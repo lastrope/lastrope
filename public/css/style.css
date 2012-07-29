@@ -100,33 +100,75 @@ textarea:-moz-placeholder {
     font-style: italic;
     color: #bbb;
 }
+/* Corps */
 #corps{
 	width: 100%;
 	height: 100%;
-	background-color: #111;
+	background-color: #cecdce;
 }
-header,footer{
+#welcome{
+	width: 300px;
+	height: 166px;
+	background:#fff;
+	float:left;
+	
+	border-radius:300px;
+	-moz-border-radius:300px;
+	-webkit-border-radius:300px;
+	-o-border-radius:300px;
+	-ms-border-radius:300px;
+	
+	border-top:1px solid #bbb;
+	border-left:1px solid #bbb;
+	border-bottom:1px solid #111;
+	border-right:1px solid #111;
+	
+	font-family: 'Ubuntu-C';
+	font-size: 20px;
+	color: #7F554E;
+	text-align:center;
+	padding-top: 134px;
+	
+	opacity: 0.7;
+}
+#welcome:hover{
+	opacity:1;
+}
+
+#event{
+	width: 300px;
+	height: 166px;
+	background:#fff;
+	float:right;
+	
+	border-radius:300px;
+	-moz-border-radius:300px;
+	-webkit-border-radius:300px;
+	-o-border-radius:300px;
+	-ms-border-radius:300px;
+	
+	border-top:1px solid #bbb;
+	border-right:1px solid #bbb;
+	border-bottom:1px solid #111;
+	border-left:1px solid #111;
+	
+	font-family: 'Ubuntu-C';
+	font-size: 20px;
+	color: #7F554E;
+	text-align:center;
+	padding-top: 134px;
+	
+	opacity: 0.7;
+}
+#event:hover{
+	opacity: 1;
+}
+/* Header */
+header{
 	margin-top:0;
 	width:100%;
 	height:100px;
 	background:#111 url(../media/image/metal_header.jpg) left top repeat-x;
-}
-footer{
-	position: absolute;
-	bottom:0;
-}
-#logo{
-	background: transparent url(../media/image/logo2.png) center center no-repeat;
-	width: 200px;
-	height: 150px;
-	margin: -20px auto 0 auto;
-}
-#copyright{
-	background: transparent url(../media/image/logo1.png) center center no-repeat;
-	width: 200px;
-	height: 150px;
-	margin: -100px auto 0 auto;
-	/*margin: -50px auto 0 auto;*/
 }
 #header{
 	font-family: baphomet;
@@ -139,62 +181,10 @@ footer{
 #header a {
 	color: #fff;
 }
-#corde{
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 150px;
-	height: 500px;
-	
-	background:transparent url(../media/image/corde.png) left top no-repeat;
-}
-.corde2{
-	position: absolute;
-	top: 0;
-	left:310px;
-	width: 150px;
-	height: 500px;
-	
-	background:transparent url(../media/image/corde.png) left top no-repeat;
-}
-.corde3{
-	position: absolute;
-	top: 0;
-	right: 310px;
-	width: 150px;
-	height: 500px;
-	
-	background:transparent url(../media/image/corde.png) left top no-repeat;
-}
-.corde4{
-	position: absolute;
-	top: 0;
-	right: 310px;
-	width: 150px;
-	height: 500px;
-	
-	background:transparent url(../media/image/corde.png) left top no-repeat;
-}
-.corde5{
-	position: absolute;
-	top: 0;
-	right: 0;
-	width: 150px;
-	height: 500px;
-	
-	background:transparent url(../media/image/corde.png) left top no-repeat;
-}
 #complement{
 	background:transparent url(../media/image/barriere.png) left bottom repeat-x;
 	width:100%;
 	height:100px;
-}
-#complement_back{
-	background:transparent url(../media/image/barriere_back.png) left top repeat-x;
-	width:100%;
-	height:100px;
-	position:absolute;
-	bottom: 0;
 }
 #news,#bio,#son,#contact{
 	background: transparent url(../media/image/sousligne.png) center 60px no-repeat;
@@ -213,4 +203,33 @@ footer{
 	height: 50px;
 	text-align:center;
 	padding-top:20px;
+}
+#logo{
+	background: transparent url(../media/image/logo2.png) center center no-repeat;
+	width: 200px;
+	height: 150px;
+	margin: -20px auto 0 auto;
+}
+/* Footer */
+footer{
+	position: absolute;
+	bottom:0;
+	margin-top:0;
+	width:100%;
+	height:100px;
+	background:#111 url(../media/image/metal_header.jpg) left top repeat-x;
+}
+#complement_back{
+	background:transparent url(../media/image/barriere_back.png) left top repeat-x;
+	width:100%;
+	height:100px;
+	position:absolute;
+	bottom: 0;
+}
+#copyright{
+	background: transparent url(../media/image/logo1.png) center center no-repeat;
+	width: 200px;
+	height: 150px;
+	margin: -100px auto 0 auto;
+	/*margin: -50px auto 0 auto;*/
 }
