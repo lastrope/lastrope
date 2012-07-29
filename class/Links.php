@@ -22,9 +22,14 @@ class Links{
      */
     public function getAllLinks($lang = "fr"){
         $request = "SELECT idLinks, text, href FROM links WHERE lang=\"$lang\"";
+		$links_array = array();
+		
         try{
             $result = $this->pdo->query($request);
-            return $result->fetch(PDO::FETCH_ASSOC);
+            while($ligne = $result->fetch(PDO::FETCH_ASSOC)){
+				$links_array[$ligne['idLinks']] = $ligne;
+			}
+			return $links_array;
         }catch(PDOException $e){
             print $e->getMessage();
         }

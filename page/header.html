@@ -1,11 +1,24 @@
+<?php
+	require_once 'class/Links.php';
+	$links = new Links($pdo);
+	$linksInformation = $links->getAllLinks();
+?>
 <header>
 	<div id="complement">
 		<div id="header">
-			<a href="#"><div id="news">News</div></a>
-			<a href="#"><div id="bio">Bio</div></a>
-			<a href="#"><div id="media">Media</div></a>
-			<a href="#"><div id="son">Son</div></a>
-			<a href="#"><div id="contact">Contact</div></a>
+			<?php
+				foreach($linksInformation as $this_link_information){
+					$id_css_array = explode('.',$this_link_information['href']);
+					$id_css = reset($id_css_array);
+					
+					echo '
+			<a href="'.$this_link_information['href'].'">
+				<div id="'.$id_css.'">'.
+					$this_link_information['text'].'
+				</div>
+			</a>';
+				}
+			?>
 		</div>
 			
 		<div id="logo">
