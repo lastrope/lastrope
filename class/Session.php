@@ -1,13 +1,13 @@
 <?php
 /** 
  * Class Session 
- *  
+ *  Manage sessions 
  */
 class Session{
-    private $timeout = 0;
-    private $sessionName = NULL;
-    private static $isStarted = false ;  
-    private $cookieParams;
+    private $timeout            = 0;
+    private $sessionName        = NULL;
+    private static $isStarted   = false ;  
+    private $cookieParams       = array();
     /** 
      * Constructor 
      * @param type $sessionName
@@ -15,7 +15,7 @@ class Session{
      * @param type $timeout 
      */
     public function __construct($sessionName = 'anonyme',$cookieParams = array(), $timeout = 3600){
-        $this->timeout = (int) $timeout;    
+        $this->timeout     = (int) $timeout;    
         $this->sessionName = (string) $sessionName;
         
         $this->cookieParams = array_merge(

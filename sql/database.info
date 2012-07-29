@@ -1,0 +1,15 @@
+/** INFORMATION DATABASE **/
+ENCODING : utf8_unicode_ci
+
+/** TABLE LINKS **/
+idLinks = id autoincrémenté
+text    = Texte du lien afficher en front
+href    = Destination du lien en http://
+lang    = Tag de langue 
+
+/** TABLE HEADER **/
+idHeader    = id autoincrémenté
+title       = Titre du site 
+meta_description = Balise meta description
+meta_keywords    = Balise meta keywords
+lang             = Tag de langue
