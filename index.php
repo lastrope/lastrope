@@ -2,7 +2,7 @@
 	require_once 'bootstrap.php';
 	require_once 'class/Header.php';
 
-	$header = new Header($pdo);
+	$header = new Header($pdo, $session->read('langue'));
 	$headerInformation = $header->getAllHeaderInformation();
 ?>
 <!DOCTYPE HTML>
