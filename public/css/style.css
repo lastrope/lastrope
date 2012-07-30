@@ -164,6 +164,17 @@ textarea:-moz-placeholder {
 	opacity: 1;
 }
 /* Header */
+#language{
+    position:absolute;
+    left:1%;
+    top:2%;
+}
+#language img{
+    height:20px;
+}
+#language img:hover{
+    opacity:0.5;
+}
 header{
 	margin-top:0;
 	width:100%;
