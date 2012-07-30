@@ -1,10 +1,18 @@
 <?php
 	require_once 'class/Links.php';
-	$links = new Links($pdo);
+	$links = new Links($pdo,$session->read('langue'));
 	$linksInformation = $links->getAllLinks();
 ?>
 <header>
 	<div id="complement">
+            <div id="language">
+                <a href="set_language.php?lang=en" title="English Version">
+                    <img src="public/img/drapeau_en.gif" />
+                </a>
+                <a href="set_language.php?lang=fr" title="Version Française">
+                    <img src="public/img/drapeau_fr.gif" />
+                </a>
+            </div>
 		<div id="header">
 			<?php
 				foreach($linksInformation as $this_link_information){
