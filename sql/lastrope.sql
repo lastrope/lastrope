@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.1
+-- version 3.4.5
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Lun 30 Juillet 2012 à 15:06
--- Version du serveur: 5.5.24-log
--- Version de PHP: 5.3.13
+-- Généré le : Lun 30 Juillet 2012 à 21:58
+-- Version du serveur: 5.5.16
+-- Version de PHP: 5.3.8
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -19,6 +19,20 @@ SET time_zone = "+00:00";
 --
 -- Base de données: `lastrope`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `actus`
+--
+
+CREATE TABLE IF NOT EXISTS `actus` (
+  `idActus` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+  `title` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
+  `body` longtext COLLATE utf8_unicode_ci NOT NULL,
+  `date` int(11) NOT NULL,
+  PRIMARY KEY (`idActus`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -72,6 +86,22 @@ INSERT INTO `links` (`idLinks`, `text`, `href`, `lang`) VALUES
 (8, 'Sound', 'son.php', 'en'),
 (9, 'Contacte', 'contact.php', 'fr'),
 (10, 'Contact', 'contact.php', 'en');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `members`
+--
+
+CREATE TABLE IF NOT EXISTS `members` (
+  `idMembers` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `firstname` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
+  `surname` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
+  `picture` text COLLATE utf8_unicode_ci NOT NULL,
+  `birthday` varchar(80) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`idMembers`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
