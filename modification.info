@@ -1,0 +1,7 @@
+/** Francky : 30/07/2012 **/
+Modification des extensions html en phtml
+Ajout  du choix de langue dans header.phtml (+ ajout des drapeaux)
+Ajout du css minimum pour le choix de la langue dans style.css
+Création de set_language.php , fichier qui gère la langue du site
+Modification des classes Header et Links , langue passée directement dans le constructeur.
+Création des classes Actus et Members (Il reste la méthode d'update à faire dans les deux)
