@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Dim 29 Juillet 2012 à 20:01
+-- Généré le: Lun 30 Juillet 2012 à 15:06
 -- Version du serveur: 5.5.24-log
 -- Version de PHP: 5.3.13
 
@@ -62,7 +62,7 @@ CREATE TABLE IF NOT EXISTS `links` (
 --
 
 INSERT INTO `links` (`idLinks`, `text`, `href`, `lang`) VALUES
-(1, 'Actualités', 'news.php', 'fr'),
+(1, 'Actualites', 'news.php', 'fr'),
 (2, 'News', 'news.php', 'en'),
 (3, 'Bio', 'bio.php', 'fr'),
 (4, 'Bio', 'bio.php', 'en'),
