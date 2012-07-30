@@ -13,3 +13,17 @@ title       = Titre du site
 meta_description = Balise meta description
 meta_keywords    = Balise meta keywords
 lang             = Tag de langue
+
+/** TABLE MEMBERS **/
+idMembers   = id autoincrémenté
+name        = nom de famille
+firstname   = prénom
+surname     = pseudos, surnoms
+picture     = image associé ( ex: kiki.png ) 
+birthday    = date de naissance
+
+/** TABLE ACTUS **/
+idActus     = id autoincrémenté
+title       = titre de l'actu
+body        = corps de l'actu
+date        = int(11) pour recevoir le timestamp de la fonction time() 
