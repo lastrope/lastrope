@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Mar 31 Juillet 2012 à 19:04
+-- Généré le: Mar 31 Juillet 2012 à 19:21
 -- Version du serveur: 5.5.24-log
 -- Version de PHP: 5.3.13
 
@@ -31,6 +31,7 @@ CREATE TABLE IF NOT EXISTS `actus` (
   `title` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
   `body` longtext COLLATE utf8_unicode_ci NOT NULL,
   `date` int(11) NOT NULL,
+  `lang` varchar(2) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`idActus`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
 
@@ -38,8 +39,8 @@ CREATE TABLE IF NOT EXISTS `actus` (
 -- Contenu de la table `actus`
 --
 
-INSERT INTO `actus` (`idActus`, `title`, `body`, `date`) VALUES
-(1, 'Il y a du changement dans l''air.', 'Comme le dit le titre, il y a du changement dans l''air. L''été nous a tous inspiré cette année pour une vague de changement. Ainsi, voici un site tout beau tout propre refait de A à Z pour vous présenter le groupe.\r\nNous avons beaucoup évolué depuis la création de Dust Of Shadows. Et notre musique aussi. De ce fait, le besoin de changer de nom, d''apparence et d''identité est venu assez naturellement.\r\nRépondant à présent au nom de Lastrope, nous prévoyons la sortie de notre nouvel EP "Eighteen" de quatre titres fin décembre.\r\nEn plus de cela, et toujours pour répondre à ce besoin de changement d''identité, nous avons réalisé - avec l''aide d''une photographe accomplie ;) - des photos reflétant le plus possible l''image souhaité du groupe et surtout de sa musique. Pour suivre ce mouvement général une vidéo de présentation est en cours de réalisation/montage.\r\n\r\nS''inscrivant dans l''air de la musique moderne et complexe, Lastrope est bien décidé à franchir une nouvelle étape. La sortie de ce futur EP sera l''élément attendu pour pouvoir - enfin - élargir notre horizon.\r\n\r\nNe perdez pas de temps et allez explorer ce site qui sera quotidiennement maintenu à jour pour être constamment exhaustif de toutes nos informations.\r\n\r\nMusicalement,\r\n\r\nLastrope.', 20120737);
+INSERT INTO `actus` (`idActus`, `title`, `body`, `date`, `lang`) VALUES
+(1, 'Il y a du changement dans l''air.', 'Comme le dit le titre, il y a du changement dans l''air. L''été nous a tous inspiré cette année pour une vague de changement. Ainsi, voici un site tout beau tout propre refait de A à Z pour vous présenter le groupe.\r\nNous avons beaucoup évolué depuis la création de Dust Of Shadows. Et notre musique aussi. De ce fait, le besoin de changer de nom, d''apparence et d''identité est venu assez naturellement.\r\nRépondant à présent au nom de Lastrope, nous prévoyons la sortie de notre nouvel EP "Eighteen" de quatre titres fin décembre.\r\nEn plus de cela, et toujours pour répondre à ce besoin de changement d''identité, nous avons réalisé - avec l''aide d''une photographe accomplie ;) - des photos reflétant le plus possible l''image souhaité du groupe et surtout de sa musique. Pour suivre ce mouvement général une vidéo de présentation est en cours de réalisation/montage.\r\n\r\nS''inscrivant dans l''air de la musique moderne et complexe, Lastrope est bien décidé à franchir une nouvelle étape. La sortie de ce futur EP sera l''élément attendu pour pouvoir - enfin - élargir notre horizon.\r\n\r\nNe perdez pas de temps et allez explorer ce site qui sera quotidiennement maintenu à jour pour être constamment exhaustif de toutes nos informations.\r\n\r\nMusicalement,\r\n\r\nLastrope.', 20120737, 'fr');
 
 -- --------------------------------------------------------
 
@@ -107,6 +108,10 @@ CREATE TABLE IF NOT EXISTS `members` (
   `surname` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
   `picture` text COLLATE utf8_unicode_ci NOT NULL,
   `birthday` varchar(80) COLLATE utf8_unicode_ci NOT NULL,
+  `instrument` varchar(80) COLLATE utf8_unicode_ci NOT NULL,
+  `influences` text COLLATE utf8_unicode_ci NOT NULL,
+  `short_desc` text COLLATE utf8_unicode_ci NOT NULL,
+  `lang` varchar(2) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`idMembers`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=6 ;
 
@@ -114,12 +119,12 @@ CREATE TABLE IF NOT EXISTS `members` (
 -- Contenu de la table `members`
 --
 
-INSERT INTO `members` (`idMembers`, `name`, `firstname`, `surname`, `picture`, `birthday`) VALUES
-(1, 'Dulon', 'Thibault', 'Titi', '', '28/02/1992'),
-(2, 'Gautier', 'Franck', 'Kyky', '', '27/07/1990'),
-(3, 'De Lima', 'Paco', 'Pakpak', '', '26/07/1991'),
-(4, 'Ramos', 'Camille', 'Boulette', '', '31/07/1992'),
-(5, 'Spenato', 'Romain', 'Rominou', '', '06/08/1990');
+INSERT INTO `members` (`idMembers`, `name`, `firstname`, `surname`, `picture`, `birthday`, `instrument`, `influences`, `short_desc`, `lang`) VALUES
+(1, 'Dulon', 'Thibault', 'Titi', '', '28/02/1992', 'Guitariste Soliste', 'Ayreon, Iron Maiden, Dream Theater, Circus Maximus, Lord of Mushrooms, Periphery, Arjen Lucassen, Nightwish', 'Après plusieurs expériences de groupe non sérieuse, j''ai décidé avec un ami de fonder Dust of shadows, un groupe de heavy progressif ou l''on pourrait enfin exprimer notre âme heavy et prog.\r\nEn parallèle, je continue mes projets solo qui me permettent d''exprimer mon autre moi musical et d''apprendre toutes les ficelles du mixage. http://soundcloud.com/fitz_lucassen', 'fr'),
+(2, 'Gautier', 'Franck', 'Kyky', '', '27/07/1990', 'Guitariste Rythmique', '', '', 'fr'),
+(3, 'De Lima', 'Paco', 'Pakpak', '', '26/07/1991', 'Bassiste', '', '', 'fr'),
+(4, 'Ramos', 'Camille', 'Boulette', '', '31/07/1992', 'Batteur', '', '', 'fr'),
+(5, 'Spenato', 'Romain', 'Rominou', '', '06/08/1990', 'Chanteur', '', '', 'fr');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
