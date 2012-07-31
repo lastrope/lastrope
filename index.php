@@ -26,6 +26,6 @@
             // La page a modifier pour le footer
             include("page/footer.phtml");
 		?>
-                </div>
+        </div>
     </body>
 </html>
