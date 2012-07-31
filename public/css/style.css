@@ -144,7 +144,7 @@ textarea:-moz-placeholder {
 	opacity:1;
 }
 #article{
-	width:554px;
+	width:555px;
 	height:300px;
 	margin:auto;
 }
@@ -234,7 +234,7 @@ header{
 #complement{
 	background:transparent url(../media/image/barriere.png) left bottom repeat-x;
 	width:100%;
-	min-width:850px;
+	min-width:900px;
 	height:80px;
 }
 #news,#bio,#son,#contact{
