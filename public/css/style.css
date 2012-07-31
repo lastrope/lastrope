@@ -103,6 +103,7 @@ textarea:-moz-placeholder {
 /* Corps */
 #corps{
 	width: 100%;
+	min-width:975px;
 	height: 100%;
 	background:#cecdce;
 	z-index:-1;
@@ -111,6 +112,7 @@ textarea:-moz-placeholder {
 	z-index:1;
 	position: relative;
 	width:100%;
+	min-width:975px;
 	background:#cecdce;
 	margin-top: 130px;
 }
@@ -216,6 +218,7 @@ section .content_event{
 header{
 	margin-top:0;
 	width:100%;
+	min-width:975px;
 	height:80px;
 	background:#111 url(../media/image/metal_header.png) left top repeat-x;
 	z-index: 999999;
@@ -273,12 +276,14 @@ footer{
 	bottom:0;
 	margin-top:0;
 	width:100%;
+	min-width:975px;
 	height:80px;
 	background:#111 url(../media/image/metal_header.png) left top repeat-x;
 }
 #complement_back{
 	background:transparent url(../media/image/barriere_back.png) left top repeat-x;
 	width:100%;
+	min-width:975px;
 	height:80px;
 	position:absolute;
 	bottom: 0;
