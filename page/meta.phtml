@@ -24,6 +24,15 @@
 
 <!-- Required CSS -->
 <link rel="stylesheet" href="public/css/style.css" media="screen" type="text/css">
+<!-- For scroll -->
+<link rel="stylesheet" href="public/css/jScrollbar.jquery.css" type="text/css" />
+<style type="text/css">
+	body {
+		margin:0px;
+	}
+	.jScrollbar3
+	{margin:10px}
+</style>
 
 <!--[if lt IE 7]>
 	<style type="text/css">
@@ -34,3 +43,12 @@
 <!-- Required script -->
 <script type="text/javascript" src="public/js/jquery.js"></script>
 <script type="text/javascript" src="public/js/jfunction.js"></script>
+<!-- For scroll -->       
+<script type="text/javascript" src="public/js/jquery-ui.js"></script>        
+<script type="text/javascript" src="public/js/jquery-mousewheel.js"></script>
+<script type="text/javascript" src="public/js/jScrollbar.jquery.js"></script>
+<script type="text/javascript">                                           
+	$(document).ready(function(){
+		$('.jScrollbar3').jScrollbar();
+	});                                        
+</script>  

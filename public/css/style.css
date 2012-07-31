@@ -145,7 +145,7 @@ textarea:-moz-placeholder {
 }
 #article{
 	width:555px;
-	height:300px;
+	height:290px;
 	margin:auto;
 }
 #event{
@@ -182,7 +182,7 @@ article .titre{
 	font-family: helvetica;
 	font-size:25px;
 	color: #7F554E;
-	margin: 20px 0;
+	margin-bottom:20px;
 }
 article .content_article{
 	font-family: ubuntu-c,corbel,georgia;
@@ -222,7 +222,7 @@ header{
 	font-family: baphomet;
 	color: #fff;
 	font-size: 24px;
-	width:800px;
+	width:875px;
 	height:70px;
 	margin:auto;
 	
@@ -234,7 +234,7 @@ header{
 #complement{
 	background:transparent url(../media/image/barriere.png) left bottom repeat-x;
 	width:100%;
-	min-width:900px;
+	min-width:975px;
 	height:80px;
 }
 #news,#bio,#son,#contact{
@@ -246,6 +246,9 @@ header{
 	height: 50px;
 	text-align:center;
 	padding-top:10px;
+}
+#news{
+	margin-left:75px;
 }
 #media{	
 	float:left;
