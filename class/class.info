@@ -1,8 +1,0 @@
-/** Session **/
-Classe qui gère les sessions , écriture , lecture et fermeture + test de timeout.
-
-/** Links **/
-Classe qui gère les liens du site , la navigation principales et autres liens ( footer , etc.. ) 
-
-/** Header **/
-Classe qui gère les informations du header en fonction de la langue choisi par l'utilisateur , balises meta , etc...
