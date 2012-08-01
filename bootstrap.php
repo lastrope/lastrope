@@ -13,6 +13,11 @@ if($session->read('langue') === null){
     $session->write('langue','fr');
 }
 
+// Récupération du nom de la page
+$page = isset($_GET['page'])?$_GET['page']:'news';
+
+
+
 try {
     $pdo = new PDO('mysql:dbname=' . DATABASE . ";host=" . SERVER_NAME, USER, PASSWORD);
 	$pdo->exec('SET NAMES utf8');
