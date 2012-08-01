@@ -91,7 +91,7 @@ class Members{
     public function deleteMembers($list_id = array()){
         if(isset($list_id)):
             try{
-                foreach($list_id as $is):
+                foreach($list_id as $id):
                     $request = "DELETE FROM members WHERE idActus=".$id;
                     $this->pdo->exec($request);
                 endforeach;
