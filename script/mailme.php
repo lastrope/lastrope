@@ -1,38 +1,49 @@
 <?php
-     // Destinataires
-     $to = 'xxx@xxx.xx';
+require_once '../class/Session.php';
+require_once '../class/Mail.php';
 
-     // Sujet
-     $subject = '_subject_';
-	 
-	 // R�cup�ration des donn�es
-	 $nomProvenance = htmlspecialchars($_POST['nom']);
-	 $mailProvenance = htmlspecialchars($_POST['mail']);
-	 $messageProvenance = htmlspecialchars($_POST['message']);
+$session = new Session();
 
-     // Message
-     $message = '
-     <html>
-		<head>
-			<title>Demande de contact par ' . $nomProvenance . '</title>
-		</head>
-		<body>
-			<p>' . $messageProvenance . '
-			</p>
-		</body>
-    </html>
-    ';
-	 
-     // Pour envoyer un mail HTML, l'en-t�te Content-type doit �tre d�fini
-     $headers  = 'MIME-Version: 1.0' . "\r\n";
-     $headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
+//Récupération des données 
+$nomProvenance = isset($_POST['nom'])? htmlspecialchars($_POST['nom']) : null;
+$mailProvenance = isset($_POST['mail'])? htmlspecialchars($_POST['mail']) : null;
+$messageProvenance = isset($_POST['message'])? htmlspecialchars($_POST['message']) : null;
 
-     // En-t�tes additionnels
-     $headers .= 'To: Nom <xxx@xxx.xx>' . "\r\n";
-     $headers .= 'From: FREAKZ_' . $nomProvenance . ' <' . $mailProvenance . '>' . "\r\n";
+// Stockage en session des informations 
+// en prévention d'une erreur pour éviter à l'utilisateur de tout retaper 
+// permet de préremplir les champs du formulaire d'envoi en cas d'erreur ou dysfonctionnement
+$session->write('contact_nom', $nomProvenance);
+$session->write('contact_mail', $mailProvenance);
+$session->write('contact_message', $messageProvenance);
 
-     // Envoi
-     mail($to, $subject, $message, $headers);
+//destinataire(s)
+$to = "";
+// sujet facultatif
+$subject = "";
 
-	header('location: ../index.php?mail=send');
-?>
+// Si on a toutes les données , envoie du mail 
+if($nomProvenance && $mailProvenance && $messageProvenance){
+    // test si l'email est valide
+    $isEmail='#^[\w.-]+@[\w.-]+\.[a-zA-Z]{2,6}$#'; 
+    if(preg_match($isEmail,$mailProvenance)){
+        
+        $mail = new Mail($to, $nomProvenance, $mailProvenance, $messageProvenance);
+        $mail->setSubject($subject);
+        // Envoie du mail + message d'erreur ou confirmation
+        if($mail->sendMail()){
+            $session->write('mail_statement', 'L \'envoi de l\'email s\'est correctemnt déroulé');
+            // Supprime les sessions de préremplissage du formulaire 
+            $session->write('contact_nom', '');
+            $session->write('contact_mail', '');
+            $session->write('contact_message', '');
+        }else{
+            $session->write('mail_statement', 'Un problème est survenu, réessayez S.V.P');
+        }
+    }
+    // redirection vers la page parente
+    header('Location: '.$_SERVER['HTTP_REFERER']);
+}else{
+    $session->write('mail_statement', 'Un problème est survenu, réessayez S.V.P');
+    header('Location: '.$_SERVER['HTTP_REFERER']);
+}
+    
