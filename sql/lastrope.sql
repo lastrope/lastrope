@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.1
+-- version 3.4.5
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Mar 31 Juillet 2012 à 19:21
--- Version du serveur: 5.5.24-log
--- Version de PHP: 5.3.13
+-- Généré le : Mer 01 Août 2012 à 21:41
+-- Version du serveur: 5.5.16
+-- Version de PHP: 5.3.8
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -84,16 +84,16 @@ CREATE TABLE IF NOT EXISTS `links` (
 --
 
 INSERT INTO `links` (`idLinks`, `text`, `href`, `lang`) VALUES
-(1, 'Actualites', 'news.php', 'fr'),
-(2, 'News', 'news.php', 'en'),
-(3, 'Bio', 'bio.php', 'fr'),
-(4, 'Bio', 'bio.php', 'en'),
-(5, 'Media', 'media.php', 'fr'),
-(6, 'Media', 'media.php', 'en'),
-(7, 'Son', 'son.php', 'fr'),
-(8, 'Sound', 'son.php', 'en'),
-(9, 'Contacte', 'contact.php', 'fr'),
-(10, 'Contact', 'contact.php', 'en');
+(1, 'Actualites', 'news', 'fr'),
+(2, 'News', 'news', 'en'),
+(3, 'Bio', 'bio', 'fr'),
+(4, 'Bio', 'bio', 'en'),
+(5, 'Media', 'media', 'fr'),
+(6, 'Media', 'media', 'en'),
+(7, 'Son', 'son', 'fr'),
+(8, 'Sound', 'son', 'en'),
+(9, 'Contacte', 'contact', 'fr'),
+(10, 'Contact', 'contact', 'en');
 
 -- --------------------------------------------------------
 
