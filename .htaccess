@@ -1,0 +1,10 @@
+Options -Indexes
+Options -Multiviews
+Options +FollowSymLinks
+SetEnv REGISTER_GLOBALS 0
+SetEnv PHP_VER 5
+RewriteEngine On
+
+RewriteRule ^fr-(.*)$ /index.php?page=$1 [L]
+RewriteRule ^en-(.*)$ /index.php?page=$1 [L]
+
