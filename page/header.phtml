@@ -2,6 +2,7 @@
 	require_once 'class/Links.php';
 	$links = new Links($pdo,$session->read('langue'));
 	$linksInformation = $links->getAllLinks();
+        $tag_langue = isset($_SESSION['langue'])?$_SESSION['langue']:'fr';
 ?>
 <header>
 	<div id="complement">
@@ -20,7 +21,7 @@
 					$id_css = reset($id_css_array);
 					
 					echo '
-			<a href="?page='.$this_link_information['href'].'">
+			<a href="'.$tag_langue.'-'.$this_link_information['href'].'">
 				<div id="'.$id_css.'">'.
 					$this_link_information['text'].'
 				</div>
