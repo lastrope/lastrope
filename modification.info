@@ -1,3 +1,11 @@
+/** Francky 01/08/2012 **/
+Correction des impureté sur les images dentelées 
+Création de la classe Mail , centralisation du code 
+Modification du fichier mailme.php , toute la gestion des données après post du formulaire ( contrôle d'email , message d'erreurs etc.. )
+Modification du systeme de page , paramètre passé en URL , include princpale dynamique dans l'index.php
+Création des pages ( vides pour la plupart ) correspondante aux liens + modification dans la base le champ hrf de la table links
+Création du .htaccess , réécritures d'url
+
 /** Francky : 30/07/2012 **/
 Modification des extensions html en phtml
 Ajout  du choix de langue dans header.phtml (+ ajout des drapeaux)
