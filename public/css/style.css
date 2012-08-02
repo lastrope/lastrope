@@ -220,7 +220,7 @@ header{
 	width:100%;
 	min-width:975px;
 	height:80px;
-	background:#111 url(../media/image/metal_header.png) left top repeat-x;
+	background:#111 url(../media/image/metal_header2.png) left top repeat-x;
 	z-index: 999999;
 }
 #header{
@@ -278,7 +278,7 @@ footer{
 	width:100%;
 	min-width:975px;
 	height:80px;
-	background:#111 url(../media/image/metal_header.png) left top repeat-x;
+	background:#111 url(../media/image/metal_header2.png) left top repeat-x;
 }
 #complement_back{
 	background:transparent url(../media/image/barriere_back.png) left top repeat-x;
