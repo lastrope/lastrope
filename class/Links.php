@@ -6,24 +6,26 @@
 class Links{
     private $pdo = null;
     private $lang = null;
+	
     /**
      * constructor 
      * @param $pdo 
+     * @param $lang
      */
     public function __construct($pdo, $lang){
         /** Set the connection database **/
         $this->pdo = $pdo;
         $this->lang = $lang;
-        return $this;
     }
     /**
      * getAllLinks
-     * @param type $pdo
-     * @param type $lang
      * @return array $result ( assoc )
      */
     public function getAllLinks(){
-        $request = "SELECT idLinks, text, href FROM links WHERE lang=\"$this->lang\"";
+        $request = "SELECT idLinks, text, href
+			FROM links
+			WHERE lang='".$this->lang."'";
+		
 		$links_array = array();
 		
         try{

@@ -224,6 +224,8 @@ header{
 	z-index: 999999;
 }
 #header{
+	position: relative;
+	
 	font-family: baphomet;
 	color: #fff;
 	font-size: 24px;
@@ -242,9 +244,13 @@ header{
 	min-width:975px;
 	height:80px;
 }
-#news,#bio,#son,#contact{
-	background: transparent url(../media/image/sousligne.png) center 40px no-repeat;
-	
+#header ul{
+	position:absolute;
+	margin: 0;
+	padding: 0;
+	z-index:2;
+}
+#header ul li{
 	float:left;
 	display:block;
 	width: 160px;
@@ -255,20 +261,20 @@ header{
 #news{
 	margin-left:75px;
 }
-#media{	
-	float:left;
-	display:block;
-	width: 160px;
-	height: 50px;
-	text-align:center;
-	padding-top:10px;
-}
 #logo{
-	background: transparent url(../media/image/logo2.png) center center no-repeat;
 	width: 200px;
 	height: 160px;
 	margin: -30px auto 0 auto;
 	position: relative;
+	z-index:3;
+}
+#box{
+	position: absolute;
+	z-index:1;
+}
+#rectangle{
+	background: transparent url(../media/image/lastrope_min.png) center top no-repeat;
+	height: 60px;
 }
 /* Footer */
 footer{

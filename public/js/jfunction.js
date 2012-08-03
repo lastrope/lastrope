@@ -1,231 +1,29 @@
-$(function(){
+$(document).ready(function(){
 
-    divNews = $('#news');
-    divBio = $('#bio');
-    divMedia = $('#media');
-    divSon = $('#son');
-    divContact = $('#contact');
+    var divNews = $('#news');
+    var divBio = $('#bio');
+    var divMedia = $('#media');
+    var divSon = $('#son');
+    var divContact = $('#contact');
 	
-	// NEW HOVER
-	divNews.hover(function(){
-		divBio.animate({
-			opacity:0.3,
-			
-		},600);
-		divMedia.animate({
-			opacity:0.3,
-			
-		},600);
-		divSon.animate({
-			opacity:0.3,
-			
-		},600);
-		divContact.animate({
-			opacity:0.3,
-			
-		},600);
-	},function(){
-		divBio.animate({
-			opacity:1,
-			
-		},600);
-		divMedia.animate({
-			opacity:1,
-			
-		},600);
-		divSon.animate({
-			opacity:1,
-			
-		},600);
-		divContact.animate({
-			opacity:1,
-			
-		},600);
+	var effet = 'easeOutElastic';
+	var default_left = Math.round($('li.selected').offset().left - $('#header').offset().left);
+	var default_width = $('li.selected').width();
+	var default_active = divNews;
+	
+	$('#box').css({left: default_left});
+	$('#rectangle').css({width: default_width});
+	
+	
+	// Rollover menu
+	$('#header li.menu').hover(function(){
+		left = Math.round($(this).offset().left - $('#header').offset().left);
+		width = $(this).width();
+		
+		$('#box').stop().animate({left:left},{duration:1000, easing:effet});
+		$('#rectangle').stop().animate({width:width},{duration:1000, easing:effet});
+	},function(){		
+		$('#box').stop().animate({left:default_left},{duration:1000, easing:effet});
+		$('#rectangle').stop().animate({width:default_width},{duration:1000, easing:effet});
 	});
-	// BIO HOVER
-	divBio.hover(function(){
-		divNews.animate({
-			opacity:0.3,
-			
-		},600);
-		divMedia.animate({
-			opacity:0.3,
-			
-		},600);
-		divSon.animate({
-			opacity:0.3,
-			
-		},600);
-		divContact.animate({
-			opacity:0.3,
-			
-		},600);
-	},function(){
-		divNews.animate({
-			opacity:1,
-			
-		},600);
-		divMedia.animate({
-			opacity:1,
-			
-		},600);
-		divSon.animate({
-			opacity:1,
-			
-		},600);
-		divContact.animate({
-			opacity:1,
-			
-		},600);
-	});
-	// MEDIA HOVER
-	divMedia.hover(function(){
-		divNews.animate({
-			opacity:0.3,
-			
-		},600);
-		divBio.animate({
-			opacity:0.3,
-			
-		},600);
-		divSon.animate({
-			opacity:0.3,
-			
-		},600);
-		divContact.animate({
-			opacity:0.3,
-			
-		},600);
-	},function(){
-		divNews.animate({
-			opacity:1,
-			
-		},600);
-		divBio.animate({
-			opacity:1,
-			
-		},600);
-		divSon.animate({
-			opacity:1,
-			
-		},600);
-		divContact.animate({
-			opacity:1,
-			
-		},600);
-	})
-	// SON HOVER
-	divSon.hover(function(){
-		divNews.animate({
-			opacity:0.3,
-			
-		},600);
-		divMedia.animate({
-			opacity:0.3,
-			
-		},600);
-		divBio.animate({
-			opacity:0.3,
-			
-		},600);
-		divContact.animate({
-			opacity:0.3,
-			
-		},600);
-	},function(){
-		divNews.animate({
-			opacity:1,
-		},600);
-		divMedia.animate({
-			opacity:1,
-		},600);
-		divBio.animate({
-			opacity:1,
-		},600);
-		divContact.animate({
-			opacity:1,
-		},600);
-	})
-	// CONTACT HOVER
-	divContact.hover(function(){
-		divNews.animate({
-			opacity:0.3,
-		},600);
-		divMedia.animate({
-			opacity:0.3,
-		},600);
-		divSon.animate({
-			opacity:0.3,
-		},600);
-		divBio.animate({
-			opacity:0.3,
-		},600);
-	},function(){
-		divNews.animate({
-			opacity:1,
-		},600);
-		divMedia.animate({
-			opacity:1,
-		},600);
-		divSon.animate({
-			opacity:1,
-		},600);
-		divBio.animate({
-			opacity:1,
-		},600);
-	})
-	// Responsive design function resize
-	$(window).resize(function(){
-		if($('body').width() < 1200){
-			$('#welcome').css({
-				width:0,
-				height:0
-			});
-			$('#welcome').empty();
-			$('#article').css({
-				margin:'0 0 0 20px'
-			});
-		}else if ($('body').width() > 1200){
-			$('#welcome').css({
-				width:'300px',
-				height:'166px'
-			});
-			$('#welcome').html('<p>Bienvenue sur le site de Lastrope !</p>');
-			$('#article').css({
-				margin:'auto'
-			});
-		}
-		if($('body').height() < 700){
-			$('footer').empty();
-		}else if($('body').height() > 700){
-			$('footer').html('<div id="complement_back"><div id="footer"></div><div id="copyright"></div></div>');
-		}
-	})
-	// Responsive design function onload
-	$(window).load(function(){
-		if($('body').width() < 1200){
-			$('#welcome').css({
-				width:0,
-				height:0
-			});
-			$('#welcome').empty();
-			$('#article').css({
-				margin:'0 0 0 20px'
-			});
-		}else if ($('body').width() > 1200){
-			$('#welcome').css({
-				width:'300px',
-				height:'166px'
-			});
-			$('#welcome').html('<p>Bienvenue sur le site de Lastrope !</p>');
-			$('#article').css({
-				margin:'auto'
-			});
-		}
-		if($('body').height() < 700){
-			$('footer').empty();
-		}else if($('body').height() > 700){
-			$('footer').html('<div id="complement_back"><div id="footer"></div><div id="copyright"></div></div>');
-		}
-	})
 });

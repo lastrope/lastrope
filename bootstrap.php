@@ -12,11 +12,10 @@ if($session->read('langue') === null){
     // En cas de non existance , création de la variable session en FR
     $session->write('langue','fr');
 }
+require 'lang/' .$_SESSION['langue']. '.php';
 
 // Récupération du nom de la page
 $page = isset($_GET['page'])?$_GET['page']:'news';
-
-
 
 try {
     $pdo = new PDO('mysql:dbname=' . DATABASE . ";host=" . SERVER_NAME, USER, PASSWORD);

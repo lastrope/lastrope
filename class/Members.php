@@ -5,22 +5,27 @@
 class Members{
     private $pdo = null;
     private $lang = null;
+	
     /**
      * constructor 
-     * @param $pdo 
+     * @param $pdo
+     * @param $lang
      */
     public function __construct($pdo, $lang){
         /** Set the connection database **/
         $this->pdo = $pdo;
         $this->lang = $lang;
-        return $this;
     }
-    /*
-     *  getAllMembers 
-     *  Permet de récupérer toutes les infos de tous les membres
+    /**
+     * getAllMembers 
+     * Permet de récupérer toutes les infos de tous les membres
+     * @return array $members_array ( assoc )
      */
     public function getAllMembers(){
-        $request = "SELECT idMembers,name,firstname,surname, picture, birthday FROM members";
+        $request = "SELECT idMembers,name,firstname,surname, picture, birthday
+			FROM members
+			WHERE lang='".$this->lang."'";
+		
         $members_array = array();
 		
         try{
@@ -34,13 +39,17 @@ class Members{
         }
         return array();
     }
-    /*
-     *  getMemberById 
-     *  permet les infos pour un membre de par son ID
+    /**
+     * getMemberById 
+     * Permet les infos pour un membre de par son ID
+	 * @param $id
+	 * @return array $members_array ( assoc )
      */
     public function getMembersById($id){
-        $request = "SELECT idMembers,name,firstname,surname, picture, birthday ";
-        $request .= "FROM members WHERE idMembers =".$id;
+        $request = "SELECT idMembers,name,firstname,surname, picture, birthday
+			FROM members
+			WHERE idMembers=".$id;
+		
         $members_array = array();
 		
         try{
@@ -54,27 +63,29 @@ class Members{
         }
         return array();
     }
-    /*
-     *  addMembers
-     *  Permet d'ajouter un membre dans la base 
-     *  Méthode attendant un tableau indexé sur les index :
-     *  firstname
-     *  name 
-     *  surname
-     *  picture
-     *  birthday
+    /**
+     * addMembers
+     * Permet d'ajouter un membre dans la base 
+     * Méthode attendant un tableau indexé sur les index : firstname, name, surname, picture, birthday, instrument, influences, short_desc, lang
+	 * @param $member ( array )
+	 * @return $this
      */
     public function addMembers($member = array()){
         if(isset($member)):
             // Transformation de tous les caractère spéciaux par leur entités html
             $firstname  = htmlspecialchars($member['firstname']);
-            $name       = htmlspecialchars($member['name']);
-            $surname    = htmlspecialchars($member['surname']);
-            $picture    = htmlspecialchars($member['picture']);
-            $birthday   = htmlspecialchars($member['birthday']);
+            $name = htmlspecialchars($member['name']);
+            $surname = htmlspecialchars($member['surname']);
+            $picture = htmlspecialchars($member['picture']);
+            $birthday = htmlspecialchars($member['birthday']);
+            $instrument = htmlspecialchars($member['instrument']);
+            $influences = htmlspecialchars($member['influences']);
+            $short_desc = htmlspecialchars($member['short_desc']);
+            $langue = htmlspecialchars($member['lang']);
             
-            $request = "INSERT INTO members(firstname,name,surname,picture,birthday) ";
-            $request .= ' VALUES("'.$firstname.'","'.$name.'","'.$surname.'","'.$picture.'","'.$birthday.'")';
+            $request = "INSERT INTO members(firstname,name,surname,picture,birthday,instrument,influences,short_desc,lang) ";
+            $request .= 'VALUES("'.$firstname.'","'.$name.'","'.$surname.'","'.$picture.'","'.$birthday.'","'.$instrument.'","'.$influences.'","'.$short_desc.'","'.$langue.'")';
+			
             try{
                 $this->pdo->exec($request);
             }catch(PDOException $e){
@@ -83,16 +94,19 @@ class Members{
         endif;
         return $this;
     }
-    /*
-     *  deleteMembers 
-     *  Permet de supprimer un ou plusieurs membres
-     *  attend une liste d'id
+    /**
+     * deleteMembers 
+     * Permet de supprimer un ou plusieurs membres
+     * Attend une liste d'id
+	 * @param $list_id
+	 * @return $this
      */
     public function deleteMembers($list_id = array()){
         if(isset($list_id)):
             try{
                 foreach($list_id as $id):
-                    $request = "DELETE FROM members WHERE idActus=".$id;
+                    $request = "DELETE FROM members
+						WHERE idActus=".$id;
                     $this->pdo->exec($request);
                 endforeach;
             }catch(PDOException $e){

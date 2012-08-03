@@ -1,46 +1,47 @@
 <?php
 /** 
  * Class Session 
- *  Manage sessions 
+ * Manage sessions 
  */
 class Session{
     private $timeout            = 0;
     private $sessionName        = NULL;
     private static $isStarted   = false ;  
     private $cookieParams       = array();
+	
     /** 
-     * Constructor 
+     * constructor 
      * @param type $sessionName
      * @param type $cookieParams
      * @param type $timeout 
      */
     public function __construct($sessionName = 'anonyme',$cookieParams = array(), $timeout = 3600){
-        $this->timeout     = (int) $timeout;    
+        $this->timeout = (int) $timeout;    
         $this->sessionName = (string) $sessionName;
         
         $this->cookieParams = array_merge(
-                session_get_cookie_params(),
-                $cookieParams
-         );
-         session_set_cookie_params(
-                 $this->cookieParams['lifetime'], 
-                 $this->cookieParams['path'],
-                 $this->cookieParams['domain'],
-                 $this->cookieParams['secure'],
-                 $this->cookieParams['httponly']
-         );
+			session_get_cookie_params(),
+			$cookieParams
+        );
+        session_set_cookie_params(
+			$this->cookieParams['lifetime'], 
+			$this->cookieParams['path'],
+			$this->cookieParams['domain'],
+			$this->cookieParams['secure'],
+			$this->cookieParams['httponly']
+        );
         if(!isset($_SESSION['started']) || $_SESSION['started'] !== true){
-           session_name($this->sessionName);
-           session_start();
-           session_regenerate_id(true);
-           
-           $this->write('started', true);//$_SESSION['started'] = true;
-           self::$isStarted = true;
-           if($this->read('started_time',false)){
-               $this->write('started_time', time()); //$_SESSION['started_time'] = time();
-           }
-        }
-        
+			session_name($this->sessionName);
+			session_start();
+			session_regenerate_id(true);
+					   
+			$this->write('started', true);//$_SESSION['started'] = true;
+			self::$isStarted = true;
+					   
+			if($this->read('started_time',false)){
+				$this->write('started_time', time()); //$_SESSION['started_time'] = time();
+			}
+		}
     }
     /** 
      * isExpired
@@ -84,5 +85,4 @@ class Session{
         unset($_SESSION);
         session_destroy();
     }
-
 }

@@ -1,3 +1,13 @@
+/** Titi 03/08/2012 **/
+Nouveau rollover sur le menu
+Correction de toutes les classes (commentaires, fonction, indentation, arguments...etc)
+Ajout d'un lien sur le logo (volonté de différencier accueil.php de news.php)
+Modification de accueil.php et news.php pour inclure les news de la base de données
+Création des fichiers de constantes fr.php et en.php
+
+/** Titi 02/08/2012 **/
+Modification de l'image du header et du footer
+
 /** Francky 01/08/2012 **/
 Correction des impureté sur les images dentelées 
 Création de la classe Mail , centralisation du code 
@@ -6,10 +16,16 @@ Modification du systeme de page , paramètre passé en URL , include princpale d
 Création des pages ( vides pour la plupart ) correspondante aux liens + modification dans la base le champ hrf de la table links
 Création du .htaccess , réécritures d'url
 
-/** Francky : 30/07/2012 **/
+/** Titi 31/07/2012 **/
+Ajout du scroll personalisé sur la liste des articles
+
+/** Francky 30/07/2012 **/
 Modification des extensions html en phtml
 Ajout  du choix de langue dans header.phtml (+ ajout des drapeaux)
 Ajout du css minimum pour le choix de la langue dans style.css
 Création de set_language.php , fichier qui gère la langue du site
 Modification des classes Header et Links , langue passée directement dans le constructeur.
 Création des classes Actus et Members (Il reste la méthode d'update à faire dans les deux)
+
+/** Titi 30/07/2012 **/
+Création de la charte graphique générale (header, footer, content)

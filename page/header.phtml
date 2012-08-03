@@ -15,22 +15,33 @@
 			</a>
 		</div>
 		<div id="header">
+			<ul>
 			<?php
+				$cpt = 0;
 				foreach($linksInformation as $this_link_information){
 					$id_css_array = explode('.',$this_link_information['href']);
 					$id_css = reset($id_css_array);
 					
 					echo '
-			<a href="'.$tag_langue.'-'.$this_link_information['href'].'">
-				<div id="'.$id_css.'">'.
+			<li '.($cpt==0?'class="selected menu"':'class="menu"').'id="'.$id_css.'">
+				<a href="'.$tag_langue.'-'.$this_link_information['href'].'">'.
 					$this_link_information['text'].'
-				</div>
-			</a>';
+				</a>
+			</li>';
+					$cpt++;
 				}
 			?>
+			</ul>
+			<div id="box">
+				<div id="rectangle">
+				</div>
+			</div>
 		</div>
 			
 		<div id="logo">
+			<a href="<?php echo $tag_langue; ?>-accueil">
+				<img src="public/media/image/logo2.png" alt="logo" style="position: absolute;top:4px;left:25px"/>
+			</a>
 		</div>
 	</div>
 </header>
