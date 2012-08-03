@@ -2,7 +2,7 @@
 	require_once 'class/Links.php';
 	$links = new Links($pdo,$session->read('langue'));
 	$linksInformation = $links->getAllLinks();
-        $tag_langue = isset($_SESSION['langue'])?$_SESSION['langue']:'fr';
+    $tag_langue = isset($_SESSION['langue'])?$_SESSION['langue']:'fr';
 ?>
 <header>
 	<div id="complement">
