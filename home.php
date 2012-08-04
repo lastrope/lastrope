@@ -1,8 +1,11 @@
 <?php
 	require_once 'class/Actus.php';
+	require_once 'class/Event.php';
 	$actus = new Actus($pdo,$session->read('langue'));
 	$actusInformation = $actus->getLastFiveActus();
 	$tag_langue = isset($_SESSION['langue'])?$_SESSION['langue']:'fr';
+	$event = new Event($pdo,$session->read('langue'));
+	$eventInformation = $event->getLastFiveEvent();
 ?>
 <div id="conteneur">
 	<div id="welcome">
@@ -38,14 +41,23 @@
 	</div>
 	
 	<div id="event">
+		<?php
+			//affichage des 5 récents events ( concerts , etc ... )
+			foreach($eventInformation as $this_event){
+		?>
 		<section>
 			<div class="titre">
-				Concert !
+				<?php echo $this_event['title']; ?>
 			</div>
 			<div class="content_event">
-				30 Juin à Epinay sur orge<br/>
-				Concert est Lastrope.
+				<?php echo $this_event['short_desc']; ?>
+			</div>
+			<div class="date_event">
+				<?php echo $this_event['date']; ?>
 			</div>
 		</section>
+		<?php 
+			}
+		?>
 	</div>
 </div>
