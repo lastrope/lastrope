@@ -54,3 +54,62 @@
 		$('.jScrollbar3').jScrollbar();
 	});
 </script>
+<script type="text/javascript">
+	// Active the scrollbar
+	$(document).ready(function(){
+		// Responsive design function onload
+		$(window).load(function(){
+			if($('body').width() < 1200){
+				$('#welcome').css({
+					width:0,
+					height:0
+				});
+				$('#welcome').empty();
+				$('#article').css({
+					margin:'0 0 0 20px'
+				});
+			}else if ($('body').width() > 1200){
+				$('#welcome').css({
+					width:'300px',
+					height:'166px'
+				});
+				$('#welcome').html('<p><?php echo WELCOME_ON_WEBSITE; ?></p>');
+				$('#article').css({
+					margin:'auto'
+				});
+			}
+			if($('body').height() < 700){
+				$('footer').empty();
+			}else if($('body').height() > 700){
+				$('footer').html('<div id="complement_back"><div id="footer"></div><div id="copyright"></div></div>');
+			}
+		});
+		// Responsive design function on resize
+		$(window).resize(function(){
+			if($('body').width() < 1200){
+				$('#welcome').css({
+					width:0,
+					height:0
+				});
+				$('#welcome').empty();
+				$('#article').css({
+					margin:'0 0 0 20px'
+				});
+			}else if ($('body').width() > 1200){
+				$('#welcome').css({
+					width:'300px',
+					height:'166px'
+				});
+				$('#welcome').html('<p><?php echo WELCOME_ON_WEBSITE; ?></p>');
+				$('#article').css({
+					margin:'auto'
+				});
+			}
+			if($('body').height() < 700){
+				$('footer').empty();
+			}else if($('body').height() > 700){
+				$('footer').html('<div id="complement_back"><div id="footer"></div><div id="copyright"></div></div>');
+			}
+		});
+	});
+</script>

@@ -15,7 +15,7 @@ if($session->read('langue') === null){
 require 'lang/' .$_SESSION['langue']. '.php';
 
 // Récupération du nom de la page
-$page = isset($_GET['page'])?$_GET['page']:'news';
+$page = isset($_GET['page'])?$_GET['page']:'home';
 
 try {
     $pdo = new PDO('mysql:dbname=' . DATABASE . ";host=" . SERVER_NAME, USER, PASSWORD);
