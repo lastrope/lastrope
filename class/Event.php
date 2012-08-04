@@ -69,17 +69,17 @@ class Event{
 	 * @param $id
 	 * @return array $event_array ( assoc )
      */
-    public function getActusById($id){
-        $request = "SELECT idActus, title, body , date
-			FROM actus
-			WHERE idActus=".$id;
+    public function getEventById($id){
+        $request = "SELECT idEvent, title, short_desc , date, type
+			FROM event
+			WHERE idEvent=".$id;
 		
         $event_array = array();
 		
         try{
             $result = $this->pdo->query($request);
             while($ligne = $result->fetch(PDO::FETCH_ASSOC)){
-                    $event_array[$ligne['idActus']] = $ligne;
+                $event_array[$ligne['idEvent']] = $ligne;
             }
             return $event_array;
         }catch(PDOException $e){
@@ -88,21 +88,22 @@ class Event{
         return array();
     }
     /*
-     * addActus
-     * Permet d'ajouter des actus 
-     * Attend un tableau indexé sur les index : title, body, lang
-	 * @param $actus ( array )
+     * addEvent
+     * Permet d'ajouter des évènements
+     * Attend un tableau indexé sur les index : title, short_desc, type, lang
+	 * @param $event ( array )
 	 * @return $this
      */
-    public function addActus($actus = array()){
-         if(isset($actus)):
+    public function addEvent($event = array()){
+         if(isset($event)):
             // Transformation de tous les caractère spéciaux par leur entités html
-            $title = htmlspecialchars($actus['title']);
-            $body = htmlspecialchars($actus['body']);
-            $langue = htmlspecialchars($actus['lang']);
+            $title = htmlspecialchars($event['title']);
+            $short_desc = htmlspecialchars($event['short_desc']);
+            $type = htmlspecialchars($event['type']);
+            $langue = htmlspecialchars($event['lang']);
               
-            $request = "INSERT INTO actus(title,body,date,lang) ";
-            $request .= 'VALUES("'.$title.'","'.$body.'",'.time().',"'.$langue.'")';
+            $request = "INSERT INTO event(title,short_desc,type,date,lang) ";
+            $request .= 'VALUES("'.$title.'","'.$short_desc.'","'.$type.'",'.time().',"'.$langue.'")';
 			
             try{
                 $this->pdo->exec($request);
@@ -113,18 +114,18 @@ class Event{
         return $this;
     }
     /*
-     * deleteActus 
-     * Permet de supprimer une ou plusieurs actus
+     * deleteEvent
+     * Permet de supprimer un ou plusieurs évènements
      * Attend une liste d'id
 	 * @param $list_id ( array )
 	 * @return $this
      */
-    public function deleteActus($list_id = array()){
+    public function deleteEvent($list_id = array()){
         if(isset($list_id)):
             try{
                 foreach($list_id as $is):
-                    $request = "DELETE FROM actus
-						WHERE idActus=".$id;
+                    $request = "DELETE FROM event
+						WHERE idEvent=".$id;
 						
                     $this->pdo->exec($request);
                 endforeach;
