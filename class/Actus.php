@@ -55,7 +55,7 @@ class Actus{
         try{
             $result = $this->pdo->query($request);
             while($ligne = $result->fetch(PDO::FETCH_ASSOC)){
-                    $actus_array[$ligne['idActus']] = $ligne;
+                $actus_array[$ligne['idActus']] = $ligne;
             }
             return $actus_array;
         }catch(PDOException $e){
