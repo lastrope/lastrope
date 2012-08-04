@@ -28,6 +28,12 @@
             include("page/footer.phtml");
 		?>
         </div>
-		<script type="text/javascript" src="public/js/function.js"></script>
+		<?php
+		if($_SERVER['REQUEST_URI'] == '/fr-contact' || $_SERVER['REQUEST_URI'] == '/en-contact'){
+		?>
+			<script type="text/javascript" src="public/js/function.js"></script>
+		<?php
+		}
+		?>
     </body>
 </html>

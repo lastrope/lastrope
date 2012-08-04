@@ -66,31 +66,28 @@
 </div>
 <script type="text/javascript">
     function eventCarousel(section){
-	
-	$('#event section').hide();
-	var id = $('section.active_carousel').attr('id');
-	var id_number = id.split('-');
-	
-	if(id_number[1] < section && id_number[1] != "" ){
-	    $('section.active_carousel').next().addClass('active_carousel').fadeIn(500);
-	    $('section.active_carousel').each(function(){
-		$(this).prev().removeClass('active_carousel');
-	    });
-	    
-	}else if(section == id_number[1] ){
-	    $('section.active_carousel').removeClass('active_carousel');
-	    $('#event-1').addClass('active_carousel').fadeIn(500);
-	}
+		$('#event section').hide();
+		var id = $('section.active_carousel').attr('id');
+		var id_number = id.split('-');
+		
+		if(id_number[1] < section && id_number[1] != "" ){
+			$('section.active_carousel').next().addClass('active_carousel').fadeIn(500);
+			$('section.active_carousel').each(function(){
+			$(this).prev().removeClass('active_carousel');
+			});
+			
+		}else if(section == id_number[1] ){
+			$('section.active_carousel').removeClass('active_carousel');
+			$('#event-1').addClass('active_carousel').fadeIn(500);
+		}
     }
     $(document).ready(function(){
-	var nb_section = 0;
-	$('#event section').each(function(){
-	    nb_section++;
-	});
-	if(nb_section > 1){
-	    setInterval("eventCarousel("+nb_section+")",4000);
-	}
-	
-	
+		var nb_section = 0;
+		$('#event section').each(function(){
+			nb_section++;
+		});
+		if(nb_section > 1){
+			setInterval("eventCarousel("+nb_section+")",4000);
+		}
     });
 </script>

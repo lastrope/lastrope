@@ -7,8 +7,19 @@ $(document).ready(function(){
     var divContact = $('#contact');
 	
 	var effet = 'easeOutElastic';
-	var default_left = Math.round($('li.selected').offset().left - $('#header').offset().left);
-	var default_width = $('li.selected').width();
+	var temoin = false;
+	$('li').each(function(){
+		if($(this).hasClass('selected')){
+			temoin = true;
+		}
+	});
+	if(temoin){
+		var default_left = Math.round($('li.selected').offset().left - $('#header').offset().left);
+		var default_width = $('li.selected').width();
+	} else {
+		default_left = 0;
+		default_width = 0;
+	}
 	var default_active = divNews;
 	
 	$('#box').css({left: default_left});

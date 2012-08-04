@@ -5,8 +5,6 @@
 	$tag_langue = isset($_SESSION['langue'])?$_SESSION['langue']:'fr';
 ?>
 <div id="conteneur">
-
-
     <div id="article" class="jScrollbar3">
 	<div class="jScrollbar_mask">
 	    <?php
@@ -14,12 +12,12 @@
 	    foreach ($actusInformation as $this_actu) {
 		?>
     	    <article>
-    		<div class="titre"><?php echo $this_actu['title']; ?></div>
-    		<div class="content_article">
-    		    <p>
-			    <?php echo $this_actu['body']; ?>
-    		    </p>
-    		</div>
+				<div class="titre"><?php echo $this_actu['title']; ?></div>
+				<div class="content_article">
+					<p>
+					<?php echo $this_actu['body']; ?>
+					</p>
+				</div>
     	    </article>
 		<?php
 	    }
@@ -32,6 +30,4 @@
 
 	<div class="clr"></div>
     </div>
-
-
 </div>
