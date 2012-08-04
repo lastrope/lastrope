@@ -216,17 +216,84 @@ section .content_event{
 #contact_page{
 	margin: auto;
 	width: 555px;
-	height:290px;
+	height:295px;
 	background: #D6D6D6;
 }
-#contact_page textarea{
-	width:100%;
-	height:100px;
+#contact_page input[type=text]{
+	float:left; 
 }
-.label_form{
-	line-height: 30px;
+#contact_page textarea{
+	min-width:400px;
+	max-width:400px;
+	height:100px;
+	max-height:100px;
+}
+#contact_page .label_form{
+	display: block;
+	float:left;
+	
+	height: 30px;
+	width: 100px;
+	
 	font-family: 'Ubuntu-C';
 	color: #242424;
+}
+#contact_page .button{
+	display: block;
+	margin: 5px auto;
+    font-family: 'Ubuntu-C';
+    color: #fff;
+	cursor: pointer;
+    padding: 7px 10px;
+	
+    border: 2px solid #303030;
+    background-color: #303030;
+    
+    box-shadow:	inset 1px 0 4px rgba(30,30,30,0.6),
+				inset -1px 0 4px rgba(30,30,30,0.6),
+                0 -2px 4px rgba(0,0,0,0.6),
+                2px 0 4px rgba(0,0,0,0.6);
+    -o-box-shadow:	inset 1px 0 4px rgba(30,30,30,0.6),
+					inset -1px 0 4px rgba(30,30,30,0.6),
+					0 -2px 4px rgba(0,0,0,0.6),
+					2px 0 4px rgba(0,0,0,0.6);
+    -ms-box-shadow: inset 1px 0 4px rgba(30,30,30,0.6),
+					inset -1px 0 4px rgba(30,30,30,0.6),
+					0 -2px 4px rgba(0,0,0,0.6),
+					2px 0 4px rgba(0,0,0,0.6);
+    -moz-box-shadow:inset 1px 0 4px rgba(30,30,30,0.6),
+					inset -1px 0 4px rgba(30,30,30,0.6),
+					0 -2px 4px rgba(0,0,0,0.6),
+					2px 0 4px rgba(0,0,0,0.6);
+    -webkit-box-shadow:	inset 1px 0 4px rgba(30,30,30,0.6),
+						inset -1px 0 4px rgba(30,30,30,0.6),
+						0 -2px 4px rgba(0,0,0,0.6),
+						2px 0 4px rgba(0,0,0,0.6);
+}
+#contact_page .button:hover{
+	opacity: 0.9;
+}
+#contact_page .button:active{
+	box-shadow:	inset 4px 0 4px rgba(30,30,30,0.6),
+				inset -4px 0 4px rgba(30,30,30,0.6),
+                0 2px 4px rgba(0,0,0,0.6),
+                2px 0 4px rgba(0,0,0,0.6);
+    -o-box-shadow:	inset 4px 0 4px rgba(30,30,30,0.6),
+					inset -4px 0 4px rgba(30,30,30,0.6),
+					0 2px 4px rgba(0,0,0,0.6),
+					2px 0 4px rgba(0,0,0,0.6);
+    -ms-box-shadow: inset 4px 0 4px rgba(30,30,30,0.6),
+					inset -4px 0 4px rgba(30,30,30,0.6),
+					0 2px 4px rgba(0,0,0,0.6),
+					2px 0 4px rgba(0,0,0,0.6);
+    -moz-box-shadow:inset 4px 0 4px rgba(30,30,30,0.6),
+					inset -4px 0 4px rgba(30,30,30,0.6),
+					0 2px 4px rgba(0,0,0,0.6),
+					2px 0 4px rgba(0,0,0,0.6);
+    -webkit-box-shadow:	inset 4px 0 4px rgba(30,30,30,0.6),
+						inset -4px 0 4px rgba(30,30,30,0.6),
+						0 2px 4px rgba(0,0,0,0.6),
+						2px 0 4px rgba(0,0,0,0.6);
 }
 /* Header */
 #language{
@@ -325,4 +392,63 @@ footer{
 	width: 200px;
 	height: 155px;
 	margin: -100px auto 0 auto;
+}
+/*SOCIAL*/
+#social,#useful_links{
+	width: 300px;
+	height: 500px;
+	background:#fff;
+	position: absolute;
+	top:-130px;
+	
+	border-radius:300px;
+	-moz-border-radius:300px;
+	-webkit-border-radius:300px;
+	-o-border-radius:300px;
+	-ms-border-radius:300px;
+	
+	font-family: helvetica;
+	font-size:18px;
+	color: #7F554E;
+	text-align:center;
+}
+#useful_links{
+	right:10px;
+	border-top:1px solid #bbb;
+	border-right:1px solid #bbb;
+	border-bottom:1px solid #111;
+	border-left:1px solid #111;
+}
+#social{
+	left:10px;
+	border-top:1px solid #bbb;
+	border-left:1px solid #bbb;
+	border-bottom:1px solid #111;
+	border-right:1px solid #111;
+}
+/*TOOLTIP FORMULAIRE*/
+.incorrect 
+{
+	border-color: rgba(127, 85, 78, 0.75);
+}
+
+.incorrect:focus 
+{
+	border-color: rgba(127, 85, 75, 0.75);
+	-moz-box-shadow: 0 0 10px rgba(127, 85, 75, 0.5);
+	-webkit-box-shadow: 0 0 10px rgba(127, 85, 75, 0.5);
+	box-shadow: 0 0 10px rgba(127, 85, 75, 0.5);
+}
+
+.tooltip 
+{
+	display: block;
+	float:left;
+	
+	margin-left: 10px;
+	
+	padding: 2px 4px;
+	background-color: transparent;
+	color: #7F554E;
+	font-family: 'Ubuntu-C';
 }

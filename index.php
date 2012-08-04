@@ -28,5 +28,6 @@
             include("page/footer.phtml");
 		?>
         </div>
+		<script type="text/javascript" src="public/js/function.js"></script>
     </body>
 </html>
