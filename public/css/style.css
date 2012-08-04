@@ -79,6 +79,10 @@ textarea{
 }
 fieldset{
 	padding: 5px;
+	margin: 5px;
+}
+legend{
+	color: #7F554E;
 }
 input::-webkit-input-placeholder {
 	font-size: 14px;
@@ -208,6 +212,21 @@ section .content_event{
 	margin-top:20px;
 	font-size: 14px;
 	line-height:22px;
+}
+#contact_page{
+	margin: auto;
+	width: 555px;
+	height:290px;
+	background: #D6D6D6;
+}
+#contact_page textarea{
+	width:100%;
+	height:100px;
+}
+.label_form{
+	line-height: 30px;
+	font-family: 'Ubuntu-C';
+	color: #242424;
 }
 /* Header */
 #language{
