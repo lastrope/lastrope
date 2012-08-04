@@ -199,9 +199,13 @@ article .content_article{
 }
 section {
 	margin-left: 12px;
-    margin-top: 40px;
-    width: 275px;
+	margin-top: 40px;
+	width: 275px;
 	height:150px;
+	display:none;
+}
+#event section:first-child{
+	display:block
 }
 section .titre{
 	font-family: helvetica;
