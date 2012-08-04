@@ -193,6 +193,12 @@ article .content_article{
 	font-size: 14px;
 	line-height:22px;
 }
+section {
+	margin-left: 12px;
+    margin-top: 40px;
+    width: 275px;
+	height:150px;
+}
 section .titre{
 	font-family: helvetica;
 	font-size:25px;
