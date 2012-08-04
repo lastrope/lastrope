@@ -43,9 +43,10 @@
 	<div id="event">
 		<?php
 			//affichage des 5 récents events ( concerts , etc ... )
+			$compteur = 1;
 			foreach($eventInformation as $this_event){
 		?>
-		<section>
+		<section id="event-<?php echo $compteur; ?>" <?php if($compteur == 1)echo "class='active_carousel'"; ?>>
 			<div class="titre">
 				<?php echo $this_event['title']; ?>
 			</div>
@@ -57,7 +58,39 @@
 			</div>
 		</section>
 		<?php 
+			
+			    $compteur++;
 			}
 		?>
 	</div>
 </div>
+<script type="text/javascript">
+    function eventCarousel(section){
+	
+	$('#event section').hide();
+	var id = $('section.active_carousel').attr('id');
+	var id_number = id.split('-');
+	
+	if(id_number[1] < section && id_number[1] != "" ){
+	    $('section.active_carousel').next().addClass('active_carousel').fadeIn(500);
+	    $('section.active_carousel').each(function(){
+		$(this).prev().removeClass('active_carousel');
+	    });
+	    
+	}else if(section == id_number[1] ){
+	    $('section.active_carousel').removeClass('active_carousel');
+	    $('#event-1').addClass('active_carousel').fadeIn(500);
+	}
+    }
+    $(document).ready(function(){
+	var nb_section = 0;
+	$('#event section').each(function(){
+	    nb_section++;
+	});
+	if(nb_section > 1){
+	    setInterval("eventCarousel("+nb_section+")",4000);
+	}
+	
+	
+    });
+</script>
