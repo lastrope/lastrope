@@ -1,3 +1,16 @@
+/** Titi 10/08/2012 **/
+Ajout de la partie réseaux sociaux sur la page contact avec transition css3
+Ajout de la page index_ie.php afin de prévenir les utilisateurs d'IE que le site n'est pas optimisé pour IE
+Modification de index.php pour rediriger les utilisateurs d'IE vers index_ie.php pour les prévenir
+Ajout d'une variable de session pour que la redirection ne se fasse qu'une fois
+Ajout d'une condition pour le responsive qui sera inactif si l'utilisateur utilise IE
+Ajout de <div> englobant les balise <header> <footer> <section> <article> pour la compatiblité avec IE
+Ajout d'une feuille de style pour IE
+Modification du script du scroll pour fonctionnement sur IE
+Ajout d'un Event pour voir le script de la home page fonctionner
+Ajout d'un text shadows sur l'onglet actif
+Ajout du footer
+
 /** Titi 03/08/2012 **/
 Nouveau rollover sur le menu
 Correction de toutes les classes (commentaires, fonction, indentation, arguments...etc)

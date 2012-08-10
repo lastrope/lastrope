@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Sam 04 Août 2012 à 17:19
+-- Généré le: Ven 10 Août 2012 à 16:06
 -- Version du serveur: 5.5.24-log
 -- Version de PHP: 5.3.13
 
@@ -57,7 +57,7 @@ CREATE TABLE IF NOT EXISTS `event` (
   `type` varchar(11) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `lang` varchar(2) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`idEvent`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 --
 -- Contenu de la table `event`
@@ -65,7 +65,9 @@ CREATE TABLE IF NOT EXISTS `event` (
 
 INSERT INTO `event` (`idEvent`, `title`, `short_desc`, `date`, `type`, `lang`) VALUES
 (1, 'Concert Epinay-sur-Orge !', 'On vous donne rdv le 30 Juin 2012 à Epinay sur orge pour un concert des Lastrope.', '30/06/2012', 'co', 'fr'),
-(2, 'Gig in Epinay-sur-Orge', 'We look forward to seeing you on June the 30th 2012 in Epinay-sur-Orge for a Lastrope gig.', '30/06/2012', 'co', 'en');
+(2, 'Gig in Epinay-sur-Orge', 'We look forward to seeing you on June the 30th 2012 in Epinay-sur-Orge for a Lastrope gig.', '30/06/2012', 'co', 'en'),
+(3, 'Concert Roinville !', 'On vous donne rdv le 23 Juin 2012 à Roinville pour un concert des Lastrope.', '23/06/2012', 'co', 'fr'),
+(4, 'Gig in Roinville', 'We look forward to seeing you on June the 23rd 2012 in Roinville for a Lastrope gig.', '23/06/2012', 'co', 'en');
 
 -- --------------------------------------------------------
 
@@ -102,7 +104,7 @@ CREATE TABLE IF NOT EXISTS `links` (
   `href` mediumtext COLLATE utf8_unicode_ci NOT NULL,
   `lang` varchar(2) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`idLinks`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=11 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=13 ;
 
 --
 -- Contenu de la table `links`
@@ -118,7 +120,9 @@ INSERT INTO `links` (`idLinks`, `text`, `href`, `lang`) VALUES
 (7, 'Son', 'sound', 'fr'),
 (8, 'Sound', 'sound', 'en'),
 (9, 'Contact', 'contact', 'fr'),
-(10, 'Contact', 'contact', 'en');
+(10, 'Contact', 'contact', 'en'),
+(11, 'Accueil', 'home', 'fr'),
+(12, 'Home', 'home', 'en');
 
 -- --------------------------------------------------------
 

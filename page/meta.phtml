@@ -17,15 +17,20 @@
 <meta name="Distribution" content="global">
 <meta name="Geography" content="Paris, France, 75010">
 
+<!-- Fav icone -->
 <link rel="icon" type="image/png" href="public/img/favicon.png" />
 <!--[if IE]>
     <link rel="shortcut icon" type="image/x-icon" href="public/img/favico.ico" />
- <![endif]-->
+<![endif]-->
 
-<!-- Required CSS -->
+<!-- REQUIRED CSS -->
 <link rel="stylesheet" href="public/css/style.css" media="screen" type="text/css">
 <!-- For scroll -->
 <link rel="stylesheet" href="public/css/jScrollbar.jquery.css" type="text/css" />
+<!-- For social transition -->
+<link rel="stylesheet" type="text/css" href="public/css/common.css" />
+<link rel="stylesheet" type="text/css" href="public/css/style2.css" />
+
 <style type="text/css">
 	body {
 		margin:0px;
@@ -33,11 +38,9 @@
 	.jScrollbar3
 	{margin:10px}
 </style>
-
-<!--[if lt IE 7]>
-	<style type="text/css">
-		
-	</style>
+<!-- REQUIRED CSS IF BADASS IE -->
+<!--[if lt IE 9]>
+	<link rel="stylesheet" href="public/css/style_IE.css" media="screen" type="text/css">
 <![endif]-->
 
 <!-- Required script -->
@@ -48,12 +51,16 @@
 <script type="text/javascript" src="public/js/jquery-ui.js"></script>        
 <script type="text/javascript" src="public/js/jquery-mousewheel.js"></script>
 <script type="text/javascript" src="public/js/jScrollbar.jquery.js"></script>
+<!-- For social transition -->
+<script type="text/javascript" src="public/js/modernizr.custom.79639.js"></script> 
 <script type="text/javascript">
 	// Active the scrollbar
 	$(document).ready(function(){
 		$('.jScrollbar3').jScrollbar();
 	});
 </script>
+<!-- No responsive if IE -->
+<!--[if !IE]><!-->
 <script type="text/javascript">
 	// Active the scrollbar
 	$(document).ready(function(){
@@ -80,8 +87,9 @@
 			}
 			if($('body').height() < 700){
 				$('footer').empty();
+				$('footer').html('<div id="footer_block"><div id="footer"><p class="foot_left"><?php echo COPYRIGHT;?></p><p class="foot_right"><?php echo SACEM; ?></p></div></div>');
 			}else if($('body').height() > 700){
-				$('footer').html('<div id="complement_back"><div id="footer"></div><div id="copyright"></div></div>');
+				$('footer').html('<div id="footer_block"><div id="complement_back"><div id="footer"><p class="foot_left"><?php echo COPYRIGHT;?></p><p class="foot_right"><?php echo SACEM; ?></p></div><div id="copyright"></div></div></div>');
 			}
 		});
 		// Responsive design function on resize
@@ -107,9 +115,11 @@
 			}
 			if($('body').height() < 700){
 				$('footer').empty();
+				$('footer').html('<div id="footer_block"><div id="footer"><p class="foot_left"><?php echo COPYRIGHT;?></p><p class="foot_right"><?php echo SACEM; ?></p></div></div>');
 			}else if($('body').height() > 700){
-				$('footer').html('<div id="complement_back"><div id="footer"></div><div id="copyright"></div></div>');
+				$('footer').html('<div id="footer_block"><div id="complement_back"><div id="footer"><p class="foot_left"><?php echo COPYRIGHT;?></p><p class="foot_right"><?php echo SACEM; ?></p></div><div id="copyright"></div></div></div>');
 			}
 		});
 	});
 </script>
+<!--<![endif]-->

@@ -6,6 +6,7 @@
 	$actual_url = ($_SERVER['REQUEST_URI'] == '/'?'/'.$tag_langue.'-home':$_SERVER['REQUEST_URI']);
 ?>
 <header>
+<div id="header_block">
 	<div id="complement">
 		<div id="language">
 			<a href="set_language.php?lang=en" title="English Version">
@@ -48,4 +49,5 @@
 			</a>
 		</div>
 	</div>
+</div>
 </header>

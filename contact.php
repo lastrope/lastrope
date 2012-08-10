@@ -1,13 +1,28 @@
 <div id="conteneur">
 	<div id="social">
-		<div id="facebook">
-		</div>
-		<div id="twitter">
-		</div>
-		<div id="bandcamp">
-		</div>
-		<div id="noomiz">
-		</div>
+		<ul class="ch-grid">
+			<li>
+				<div class="ch-item ch-img-1">
+					<div class="ch-info">
+						<h3><a href="#">Facebook</a></h3>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="ch-item ch-img-2">
+					<div class="ch-info">
+						<h3><a href="#">Twitter</a></h3>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="ch-item ch-img-3">
+					<div class="ch-info">
+						<h3><a href="#">Noomiz</a></h3>
+					</div>
+				</div>
+			</li>
+		</ul>
 	</div>
 	
 	<div id="contact_page">

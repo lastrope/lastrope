@@ -21,12 +21,14 @@
 				foreach($actusInformation as $this_actu){
 			?>
 			<article>
+			<div class="article_block">
 				<div class="titre"><?php echo $this_actu['title']; ?></div>
 				<div class="content_article">
 					<p>
 						<?php echo $this_actu['body']; ?>
 					</p>
 				</div>
+			</div>
 			</article>
 			<?php
 				}
@@ -47,6 +49,7 @@
 			foreach($eventInformation as $this_event){
 		?>
 		<section id="event-<?php echo $compteur; ?>" <?php if($compteur == 1)echo "class='active_carousel'"; ?>>
+		<div class="section_block">
 			<div class="titre">
 				<?php echo $this_event['title']; ?>
 			</div>
@@ -56,6 +59,7 @@
 			<div class="date_event">
 				<?php echo $this_event['date']; ?>
 			</div>
+		</div>
 		</section>
 		<?php 
 			
@@ -65,7 +69,7 @@
 	</div>
 </div>
 <script type="text/javascript">
-    function eventCarousel(section){
+	function eventCarousel(section){
 		$('#event section').hide();
 		var id = $('section.active_carousel').attr('id');
 		var id_number = id.split('-');
@@ -73,9 +77,8 @@
 		if(id_number[1] < section && id_number[1] != "" ){
 			$('section.active_carousel').next().addClass('active_carousel').fadeIn(500);
 			$('section.active_carousel').each(function(){
-			$(this).prev().removeClass('active_carousel');
+				$(this).prev().removeClass('active_carousel');
 			});
-			
 		}else if(section == id_number[1] ){
 			$('section.active_carousel').removeClass('active_carousel');
 			$('#event-1').addClass('active_carousel').fadeIn(500);

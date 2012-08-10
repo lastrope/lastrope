@@ -1,0 +1,54 @@
+#header_block{
+	margin-top:0;
+	width:100%;
+	min-width:975px;
+	height:80px;
+	background:#111 url(../media/image/metal_header2.png) left top repeat-x;
+	z-index: 999999;
+}
+#footer_block{
+	position: absolute;
+	bottom:0;
+	margin-top:0;
+	width:100%;
+	min-width:975px;
+	height:80px;
+	background:#111 url(../media/image/metal_header2.png) left top repeat-x;
+}
+#footer_block p {
+	color: #fff;
+	margin-top: 40px;
+	font-family: helvetica;
+}
+.section_block {
+	margin-left: 12px;
+	margin-top: 40px;
+	width: 275px;
+	height:150px;
+	display:none;
+}
+.section_block .titre{
+	font-family: helvetica;
+	font-size:25px;
+	color: #7F554E;
+}
+.section_block .content_event{
+	margin-top:20px;
+	font-size: 14px;
+	line-height:22px;
+}
+#event .section_block:first-child{
+	display:block
+}
+.article_block .titre{
+	font-family: helvetica;
+	font-size:25px;
+	color: #7F554E;
+	margin-bottom:20px;
+}
+.article_block .content_article{
+	font-family: ubuntu-c,corbel,georgia;
+	text-align:justify;
+	font-size: 14px;
+	line-height:22px;
+}

@@ -4,7 +4,11 @@
         
 	$header = new Header($pdo, $session->read('langue'));
 	$headerInformation = $header->getAllHeaderInformation();
-        
+	
+	if(preg_match("/MSIE/", $_SERVER["HTTP_USER_AGENT"]) === 1 && $_SESSION['IE_for_first_time']){
+		header("location: index_ie.php");
+		$_SESSION['IE_for_first_time'] = false;
+	}   
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -31,7 +35,7 @@
 		<?php
 		if($_SERVER['REQUEST_URI'] == '/fr-contact' || $_SERVER['REQUEST_URI'] == '/en-contact'){
 		?>
-			<script type="text/javascript" src="public/js/function.js"></script>
+			<script type="text/javascript" src="public/js/formulaire.js"></script>
 		<?php
 		}
 		?>

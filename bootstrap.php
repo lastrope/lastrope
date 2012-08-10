@@ -13,6 +13,10 @@ if($session->read('langue') === null){
     // En cas de non existance , création de la variable session en FR
     $session->write('langue','fr');
 }
+if($session->read('IE_for_first_time') === null){
+    // En cas de non existance , création de la variable session en FR
+    $session->write('IE_for_first_time','true');
+}
 require 'lang/' .$_SESSION['langue']. '.php';
 
 // Récupération du nom de la page

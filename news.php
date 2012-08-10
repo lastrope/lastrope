@@ -12,12 +12,14 @@
 	    foreach ($actusInformation as $this_actu) {
 		?>
     	    <article>
+			<div class="article_block">
 				<div class="titre"><?php echo $this_actu['title']; ?></div>
 				<div class="content_article">
 					<p>
 					<?php echo $this_actu['body']; ?>
 					</p>
 				</div>
+			</div>
     	    </article>
 		<?php
 	    }
