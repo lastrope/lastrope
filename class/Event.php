@@ -22,9 +22,10 @@ class Event{
 	 * @return array $event_array ( assoc )
      */
     public function getAllEvent(){
-        $request = "SELECT idEvent, title, short_desc , date, type
+        $request = "SELECT idEvent, title, body , date, type
 			FROM event
-			WHERE lang='".$this->lang."'";
+			WHERE lang='".$this->lang."'
+			ORDER BY date DESC";
 		
         $event_array = array();
 		
@@ -45,7 +46,7 @@ class Event{
 	 * @return array $event_array ( assoc )
      */
 	public function getLastFiveEvent(){
-        $request = "SELECT idEvent, title, short_desc , date, type
+        $request = "SELECT idEvent, title, body , date, type
 			FROM event
 			WHERE lang='".$this->lang."'
 			LIMIT 5";
@@ -70,7 +71,7 @@ class Event{
 	 * @return array $event_array ( assoc )
      */
     public function getEventById($id){
-        $request = "SELECT idEvent, title, short_desc , date, type
+        $request = "SELECT idEvent, title, body , date, type
 			FROM event
 			WHERE idEvent=".$id;
 		
@@ -90,7 +91,7 @@ class Event{
     /*
      * addEvent
      * Permet d'ajouter des évènements
-     * Attend un tableau indexé sur les index : title, short_desc, type, lang
+     * Attend un tableau indexé sur les index : title, body, type, lang
 	 * @param $event ( array )
 	 * @return $this
      */
@@ -98,12 +99,12 @@ class Event{
          if(isset($event)):
             // Transformation de tous les caractère spéciaux par leur entités html
             $title = htmlspecialchars($event['title']);
-            $short_desc = htmlspecialchars($event['short_desc']);
+            $body = htmlspecialchars($event['body']);
             $type = htmlspecialchars($event['type']);
             $langue = htmlspecialchars($event['lang']);
               
-            $request = "INSERT INTO event(title,short_desc,type,date,lang) ";
-            $request .= 'VALUES("'.$title.'","'.$short_desc.'","'.$type.'",'.time().',"'.$langue.'")';
+            $request = "INSERT INTO event(title,body,type,date,lang) ";
+            $request .= 'VALUES("'.$title.'","'.$body.'","'.$type.'",'.time().',"'.$langue.'")';
 			
             try{
                 $this->pdo->exec($request);

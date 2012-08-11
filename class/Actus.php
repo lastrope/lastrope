@@ -24,7 +24,8 @@ class Actus{
     public function getAllActus(){
         $request = "SELECT idActus, title, body , date
 			FROM actus
-			WHERE lang='".$this->lang."'";
+			WHERE lang='".$this->lang."'
+			ORDER BY date DESC";
 		
         $actus_array = array();
 		

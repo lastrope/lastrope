@@ -36,7 +36,7 @@ lang		= varchar(2)
 /** TABLE EVENT **/
 idEvent     = id autoincrémenté
 title       = titre de l'event
-short_desc  = corps de l'event
-date        = varchar(11)
+body		= corps de l'event
+date        = int(11) pour recevoir le timestamp de la fonction time() 
 type		= varchar(11) 
 lang		= varchar(2)

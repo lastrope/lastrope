@@ -32,7 +32,7 @@
 					<a href="set_language.php?lang=en" title="English Version">
 						<img src="public/media/image/flag_en.png" />
 					</a>
-					<a href="set_language.php?lang=fr" title="Version Française">
+					<a href="set_language.php?lang=fr" title="Version FranÃ§aise">
 						<img src="public/media/image/flag_fr.png" />
 					</a>
 				</div>

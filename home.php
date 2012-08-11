@@ -1,11 +1,13 @@
 <?php
 	require_once 'class/Actus.php';
 	require_once 'class/Event.php';
+	
 	$actus = new Actus($pdo,$session->read('langue'));
 	$actusInformation = $actus->getLastFiveActus();
-	$tag_langue = isset($_SESSION['langue'])?$_SESSION['langue']:'fr';
 	$event = new Event($pdo,$session->read('langue'));
 	$eventInformation = $event->getLastFiveEvent();
+	
+	$tag_langue = isset($_SESSION['langue'])?$_SESSION['langue']:'fr';
 ?>
 <div id="conteneur">
 	<div id="welcome">
@@ -54,7 +56,7 @@
 				<?php echo $this_event['title']; ?>
 			</div>
 			<div class="content_event">
-				<?php echo $this_event['short_desc']; ?>
+				<?php echo $this_event['body']; ?>
 			</div>
 			<div class="date_event">
 				<?php echo $this_event['date']; ?>
