@@ -126,18 +126,13 @@ textarea:-moz-placeholder {
 	background:#fff;
 	position: absolute;
 	top:0;
-	left:0;
+	left:10px;
 	
 	border-radius:300px;
 	-moz-border-radius:300px;
 	-webkit-border-radius:300px;
 	-o-border-radius:300px;
 	-ms-border-radius:300px;
-	
-	border-top:1px solid #bbb;
-	border-left:1px solid #bbb;
-	border-bottom:1px solid #111;
-	border-right:1px solid #111;
 	
 	font-family: helvetica;
 	font-size:18px;
@@ -161,18 +156,12 @@ textarea:-moz-placeholder {
 	background:#fff;
 	position: absolute;
 	top:0;
-	right:0;
+	right:10px;
 	
 	border-radius:300px;
 	-moz-border-radius:300px;
 	-webkit-border-radius:300px;
 	-o-border-radius:300px;
-	-ms-border-radius:300px;
-	
-	border-top:1px solid #bbb;
-	border-right:1px solid #bbb;
-	border-bottom:1px solid #111;
-	border-left:1px solid #111;
 	
 	font-family: 'Ubuntu-C';
 	font-size: 20px;
@@ -417,15 +406,8 @@ footer p {
 #social,#useful_links{
 	width: 300px;
 	height: 500px;
-	background:#fff;
 	position: absolute;
 	top:-130px;
-	
-	border-radius:300px;
-	-moz-border-radius:300px;
-	-webkit-border-radius:300px;
-	-o-border-radius:300px;
-	-ms-border-radius:300px;
 	
 	font-family: helvetica;
 	font-size:18px;
@@ -434,23 +416,15 @@ footer p {
 }
 #useful_links{
 	right:10px;
-	border-top:1px solid #bbb;
-	border-right:1px solid #bbb;
-	border-bottom:1px solid #111;
-	border-left:1px solid #111;
 }
 #social{
 	left:10px;
-	border-top:1px solid #bbb;
-	border-left:1px solid #bbb;
-	border-bottom:1px solid #111;
-	border-right:1px solid #111;
 }
 #warning{
 	margin:auto;
 	width: 800px;
 	height:350px;
-	background:rgba(127,85,79,0.6);
+	background:rgb(127,85,79);
 	text-align: center;
 	padding-top: 250px;
 	

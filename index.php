@@ -8,7 +8,7 @@
 	if(preg_match("/MSIE/", $_SERVER["HTTP_USER_AGENT"]) === 1 && $_SESSION['IE_for_first_time']){
 		header("location: index_ie.php");
 		$_SESSION['IE_for_first_time'] = false;
-	}   
+	}
 ?>
 <!DOCTYPE HTML>
 <html>
