@@ -104,6 +104,28 @@ textarea:-moz-placeholder {
     font-style: italic;
     color: #bbb;
 }
+/* Loader */
+#top_loader,
+#bottom_loader{
+    background:#111 url(../media/image/metal_header2.png) ;
+    position:absolute;
+    width:100%;
+    z-index:888;    
+}
+#top_loader{
+    top:0;
+}
+#bottom_loader{
+    bottom:0;
+}
+#logo_loader{
+    position:absolute;
+    z-index:999;
+    background: url(../media/image/logo2.png)center center  no-repeat ;
+    height:155px;
+    width:155px;
+    
+}
 /* Corps */
 #corps{
 	width: 100%;
@@ -226,6 +248,24 @@ section .content_event{
 	margin-top:20px;
 	font-size: 14px;
 	line-height:22px;
+}
+.published{
+    font-size:0.8em;
+    font-style:italic;
+}
+#mail_confirm,
+#mail_error{
+    width: 545px;
+    margin:2px auto;
+    padding:5px;
+    color:#fff;
+    text-align:center;
+}
+#mail_error{
+    background:#7F554E;
+}
+#mail_confirm{
+    background:#3C4E70;
 }
 #contact_page{
 	margin: auto;
