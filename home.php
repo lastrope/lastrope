@@ -9,6 +9,7 @@
 	
 	$tag_langue = isset($_SESSION['langue'])?$_SESSION['langue']:'fr';
 ?>
+
 <div id="conteneur">
 	<div id="welcome">
 		<p>
@@ -59,7 +60,7 @@
 				<?php echo $this_event['body']; ?>
 			</div>
 			<div class="date_event">
-				<?php echo $this_event['date']; ?>
+				<?php echo "<p class='published'>".DATE_PUBLISHED." " , date("d/m/Y ".AT." H:i:s",$this_event['date']) , "</p>"; ?>
 			</div>
 		</div>
 		</section>
