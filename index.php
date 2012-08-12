@@ -18,8 +18,16 @@
 			// La page à modifier pour inclure le CSS le JS et les balises meta
             include("page/meta.phtml");
         ?>
+		<script type="text/javascript">
+		    
+		</script>
     </head>
-    <body>
+    <body <?php echo (isset($_SESSION['loader']) && $_SESSION['loader'] != 'off' ? 'onload="loader()"':"") ; ?> >
+		<?php if(isset($_SESSION['loader']) && $_SESSION['loader'] == 'on'){ ?>
+		<div id="top_loader"></div>
+		<div id="logo_loader"></div>
+		<div id="bottom_loader"></div>
+		<?php } ?>
 		<div id="corps">
         <?php
 			// La page a modifier pour le header
