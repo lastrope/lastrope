@@ -32,19 +32,21 @@ if ($nomProvenance && $mailProvenance && $messageProvenance) {
 	$mail->setSubject($subject);
 	// Envoie du mail + message d'erreur ou confirmation
 	if ($mail->sendMail()) {
-	    $session->write('mail_statement', 'L \'envoi de l\'email s\'est correctemnt déroulé');
+	    $session->write('mail_statement_confirm', 'L \'envoi de l\'email s\'est correctemnt déroulé');
 	    // Supprime les sessions de préremplissage du formulaire 
 	    $session->write('contact_nom', '');
 	    $session->write('contact_mail', '');
 	    $session->write('contact_message', '');
 	} else {
-	    $session->write('mail_statement', 'Un problème est survenu, réessayez S.V.P');
+	    $session->write('mail_statement_error', 'Un problème est survenu, réessayez S.V.P');
 	}
+    }else{
+	    $session->write('mail_statement_error', 'L\'email est incorrect, réessayez S.V.P');
     }
     // redirection vers la page parente
     header('Location: ' . $_SERVER['HTTP_REFERER']);
 } else {
-    $session->write('mail_statement', 'Un problème est survenu, réessayez S.V.P');
+    $session->write('mail_statement_error', 'Un problème est survenu, réessayez S.V.P');
     header('Location: ' . $_SERVER['HTTP_REFERER']);
 }
     
