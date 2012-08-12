@@ -24,9 +24,15 @@
 			</li>
 		</ul>
 	</div>
-	
+	<?php 
+	    if(isset($_SESSION['mail_statement_confirm']) && $_SESSION['mail_statement_confirm'] != ""){ 
+		echo "<p id='mail_confirm'>" , $_SESSION['mail_statement_confirm'] , "</p>";
+	    }else if(isset($_SESSION['mail_statement_error']) && $_SESSION['mail_statement_error'] != ""){
+		echo "<p id='mail_error'>" , $_SESSION['mail_statement_error'] , "</p>";
+	    }
+	?>
 	<div id="contact_page">
-		<?php echo isset($_SESSION['mail_statement'])?$_SESSION['mail_statement']:null; ?>
+		
 		
 		<form id="form_contact" action="script/mailme.php" method="post">
 			<fieldset>
