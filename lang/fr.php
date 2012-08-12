@@ -23,5 +23,6 @@
 	define("ADVICE_BROWSER","Actuellement sur Internet Explorer, vous ne pourrez pas profiter au maximum de notre site web.");
 	define("CHECK_OTHER_BROWSER","Vous pouvez télécharger <a href=\"http://www.mozilla.org/fr/firefox/new/\">Mozilla Firefox ici</a> ou <a href=\"https://www.google.com/intl/fr/chrome/browser/\">Google Chrome ici</a>");
 	define("SEE_WEBSITE_WITH_IE","<a href=\"".$_SESSION['langue']."-home\"> Retour vers le site</a>");
-
+	define("DATE_PUBLISHED",'Publié le');
+	define("AT", "à");
 ?>
