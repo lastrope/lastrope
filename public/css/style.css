@@ -144,7 +144,7 @@ textarea:-moz-placeholder {
 	margin-top: 130px;
 }
 #image_front{
-	background: #fff url(../media/image/loupe.png) center center;
+	background: #fff url(../media/image/loupe.png) center center no-repeat;
 	width: 70px;
 	height: 70px;
 	
@@ -169,7 +169,7 @@ textarea:-moz-placeholder {
 	-ms-transition-duration: 1s;
 }
 #image_front:hover{
-	background: #cecdce url(../media/image/loupe.png) center center;
+	background: #cecdce url(../media/image/loupe.png) center center no-repeat;
 	border: none;
 	margin-right: -90px;
 }
