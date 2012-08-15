@@ -153,7 +153,7 @@ textarea:-moz-placeholder {
 	background: #fff url(../media/image/loupe.png) center center no-repeat;
 	float:right;
 	margin-right: -74px;
-	border: 2px solid #D6D6D6;
+	border: 2px solid #313131;
 	border-left: 2px solid #fff;
 
 	transition-property: background,border,margin-right;
@@ -182,7 +182,7 @@ textarea:-moz-placeholder {
 	background: #313131 url(../media/image/loupe.png) center center no-repeat;
 	float:left;
 	margin-left: -74px;
-	border: 2px solid #D6D6D6;
+	border: 2px solid #fff;
 	border-right: 2px solid #313131;
 
 	transition-property: background,border,margin-left;
