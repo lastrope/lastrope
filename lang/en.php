@@ -25,5 +25,7 @@
 	define("SEE_WEBSITE_WITH_IE","<a href=\"".$_SESSION['langue']."-home\">Back to the website</a>");
 	define("DATE_PUBLISHED",'Pulished');
 	define("AT", " ");
+	define("NEWS_ADVICE", "Click on a news to print it");
+	define("ALL_NEWS", "All news");
 
 ?>

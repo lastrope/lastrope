@@ -88,6 +88,23 @@ class Actus{
         }
         return array();
     }
+	public function isActuExist($id, $title){
+        $request = "SELECT idActus, title, body , date
+			FROM actus
+			WHERE idActus=".$id." AND title='".$title."'";
+        $actus_array = array();
+		
+        try{
+            $result = $this->pdo->query($request);
+            if($ligne = $result->fetch(PDO::FETCH_ASSOC)) {
+                $actus_array = $ligne;
+            }
+            return $actus_array;
+        } catch(PDOException $e) {
+            print $e->getMessage();
+        }
+        return array();
+	}
     /*
      * addActus
      * Permet d'ajouter des actus 

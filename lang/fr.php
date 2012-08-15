@@ -25,4 +25,6 @@
 	define("SEE_WEBSITE_WITH_IE","<a href=\"".$_SESSION['langue']."-home\"> Retour vers le site</a>");
 	define("DATE_PUBLISHED",'Publié le');
 	define("AT", "à");
+	define("NEWS_ADVICE", "Cliquez sur l'actualité pour l'afficher");
+	define("ALL_NEWS", "Toutes les actualités");
 ?>

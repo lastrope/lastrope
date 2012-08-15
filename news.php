@@ -11,14 +11,19 @@
 	$size_actus = count($actusInformation);
 	$cpt_event = 0;
 	$cpt_actu = 0;
+	$cpt = 0;
 	$key_actus = array_keys($actusInformation);
 	$key_event = array_keys($eventInformation);
 	
 	$tag_langue = isset($_SESSION['langue'])?$_SESSION['langue']:'fr';
 ?>
-<div id="conteneur">
-    	<div id="selecteur" class="jScrollbar3">
-		<ul style="float:left;display:block;">
+<div id="selecteur" class="jScrollbar3" style="overflow:visible;">
+	<div id="image_front">
+	</div>
+	
+	<div id="content_bis" style="overflow:hidden;">
+		<h3><?php echo NEWS_ADVICE; ?></h3>
+		<ul>
 		<?php
 			// On veille à ne pas dépasser la taille des tableaux
 			while($cpt_event < $size_event && $cpt_actu < $size_actus) {
@@ -31,10 +36,11 @@
 					$cpt_actu++;
 				}
 		?>
-			<li>
+			<li id="news_<?php echo $cpt;?>" onclick="load_news_text('<?php echo (isset($this_actu['idActus'])?$this_actu['idActus']:$this_actu['idEvent']); ?>','<?php echo $this_actu['title']; ?>');">
 				<?php echo $this_actu['title']; ?>
 			</li>
 		<?php
+				$cpt++;
 			}
 			// On récupère les infos restantes du tableau inachevé
 			$rest_array = ($cpt_event == $size_event?$actusInformation:$eventInformation);
@@ -44,18 +50,23 @@
 			// Et on les affiche à la suite
 			while($rest_cpt < count($rest_array)){
 		?>
-			<li>
+			<li id="news_<?php echo $cpt;?>" onclick="load_news_text('<?php echo (isset($rest_array[$rest_key[$rest_cpt]]['idActus'])?$rest_array[$rest_key[$rest_cpt]]['idActus']:$rest_array[$rest_key[$rest_cpt]]['idEvent']); ?>','<?php echo addslashes($rest_array[$rest_key[$rest_cpt]]['title']) ?>');">
 				<?php echo $rest_array[$rest_key[$rest_cpt]]['title']; ?>
 			</li>
 		<?php
 				$rest_cpt++;
+				$cpt++;
 			}
 		?>
+			<li onclick="load_news_text('0','<?php echo $_SESSION['langue']; ?>');">
+				<?php echo ALL_NEWS; ?>
+			</li>
 		</ul>
 	</div>
-	
-    <div id="article" class="jScrollbar3" style="float:left;margin-left:10px;">
-	<div class="jScrollbar_mask">
+</div>
+<div id="conteneur">
+    <div id="article" class="jScrollbar3">
+	<div id="article_content" class="jScrollbar_mask">
 	    <?php
 			$cpt_event = 0;
 			$cpt_actu = 0;

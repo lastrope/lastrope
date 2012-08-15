@@ -28,7 +28,8 @@
 				<div class="titre"><?php echo $this_actu['title']; ?></div>
 				<div class="content_article">
 					<p>
-						<?php echo $this_actu['body']; ?>
+						<?php echo nl2br($this_actu['body']); ?>
+						<?php echo "<p class='published' style='float:right;background:#D6D6D6;text-align:center;'>".DATE_PUBLISHED." " , date("d/m/Y ".AT." H:i:s",$this_actu['date']) , "</p>"; ?>
 					</p>
 				</div>
 			</div>

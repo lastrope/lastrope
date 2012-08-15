@@ -88,6 +88,24 @@ class Event{
         }
         return array();
     }
+	public function isEventExist($id, $title){
+        $request = "SELECT idEvent, title, body , date, type
+			FROM event
+			WHERE idEvent=".$id." AND title='".$title."'";
+		
+        $event_array = array();
+		
+        try{
+            $result = $this->pdo->query($request);
+            if($ligne = $result->fetch(PDO::FETCH_ASSOC)) {
+                $event_array = $ligne;
+            }
+            return $event_array;
+        } catch(PDOException $e) {
+            print $e->getMessage();
+        }
+        return array();
+	}
     /*
      * addEvent
      * Permet d'ajouter des évènements

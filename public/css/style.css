@@ -137,25 +137,108 @@ textarea:-moz-placeholder {
 #conteneur{
 	z-index:1;
 	position: relative;
+	position: relative;
 	width:100%;
 	min-width:975px;
 	background:#cecdce;
 	margin-top: 130px;
 }
+#image_front{
+	background: #fff url(../media/image/loupe.png) center center;
+	width: 70px;
+	height: 70px;
+	
+	display:block;
+	float:right;
+	
+	margin-right: -70px;
+	margin-top: 90px;
+	
+	cursor:pointer;
+	border: 2px solid #D6D6D6;
+
+	transition-property: background,border,margin-right;
+	transition-duration: 1s;
+	-moz-transition-property: background,border,margin-right;
+	-moz-transition-duration: 1s;
+	-webkit-transition-property: background,border,margin-right;
+	-webkit-transition-duration: 1s;
+	-o-transition-property: background,border,margin-right;
+	-o-transition-duration: 1s;
+	-ms-transition-property: background,border,margin-right;
+	-ms-transition-duration: 1s;
+}
+#image_front:hover{
+	background: #cecdce url(../media/image/loupe.png) center center;
+	border: none;
+	margin-right: -90px;
+}
 #selecteur{
-	width:300px;
-	height:290px;
+	width:0;
+	height:100%;
 	margin: 0;
+	padding:0;
+	background: transparent url(../media/image/metal_header_vert.png) top left;
 	
 	font-family: georgia;
 	font-weight:bold;
-	color: #373737;
+	color: #cecdce;
 	
 	display:block;
-	float:left;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 100;
+
+	box-shadow: 3px 0 5px rgba(10,10,10,0.9);
+	-o-box-shadow: 3px 0 5px rgba(10,10,10,0.9);
+	-ms-box-shadow: 3px 0 5px rgba(10,10,10,0.9);
+	-webkit-box-shadow: 3px 0 5px rgba(10,10,10,0.9);
+	-moz-box-shadow: 3px 0 5px rgba(10,10,10,0.9);
+}
+#selecteur h3{
+	font-family: helvetica;
+	font-size: 14px;
+	font-style: italic;
+	color: #cecdce;
+	font-weight: normal;
+	
+	margin-bottom: 10px;
+	margin-left: 25px;
+}
+#selecteur ul{
+	display:block;
+	margin:20px auto;
+	padding-top: 10px;
+	
+	height: auto;
+	min-height:270px;
+	
+	box-shadow: 0 -3px 5px rgba(10,10,10,0.9);
+	-o-box-shadow: 0 -3px 5px rgba(10,10,10,0.9);
+	-ms-box-shadow: 0 -3px 5px rgba(10,10,10,0.9);
+	-webkit-box-shadow: 0 -3px 5px rgba(10,10,10,0.9);
+	-moz-box-shadow: 0 -3px 5px rgba(10,10,10,0.9);
 }
 #selecteur ul li{
-	margin-bottom: 10px;
+	margin: 10px 15px;
+	cursor: pointer;
+	font-size: 14px;
+	color: #fff;
+	
+	transition-property: color;
+	transition-duration: 1s;
+	-moz-transition-property: color;
+	-moz-transition-duration: 1s;
+	-webkit-transition-property: color;
+	-webkit-transition-duration: 1s;
+	-o-transition-property: color;
+	-o-transition-duration: 1s;
+	-ms-transition-property: color;
+	-ms-transition-duration: 1s;
+}
+#selecteur ul li:hover{
+	color: #7F554E;
 }
 #welcome{
 	width: 300px;
