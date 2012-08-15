@@ -107,6 +107,14 @@ $(document).ready(function(){
 			$(this).addClass('selected_answer');
 		}
 	});
+	$('#search_value_id').focus(function(){
+		$('#search_value_id').removeClass('input_text_passive');
+		$('#search_value_id').addClass('input_text_active');
+	});
+	$('#search_value_id').blur(function(){
+		$('#search_value_id').removeClass('input_text_active');
+		$('#search_value_id').addClass('input_text_passive');
+	});
 });
 function loader(){
     $('#corps').hide();

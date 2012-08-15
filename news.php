@@ -81,11 +81,19 @@
 		
 		<form id="my_news_search" action="#" method="post">
 			<label style="display:block;"><?php echo SEARCH_TYPE; ?></label><br/><br/>
-			<div class="div_answer"><?php echo A_SOUND; ?></div>
-			<div class="div_answer"><?php echo A_MEMBER; ?></div>
-			<div class="div_answer"><?php echo A_VIDEO; ?></div>
-			<div class="div_answer"><?php echo A_NEWS; ?></div>
-			<div class="div_answer"><?php echo AN_EVENT; ?></div>
+			<div style="width: 100%;height:170px;">
+				<div class="div_answer"><?php echo A_SOUND; ?></div>
+				<div class="div_answer"><?php echo A_MEMBER; ?></div>
+				<div class="div_answer"><?php echo A_VIDEO; ?></div>
+				<div class="div_answer"><?php echo A_NEWS; ?></div>
+				<div class="div_answer"><?php echo AN_EVENT; ?></div>
+			</div>
+			
+			<label style="display:block;"><?php echo ENTER_YOUR_SEARCH; ?></label><br/><br/>
+			<input id="search_value_id" type="text" name="search_value" class="input_text_passive" required/>
+			
+			<input type="hidden" value="" name="type_search" />
+			<input type="submit" value="<?php echo SEARCH;?>" class="button" />
 		</form>
 	</div>
 </div>

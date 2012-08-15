@@ -32,6 +32,8 @@
 	define("ALL_NEWS", "Toutes les actualités");
 	define("SEARCH_FORM_ADVICE", "Faites votre recherche d'actualité :");
 	define("SEARCH_TYPE", "Que recherchez-vous ?");
+	define("ENTER_YOUR_SEARCH", "Entrez ce que vous recherchez :");
+	define("SEARCH", "Chercher");
 	define("A_SOUND", "Un son");
 	define("A_VIDEO", "Une vidéo");
 	define("A_MEMBER", "Un membre");

@@ -32,6 +32,8 @@
 	define("ALL_NEWS", "All news");
 	define("SEARCH_FORM_ADVICE", "Do your news research:");
 	define("SEARCH_TYPE", "What are you searching for?");
+	define("ENTER_YOUR_SEARCH", "Enter what you're searching for:");
+	define("SEARCH", "Search");
 	define("A_SOUND", "A sound");
 	define("A_VIDEO", "A video");
 	define("A_MEMBER", "A member");
