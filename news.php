@@ -17,7 +17,11 @@
 	
 	$tag_langue = isset($_SESSION['langue'])?$_SESSION['langue']:'fr';
 ?>
-<div id="selecteur" class="jScrollbar3" style="overflow:visible;">
+
+<!-- COLONNE DE GAUCHE -->
+<!-- ----------------- -->
+
+<div id="selecteur" class="div_to_show" style="overflow:visible;">
 	<div id="image_front">
 	</div>
 	
@@ -64,6 +68,31 @@
 		</ul>
 	</div>
 </div>
+
+<!-- COLONNE DE DROITE -->
+<!-- ----------------- -->
+
+<div id="search_form" class="div_to_show">
+	<div id="image_back">
+	</div>
+	
+	<div id="content_form" style="overflow:hidden;">
+		<h3><?php echo SEARCH_FORM_ADVICE; ?></h3>
+		
+		<form id="my_news_search" action="#" method="post">
+			<label style="display:block;"><?php echo SEARCH_TYPE; ?></label><br/><br/>
+			<div class="div_answer"><?php echo A_SOUND; ?></div>
+			<div class="div_answer"><?php echo A_MEMBER; ?></div>
+			<div class="div_answer"><?php echo A_VIDEO; ?></div>
+			<div class="div_answer"><?php echo A_NEWS; ?></div>
+			<div class="div_answer"><?php echo AN_EVENT; ?></div>
+		</form>
+	</div>
+</div>
+
+<!-- CONTENU PRINCIPAL -->
+<!-- ----------------- -->
+
 <div id="conteneur">
     <div id="article" class="jScrollbar3">
 	<div id="article_content" class="jScrollbar_mask">

@@ -6,6 +6,7 @@ $(document).ready(function(){
     var divSon = $('#son');
     var divContact = $('#contact');
 	
+	var isNavOpen = false;
 	var isSearchOpen = false;
 	
 	var effet = 'easeOutElastic';
@@ -45,7 +46,7 @@ $(document).ready(function(){
 		left_search = $('#selecteur');
 		content_search = $('#content_bis');
 		
-		if(isSearchOpen){
+		if(isNavOpen){
 			content_search.fadeOut('slow');
 			
 			setTimeout(function(){
@@ -55,7 +56,7 @@ $(document).ready(function(){
 				},500);
 			},800);
 			
-			isSearchOpen = false;
+			isNavOpen = false;
 		} else {
 			content_search.css({display:'none'});
 			
@@ -67,7 +68,43 @@ $(document).ready(function(){
 			setTimeout(function(){
 				content_search.fadeIn('slow');
 			},800);
+			isNavOpen = true;
+		}
+	});
+	$('#image_back').click(function(){
+		right_search = $('#search_form');
+		content_search = $('#content_form');
+		
+		if(isSearchOpen){
+			content_search.fadeOut('slow');
+			
+			setTimeout(function(){
+				right_search.animate({
+					width: '0',
+					padding: '0'
+				},500);
+			},800);
+			
+			isSearchOpen = false;
+		} else {
+			content_search.css({display:'none'});
+			
+			right_search.animate({
+				width: '300px',
+				padding: '10px'
+			},500);
+			
+			setTimeout(function(){
+				content_search.fadeIn('slow');
+			},800);
 			isSearchOpen = true;
+		}
+	});
+	$('.div_answer').click(function(){
+		if($(this).hasClass('selected_answer')){
+			$(this).removeClass('selected_answer');
+		} else {
+			$(this).addClass('selected_answer');
 		}
 	});
 });

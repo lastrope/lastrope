@@ -3,6 +3,8 @@ Modification page news.php :
 	- Une rubrique au milieu contenant toutes les news
 	- Un icone à gauche relié à un script jquery qui dévoile la fenêtre de navigation des news après un click
 	- Fenêtre de navigation des news géré en Ajax (un click sur une news l'affiche dans le carré du milieu)
+	- Une icone à droite relié à un script jquery qui dévoile la fenêtre de recherche globale après un click
+	- Fenêtre de recherche globale (simplement style.css)
 
 /** Franck 12/08/2012 **/
 Ajout des timestamp dans la base 
