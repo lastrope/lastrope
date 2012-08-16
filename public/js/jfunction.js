@@ -82,7 +82,9 @@ $(document).ready(function(){
 		
 		if(isSearchOpen){
 			content_search.fadeOut('slow');
-			
+			$('#content_answer').css({display:'none'});
+			$('.div_answer').css({display:'none'});
+				
 			setTimeout(function(){
 				right_search.animate({
 					width: '0',
@@ -103,6 +105,9 @@ $(document).ready(function(){
 			},500);
 			
 			setTimeout(function(){
+				$('#content_answer').css({display:'block'});
+				$('.div_answer').css({display:'block'});
+				
 				content_search.fadeIn('slow');
 			},800);
 			

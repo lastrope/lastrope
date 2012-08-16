@@ -14,11 +14,15 @@
 	min-width:975px;
 	height:80px;
 	background:#111 url(../media/image/metal_header2.png) left top repeat-x;
+	z-index:99999;
 }
 #footer_block p {
 	color: #fff;
 	margin-top: 40px;
 	font-family: helvetica;
+	font-style: italic;
+	font-size: 12px;
+	border-bottom: 1px solid rgba(255,255,255,0.5);
 }
 .section_block {
 	margin-left: 12px;

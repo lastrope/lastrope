@@ -81,7 +81,7 @@
 		
 		<form id="my_news_search" action="#" method="post">
 			<label style="display:block;"><?php echo SEARCH_TYPE; ?></label><br/><br/>
-			<div style="width: 100%;height:170px;">
+			<div id="content_answer" style="display:none;width: 100%;height:170px;">
 				<div class="div_answer"><?php echo A_SOUND; ?></div>
 				<div class="div_answer"><?php echo A_MEMBER; ?></div>
 				<div class="div_answer"><?php echo A_VIDEO; ?></div>
