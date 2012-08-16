@@ -107,7 +107,7 @@ textarea:-moz-placeholder {
 /* Loader */
 #top_loader,
 #bottom_loader{
-    background:#111 url(../media/image/metal_header2.png) ;
+    background:#111 url('../media/image/metal_header2.png') ;
     position:absolute;
     width:100%;
     z-index:888;    
@@ -121,7 +121,7 @@ textarea:-moz-placeholder {
 #logo_loader{
     position:absolute;
     z-index:999;
-    background: url(../media/image/logo2.png)center center  no-repeat ;
+    background: url('../media/image/logo2.png')center center  no-repeat ;
     height:155px;
     width:155px;
     
@@ -148,9 +148,10 @@ textarea:-moz-placeholder {
 	height: 70px;
 	display:block;
 	
-	margin-top: 90px;
+/*	margin-top: 90px;*/
+	margin-top: 40px;
 	cursor:pointer;
-	background: #fff url(../media/image/loupe.png) center center no-repeat;
+	background: #fff url('../media/image/loupe.png') center center no-repeat;
 	float:right;
 	margin-right: -74px;
 	border: 2px solid #313131;
@@ -168,7 +169,7 @@ textarea:-moz-placeholder {
 	-ms-transition-duration: 1s;
 }
 #image_front:hover{
-	background: #cecdce url(../media/image/loupe.png) center center no-repeat;
+	background: #cecdce url('../media/image/loupe.png') center center no-repeat;
 	border: none;
 	margin-right: -90px;
 }
@@ -177,9 +178,9 @@ textarea:-moz-placeholder {
 	height: 70px;
 	display:block;
 	
-	margin-top: 90px;
+	margin-top: 40px;
 	cursor:pointer;
-	background: #313131 url(../media/image/loupe.png) center center no-repeat;
+	background: #313131 url('../media/image/loupe.png') center center no-repeat;
 	float:left;
 	margin-left: -74px;
 	border: 2px solid #fff;
@@ -197,7 +198,7 @@ textarea:-moz-placeholder {
 	-ms-transition-duration: 1s;
 }
 #image_back:hover{
-	background: #cecdce url(../media/image/loupe.png) center center no-repeat;
+	background: #cecdce url('../media/image/loupe.png') center center no-repeat;
 	border: none;
 	margin-left: -90px;
 }
@@ -208,7 +209,7 @@ textarea:-moz-placeholder {
 	margin: 0;
 	padding:0;
 	
-	background: transparent url(../media/image/metal_header_vert.png) top left;
+	background: transparent url('../media/image/metal_header_vert.png') top left;
 	z-index: 100;
 	
 	font-family: georgia;
@@ -217,20 +218,25 @@ textarea:-moz-placeholder {
 }
 #selecteur{
 	position: absolute;
-	top: 0;
+/*	top: 0;
+	left: 0;*/
+	top: 10%;
 	left: 0;
-	
+	height:78%;
 	box-shadow: 3px 0 5px rgba(10,10,10,0.9);
 	-o-box-shadow: 3px 0 5px rgba(10,10,10,0.9);
 	-ms-box-shadow: 3px 0 5px rgba(10,10,10,0.9);
 	-webkit-box-shadow: 3px 0 5px rgba(10,10,10,0.9);
 	-moz-box-shadow: 3px 0 5px rgba(10,10,10,0.9);
+	
 }
 #search_form{
 	position: absolute;
-	top: 0;
+/*	top: 0;
+	right: 0;*/
+	top: 10%;
 	right: 0;
-	
+	height:78%;
 	box-shadow: -3px 0 5px rgba(10,10,10,0.9);
 	-o-box-shadow: -3px 0 5px rgba(10,10,10,0.9);
 	-ms-box-shadow: -3px 0 5px rgba(10,10,10,0.9);
@@ -596,7 +602,7 @@ header{
 	width:100%;
 	min-width:975px;
 	height:80px;
-	background:#111 url(../media/image/metal_header2.png) left top repeat-x;
+	background:#111 url('../media/image/metal_header2.png') left top repeat-x;
 	z-index: 999999;
 }
 #header{
@@ -616,7 +622,7 @@ header{
 	font-weight: bold;
 }
 #complement{
-	background:transparent url(../media/image/barriere.png) left bottom repeat-x;
+	background:transparent url('../media/image/barriere.png') left bottom repeat-x;
 	width:100%;
 	min-width:975px;
 	height:80px;
@@ -653,7 +659,7 @@ header{
 	z-index:1;
 }
 #rectangle{
-	background: transparent url(../media/image/lastrope_min.png) center top no-repeat;
+	background: transparent url('../media/image/lastrope_min.png') center top no-repeat;
 	height: 60px;
 }
 /* Footer */
@@ -664,7 +670,7 @@ footer{
 	width:100%;
 	min-width:975px;
 	height:80px;
-	background:#111 url(../media/image/metal_header2.png) left top repeat-x;
+	background:#111 url('../media/image/metal_header2.png') left top repeat-x;
 }
 footer p {
 	color: #fff;
@@ -680,7 +686,7 @@ footer p {
 	margin-right: 30px;
 }
 #complement_back{
-	background:transparent url(../media/image/barriere_back.png) left top repeat-x;
+	background:transparent url('../media/image/barriere_back.png') left top repeat-x;
 	width:100%;
 	min-width:975px;
 	height:80px;
@@ -688,7 +694,7 @@ footer p {
 	bottom: 0;
 }
 #copyright{
-	background: transparent url(../media/image/logo1.png) center center no-repeat;
+	background: transparent url('../media/image/logo1.png') center center no-repeat;
 	width: 200px;
 	height: 155px;
 	margin: -100px auto 0 auto;
