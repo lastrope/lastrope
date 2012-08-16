@@ -5,6 +5,8 @@ Modification page news.php :
 	- Fenêtre de navigation des news géré en Ajax (un click sur une news l'affiche dans le carré du milieu)
 	- Une icone à droite relié à un script jquery qui dévoile la fenêtre de recherche globale après un click
 	- Fenêtre de recherche globale (simplement style.css)
+Modification module réseaux sociaux (couleur + taille + style + alignement)
+Modification footer (typographie + visibilité petit ecran)
 
 /** Franck 12/08/2012 **/
 Ajout des timestamp dans la base 
