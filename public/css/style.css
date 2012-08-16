@@ -147,16 +147,11 @@ textarea:-moz-placeholder {
 	width: 70px;
 	height: 70px;
 	display:block;
-	
-/*	margin-top: 90px;*/
 	margin-top: 0px;
 	cursor:pointer;
-/*	background: #fff url('../media/image/loupe.png') center center no-repeat;*/
 	background: transparent url('../media/image/search.png') center center no-repeat;
 	float:right;
 	margin-right: -70px;
-/*	border: 2px solid #313131;
-	border-left: 2px solid #fff;*/
 
 	transition-property: background,border,margin-right;
 	transition-duration: 1s;
@@ -170,7 +165,6 @@ textarea:-moz-placeholder {
 	-ms-transition-duration: 1s;
 }
 #image_front:hover{
-/*	background: #cecdce url('../media/image/loupe.png') center center no-repeat;*/
 	border: none;
 	margin-right: -90px;
 }
@@ -180,13 +174,10 @@ textarea:-moz-placeholder {
 		
 	margin-top: 0px;
 	cursor:pointer;
-/*	background: #313131 url('../media/image/loupe.png') center center no-repeat;*/
 	background: transparent url('../media/image/search.png') center center no-repeat;
 	float:left;
 	
 	margin-left: -70px;
-/*	border: 2px solid #fff;
-	border-right: 2px solid #313131;*/
 
 	transition-property: background,border,margin-left;
 	transition-duration: 1s;
@@ -200,7 +191,6 @@ textarea:-moz-placeholder {
 	-ms-transition-duration: 1s;
 }
 #image_back:hover{
-/*	background: #cecdce url('../media/image/loupe.png') center center no-repeat;*/
 	border: none;
 	margin-left: -90px;
 
@@ -222,11 +212,11 @@ textarea:-moz-placeholder {
 }
 #selecteur{
 	position: absolute;
-/*	top: 0;
-	left: 0;*/
+
 	top: 10%;
 	left: 0;
 	height:78%;
+	
 	box-shadow: 3px 0 5px rgba(10,10,10,0.9);
 	-o-box-shadow: 3px 0 5px rgba(10,10,10,0.9);
 	-ms-box-shadow: 3px 0 5px rgba(10,10,10,0.9);
@@ -235,11 +225,11 @@ textarea:-moz-placeholder {
 }
 #search_form{
 	position: absolute;
-/*	top: 0;
-	right: 0;*/
+
 	top: 10%;
 	right: 0;
 	height:78%;
+	
 	box-shadow: -3px 0 5px rgba(10,10,10,0.9);
 	-o-box-shadow: -3px 0 5px rgba(10,10,10,0.9);
 	-ms-box-shadow: -3px 0 5px rgba(10,10,10,0.9);
@@ -332,7 +322,7 @@ textarea:-moz-placeholder {
 	height: 24px;
 	text-align:center;
 }
-.button{
+#search_form .button{
 	display:block;
 	margin:20px auto;
 	width: 165px;
@@ -348,19 +338,23 @@ textarea:-moz-placeholder {
 	font-family: 'baphomet', helvetica;
 	font-size: 18px;
 	
-/*	box-shadow: 5px 3px 5px rgba(0,0,0,0.7),
-				inset 0 0 5px rgba(10,10,10,0.9);*/
+	box-shadow:inset 0 0 5px rgba(10,10,10,0.9);
+	-o-box-shadow:inset 0 0 5px rgba(10,10,10,0.9);
+	-moz-box-shadow:inset 0 0 5px rgba(10,10,10,0.9);
+	-webkit-box-shadow:inset 0 0 5px rgba(10,10,10,0.9);
+	-ms-box-shadow:inset 0 0 5px rgba(10,10,10,0.9);
+				
 	transition: all .2s ease-in;
 	-moz-transition: all.2s ease-in; 
 	-webkit-transition:all .2s ease-in; 
 	-o-transition: all .2s ease-in; 
 	-ms-transition: all .2s ease-in
 }
-.button:hover{
+#search_form .button:hover{
 	background: transparent url('../media/image/lastrope_min.png') left bottom no-repeat ;
 	text-shadow: 0px 0px 9px #eee;
 }
-.button:active{
+#search_form .button:active{
 	box-shadow:inset 5px 3px 5px rgba(0,0,0,0.7);
 }
 #selecteur h3,#search_form h3{

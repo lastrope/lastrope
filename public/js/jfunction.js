@@ -56,6 +56,9 @@ $(document).ready(function(){
 				},500);
 			},800);
 			
+			setTimeout(function(){
+				$('#image_front').css({'background-image':'url(public/media/image/search.png)'});
+			},900);
 			isNavOpen = false;
 		} else {
 			content_search.css({display:'none'});
@@ -68,6 +71,8 @@ $(document).ready(function(){
 			setTimeout(function(){
 				content_search.fadeIn('slow');
 			},800);
+			
+			$('#image_front').css({'background-image':'url(public/media/image/search_moins.png)'});
 			isNavOpen = true;
 		}
 	});
@@ -85,6 +90,9 @@ $(document).ready(function(){
 				},500);
 			},800);
 			
+			setTimeout(function(){
+				$('#image_back').css({'background-image':'url(public/media/image/search.png)'});
+			},900);
 			isSearchOpen = false;
 		} else {
 			content_search.css({display:'none'});
@@ -97,6 +105,8 @@ $(document).ready(function(){
 			setTimeout(function(){
 				content_search.fadeIn('slow');
 			},800);
+			
+			$('#image_back').css({'background-image':'url(public/media/image/search_moins.png)'});
 			isSearchOpen = true;
 		}
 	});
