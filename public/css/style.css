@@ -212,6 +212,7 @@ textarea:-moz-placeholder {
 	height:100%;
 	margin: 0;
 	padding:0;
+	padding:0;
 	
 	background: transparent url('../media/image/metal_header_vert.png') top left;
 	
@@ -629,7 +630,7 @@ header{
 #header{
 	position: relative;
 	
-	font-family: baphomet;
+	font-family: baphomet, helvetica;
 	color: #fff;
 	font-size: 22px;
 	width:875px;

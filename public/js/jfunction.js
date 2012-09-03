@@ -41,7 +41,7 @@ $(document).ready(function(){
 		$('#rectangle').stop().animate({width:default_width},{duration:1000, easing:effet});
 	});
 	
-	// jquery for showing news navigation
+	// jquery for showing news navigation left
 	$('#image_front').click(function(){
 		left_search = $('#selecteur');
 		content_search = $('#content_bis');
@@ -76,6 +76,7 @@ $(document).ready(function(){
 			isNavOpen = true;
 		}
 	});
+	// jquery for showing news navigation right
 	$('#image_back').click(function(){
 		right_search = $('#search_form');
 		content_search = $('#content_form');
@@ -115,11 +116,23 @@ $(document).ready(function(){
 			isSearchOpen = true;
 		}
 	});
+	// For the research formulaire
 	$('.div_answer').click(function(){
 		if($(this).hasClass('selected_answer')){
 			$(this).removeClass('selected_answer');
+			
+			var current_value = $('#type_search').val();
+			current_value = current_value.replace($(this).attr("id"),'');
+			
+			$('#type_search').val(current_value);
 		} else {
 			$(this).addClass('selected_answer');
+			
+			if($('#type_search').val() == ""){
+				$('#type_search').val($(this).attr("id"));
+			} else {
+				$('#type_search').val($('#type_search').val() + ' ' + $(this).attr("id"));
+			}
 		}
 	});
 	$('#search_value_id').focus(function(){
@@ -131,6 +144,7 @@ $(document).ready(function(){
 		$('#search_value_id').addClass('input_text_passive');
 	});
 });
+// Animation for the website opening
 function loader(){
     $('#corps').hide();
 	
