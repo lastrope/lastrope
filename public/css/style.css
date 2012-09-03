@@ -625,7 +625,7 @@ header{
 	min-width:975px;
 	height:80px;
 	background:#111 url('../media/image/metal_header2.png') left top repeat-x;
-	z-index: 999999;
+	z-index: 800;
 }
 #header{
 	position: relative;
@@ -693,7 +693,7 @@ footer{
 	min-width:975px;
 	height:80px;
 	background:#111 url('../media/image/metal_header2.png') left top repeat-x;
-	z-index:99999;
+	z-index:800;
 }
 footer p {
 	color: #fff;
