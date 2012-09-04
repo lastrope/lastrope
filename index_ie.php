@@ -7,7 +7,7 @@
 		<title>Attention !</title>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
-		<meta name="Author" content="Lastrope">
+		<meta name="Author" content="PASSANGER">
 		<meta NAME="Identifier-URL" CONTENT="">
 		<meta NAME="Date-Creation-yyyymmdd" content="20120726">
 		<meta name="Date-Revision-yyyymmdd" content="20120726">

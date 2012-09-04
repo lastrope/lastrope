@@ -135,6 +135,18 @@ $(document).ready(function(){
 			}
 		}
 	});
+	// For the members transition
+	$('.member_container').hover(function(){
+		// Change dimensions
+		$(this).find(':first').next().stop().animate({'height':'0'},800);
+		$(this).find(':first').stop().animate({'height':'0'},800);
+	}, function(){
+		// Change dimensions
+		$(this).find(':first').stop().animate({'height':'220px'},800);
+		$(this).find(':first').next().stop().animate({'height':'180px'},800);
+	});
+	
+	
 	$('#search_value_id').focus(function(){
 		$('#search_value_id').removeClass('input_text_passive');
 		$('#search_value_id').addClass('input_text_active');

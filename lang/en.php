@@ -2,7 +2,7 @@
 	// General
 	define("BEFORE_TWO_POINT","");
 	define("HOME","Home");
-	define("WELCOME_ON_WEBSITE","Welcome on the Lastrope website !");
+	define("WELCOME_ON_WEBSITE","Welcome on the Passanger website !");
 	define("GIGS","Gigs !");
 	define("BAD_BROWSER","Warning, this website is optimized for recent browsers such as Mozilla Firefox or Google Chrome.");
 	define("ADVICE_BROWSER","Currently on Internet Explorer, you won't be able to take full advantage of our website.");
@@ -25,7 +25,7 @@
 	define("INFLUENCES","Influences");
 	define("SHORT_DESC","Short description");
 	// Footer
-	define("COPYRIGHT","All rights reserved to Lastrope ©");
+	define("COPYRIGHT","All rights reserved to Passanger ©");
 	define("SACEM","All the flows and contents published on internet are protected by the SACEM");
 	// News page
 	define("NEWS_ADVICE", "Click on a news to print it");

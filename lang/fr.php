@@ -2,7 +2,7 @@
 	// General
 	define("BEFORE_TWO_POINT"," ");
 	define("HOME","Accueil");
-	define("WELCOME_ON_WEBSITE","Bienvenue sur le site de Lastrope !");
+	define("WELCOME_ON_WEBSITE","Bienvenue sur le site de Passanger !");
 	define("GIGS","Concert !");
 	define("BAD_BROWSER","Attention, ce site est optimisé pour les navigateurs récent tel que Google Chrome ou Mozilla firefox.");
 	define("ADVICE_BROWSER","Actuellement sur Internet Explorer, vous ne pourrez pas profiter au maximum de notre site web.");
@@ -25,7 +25,7 @@
 	define("INFLUENCES","Influences");
 	define("SHORT_DESC","Rapide description");
 	// Footer
-	define("COPYRIGHT","Tous droits réservés aux Lastrope ©");
+	define("COPYRIGHT","Tous droits réservés aux Passanger ©");
 	define("SACEM","Tous les flux et contenus publiés sur internet sont protégés par la SACEM");
 	// News page
 	define("NEWS_ADVICE", "Cliquez sur l'actualité pour l'afficher");

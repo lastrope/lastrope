@@ -22,7 +22,7 @@ class Members{
      * @return array $members_array ( assoc )
      */
     public function getAllMembers(){
-        $request = "SELECT idMembers,name,firstname,surname, picture, birthday
+        $request = "SELECT *
 			FROM members
 			WHERE lang='".$this->lang."'";
 		

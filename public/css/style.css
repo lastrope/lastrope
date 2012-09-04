@@ -78,11 +78,12 @@ textarea{
 	min-width: 132px;
 }
 fieldset{
-	padding: 5px;
+	padding: 20px 5px 5px 5px;
 	margin: 5px;
 }
 legend{
 	color: #7F554E;
+	font-family: georgia;
 }
 input::-webkit-input-placeholder {
 	font-size: 14px;
@@ -528,17 +529,70 @@ section .content_event{
 #contact_page{
 	margin: auto;
 	width: 555px;
-	height:295px;
+	height:320px;
 	background: #D6D6D6;
 }
 #contact_page input[type=text]{
-	float:left; 
+	float:left;
+	background:#dedfde;
+	padding-bottom:3px;
+	
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	-o-border-radius:3px;
+	-ms-border-radius:3px;
+	
+	border:none;
+	height: 25px;
+	text-align:center;
+	
+	font-family: georgia;
+	
+	box-shadow:	inset 1px 1px 4px rgba(0,0,0,0.9),
+				inset -1px -1px 4px rgba(255,255,255,0.9);
+	-moz-box-shadow:inset 1px 1px 4px rgba(0,0,0,0.9),
+				inset -1px -1px 4px rgba(255,255,255,0.9);
+	-webkit-box-shadow:	inset 1px 1px 4px rgba(0,0,0,0.9),
+				inset -1px -1px 4px rgba(255,255,255,0.9);
+	-o-box-shadow:	inset 1px 1px 4px rgba(0,0,0,0.9),
+				inset -1px -1px 4px rgba(255,255,255,0.9);
+	-ms-box-shadow:	inset 1px 1px 4px rgba(0,0,0,0.9),
+				inset -1px -1px 4px rgba(255,255,255,0.9);
+}
+#contact_page input[type=text]:focus{
+	background:#efefef;
 }
 #contact_page textarea{
+	background:#dedfde;
+	border:none;
+	padding: 10px;
 	min-width:400px;
 	max-width:400px;
 	height:100px;
 	max-height:100px;
+	
+	font-family: georgia;
+	
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	-o-border-radius:3px;
+	-ms-border-radius:3px;
+	
+	box-shadow:	inset 1px 1px 4px rgba(0,0,0,0.9),
+				inset -1px -1px 4px rgba(255,255,255,0.9);
+	-moz-box-shadow:inset 1px 1px 4px rgba(0,0,0,0.9),
+				inset -1px -1px 4px rgba(255,255,255,0.9);
+	-webkit-box-shadow:	inset 1px 1px 4px rgba(0,0,0,0.9),
+				inset -1px -1px 4px rgba(255,255,255,0.9);
+	-o-box-shadow:	inset 1px 1px 4px rgba(0,0,0,0.9),
+				inset -1px -1px 4px rgba(255,255,255,0.9);
+	-ms-box-shadow:	inset 1px 1px 4px rgba(0,0,0,0.9),
+				inset -1px -1px 4px rgba(255,255,255,0.9);
+}
+#contact_page textarea:focus{
+	background:#efefef;
 }
 #contact_page .label_form{
 	display: block;
@@ -547,7 +601,7 @@ section .content_event{
 	height: 30px;
 	width: 100px;
 	
-	font-family: 'Ubuntu-C';
+	font-family: Ubuntu-c;
 	color: #242424;
 }
 #contact_page .button{
@@ -730,7 +784,7 @@ footer p {
 	width: 200px;
 	height: 350px;
 	position: absolute;
-	top:-30px;
+	top:-13px;
 	
 	font-family: helvetica;
 	font-size:18px;
@@ -765,15 +819,12 @@ footer p {
 /*TOOLTIP FORMULAIRE*/
 .incorrect 
 {
-	border-color: rgba(127, 85, 78, 0.75);
+	background: rgba(227, 85, 75, 0.75) !important;
 }
 
 .incorrect:focus 
 {
-	border-color: rgba(127, 85, 75, 0.75);
-	-moz-box-shadow: 0 0 10px rgba(127, 85, 75, 0.5);
-	-webkit-box-shadow: 0 0 10px rgba(127, 85, 75, 0.5);
-	box-shadow: 0 0 10px rgba(127, 85, 75, 0.5);
+	background: rgba(227, 85, 75, 0.75) !important;
 }
 
 .tooltip 
@@ -787,4 +838,73 @@ footer p {
 	background-color: transparent;
 	color: #7F554E;
 	font-family: 'Ubuntu-C';
+}
+/** BIO STYLE **/
+#members_container{
+	width: 1020px;
+	height: 400px;
+	margin: auto;
+	overflow:hidden;
+	background:#acabac url(../media/image/bg_members.png) top left repeat-x;
+	
+	-moz-box-shadow:inset 2px 2px 5px rgba(250, 250, 250, 0.9);
+	-webkit-box-shadow:inset 2px 2px 5px rgba(250, 250, 250, 0.9);
+	box-shadow:inset 1px 1px 5px rgba(250, 250, 250, 0.9),
+				inset -1px -1px 5px rgba(0,0,0,0.9);
+	
+	border-radius:10px;
+	-moz-border-radius:10px;
+	-webkit-border-radius:10px;
+	-o-border-radius:10px;
+	-ms-border-radius:10px;
+}
+#members_container .member_container{
+	float:left;
+	width:203px;
+	margin-right:1px;
+	height: 400px;
+	text-align: center;
+	
+	position:relative;
+}
+#members_container .name_member{
+	font-family: baphomet;
+	font-weight: bold;
+	font-size:20px;
+	position: absolute;
+	width: 100%;
+	bottom: 10px;
+}
+#members_container .member_desc{
+	position: absolute;
+	top:0;
+	left:0;
+	width:203px;
+	height: 400px;
+}
+#members_container .haut_member{
+	position: relative;
+	top:0;
+	left:0;
+	height:220px;
+	width: 203px;
+	background:#CECDCE;
+}
+#members_container .bas_member{
+	position:absolute;
+	bottom:0;
+	left:0;
+	background:#CECDCE;
+	height: 180px;
+	width: 203px;
+}
+#members_container .label{
+	display:block;
+	float:left;
+	text-align:left;
+	padding: 5px 0 0 5px;
+	width: 90px;
+	
+	color: #21B8FF;
+	font-family: Ubuntu-C;
 }
