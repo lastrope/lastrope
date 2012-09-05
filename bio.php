@@ -22,19 +22,20 @@
 			</div>
 			<div class="bas_member">
 			</div>
-			<div style="member_desc">
-				<span class="label" style="font-weight:bold;"><?php echo NAME . BEFORE_TWO_POINT;?>: </span>
-				<span class="label" style="color: #fff;"><?php echo $this_member['name']; ?></span><br/>
-				
-				<span class="label" style="font-weight:bold;"><?php echo FIRST_NAME . BEFORE_TWO_POINT;?>: </span>
-				<span class="label" style="color: #fff;"><?php echo $this_member['firstname']; ?></span><br/>
-				
-				<span class="label" style="font-weight:bold;"><?php echo NICK_NAME . BEFORE_TWO_POINT;?>: </span>
-				<span class="label" style="color: #fff;"><?php echo $this_member['birthday']; ?></span><br/>
-				
-				<span class="label" style="font-weight:bold;"><?php echo INSTRUMENT . BEFORE_TWO_POINT;?>: </span>
-				<span class="label" style="color: #fff;"><?php echo $this_member['instrument']; ?></span><br/>
-				
+			<div class="member_desc">
+				<div class="bio_member">
+					<span class="label" style="font-weight:bold;"><?php echo NAME . BEFORE_TWO_POINT;?>: </span>
+					<span class="label" style="color: #fff;"><?php echo $this_member['name']; ?></span><br/>
+					
+					<span class="label" style="font-weight:bold;"><?php echo FIRST_NAME . BEFORE_TWO_POINT;?>: </span>
+					<span class="label" style="color: #fff;"><?php echo $this_member['firstname']; ?></span><br/>
+					
+					<span class="label" style="font-weight:bold;"><?php echo NICK_NAME . BEFORE_TWO_POINT;?>: </span>
+					<span class="label" style="color: #fff;"><?php echo $this_member['birthday']; ?></span><br/>
+					
+					<span class="label" style="font-weight:bold;"><?php echo INSTRUMENT . BEFORE_TWO_POINT;?>: </span>
+					<span class="label" style="color: #fff;"><?php echo $this_member['instrument']; ?></span><br/>
+				</div>
 			</div>
 		</div>
 		<?php
