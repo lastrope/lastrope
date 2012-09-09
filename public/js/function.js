@@ -1,9 +1,13 @@
-function put_typeSearch_hidden(name, active){
-	var type_search = document.getElementById('type_search');
+function verif_search(){
+	var search = document.getElementById('search_value_id');
 	
-	if(type_search == ""){
-		type_search.value = name;
+	if(search.value == ""){
+		search.className = 'input_text_passive incorrect';
+		alert('Veuillez renseigner au moins un mot clef.');
+		return false;
 	} else {
-		type_search.value = ' ' + name;
+		search.className = 'input_text_passive';
+		return true;
 	}
 }
+

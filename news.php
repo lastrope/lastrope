@@ -93,7 +93,7 @@
 			<input id="search_value_id" type="text" name="search_value" class="input_text_passive" required/>
 			
 			<input type="hidden" value="" name="type_search" id="type_search" />
-			<input type="submit" value="<?php echo SEARCH;?>" class="button" />
+			<input type="submit" value="<?php echo SEARCH;?>" class="button" onclick="if(!verif_search())return false;"/>
 		</form>
 	</div>
 </div>

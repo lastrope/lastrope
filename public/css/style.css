@@ -459,7 +459,7 @@ textarea:-moz-placeholder {
 	-webkit-border-radius:300px;
 	-o-border-radius:300px;
 	
-	font-family: 'Ubuntu-C';
+	font-family: 'Ubuntu-C',arial;
 	font-size: 20px;
 	color: #7F554E;
 	text-align:center;
@@ -601,13 +601,13 @@ section .content_event{
 	height: 30px;
 	width: 100px;
 	
-	font-family: Ubuntu-c;
+	font-family: Ubuntu-c, arial;
 	color: #242424;
 }
 #contact_page .button{
 	display: block;
 	margin: 5px auto;
-    font-family: 'Ubuntu-C';
+    font-family: 'Ubuntu-C',arial;
     color: #fff;
 	cursor: pointer;
     padding: 7px 10px;
@@ -798,23 +798,25 @@ footer p {
 	left:10px;
 }
 #warning{
-	margin:auto;
+	margin: auto;
 	width: 800px;
-	height:350px;
-	background:rgb(127,85,79);
+	height:250px;
+	background:rgb(127,85,79) url(../media/image/studio.jpg) center bottom no-repeat;
 	text-align: center;
-	padding-top: 250px;
+	padding-top: 150px;
 	
-	border-radius:300px;
-	-moz-border-radius:300px;
-	-webkit-border-radius:300px;
-	-o-border-radius:300px;
-	-ms-border-radius:300px;
+	box-shadow: 3px 3px 10px rgba(0,0,0,0.6);
 }
-#warning p{
+#warning div.transp{
 	color: #fff;
 	font-family: georgia;
 	line-height: 30px;
+	
+	background: transparent url(../media/image/bordure-transparente.png) left bottom repeat-x;
+}
+#warning div.transp a{	
+	color: #7F554E;
+	font-weight:bold;
 }
 /*TOOLTIP FORMULAIRE*/
 .incorrect 
@@ -837,11 +839,11 @@ footer p {
 	padding: 2px 4px;
 	background-color: transparent;
 	color: #7F554E;
-	font-family: 'Ubuntu-C';
+	font-family: 'Ubuntu-C', arial;
 }
 /** BIO STYLE **/
 #members_container{
-	width: 1015px;
+	width: 975px;
 	height: 400px;
 	margin: auto;
 	overflow:hidden;
@@ -850,7 +852,7 @@ footer p {
 }
 #members_container .member_container{
 	float:left;
-	width:203px;
+	width:195px;
 	height: 400px;
 	text-align: center;
 	
@@ -858,22 +860,22 @@ footer p {
 	z-index:2;
 }
 #members_container .name_member{
-	font-family: baphomet;
+	font-family: baphomet,Helvetica;
 	font-weight: bold;
-	font-size:20px;
+	font-size:18px;
 	position: absolute;
 	width: 100%;
 	bottom: 10px;
 }
 #members_container .member_desc{
-	width:203px;
+	width:195px;
 	height: 400px;
 	
 	z-index:1;
 	position:relative;
 }
 #members_container .bio_member{
-	width:203px;
+	width:195px;
 	height: 120px;
 	
 	position: absolute;
@@ -886,7 +888,7 @@ footer p {
 	box-shadow: 0 -5px 10px rgba(250,250,250,0.6);
 }
 #members_container .img_member{
-	width:203px;
+	width:195px;
 	height: 120px;
 	
 	position: absolute;
@@ -900,7 +902,7 @@ footer p {
 	top:0;
 	left:0;
 	height:220px;
-	width: 203px;
+	width: 195px;
 	background:#CECDCE;
 	z-index:3;
 }
@@ -910,7 +912,7 @@ footer p {
 	left:0;
 	background:#CECDCE;
 	height: 180px;
-	width: 203px;
+	width: 195px;
 	
 	z-index:4;
 }
@@ -922,7 +924,7 @@ footer p {
 	width: 90px;
 	
 	color: #21B8FF;
-	font-family: Ubuntu-C;
+	font-family: Ubuntu-C, arial;
 	font-size: 11px;
 }
 #members_container .more{
@@ -930,7 +932,7 @@ footer p {
 	padding: 5px 5px 0 5px;
 	
 	color: #21B8FF;
-	font-family: Ubuntu-C;
+	font-family: Ubuntu-C,arial;
 	font-size: 11px;
 }
 #members_container .more_about_him{
