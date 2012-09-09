@@ -146,6 +146,14 @@ $(document).ready(function(){
 		$(this).find(':first').next().stop().animate({'height':'180px'},800);
 	});
 	
+	// Members invisible div
+	$('.bio_member, .img_member').click(function(){
+		$(this).parent().parent().children('.more_about_him').fadeIn('slow');
+	});
+	$('.more_about_him').click(function(){
+		$(this).fadeOut('slow');
+	});
+	
 	
 	$('#search_value_id').focus(function(){
 		$('#search_value_id').removeClass('input_text_passive');

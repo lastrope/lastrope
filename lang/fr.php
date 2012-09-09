@@ -18,6 +18,7 @@
 	define("NAME","Nom");
 	define("FIRST_NAME","Prénom");
 	define("NICK_NAME","Surnom");
+	define("BIRTHDAY","Née le");
 	define("ADRESS","Adresse");
 	define("MAIL","Email");
 	// Members page

@@ -841,27 +841,16 @@ footer p {
 }
 /** BIO STYLE **/
 #members_container{
-	width: 1020px;
+	width: 1015px;
 	height: 400px;
 	margin: auto;
 	overflow:hidden;
-	background:#acabac url(../media/image/studio.jpg) bottom left repeat-x;
+	background:#acabac url(../media/image/studio.jpg) left bottom repeat-x;
 	
-	-moz-box-shadow:inset 2px 2px 5px rgba(250, 250, 250, 0.9);
-	-webkit-box-shadow:inset 2px 2px 5px rgba(250, 250, 250, 0.9);
-	box-shadow:inset 1px 1px 5px rgba(250, 250, 250, 0.9),
-				inset -1px -1px 5px rgba(0,0,0,0.9);
-	
-	border-radius:10px;
-	-moz-border-radius:10px;
-	-webkit-border-radius:10px;
-	-o-border-radius:10px;
-	-ms-border-radius:10px;
 }
 #members_container .member_container{
 	float:left;
 	width:203px;
-	margin-right:1px;
 	height: 400px;
 	text-align: center;
 	
@@ -885,11 +874,26 @@ footer p {
 }
 #members_container .bio_member{
 	width:203px;
-	height: 130px;
+	height: 120px;
 	
 	position: absolute;
 	bottom:0;
 	left:0;
+	background-color: rgba(0,0,0,0.5);
+	cursor: pointer;
+	z-index:100;
+	
+	box-shadow: 0 -5px 10px rgba(250,250,250,0.6);
+}
+#members_container .img_member{
+	width:203px;
+	height: 120px;
+	
+	position: absolute;
+	bottom:0;
+	left:0;
+	cursor: pointer;
+	z-index:99;
 }
 #members_container .haut_member{
 	position: relative;
@@ -919,4 +923,27 @@ footer p {
 	
 	color: #21B8FF;
 	font-family: Ubuntu-C;
+	font-size: 11px;
+}
+#members_container .more{
+	text-align:justify;
+	padding: 5px 5px 0 5px;
+	
+	color: #21B8FF;
+	font-family: Ubuntu-C;
+	font-size: 11px;
+}
+#members_container .more_about_him{
+	z-index: 999999;
+	display:none;
+	width:100%;
+	height:100%;
+	
+	position: absolute;
+	top: 0;
+	left: 0;
+	
+	background:rgba(0,0,0,0.8);
+	
+	cursor:pointer;
 }

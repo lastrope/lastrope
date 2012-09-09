@@ -16,8 +16,9 @@
 	define("NAME_TOOLTIP","Name must contain 2 letters");
 	define("MAIL_TOOLTIP","Email pattern : xxx@xxx.xx");
 	define("NAME","Name");
-	define("FIRST_NAME","Firt name");
+	define("FIRST_NAME","First name");
 	define("NICK_NAME","Nick name");
+	define("BIRTHDAY","Birthday");
 	define("ADRESS","Adress");
 	define("MAIL","Email");
 	// Members page

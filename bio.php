@@ -31,13 +31,31 @@
 					<span class="label" style="color: #fff;"><?php echo $this_member['firstname']; ?></span><br/>
 					
 					<span class="label" style="font-weight:bold;"><?php echo NICK_NAME . BEFORE_TWO_POINT;?>: </span>
+					<span class="label" style="color: #fff;"><?php echo $this_member['surname']; ?></span><br/>
+					
+					<span class="label" style="font-weight:bold;"><?php echo BIRTHDAY . BEFORE_TWO_POINT;?>: </span>
 					<span class="label" style="color: #fff;"><?php echo $this_member['birthday']; ?></span><br/>
 					
 					<span class="label" style="font-weight:bold;"><?php echo INSTRUMENT . BEFORE_TWO_POINT;?>: </span>
 					<span class="label" style="color: #fff;"><?php echo $this_member['instrument']; ?></span><br/>
 				</div>
+				<div class="img_member">
+					<img src="public/media/image/<?php echo $this_member['picture']; ?>" alt="<?php echo NAME . BEFORE_TWO_POINT;?>_picture" width="203px" />
+				</div>
+			</div>
+			<div class="more_about_him">
+				<div class="more" style="font-weight:bold;"><?php echo INFLUENCES . BEFORE_TWO_POINT;?>: </div>
+				<div class="more" style="color: #fff;"><?php echo $this_member['influences']; ?></div><br/>
+				
+				<div class="more" style="font-weight:bold;"><?php echo SHORT_DESC . BEFORE_TWO_POINT;?>: </div>
+				<div class="more" style="color: #fff;"><?php echo $this_member['short_desc']; ?></div><br/>
+				
+				<div style="color: #7F554E;font-family:'Ubuntu-c';font-size: 13px;">
+					Cliquez pour cacher la description
+				</div>
 			</div>
 		</div>
+		
 		<?php
 			}
 		?>
