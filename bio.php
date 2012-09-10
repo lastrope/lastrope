@@ -8,6 +8,14 @@
 ?>
 
 <div id="conteneur">
+	<div id="switch_bio">
+		<div id="members_switch">
+		</div>
+		<div id="general_switch">
+		</div>
+	</div>
+	
+	<!-- First page -->
 	<div id="members_container">
 		<?php
 			foreach($membersInformation as $this_member){
@@ -59,5 +67,12 @@
 		<?php
 			}
 		?>
+	</div>
+</div>
+
+<!-- Second page -->
+<div id="bio_gen">
+	<div class="big_title">
+		Biographie
 	</div>
 </div>

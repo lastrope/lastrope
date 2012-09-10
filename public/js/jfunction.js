@@ -154,6 +154,26 @@ $(document).ready(function(){
 		$(this).fadeOut('slow');
 	});
 	
+	$('#members_switch').click(function(){
+		scrollTo('top');
+	});
+	$('#general_switch').click(function(){
+		scrollTo('bottom');
+	});
+	
+	function scrollTo(direction){
+		if(direction == 'top'){
+			var height = $('#members_container').offset().top-250;
+			$('#members_switch').css({'background':'#cecdce url(public/media/image/fleche_right.png) left top no-repeat'});
+			$('#general_switch').css({'background':'#740000 url(public/media/image/fleche_bottom.png) left top no-repeat'});
+		} else {
+			var height = $('#bio_gen').offset().top;
+			$('#members_switch').css({'background':'#cecdce url(public/media/image/fleche_top.png) left top no-repeat'});
+			$('#general_switch').css({'background':'#740000 url(public/media/image/fleche_right.png) left top no-repeat'});
+		}
+		
+		$('html,body').stop().animate({scrollTop:height},1000);
+	}
 	
 	$('#search_value_id').focus(function(){
 		$('#search_value_id').removeClass('input_text_passive');
