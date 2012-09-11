@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.4.5
+-- version 3.5.1
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le : Dim 12 Août 2012 à 12:23
--- Version du serveur: 5.5.16
--- Version de PHP: 5.3.8
+-- Généré le: Mar 11 Septembre 2012 à 21:12
+-- Version du serveur: 5.5.24-log
+-- Version de PHP: 5.3.13
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -40,8 +40,36 @@ CREATE TABLE IF NOT EXISTS `actus` (
 --
 
 INSERT INTO `actus` (`idActus`, `title`, `body`, `date`, `lang`) VALUES
-(1, 'Il y a du changement dans l''air.', 'Comme le dit le titre, il y a du changement dans l''air. L''été nous a tous inspiré cette année pour une vague de changement. Ainsi, voici un site tout beau tout propre refait de A à Z pour vous présenter le groupe.<br/>\r\nNous avons beaucoup évolué depuis la création de Dust Of Shadows. Et notre musique aussi. De ce fait, le besoin de changer de nom, d''apparence et d''identité est venu assez naturellement.<br/>\r\nRépondant à présent au nom de Lastrope, nous prévoyons la sortie de notre nouvel EP "Eighteen" de quatre titres fin décembre.<br/>\r\nEn plus de cela, et toujours pour répondre à ce besoin de changement d''identité, nous avons réalisé - avec l''aide d''une photographe accomplie ;) - des photos reflétant le plus possible l''image souhaité du groupe et surtout de sa musique. Pour suivre ce mouvement général une vidéo de présentation est en cours de réalisation/montage.<br/><br/>\r\nS''inscrivant dans l''air de la musique moderne et complexe, Lastrope est bien décidé à franchir une nouvelle étape. La sortie de ce futur EP sera l''élément attendu pour pouvoir - enfin - élargir notre horizon.<br/>\r\nNe perdez pas de temps et allez explorer ce site qui sera quotidiennement maintenu à jour pour être constamment exhaustif de toutes nos informations.<br/><br/>\r\nMusicalement,<br/>\r\n\r\nLastrope.', 1344757674, 'fr'),
-(2, 'There is change in the air.', 'As the title says, there is a change in the air. Summer inspired us all this year for the wave of change. So here is a new clean and nice website to introduce the band. <br/>\r\nWe have evolved considerably since the creation of Dust Of Shadows. And our music too. Therefore, the need to change our name, our appearance and our identity came pretty naturally. <br/>\r\nResponding to the name of Lastrope, we expect the release of our new four titles EP "Eighteen" in late December. <br/>\r\nIn addition to this and always to meet this need of changing, we have made - with the help of an accomplished photographer ;) - photos reflecting the desired image of the band and especially its music. To follow this general trend, we are also making a video presentation (in progress / editing). <br/>\r\nAs part of the air of modern and complex music, Lastrope is determined to pass the next step. The release of this future EP will be the element expected to be able - finally - to expand our horizon. <br/>\r\nDo not waste time and go explore this website which will be daily maintained to be constantly updated exhaustive of all our information. <br/>\r\nMusically, <br/>\r\n\r\nLastrope.', 1344757674, 'en');
+(1, 'Il y a du changement dans l''air.', 'Comme le dit le titre, il y a du changement dans l''air. L''été nous a tous inspiré cette année pour une vague de changement. Ainsi, voici un site tout beau tout propre refait de A à Z pour vous présenter le groupe.\r\nNous avons beaucoup évolué depuis la création de Dust Of Shadows. Et notre musique aussi. De ce fait, le besoin de changer de nom, d''apparence et d''identité est venu assez naturellement.\r\nRépondant à présent au nom de Passanger, nous prévoyons la sortie de notre nouvel EP "Eighteen" de quatre titres fin décembre.\r\n\r\nEn plus de cela, et toujours pour répondre à ce besoin de changement d''identité, nous avons réalisé - avec l''aide d''une photographe accomplie ;) - des photos reflétant le plus possible l''image souhaité du groupe et surtout de sa musique. Pour suivre ce mouvement général une vidéo de présentation est en cours de réalisation/montage.\r\nS''inscrivant dans l''air de la musique moderne et complexe, Passanger est bien décidé à franchir une nouvelle étape. La sortie de ce futur EP sera l''élément attendu pour pouvoir - enfin - élargir notre horizon.\r\nNe perdez pas de temps et allez explorer ce site qui sera quotidiennement maintenu à jour pour être constamment exhaustif de toutes nos informations.\r\n\r\nMusicalement,\r\nPassanger.', 1344757674, 'fr'),
+(2, 'There is change in the air.', 'As the title says, there is a change in the air. Summer inspired us all this year for the wave of change. So here is a new clean and nice website to introduce the band.\r\nWe have evolved considerably since the creation of Dust Of Shadows. And our music too. Therefore, the need to change our name, our appearance and our identity came pretty naturally.\r\nResponding to the name of Passanger, we expect the release of our new four titles EP "Eighteen" in late December.\r\n\r\nIn addition to this and always to meet this need of changing, we have made - with the help of an accomplished photographer ;) - photos reflecting the desired image of the band and especially its music. To follow this general trend, we are also making a video presentation (in progress / editing).\r\nAs part of the air of modern and complex music, Passanger is determined to pass the next step. The release of this future EP will be the element expected to be able - finally - to expand our horizon.\r\nDo not waste time and go explore this website which will be daily maintained to be constantly updated exhaustive of all our information.\r\n\r\nMusically,\r\nPassanger.', 1344757674, 'en');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `bio`
+--
+
+CREATE TABLE IF NOT EXISTS `bio` (
+  `idPeriod` smallint(5) NOT NULL AUTO_INCREMENT,
+  `year` int(4) NOT NULL,
+  `description` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `lang` varchar(2) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL DEFAULT 'fr',
+  PRIMARY KEY (`idPeriod`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
+
+--
+-- Contenu de la table `bio`
+--
+
+INSERT INTO `bio` (`idPeriod`, `year`, `description`, `lang`) VALUES
+(1, 2012, 'Après un premier semestre remplis de répétitions pour les musiques du dernier album et de quelques concerts dans la région, le groupe se met en quette d''une nouvelle identité musicale et graphique. L''enregistrement du nouvel EP "Eighteen part 1" commença en aout.', 'fr'),
+(2, 2011, '', 'fr'),
+(3, 2010, '', 'fr'),
+(4, 2009, '', 'fr'),
+(5, 2012, 'After a first semester filled with rehearsals for the new album and some gigs in the region, the group goes in search of a new musical and graphic identity. The recording of the new EP "Eighteen Part 1" began in August.', 'en'),
+(6, 2011, '', 'en'),
+(7, 2010, '', 'en'),
+(8, 2009, '', 'en');
 
 -- --------------------------------------------------------
 
@@ -64,10 +92,10 @@ CREATE TABLE IF NOT EXISTS `event` (
 --
 
 INSERT INTO `event` (`idEvent`, `title`, `body`, `date`, `type`, `lang`) VALUES
-(1, 'Concert Epinay-sur-Orge !', 'On vous donne rdv le 30 Juin 2012 à Epinay sur orge pour un concert des Lastrope.', 1344757700, 'co', 'fr'),
-(2, 'Gig in Epinay-sur-Orge', 'We look forward to seeing you on June the 30th 2012 in Epinay-sur-Orge for a Lastrope gig.', 1344757700, 'co', 'en'),
-(3, 'Concert Roinville !', 'On vous donne rdv le 23 Juin 2012 à Roinville pour un concert des Lastrope.', 1344757743, 'co', 'fr'),
-(4, 'Gig in Roinville', 'We look forward to seeing you on June the 23rd 2012 in Roinville for a Lastrope gig.', 1344757743, 'co', 'en');
+(1, 'Concert Epinay-sur-Orge !', 'On vous donne rdv le 30 Juin 2012 à Epinay sur orge pour un concert des Passanger.', 1344757700, 'co', 'fr'),
+(2, 'Gig in Epinay-sur-Orge', 'We look forward to seeing you on June the 30th 2012 in Epinay-sur-Orge for a Passanger gig.', 1344757700, 'co', 'en'),
+(3, 'Concert Roinville !', 'On vous donne rdv le 23 Juin 2012 à Roinville pour un concert des Passanger.', 1344757743, 'co', 'fr'),
+(4, 'Gig in Roinville', 'We look forward to seeing you on June the 23rd 2012 in Roinville for a Passanger gig.', 1344757743, 'co', 'en');
 
 -- --------------------------------------------------------
 
@@ -89,8 +117,8 @@ CREATE TABLE IF NOT EXISTS `header` (
 --
 
 INSERT INTO `header` (`idHeader`, `title`, `meta_description`, `meta_keywords`, `lang`) VALUES
-(1, 'Lastrope', 'Le site du groupe de heavy métal progressif Lastrope', 'lastrope,heavy metal, progressif, iron maiden, dream theater,guitare, solo,batterie,php,html,css,mysql,css3,html5,jquery,javascript', 'fr'),
-(2, 'Lastrope', 'The website of the heavy metal progressif band Lastrope', 'lastrope,heavy metal, progressif, iron maiden, dream theater,guitar, solo,drum,php,html,css,mysql,css3,html5,jquery,javascript', 'en');
+(1, 'Passanger', 'Le site du groupe de heavy métal progressif Passanger', 'Passanger,heavy metal, progressif, iron maiden, dream theater,guitare, solo,batterie,php,html,css,mysql,css3,html5,jquery,javascript', 'fr'),
+(2, 'Passanger', 'The website of the heavy metal progressif band Lastrope', 'lastrope,heavy metal, progressif, iron maiden, dream theater,guitar, solo,drum,php,html,css,mysql,css3,html5,jquery,javascript', 'en');
 
 -- --------------------------------------------------------
 
@@ -149,13 +177,13 @@ CREATE TABLE IF NOT EXISTS `members` (
 --
 
 INSERT INTO `members` (`idMembers`, `name`, `firstname`, `surname`, `picture`, `birthday`, `instrument`, `influences`, `short_desc`, `lang`) VALUES
-(1, 'Dulon', 'Thibault', 'Titi', '', '28/02/1992', 'Guitariste Soliste', 'Ayreon, Iron Maiden, Dream Theater, Circus Maximus, Lord of Mushrooms, Periphery, Arjen Lucassen, Nightwish', 'Après plusieurs expériences de groupe non sérieuse, j''ai décidé, avec un ami, de fonder Dust of shadows, un groupe de heavy progressif où l''on pourrait enfin exprimer notre âme heavy et prog.\r\nEn parallèle, je continue mes projets solo qui me permettent d''exprimer mon autre moi musical et d''apprendre toutes les ficelles du mixage. http://soundcloud.com/fitz_lucassen', 'fr'),
-(2, 'Gautier', 'Franck', 'Kyky', '', '27/07/1990', 'Guitariste Rythmique', 'Saxon, Iron Maiden, Helloween, Paul Gilbert, Racer X, BFMV, Killswitch Engage.', 'Dans la polyvalence et à travers les styles je finis par me diriger vers le métal et c''est après quelques années à jouer avec différents groupes que  j''intègre le groupe Dust Of ShadowS avec lequel je partage cette passion pour la musique. \r\nhttp://www.franck-gautier.fr/page-accueil', 'fr'),
-(3, 'De Lima', 'Paco', 'Pakpak', '', '26/07/1991', 'Bassiste', '', '', 'fr'),
-(4, 'Ramos', 'Camille', 'Boulette', '', '31/07/1992', 'Batteur', '', '', 'fr'),
-(5, 'Spenato', 'Romain', 'Rominou', '', '06/08/1990', 'Chanteur', '', '', 'fr'),
-(6, 'Dulon', 'Thibault', 'Titi', '', '28/02/1992', 'Lead Guitarist', 'Ayreon, Iron Maiden, Dream Theater, Circus Maximus, Lord of Mushrooms, Periphery, Arjen Lucassen, Nightwish', 'After several not serious band experiences, I''ve decided, with a friend, to found Dust of Shadows, a heavy progressive band where we could finally express our heavy soul.\r\n Meanwhile, I continue my solo projects that allow me to express my other musical self and learn all mix tricks. http://soundcloud.com/fitz_lucassen', 'en'),
-(7, 'Gautier', 'Franck', 'Kyky', '', '27/07/1990', 'Rythm Guitarist', 'Saxon, Iron Maiden, Helloween, Paul Gilbert, Racer X, BFMV, Killswitch Engage', 'In versatility across styles and I end up heading to the metal and this is after a few years playing with different groups that I joined the band Dust Of Shadows with whom I share this passion for music.\r\nhttp://franck-gautier.fr/page-accueil', 'en'),
+(1, 'Dulon', 'Thibault', 'Titi', 'titou.png', '28/02/1992', 'Guitariste Soliste', 'Ayreon, Iron Maiden, Dream Theater, Circus Maximus, Periphery, Arjen Lucassen, Nightwish', 'Après plusieurs expériences de groupe non sérieuse, j''ai décidé, avec un ami, de fonder Dust of shadows, un groupe de heavy progressif où l''on pourrait enfin exprimer notre âme heavy et prog.\r\nEn parallèle, je continue mes projets solo qui me permettent d''exprimer mon autre moi musical et d''apprendre toutes les ficelles du mixage. http://soundcloud.com/fitz_lucassen', 'fr'),
+(2, 'Gautier', 'Franck', 'Kyky', 'kyky.png', '27/07/1990', 'Guitariste Rythmique', '', '', 'fr'),
+(3, 'De Lima', 'Paco', 'Pakpak', 'pakpak.png', '26/07/1991', 'Bassiste', '', '', 'fr'),
+(4, 'Ramos', 'Camille', 'Boulette', 'cams.png', '31/07/1992', 'Batteur', '', '', 'fr'),
+(5, 'Spenato', 'Romain', 'Rominou', 'rominou.png', '06/08/1990', 'Chanteur', '', '', 'fr'),
+(6, 'Dulon', 'Thibault', 'Titi', '', '28/02/1992', 'Lead Guitarist', 'Ayreon, Iron Maiden, Dream Theater, Circus Maximus, Periphery, Arjen Lucassen, Nightwish', 'After several not serious band experiences, I''ve decided, with a friend, to found Dust of Shadows, a heavy progressive band where we could finally express our heavy soul.\r\n Meanwhile, I continue my solo projects that allow me to express my other musical self and learn all mix tricks. http://soundcloud.com/fitz_lucassen', 'en'),
+(7, 'Gautier', 'Franck', 'Kyky', '', '27/07/1990', 'Rythm Guitarist', '', '', 'en'),
 (8, 'De Lima', 'Paco', 'Pakpak', '', '26/07/1991', 'Bassist', '', '', 'en'),
 (9, 'Ramos', 'Camille', 'Boulette', '', '31/07/1992', 'Drummer', '', '', 'en'),
 (10, 'Spenato', 'Romain', 'Rominou', '', '06/08/1990', 'Singer', '', '', 'en');
