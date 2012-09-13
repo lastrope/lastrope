@@ -175,6 +175,16 @@ $(document).ready(function(){
 		$('html,body').stop().animate({scrollTop:height},1000);
 	}
 	
+	$(window).scroll(function(){
+		if($(window).scrollTop() <= ($('#members_container').offset().top+370)){
+			$('#members_switch').css({'background':'#cecdce url(public/media/image/fleche_right.png) center center no-repeat'});
+			$('#general_switch').css({'background':'#7F554E url(public/media/image/fleche_bottom.png) center center no-repeat'});
+		} else {
+			$('#members_switch').css({'background':'#cecdce url(public/media/image/fleche_top_black.png) center center no-repeat'});
+			$('#general_switch').css({'background':'#7F554E url(public/media/image/fleche_right_white.png) center center no-repeat'});
+		}
+	});
+	
 	$('#search_value_id').focus(function(){
 		$('#search_value_id').removeClass('input_text_passive');
 		$('#search_value_id').addClass('input_text_active');

@@ -18,6 +18,7 @@
 	<!-- First page -->
 	<div id="members_container">
 		<?php
+			$cpt = 0;
 			foreach($membersInformation as $this_member){
 		?>	
 		<div id="<?php echo $this_member['name'] . '_' . $this_member['idMembers'];?>" class="member_container">
@@ -29,6 +30,23 @@
 				</div>
 			</div>
 			<div class="bas_member">
+				<div class="anim-guitare-<?php echo $cpt;?>">
+					<?php
+					if($cpt == 0){
+					?>
+					<img style="margin-top: 10px;" src="public/media/image/rg1570.png" alt="" />
+					<?php
+					} else if($cpt == 1) {
+					?>
+					<img style="margin-top: 10px;" src="public/media/image/lag.png" alt="" />
+					<?php
+					} else if($cpt == 2){
+					?>
+					<img style="margin-top: 10px;" src="public/media/image/sr.png" alt="" />
+					<?php
+					}
+					?>
+				</div>
 			</div>
 			<div class="member_desc">
 				<div class="bio_member">
@@ -65,6 +83,7 @@
 		</div>
 		
 		<?php
+				$cpt++;
 			}
 		?>
 	</div>
