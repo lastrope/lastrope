@@ -223,20 +223,7 @@ textarea:-moz-placeholder {
 	font-weight:bold;
 	color: #cecdce;
 }
-#selecteur{
-	position: absolute;
 
-	top: 12%;
-	left: 0;
-	height:78%;
-	min-height: 450px;
-	
-	box-shadow: 3px 0 5px rgba(10,10,10,0.9);
-	-o-box-shadow: 3px 0 5px rgba(10,10,10,0.9);
-	-ms-box-shadow: 3px 0 5px rgba(10,10,10,0.9);
-	-webkit-box-shadow: 3px 0 5px rgba(10,10,10,0.9);
-	-moz-box-shadow: 3px 0 5px rgba(10,10,10,0.9);
-}
 #search_form{
 	position: absolute;
 
@@ -366,7 +353,7 @@ textarea:-moz-placeholder {
 #search_form .button:active{
 	box-shadow:inset 5px 3px 5px rgba(0,0,0,0.7);
 }
-#selecteur h3,#search_form h3{
+#search_form h3{
 	font-family: helvetica;
 	font-size: 14px;
 	font-style: italic;
@@ -376,7 +363,7 @@ textarea:-moz-placeholder {
 	margin-bottom: 10px;
 	text-align:center;
 }
-#selecteur ul,#search_form form{
+#search_form form{
 	display:block;
 	margin:20px auto;
 	padding-top: 10px;
@@ -390,11 +377,39 @@ textarea:-moz-placeholder {
 	-webkit-box-shadow: 0 -3px 5px rgba(10,10,10,0.9);
 	-moz-box-shadow: 0 -3px 5px rgba(10,10,10,0.9);
 }
+#content_bis{
+	
+}
+#content_bis h3{
+	background:#7F554E;
+	padding:5px;
+	color:#fff;
+	border-bottom: 2px dashed #fff;
+}
+#selecteur{
+	position: absolute;
+	top: 16%;
+	left: -250px;
+	height:78%;
+	min-height: 450px;
+	background:#D6D6D6;
+	z-index:500;
+	max-width:250px;
+/*	box-shadow: 0 1px 5px rgba(3,3,3,0.5);
+	-o-box-shadow: 0 1px 5px rgba(3,3,3,0.5);
+	-ms-box-shadow: 0 1px 5px rgba(3,3,3,0.5);
+	-webkit-box-shadow: 0 1px 5px rgba(3,3,3,0.5);
+	-moz-box-shadow: 0 1px 5px rgba(3,3,3,0.5);*/
+	
+}
+#selecteur ul{
+	padding:2px 0px;
+}
 #selecteur ul li{
 	margin: 10px 15px;
 	cursor: pointer;
 	font-size: 14px;
-	color: #fff;
+	color: #666666;
 	
 	transition-property: color;
 	transition-duration: 1s;
