@@ -42,40 +42,8 @@ $(document).ready(function(){
 	});
 	
 	// jquery for showing news navigation left
-	$('#image_front').click(function(){
-		left_search = $('#selecteur');
-		content_search = $('#content_bis');
-		
-		if(isNavOpen){
-			content_search.fadeOut('slow');
-			
-			setTimeout(function(){
-				left_search.animate({
-					width: '0',
-					padding: '0'
-				},500);
-			},800);
-			
-			setTimeout(function(){
-				$('#image_front').css({'background-image':'url(public/media/image/search.png)'});
-			},900);
-			isNavOpen = false;
-		} else {
-			content_search.css({display:'none'});
-			
-			left_search.animate({
-				width: '300px',
-				padding: '10px'
-			},500);
-			
-			setTimeout(function(){
-				content_search.fadeIn('slow');
-			},800);
-			
-			$('#image_front').css({'background-image':'url(public/media/image/search_moins.png)'});
-			isNavOpen = true;
-		}
-	});
+	$('#selecteur').animate({'left':'0'},1200);
+	
 	// jquery for showing news navigation right
 	$('#image_back').click(function(){
 		right_search = $('#search_form');

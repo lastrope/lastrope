@@ -21,12 +21,10 @@
 <!-- COLONNE DE GAUCHE -->
 <!-- ----------------- -->
 
-<div id="selecteur" class="div_to_show" style="overflow:visible;">
-	<div id="image_front">
-	</div>
-	
-	<div id="content_bis" style="overflow:hidden;">
-		<h3><?php echo NEWS_ADVICE; ?></h3>
+<div id="selecteur">
+		
+	<div id="content_bis">
+	    <h3>En bref' :</h3>
 		<ul>
 		<?php
 			// On veille à ne pas dépasser la taille des tableaux
