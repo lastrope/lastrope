@@ -1,0 +1,223 @@
+/*
+ ********************************
+ ***ANIMATION FOR THE GUITARS ***
+ ********************************
+ */
+.anim-guitare-1, .anim-guitare-0{
+	-webkit-animation-name: rotateInstru;
+    -webkit-animation-duration: 4s;
+    -webkit-animation-iteration-count: infinite;
+	
+	-moz-animation-name: rotateInstru;
+    -moz-animation-duration: 4s;
+    -moz-animation-iteration-count: infinite;
+	
+	-o-animation-name: rotateInstru;
+    -o-animation-duration: 4s;
+    -o-animation-iteration-count: infinite;
+	
+	animation-name: rotateInstru;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes rotateInstru{
+	0%{
+		-webkit-transform: rotate(21deg);
+		-webkit-animation-timing-function: ease-out;
+	}
+	25%{
+		-webkit-transform: rotate(33deg) translate(-12px,8px);
+		-webkit-animation-timing-function: ease-in;
+	}
+	50%{
+		-webkit-transform: rotate(21deg);
+		-webkit-animation-timing-function: ease-out;
+	}
+	75%{
+		-webkit-transform: rotate(9deg) translate(12px,-4px);
+		-webkit-animation-timing-function: ease-in;
+	}
+	100%{
+		-webkit-transform: rotate(21deg);
+		-webkit-animation-timing-function: ease-out;
+	}
+}
+@-moz-keyframes rotateInstru{
+	0%{
+		-moz-transform: rotate(21deg);
+		-moz-animation-timing-function: ease-out;
+	}
+	25%{
+		-moz-transform: rotate(33deg);
+		-moz-animation-timing-function: ease-in;
+	}
+	50%{
+		-moz-transform: rotate(21deg);
+		-moz-animation-timing-function: ease-out;
+	}
+	75%{
+		-moz-transform: rotate(9deg);
+		-moz-animation-timing-function: ease-in;
+	}
+	100%{
+		-moz-transform: rotate(21deg);
+		-moz-animation-timing-function: ease-out;
+	}
+}
+@-o-keyframes rotateInstru{
+	0%{
+		-o-transform: rotate(21deg);
+		-o-animation-timing-function: ease-out;
+	}
+	25%{
+		-o-transform: rotate(33deg);
+		-o-animation-timing-function: ease-in;
+	}
+	50%{
+		-o-transform: rotate(21deg);
+		-o-animation-timing-function: ease-out;
+	}
+	75%{
+		-o-transform: rotate(9deg);
+		-o-animation-timing-function: ease-in;
+	}
+	100%{
+		-o-transform: rotate(21deg);
+		-o-animation-timing-function: ease-out;
+	}
+}
+@keyframes rotateInstru{
+	0%{
+		transform: rotate(21deg);
+		animation-timing-function: ease-out;
+	}
+	25%{
+		transform: rotate(33deg);
+		animation-timing-function: ease-in;
+	}
+	50%{
+		transform: rotate(21deg);
+		animation-timing-function: ease-out;
+	}
+	75%{
+		transform: rotate(9deg);
+		animation-timing-function: ease-in;
+	}
+	100%{
+		transform: rotate(21deg);
+		animation-timing-function: ease-out;
+	}
+}
+
+/*
+ ********************************
+ ***ANIMATION FOR THE BASS ***
+ ********************************
+ */
+.anim-guitare-2{
+	-webkit-animation-name: rotateBass;
+    -webkit-animation-duration: 4s;
+    -webkit-animation-iteration-count: infinite;
+	
+	-moz-animation-name: rotateBass;
+    -moz-animation-duration: 4s;
+    -moz-animation-iteration-count: infinite;
+	
+	-o-animation-name: rotateBass;
+    -o-animation-duration: 4s;
+    -o-animation-iteration-count: infinite;
+	
+	animation-name: rotateBass;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes rotateBass{
+	0%{
+		-webkit-transform: rotate(25deg);
+		-webkit-animation-timing-function: ease-out;
+	}
+	25%{
+		-webkit-transform: rotate(37deg) translate(-10px,10px);
+		-webkit-animation-timing-function: ease-in;
+	}
+	50%{
+		-webkit-transform: rotate(25deg);
+		-webkit-animation-timing-function: ease-out;
+	}
+	75%{
+		-webkit-transform: rotate(13deg) translate(14px,-6px);
+		-webkit-animation-timing-function: ease-in;
+	}
+	100%{
+		-webkit-transform: rotate(25deg);
+		-webkit-animation-timing-function: ease-out;
+	}
+}
+@-moz-keyframes rotateBass{
+	0%{
+		-moz-transform: rotate(21deg);
+		-moz-animation-timing-function: ease-out;
+	}
+	25%{
+		-moz-transform: rotate(33deg);
+		-moz-animation-timing-function: ease-in;
+	}
+	50%{
+		-moz-transform: rotate(21deg);
+		-moz-animation-timing-function: ease-out;
+	}
+	75%{
+		-moz-transform: rotate(9deg);
+		-moz-animation-timing-function: ease-in;
+	}
+	100%{
+		-moz-transform: rotate(21deg);
+		-moz-animation-timing-function: ease-out;
+	}
+}
+@-o-keyframes rotateBass{
+	0%{
+		-o-transform: rotate(21deg);
+		-o-animation-timing-function: ease-out;
+	}
+	25%{
+		-o-transform: rotate(33deg);
+		-o-animation-timing-function: ease-in;
+	}
+	50%{
+		-o-transform: rotate(21deg);
+		-o-animation-timing-function: ease-out;
+	}
+	75%{
+		-o-transform: rotate(9deg);
+		-o-animation-timing-function: ease-in;
+	}
+	100%{
+		-o-transform: rotate(21deg);
+		-o-animation-timing-function: ease-out;
+	}
+}
+@keyframes rotateBass{
+	0%{
+		transform: rotate(21deg);
+		animation-timing-function: ease-out;
+	}
+	25%{
+		transform: rotate(33deg);
+		animation-timing-function: ease-in;
+	}
+	50%{
+		transform: rotate(21deg);
+		animation-timing-function: ease-out;
+	}
+	75%{
+		transform: rotate(9deg);
+		animation-timing-function: ease-in;
+	}
+	100%{
+		transform: rotate(21deg);
+		animation-timing-function: ease-out;
+	}
+}
