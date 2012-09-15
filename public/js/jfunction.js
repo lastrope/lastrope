@@ -165,11 +165,11 @@ $(document).ready(function(){
 		if(direction == 'top'){
 			var height = $('#members_container').offset().top-250;
 			$('#members_switch').css({'background':'#cecdce url(public/media/image/fleche_right.png) center center no-repeat'});
-			$('#general_switch').css({'background':'#7F554E url(public/media/image/fleche_bottom.png) center center no-repeat'});
+			$('#general_switch').css({'background':'#2B5A74 url(public/media/image/fleche_bottom.png) center center no-repeat'});
 		} else {
 			var height = $('#bio_gen').offset().top;
 			$('#members_switch').css({'background':'#cecdce url(public/media/image/fleche_top_black.png) center center no-repeat'});
-			$('#general_switch').css({'background':'#7F554E url(public/media/image/fleche_right_white.png) center center no-repeat'});
+			$('#general_switch').css({'background':'#2B5A74 url(public/media/image/fleche_right_white.png) center center no-repeat'});
 		}
 		
 		$('html,body').stop().animate({scrollTop:height},1000);
@@ -178,10 +178,10 @@ $(document).ready(function(){
 	$(window).scroll(function(){
 		if($(window).scrollTop() <= ($('#members_container').offset().top+370)){
 			$('#members_switch').css({'background':'#cecdce url(public/media/image/fleche_right.png) center center no-repeat'});
-			$('#general_switch').css({'background':'#7F554E url(public/media/image/fleche_bottom.png) center center no-repeat'});
+			$('#general_switch').css({'background':'#2B5A74 url(public/media/image/fleche_bottom.png) center center no-repeat'});
 		} else {
 			$('#members_switch').css({'background':'#cecdce url(public/media/image/fleche_top_black.png) center center no-repeat'});
-			$('#general_switch').css({'background':'#7F554E url(public/media/image/fleche_right_white.png) center center no-repeat'});
+			$('#general_switch').css({'background':'#2B5A74 url(public/media/image/fleche_right_white.png) center center no-repeat'});
 		}
 	});
 	

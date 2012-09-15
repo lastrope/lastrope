@@ -44,6 +44,10 @@
 					?>
 					<img style="margin-top: 10px;" src="public/media/image/sr.png" alt="" />
 					<?php
+					} else if($cpt == 4){
+					?>
+					<img style="margin-top: 10px;" src="public/media/image/micro.png" alt="" />
+					<?php
 					}
 					?>
 				</div>
