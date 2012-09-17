@@ -10,4 +10,48 @@ function verif_search(){
 		return true;
 	}
 }
-
+/** research **/
+$(document).ready(function(){
+    var widthWindowOnLoad = (($(window).width()-555)/2);
+    $('#article').animate({'margin':'0 0 0 '+widthWindowOnLoad+'px'});
+    
+    $('#search_value_id').live('keypress',function(e){
+	var key = $(this).val().length;
+	
+	if(e.which != 8){
+	    if(key > 1){
+		openPreview();
+	    }else{
+		if($('#selecteur').css('left') == '-300px'){
+		   closePreview();
+		}
+	    }
+	}else{
+	    if(key < 4){
+		if($('#selecteur').css('left') == '-300px'){
+		    closePreview();
+		}
+	    }
+	}
+    });
+    $('#image_back').live('click',function(){
+	if($('#content_form').css('display') != 'none'){
+	    closePreview();
+	    $('#search_value_id').val('');
+	}
+    });
+});
+function openPreview(){
+    $('#selecteur').animate({'left':'-300px'},500);
+    $('#article').animate({'margin':'0 0 0 20px','width':'970px'},1000);
+    $('#researchPreview').delay(1100).fadeIn();
+}
+function closePreview(){
+    var width = (($(window).width()-555)/2); 
+    $('#researchPreview').fadeOut();
+    $('#selecteur').delay(1000).animate({'left':'0'},1000);
+    $('#article').delay(500).animate({'margin':'0 0 0 '+width+'px','width':'555px'},500);
+}
+function researchPreview(){
+    
+}
