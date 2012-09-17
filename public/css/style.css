@@ -389,18 +389,13 @@ textarea:-moz-placeholder {
 #selecteur{
 	position: absolute;
 	top: 16%;
-	left: -250px;
+	left: -3000px;
 	height:78%;
 	min-height: 450px;
-	background:#D6D6D6;
+	background-color:#D6D6D6;
 	z-index:500;
 	max-width:250px;
-/*	box-shadow: 0 1px 5px rgba(3,3,3,0.5);
-	-o-box-shadow: 0 1px 5px rgba(3,3,3,0.5);
-	-ms-box-shadow: 0 1px 5px rgba(3,3,3,0.5);
-	-webkit-box-shadow: 0 1px 5px rgba(3,3,3,0.5);
-	-moz-box-shadow: 0 1px 5px rgba(3,3,3,0.5);*/
-	
+
 }
 #selecteur ul{
 	padding:2px 0px;
@@ -452,8 +447,19 @@ textarea:-moz-placeholder {
 }
 #article{
 	width:555px;
-	height:290px;
+	height:290px;	
 	margin:auto;
+}
+#researchPreview{
+    float:right;
+    display: none;
+    background:#fff;
+}
+
+#researchPreview,
+#researchPreview img{
+    height:290px;
+    width:430px;
 }
 #event{
 	width: 300px;
