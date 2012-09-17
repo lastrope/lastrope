@@ -153,11 +153,11 @@
 			}
 		?>
 	</div>
-
+	  
 	<div class="jScrollbar_draggable">
 	    <a href="#" class="draggable"></a>
 	</div>
-
+	<div id="researchPreview"><img src="public/media/image/loader.gif" /></div>
 	<div class="clr"></div>
     </div>
 </div>
