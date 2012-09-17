@@ -21,6 +21,7 @@ $(document).ready(function(){
 	if(e.which != 8){
 	    if(key > 1){
 		openPreview();
+		researchPreview();
 	    }else{
 		if($('#selecteur').css('left') == '-300px'){
 		   closePreview();
@@ -53,5 +54,15 @@ function closePreview(){
     $('#article').delay(500).animate({'margin':'0 0 0 '+width+'px','width':'555px'},500);
 }
 function researchPreview(){
-    
+    var where = $("#type_search").val();
+    var what = $("#search_value_id").val();
+    $.ajax({
+	type:'POST',
+	url:'script/search.php',
+	data:{'what':what,'where':where},
+	success:function(response){
+	    $("#researchPreview").delay(500).html(response);
+	}
+    });
+	
 }
