@@ -15,7 +15,7 @@ $(document).ready(function(){
     var widthWindowOnLoad = (($(window).width()-555)/2);
     $('#article').animate({
 	'margin':'0 0 0 '+widthWindowOnLoad+'px'
-	});
+    });
     // A la saisie d'une lettre 
     $('#search_value_id').bind('keypress',function(e){
 	var key = $(this).val().length;
@@ -59,8 +59,8 @@ $(document).ready(function(){
 function openPreview(){
     $('#selecteur').animate({
 	'left':'-300px'
-    },500);
-    $('#article').animate({
+    });
+    $('#article').delay(500).animate({
 	'margin':'0 0 0 20px',
 	'width':'970px'
     },1000);
