@@ -9,7 +9,7 @@ $memoire = array();
 $research = new Research($pdo, $langue);
 $output = "";
 $compteur = 0;
-$output .= '<h3>Résultats pertinents</h3>';
+$h3 = '<h3>Résultats pertinents</h3>';
 if ($what != null && $where != null) {
     // séparation des tris de sélections
     $what_part = explode(' ', $what);
@@ -47,8 +47,9 @@ if ($what != null && $where != null) {
 		if (is_array($return)) {
 		    // Construction de la sortie écran des résultats
 		    foreach ($return as $result) {
-			if (array_search($result['title'], $memoire) === FALSE) {
+			if (array_search($result['title'], $memoire) === FALSE && $compteur < 10) {
 			    $output .= '<p>' . $result['title'] . '</p>';
+			    $compteur++;
 			}
 			$memoire[] = $result['title'];
 		    }
@@ -56,10 +57,9 @@ if ($what != null && $where != null) {
 	    }
 	}
     }
-    if($compteur < 10){
-	echo $output;
-	$compteur++;
-    }
+    
+    echo (isset($output) && !empty($output))?$h3.PHP_EOL.$output:$h3.PHP_EOL.'Pas de résultats';
+
 } else {
     echo 'Pas de résultats';
 }
