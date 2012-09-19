@@ -40,4 +40,7 @@
 	define("A_MEMBER", "Un membre");
 	define("A_NEWS", "Une actualité");
 	define("AN_EVENT", "Un évènement");
+	define("RELEVANT", "Résultat(s) pertinent(s)");
+	define("BREF", "En bref");
+	define("NO_RESULTS", "Pas de résultat(s)");
 ?>

@@ -24,7 +24,7 @@
 <div id="selecteur">
 		
 	<div id="content_bis">
-	    <h3>En bref' :</h3>
+	    <h3><?php echo BREF; ?></h3>
 		<ul>
 		<?php
 			// On veille à ne pas dépasser la taille des tableaux
@@ -153,11 +153,11 @@
 			}
 		?>
 	</div>
-
+	  
 	<div class="jScrollbar_draggable">
 	    <a href="#" class="draggable"></a>
 	</div>
-
+	<div id="researchPreview"><img src="public/media/image/loader.gif" /></div>
 	<div class="clr"></div>
     </div>
 </div>

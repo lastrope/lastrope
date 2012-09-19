@@ -194,6 +194,6 @@ function load_news_text(id,title){
 					$('#article_content').empty();
 					$('#article_content').append(data);
 				});
-		},800);
+		},200);
 	}
 }
