@@ -4,7 +4,7 @@ require_once '../class/Research.php';
 $langue = $_SESSION['langue'];
 // Récupération des données du formulaire en supprimant les espaces aux extrémités
 $what = (isset($_POST['what'])) ? trim($_POST['what']) : null;
-$where = (isset($_POST['where'])) ? trim($_POST['where']) : null;
+$where = (isset($_POST['where'])) ? trim($_POST['where']) : '';
 $memoire = array();
 $research = new Research($pdo, $langue);
 $output = "";
