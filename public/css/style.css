@@ -451,15 +451,24 @@ textarea:-moz-placeholder {
 	margin:auto;
 }
 #researchPreview{
-    float:right;
-    display: none;
-    background:#fff;
+	float:right;
+	display: none;
+	background:#fff;
 }
-
 #researchPreview,
 #researchPreview img{
-    height:290px;
-    width:430px;
+	height:290px;
+	width:430px;
+}
+#researchPreview h3{
+	background:#00C2E7;
+	color:#fff;
+	padding:2px 5px;
+}
+#researchPreview p{
+	padding:5px;
+	border-bottom:1px dotted #323232;
+	font-size:12px;
 }
 #event{
 	width: 300px;
