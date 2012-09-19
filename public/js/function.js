@@ -94,7 +94,6 @@ function researchPreview(){
 	success:function(response){
 	    $("#researchPreview").empty();
 	    $("#researchPreview").delay(500).append(response);
-	    
 	}
     });
     

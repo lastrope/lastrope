@@ -489,6 +489,24 @@ textarea:-moz-placeholder {
     background:#00C2E7;
     color:#fff;
 }
+#avatar_member{
+    padding:5px;
+    float:left;
+}
+.ligne_member,
+.label_member_block{
+    display: block;
+    
+}
+.label_member,
+.label_member_block{
+    font-weight:bold;
+    color:#7F554E;
+}
+
+.ligne_member:first-child{
+    margin-top:10px;
+}
 #event{
 	width: 300px;
 	height: 270px;

@@ -28,7 +28,35 @@
 		    $output .= nl2br($event_inf['body']);
 	    }
 	}else{
-	    $output .= '<span id="avatar_member"><img src="../public/media/image/'.$member_inf['picture'].'" /> </span>';
+	    $output .= '<span id="avatar_member"><img src="../public/media/image/'.$member_inf['picture'].'" /></span>';
+	    $output .= '<span class="ligne_member">
+			    <span class="label_member">'.NAME.' : </span>
+			    <span class="desc_member">'.$member_inf['name'].'</span>
+			</span>';
+	    $output .= '<span class="ligne_member">
+			    <span class="label_member">'.FIRST_NAME.' : </span>
+			    <span class="desc_member">'.$member_inf['firstname'].'</span>
+			</span>';
+	    $output .= '<span class="ligne_member">
+			    <span class="label_member">'.NICK_NAME.' : </span>
+			    <span class="desc_member">'.$member_inf['surname'].'</span>
+			</span>';
+	    $output .= '<span class="ligne_member">
+			    <span class="label_member">'.BIRTHDAY.' : </span>
+			    <span class="desc_member">'.$member_inf['birthday'].'</span>
+			</span>';
+	    $output .= '<span class="ligne_member">
+			    <span class="label_member">'.INSTRUMENT.' : </span>
+			    <span class="desc_member">'.$member_inf['instrument'].'</span>
+			</span>';
+	    $output .= '<span class="ligne_member">
+			    <span class="label_member_block">'.SHORT_DESC.' : </span>
+			    <span class="desc_member">'.$member_inf['short_desc'].'</span>
+			</span>';
+	    $output .= '<span class="ligne_member">
+			    <span class="label_member_block">'.INFLUENCES.' : </span>
+			    <span class="desc_member">'.$member_inf['influences'].'</span>
+			</span>';
 	}
 	echo $output;
 	?>

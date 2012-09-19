@@ -9,7 +9,7 @@ $memoire = array();
 $research = new Research($pdo, $langue);
 $output = "";
 $compteur = 0;
-$h3 = '<h3>Résultats pertinents</h3>';
+$h3 = '<h3>'.RELEVANT.'</h3>';
 if ($what != null && $where != null) {
     // séparation des tris de sélections
     $what_part = explode(' ', $what);
@@ -63,8 +63,8 @@ if ($what != null && $where != null) {
 	}
     }
     
-    echo (isset($output) && !empty($output))?$h3.PHP_EOL.$output:$h3.PHP_EOL.'Pas de résultats';
+    echo (isset($output) && !empty($output))?$h3.PHP_EOL.$output:$h3.PHP_EOL.NO_RESULTS;
 
 } else {
-    echo 'Pas de résultats';
+    echo NO_RESULTS;
 }
