@@ -22,7 +22,7 @@ if ($what != null && $where != null) {
 		// Construction de la requête en fonction du domaine
 		switch ($where_value) {
 		    case 'a_member':
-			$request = "SELECT concat(name,' ',firstname) as title FROM members WHERE (name LIKE '%$what_value%' ";
+			$request = "SELECT idMembers as id, concat(name,' ',firstname) as title FROM members WHERE (name LIKE '%$what_value%' ";
 			$request .= "OR firstname LIKE '%$what_value%' ";
 			$request .= "OR influences LIKE '%$what_value%' ";
 			$request .= "OR short_desc LIKE '%$what_value%') ";
@@ -49,7 +49,7 @@ if ($what != null && $where != null) {
 		    foreach ($return as $result) {
 			if (array_search($result['title'], $memoire) === FALSE && $compteur < 10) {
 			    if($where_value == 'a_member'){
-				$attributes = '';
+				$attributes = "onclick=\"load_news_text('".intval($result['id'])."',null);\"";
 			    }else{
 				$attributes = "onclick=\"load_news_text('".intval($result['id'])."','".addslashes($result['title'])."');\"";
 			    }

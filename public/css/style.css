@@ -473,15 +473,15 @@ textarea:-moz-placeholder {
     display:block;
     padding:5px;
     color:#3A3A3A;
-    transition-property: color,background;
+    transition-property: background;
     transition-duration: 0.5s;
-    -moz-transition-property: color,background;
+    -moz-transition-property: background;
     -moz-transition-duration:0.5s;
-    -webkit-transition-property: color,background;
+    -webkit-transition-property: background;
     -webkit-transition-duration: 0.5s;
-    -o-transition-property: color,background;
+    -o-transition-property: background;
     -o-transition-duration: 0.5s;
-    -ms-transition-property: color,background;
+    -ms-transition-property: background;
     -ms-transition-duration:0.5s;    
 }
 #researchPreview a:hover{

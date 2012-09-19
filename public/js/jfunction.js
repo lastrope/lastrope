@@ -188,12 +188,12 @@ function load_news_text(id,title){
 		url = title + '-news';
 		$(location).attr('href',url);
 	} else {
-		setTimeout(function(){
+		//setTimeout(function(){
 			$.post("script/chargeNews.php", {id: id,title: title},  
 				function success(data){
 					$('#article_content').empty();
 					$('#article_content').append(data);
 				});
-		},200);
+		//},200);
 	}
 }
