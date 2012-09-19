@@ -59,7 +59,7 @@ $(document).ready(function(){
 function openPreview(){
     $('#selecteur').animate({
 	'left':'-300px'
-    });
+    },500);
     $('#article').delay(500).animate({
 	'margin':'0 0 0 20px',
 	'width':'970px'

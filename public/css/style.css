@@ -453,7 +453,7 @@ textarea:-moz-placeholder {
 #researchPreview{
 	float:right;
 	display: none;
-	background:#fff;
+	background:#EEEEEE;
 }
 #researchPreview,
 #researchPreview img{
