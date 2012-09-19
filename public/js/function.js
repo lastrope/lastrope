@@ -92,7 +92,8 @@ function researchPreview(){
 	    'where':where
 	},
 	success:function(response){
-	    $("#researchPreview").delay(500).html(response);
+	    $("#researchPreview").empty();
+	    $("#researchPreview").delay(500).append(response);
 	    
 	}
     });
