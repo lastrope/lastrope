@@ -66,5 +66,5 @@ if ($what != null && $where != null) {
     echo (isset($output) && !empty($output))?$h3.PHP_EOL.$output:$h3.PHP_EOL.NO_RESULTS;
 
 } else {
-    echo NO_RESULTS;
+    echo $h3.PHP_EOL.NO_RESULTS;
 }
