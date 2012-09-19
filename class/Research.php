@@ -17,7 +17,7 @@ class Research{
     public function execute($request){
 	try{
 	    $result = $this->pdo->query($request);
-	    $return = $result->fetch(PDO::FETCH_ASSOC);
+	    $return = $result->fetchAll(PDO::FETCH_ASSOC);
 	    return $return;
           
 	}catch(PDOException $e){
