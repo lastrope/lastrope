@@ -51,6 +51,10 @@ $(document).ready(function(){
 	if($('#content_form').css('display') != 'none'){
 	    closePreview();
 	    $('#search_value_id').val('');
+	    var location = window.location.href;
+	    var end_of_url = location.substring(location.lastIndexOf( "/" )+1, location.length);
+	    var lang_tag = end_of_url.split('-');
+	    load_news_text(0, lang_tag[0]);
 	}
     });
     
@@ -69,9 +73,7 @@ function openPreview(){
 // Fermeture de l'encart de résultats pertinents'
 function closePreview(){
     var width = (($(window).width()-555)/2);
-    var location = window.location.href;
-    var end_of_url = location.substring(location.lastIndexOf( "/" )+1, location.length);
-    var lang_tag = end_of_url.split('-');
+    
     $('#researchPreview').fadeOut();
     $('#selecteur').delay(1000).animate({
 	'left':'0'
@@ -80,7 +82,7 @@ function closePreview(){
 	'margin':'0 0 0 '+width+'px',
 	'width':'555px'
     },500);
-    load_news_text(0, lang_tag[0]);
+    
     
 }
 // MAJ du contenu de l'encart 
