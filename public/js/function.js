@@ -96,5 +96,4 @@ function researchPreview(){
 	    $("#researchPreview").delay(800).append(response);
 	}
     });
-    
 }
