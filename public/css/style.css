@@ -392,6 +392,7 @@ textarea:-moz-placeholder {
 	left: -3000px;
 	height:78%;
 	min-height: 450px;
+	background:url('/public/media/image/stripe_background.png');
 	background-color:#D6D6D6;
 	z-index:500;
 	max-width:250px;
