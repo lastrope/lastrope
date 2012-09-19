@@ -41,6 +41,9 @@ $(document).ready(function(){
     });
     // Si l'on ferme le panel droite de recherche alors qu'il reste des caractères de saisi
     $('#image_back').live('click',function(){
+	// on réinitialise tout
+	$('.selected_answer').removeClass('selected_answer');
+	$('#type_search').val('');
 	if($('#content_form').css('display') != 'none'){
 	    closePreview();
 	    $('#search_value_id').val('');
