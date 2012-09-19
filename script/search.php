@@ -8,6 +8,7 @@ $where = (isset($_POST['where'])) ? trim($_POST['where']) : '';
 $memoire = array();
 $research = new Research($pdo, $langue);
 $output = "";
+$compteur = 0;
 $output .= '<h3>Résultats pertinents</h3>';
 if ($what != null && $where != null) {
     // séparation des tris de sélections
@@ -55,7 +56,10 @@ if ($what != null && $where != null) {
 	    }
 	}
     }
-    echo $output;
+    if($compteur < 10){
+	echo $output;
+	$compteur++;
+    }
 } else {
     echo 'Pas de résultats';
 }
