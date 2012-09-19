@@ -31,12 +31,12 @@ if ($what != null && $where != null) {
 		    case 'a_sound':break;
 		    case 'a_video':break;
 		    case 'a_news':
-			$request = "SELECT title FROM actus WHERE (title LIKE '%$what_value%' ";
+			$request = "SELECT idActus as id , title FROM actus WHERE (title LIKE '%$what_value%' ";
 			$request .= "OR body LIKE '%$what_value%') ";
 			$request .= "AND lang='$langue'";
 			break;
 		    case 'a_event':
-			$request = "SELECT title FROM event WHERE (title LIKE '%$what_value%' ";
+			$request = "SELECT idEvent as id, title FROM event WHERE (title LIKE '%$what_value%' ";
 			$request .= "OR body LIKE '%$what_value%') ";
 			$request .= "AND lang='$langue'";
 			break;
@@ -48,7 +48,12 @@ if ($what != null && $where != null) {
 		    // Construction de la sortie écran des résultats
 		    foreach ($return as $result) {
 			if (array_search($result['title'], $memoire) === FALSE && $compteur < 10) {
-			    $output .= '<p>' . $result['title'] . '</p>';
+			    if($where_value == 'a_member'){
+				$attributes = '';
+			    }else{
+				$attributes = "onclick=\"load_news_text('".intval($result['id'])."','".addslashes($result['title'])."');\"";
+			    }
+			    $output .= "<p><a href='#' ".$attributes." >" . $result['title'] . "</a></p>";
 			    $compteur++;
 			}
 			$memoire[] = $result['title'];
