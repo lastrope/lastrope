@@ -1,5 +1,7 @@
 <?php
+// Récupération de l'id 
 $news_id = isset($_POST['id']) ? intval($_POST['id']) : 0;
+//Type de news récolter
 $news_type = isset($_POST['type']) ? addslashes($_POST['type']) : '';
 
 require '../bootstrap.php';
@@ -15,6 +17,7 @@ $output = "";
 	<div class="content_article">
 	    <p>
 		<?php
+		// Construction de la réponse en fonction du type de news demandé
 		switch ($news_type) {
 		    case 'actu':
 			$actus = new Actus($pdo, $session->read('langue'));
@@ -24,8 +27,10 @@ $output = "";
 		    case 'video':
 			$video = new Video($pdo, $session->read('langue'));
 			$video_inf = $video->getVideoById($news_id);
-			$output .= '<span class="label_member_block">'.$video_inf['title'].'<span>'.PHP_EOL;
-			$output .= '<span class="label_member_block"><iframe width="512" height="300" src="' . urldecode($video_inf['url']) . '" frameborder="0" allowfullscreen></iframe></span>' . PHP_EOL;
+			$output .= '<span class="label_member_block">' . $video_inf['title'] . '<span>' . PHP_EOL;
+			$output .= '<span class="label_member_block">';
+			$output .= '<iframe width="512" height="300" src="' . urldecode($video_inf['url']) . '" frameborder="0" allowfullscreen></iframe>';
+			$output .= '</span>' . PHP_EOL;
 			$output .= '<span>' . $video_inf['description'] . '</span>';
 			break;
 		    case 'music':
@@ -71,7 +76,9 @@ $output = "";
 				<span class="desc_member">' . $member_inf['influences'] . '</span>
 			    </span>';
 			break;
-		    default:break;
+		    default:
+			'<span>' . NO_RESULTS . '</span>';
+			break;
 		}
 		echo $output;
 		?>

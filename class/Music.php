@@ -16,9 +16,9 @@ class Music{
     }
     public function getMusicById($id){
         $request = "SELECT *
-			FROM music
+			FROM song
 			WHERE lang='".$this->lang."'
-			AND idMusic=".$id;
+			AND idSong=".$id;
 
         try{
             $result = $this->pdo->query($request);
