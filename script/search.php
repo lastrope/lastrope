@@ -11,10 +11,10 @@ $research = new Research($pdo, $langue);
 $output = "";
 $compteur = 0;
 $h3 = '<h3>' . RELEVANT . '</h3>';
-if ($what != null && $where != null) {
+if ($what != null) {
     // séparation des tris de sélections
     $what_part = explode(' ', $what);
-    $where_parts = explode(' ', $where);
+    $where_parts = (empty($where))?array('a_member','a_sound','a_video','a_news','a_event'):explode(' ', $where);
     // Pour chaque mot entré lors de la saisie
     foreach ($what_part as $what_value) {
 	// Chaque domaine de recherche

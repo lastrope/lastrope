@@ -88,7 +88,7 @@ class Event{
         }
         return array();
     }
-	public function isEventExist($id, $title){
+	public function isEventExist($id){
         $request = "SELECT idEvent, title, body , date, type
 			FROM event
 			WHERE idEvent=".$id;
