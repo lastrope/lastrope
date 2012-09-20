@@ -16,6 +16,7 @@
 	$key_event = array_keys($eventInformation);
 	
 	$tag_langue = isset($_SESSION['langue'])?$_SESSION['langue']:'fr';
+	
 ?>
 
 <!-- COLONNE DE GAUCHE -->
@@ -38,7 +39,7 @@
 					$cpt_actu++;
 				}
 		?>
-			<li id="news_<?php echo $cpt;?>" onclick="load_news_text('<?php echo (isset($this_actu['idActus'])?$this_actu['idActus']:$this_actu['idEvent']); ?>','<?php echo $this_actu['title']; ?>');">
+			<li id="news_<?php echo $cpt;?>" onclick="load_news_text('<?php echo (isset($this_actu['idActus'])?$this_actu['idActus']."','actu":$this_actu['idEvent']."','event"); ?>');">
 				<?php echo $this_actu['title']; ?>
 			</li>
 		<?php
@@ -52,7 +53,7 @@
 			// Et on les affiche à la suite
 			while($rest_cpt < count($rest_array)){
 		?>
-			<li id="news_<?php echo $cpt;?>" onclick="load_news_text('<?php echo (isset($rest_array[$rest_key[$rest_cpt]]['idActus'])?$rest_array[$rest_key[$rest_cpt]]['idActus']:$rest_array[$rest_key[$rest_cpt]]['idEvent']); ?>','<?php echo addslashes($rest_array[$rest_key[$rest_cpt]]['title']) ?>');">
+			<li id="news_<?php echo $cpt;?>" onclick="load_news_text('<?php echo (isset($rest_array[$rest_key[$rest_cpt]]['idActus'])?$rest_array[$rest_key[$rest_cpt]]['idActus']."','actu":$rest_array[$rest_key[$rest_cpt]]['idEvent']."','event"); ?>');">
 				<?php echo $rest_array[$rest_key[$rest_cpt]]['title']; ?>
 			</li>
 		<?php

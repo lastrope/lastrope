@@ -183,13 +183,13 @@ function loader(){
     $('#top_loader').animate({'height':'0px'},2500);
 }
 // Ajax for load news
-function load_news_text(id,title){
-	if(id == 0 && (title == 'fr' || title == 'en')){
-		url = title + '-news';
+function load_news_text(id,type){
+	if(id == 0 && (type == 'fr' || type == 'en')){
+		url = type + '-news';
 		$(location).attr('href',url);
 	} else {
 		setTimeout(function(){
-			$.post("script/chargeNews.php", {id: id,title: title},  
+			$.post("script/chargeNews.php", {id: id,type: type},  
 				function success(data){
 					$('#article_content').empty();
 					$('#article_content').append(data);
