@@ -41,6 +41,7 @@ $output = "";
 		    case 'event':
 			$event = new Event($pdo, $session->read('langue'));
 			$event_inf = $event->isEventExist($news_id);
+			$output .= '<span>'.$event_inf['title'].'</span>';
 			$output .= nl2br($event_inf['body']);
 			break;
 		    case 'member':
