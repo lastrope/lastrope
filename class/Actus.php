@@ -88,10 +88,10 @@ class Actus{
         }
         return array();
     }
-	public function isActuExist($id, $title){
+	public function isActuExist($id){
         $request = "SELECT idActus, title, body , date
 			FROM actus
-			WHERE idActus=".$id." AND title='".$title."'";
+			WHERE idActus=".$id;
         $actus_array = array();
 		
         try{

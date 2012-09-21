@@ -20,24 +20,10 @@ $(document).ready(function(){
     $('#search_value_id').bind('keypress',function(e){
 	var key = $(this).val().length;
 	// Si on backspace la saisie
-	if(e.which != 8){
-	    if(key > 1){
-		openPreview();
-		
-		researchPreview();
-		
-	    }else{
-		if($('#selecteur').css('left') == '-300px'){
-		    closePreview();
-		}
-	    }
-	}else{
-	    if(key < 4){
-		if($('#selecteur').css('left') == '-300px'){
-		    closePreview();
-		}
-	    }
+	if(key > 1){
+	    openPreview();
 	}
+	researchPreview();
     });
     // MAJ du contenu de l'encart si les domaines changes 
     $('.div_answer').live('click',function(){
