@@ -41,4 +41,7 @@
 	define("A_NEWS", "Une actualité");
 	define("AN_EVENT", "Un évènement");
 	define("IN_FEW_WORDS", "En bref");
+	define("RELEVANT", "Résultat(s) pertinent(s)");
+	define("BREF", "En bref");
+	define("NO_RESULTS", "Pas de résultat(s)");
 ?>

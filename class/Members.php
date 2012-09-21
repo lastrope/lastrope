@@ -43,21 +43,18 @@ class Members{
      * getMemberById 
      * Permet les infos pour un membre de par son ID
 	 * @param $id
-	 * @return array $members_array ( assoc )
+	 * @return array $ligne
      */
     public function getMembersById($id){
-        $request = "SELECT idMembers,name,firstname,surname, picture, birthday
+        $request = "SELECT *
 			FROM members
-			WHERE idMembers=".$id;
-		
-        $members_array = array();
-		
+			WHERE lang='".$this->lang."'
+			AND idMembers=".$id;
+
         try{
             $result = $this->pdo->query($request);
-            while($ligne = $result->fetch(PDO::FETCH_ASSOC)){
-                    $members_array[$ligne['idMembers']] = $ligne;
-            }
-            return $members_array;
+            $ligne = $result->fetch(PDO::FETCH_ASSOC);
+            return $ligne;
         }catch(PDOException $e){
             print $e->getMessage();
         }

@@ -1,6 +1,6 @@
 <?php
 /*
- *  Class Event : gère les évènements du site
+ *  Class Event : gï¿½re les ï¿½vï¿½nements du site
  */
 class Event{
     private $pdo = null;
@@ -18,7 +18,7 @@ class Event{
     }
     /*
      * getAllEvent
-     * permet de récupérer tous les évènements
+     * permet de rï¿½cupï¿½rer tous les ï¿½vï¿½nements
 	 * @return array $event_array ( assoc )
      */
     public function getAllEvent(){
@@ -42,7 +42,7 @@ class Event{
     }
     /*
      * getLastFiveEvent
-     * permet de récupérer les 5 derniers évènements
+     * permet de rï¿½cupï¿½rer les 5 derniers ï¿½vï¿½nements
 	 * @return array $event_array ( assoc )
      */
 	public function getLastFiveEvent(){
@@ -66,7 +66,7 @@ class Event{
 	}
     /*
      * getEventById
-     * permet de récupérer un évènement par son id
+     * permet de rï¿½cupï¿½rer un ï¿½vï¿½nement par son id
 	 * @param $id
 	 * @return array $event_array ( assoc )
      */
@@ -88,10 +88,10 @@ class Event{
         }
         return array();
     }
-	public function isEventExist($id, $title){
+	public function isEventExist($id){
         $request = "SELECT idEvent, title, body , date, type
 			FROM event
-			WHERE idEvent=".$id." AND title='".$title."'";
+			WHERE idEvent=".$id;
 		
         $event_array = array();
 		
@@ -108,14 +108,14 @@ class Event{
 	}
     /*
      * addEvent
-     * Permet d'ajouter des évènements
-     * Attend un tableau indexé sur les index : title, body, type, lang
+     * Permet d'ajouter des ï¿½vï¿½nements
+     * Attend un tableau indexï¿½ sur les index : title, body, type, lang
 	 * @param $event ( array )
 	 * @return $this
      */
     public function addEvent($event = array()){
          if(isset($event)):
-            // Transformation de tous les caractère spéciaux par leur entités html
+            // Transformation de tous les caractï¿½re spï¿½ciaux par leur entitï¿½s html
             $title = htmlspecialchars($event['title']);
             $body = htmlspecialchars($event['body']);
             $type = htmlspecialchars($event['type']);
@@ -134,7 +134,7 @@ class Event{
     }
     /*
      * deleteEvent
-     * Permet de supprimer un ou plusieurs évènements
+     * Permet de supprimer un ou plusieurs ï¿½vï¿½nements
      * Attend une liste d'id
 	 * @param $list_id ( array )
 	 * @return $this

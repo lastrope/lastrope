@@ -1,3 +1,17 @@
+/** Franck 19/09/12 **/
+Apport des finitions animation + fonctionnement des résultats pertinents de pré-recherche.
+Modification du logo principal
+
+/** Franck 17/09/12 **/
+Modification de la page news.php :
+	- Ajout d'un bloc de preview à la frappe dans l'input 
+	- Animation d'apparition et de disparition de la preview
+
+/** Francky 15/09/12 **/
+Modification du panneau latéral gauche de l'actualité 
+Modification en conséquence du fichier jfunction.js ( réduction de code )
+Ainsi que du fichier news.php + style.csss
+
 /** Titi 15/08/2012 **/
 Modification page news.php :
 	- Une rubrique au milieu contenant toutes les news

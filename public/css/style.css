@@ -389,18 +389,14 @@ textarea:-moz-placeholder {
 #selecteur{
 	position: absolute;
 	top: 16%;
-	left: -250px;
+	left: -3000px;
 	height:78%;
 	min-height: 450px;
-	background:#D6D6D6;
+	background:url('/public/media/image/stripe_background.png');
+	background-color:#D6D6D6;
 	z-index:500;
 	max-width:250px;
-/*	box-shadow: 0 1px 5px rgba(3,3,3,0.5);
-	-o-box-shadow: 0 1px 5px rgba(3,3,3,0.5);
-	-ms-box-shadow: 0 1px 5px rgba(3,3,3,0.5);
-	-webkit-box-shadow: 0 1px 5px rgba(3,3,3,0.5);
-	-moz-box-shadow: 0 1px 5px rgba(3,3,3,0.5);*/
-	
+
 }
 #selecteur ul{
 	padding:2px 0px;
@@ -452,8 +448,65 @@ textarea:-moz-placeholder {
 }
 #article{
 	width:555px;
-	height:290px;
+	height:290px;	
 	margin:auto;
+}
+#researchPreview{
+	float:right;
+	display: none;
+	background:#EEEEEE;
+}
+#researchPreview,
+#researchPreview img{
+	height:290px;
+	width:430px;
+}
+#researchPreview h3{
+	background:#3A3A3A;
+	color:#fff;
+	padding:2px 5px;
+}
+#researchPreview p{
+	border-bottom:1px dotted #323232;
+	font-size:12px;
+}
+#researchPreview a{
+    display:block;
+    padding:5px;
+    color:#3A3A3A;
+    transition-property: background;
+    transition-duration: 0.5s;
+    -moz-transition-property: background;
+    -moz-transition-duration:0.5s;
+    -webkit-transition-property: background;
+    -webkit-transition-duration: 0.5s;
+    -o-transition-property: background;
+    -o-transition-duration: 0.5s;
+    -ms-transition-property: background;
+    -ms-transition-duration:0.5s;    
+}
+#researchPreview a:hover{
+    display:block;
+    background:#00C2E7;
+    color:#fff;
+}
+#avatar_member{
+    padding:5px;
+    float:left;
+}
+.ligne_member,
+.label_member_block{
+    display: block;
+    
+}
+.label_member,
+.label_member_block{
+    font-weight:bold;
+    color:#7F554E;
+}
+
+.ligne_member:first-child{
+    margin-top:10px;
 }
 #event{
 	width: 300px;
