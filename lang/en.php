@@ -40,4 +40,5 @@
 	define("A_MEMBER", "A member");
 	define("A_NEWS", "A news");
 	define("AN_EVENT", "An event");
+	define("IN_FEW_WORDS", "The news");
 ?>
