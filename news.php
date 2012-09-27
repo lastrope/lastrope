@@ -25,7 +25,7 @@
 <div id="selecteur">
 		
 	<div id="content_bis">
-	    <h3><?php echo BREF; ?></h3>
+	    <h3><?php echo IN_FEW_WORDS . BEFORE_TWO_POINT; ?>:</h3>
 		<ul>
 		<?php
 			// On veille à ne pas dépasser la taille des tableaux
