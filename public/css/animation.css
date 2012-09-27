@@ -324,67 +324,67 @@
 }
 @-moz-keyframes rotateMicro{
 	0%{
-		-moz-transform: rotate(25deg);
+		-moz-transform: rotate(0deg);
 		-moz-animation-timing-function: ease-out;
 	}
 	25%{
-		-moz-transform: rotate(37deg) translate(-14px,2px);
+		-moz-transform: rotate(12deg) translate(-14px,2px);
 		-moz-animation-timing-function: ease-in;
 	}
 	50%{
-		-moz-transform: rotate(25deg);
+		-moz-transform: rotate(0deg);
 		-moz-animation-timing-function: ease-out;
 	}
 	75%{
-		-moz-transform: rotate(13deg) translate(14px,2px);
+		-moz-transform: rotate(-12deg) translate(14px,2px);
 		-moz-animation-timing-function: ease-in;
 	}
 	100%{
-		-moz-transform: rotate(25deg);
+		-moz-transform: rotate(0deg);
 		-moz-animation-timing-function: ease-out;
 	}
 }
 @-o-keyframes rotateMicro{
 	0%{
-		-o-transform: rotate(25deg);
+		-o-transform: rotate(0deg);
 		-o-animation-timing-function: ease-out;
 	}
 	25%{
-		-o-transform: rotate(37deg) translate(-14px,2px);
+		-o-transform: rotate(12deg) translate(-14px,2px);
 		-o-animation-timing-function: ease-in;
 	}
 	50%{
-		-o-transform: rotate(25deg);
+		-o-transform: rotate(0deg);
 		-o-animation-timing-function: ease-out;
 	}
 	75%{
-		-o-transform: rotate(13deg) translate(14px,2px);
+		-o-transform: rotate(-12deg) translate(14px,2px);
 		-o-animation-timing-function: ease-in;
 	}
 	100%{
-		-o-transform: rotate(25deg);
+		-o-transform: rotate(0deg);
 		-o-animation-timing-function: ease-out;
 	}
 }
 @keyframes rotateMicro{
 	0%{
-		transform: rotate(25deg);
+		transform: rotate(0deg);
 		animation-timing-function: ease-out;
 	}
 	25%{
-		transform: rotate(37deg) translate(-14px,2px);
+		transform: rotate(12deg) translate(-14px,2px);
 		animation-timing-function: ease-in;
 	}
 	50%{
-		transform: rotate(25deg);
+		transform: rotate(0deg);
 		animation-timing-function: ease-out;
 	}
 	75%{
-		transform: rotate(13deg) translate(14px,2px);
+		transform: rotate(-12deg) translate(14px,2px);
 		animation-timing-function: ease-in;
 	}
 	100%{
-		transform: rotate(25deg);
+		transform: rotate(0deg);
 		animation-timing-function: ease-out;
 	}
 }
