@@ -1,22 +1,28 @@
 $(document).ready(function(){
-
     var divNews = $('#news');
     var divBio = $('#bio');
     var divMedia = $('#media');
     var divSon = $('#son');
     var divContact = $('#contact');
+	var default_active = divNews;
 	
 	var isNavOpen = false;
 	var isSearchOpen = false;
-	
-	var effet = 'easeOutElastic';
 	var temoin = false;
 	
+	var effet = 'easeOutElastic';
+	
+	var widthWindowOnLoad = (($(window).width()-555)/2);
+	
+	// Initialization of the rollhover menu
+	// If One Item is already selected put the boolean at "True"
 	$('li').each(function(){
 		if($(this).hasClass('selected')){
 			temoin = true;
 		}
 	});
+	// If there is an item already selected, take its offset left for the hover animation
+	// Else, take 0
 	if(temoin){
 		var default_left = Math.round($('li.selected').offset().left - $('#header').offset().left);
 		var default_width = $('li.selected').width();
@@ -24,8 +30,7 @@ $(document).ready(function(){
 		default_left = 0;
 		default_width = 0;
 	}
-	var default_active = divNews;
-	
+	// Initialization of the rollhover object position
 	$('#box').css({left: default_left});
 	$('#rectangle').css({width: default_width});
 	
@@ -41,7 +46,7 @@ $(document).ready(function(){
 		$('#rectangle').stop().animate({width:default_width},{duration:1000, easing:effet});
 	});
 	
-	// jquery for showing news navigation left
+	// jquery for showing news navigation left on the page loading
 	$('#selecteur').animate({'left':'0'},1200);
 	
 	// jquery for showing news navigation right
@@ -122,6 +127,7 @@ $(document).ready(function(){
 		$(this).fadeOut('slow');
 	});
 	
+	// For scrolling content on bio page
 	$('#members_switch').click(function(){
 		scrollTo('top');
 	});
@@ -129,20 +135,7 @@ $(document).ready(function(){
 		scrollTo('bottom');
 	});
 	
-	function scrollTo(direction){
-		if(direction == 'top'){
-			var height = $('#members_container').offset().top-250;
-			$('#members_switch').css({'background':'#cecdce url(public/media/image/fleche_right.png) center center no-repeat'});
-			$('#general_switch').css({'background':'#2B5A74 url(public/media/image/fleche_bottom.png) center center no-repeat'});
-		} else {
-			var height = $('#bio_gen').offset().top;
-			$('#members_switch').css({'background':'#cecdce url(public/media/image/fleche_top_black.png) center center no-repeat'});
-			$('#general_switch').css({'background':'#2B5A74 url(public/media/image/fleche_right_white.png) center center no-repeat'});
-		}
-		
-		$('html,body').stop().animate({scrollTop:height},1000);
-	}
-	
+	// Check if the scroll in the page is on a keypoint for changing image
 	$(window).scroll(function(){
 		if($(window).scrollTop() <= ($('#members_container').offset().top+370)){
 			$('#members_switch').css({'background':'#cecdce url(public/media/image/fleche_right.png) center center no-repeat'});
@@ -153,6 +146,7 @@ $(document).ready(function(){
 		}
 	});
 	
+	// Change the appearance of the input on the search form
 	$('#search_value_id').focus(function(){
 		$('#search_value_id').removeClass('input_text_passive');
 		$('#search_value_id').addClass('input_text_active');
@@ -161,6 +155,41 @@ $(document).ready(function(){
 		$('#search_value_id').removeClass('input_text_active');
 		$('#search_value_id').addClass('input_text_passive');
 	});
+	
+    $('#article').animate({
+		'margin':'0 0 0 '+widthWindowOnLoad+'px'
+    });
+	
+    // A la saisie d'une lettre 
+    $('#search_value_id').bind('keypress',function(e){
+		var key = $(this).val().length;
+		// Si on backspace la saisie
+		if(key > 2){
+			openPreview();
+		}
+		researchPreview();
+    });
+    // MAJ du contenu de l'encart si les domaines changes 
+    $('.div_answer').live('click',function(){
+		researchPreview();
+    });
+    // Si l'on ferme le panel droite de recherche alors qu'il reste des caractères de saisi
+    $('#image_back').live('click',function(){
+		// on réinitialise tout
+		$('.selected_answer').removeClass('selected_answer');
+		$('#type_search').val('');
+		
+		if($('#content_form').css('display') != 'none'){
+			closePreview();
+			$('#search_value_id').val('');
+			
+			var location = window.location.href;
+			var end_of_url = location.substring(location.lastIndexOf( "/" )+1, location.length);
+			var lang_tag = end_of_url.split('-');
+			
+			load_news_text(0, lang_tag[0]);
+		}
+    }); 
 });
 // Animation for the website opening
 function loader(){
@@ -196,4 +225,61 @@ function load_news_text(id,type){
 				});
 		},200);
 	}
+}
+// Ouverture de l'encart de résultats pertinents'
+function openPreview(){
+    $('#selecteur').animate({
+		'left':'-300px'
+    },500);
+    $('#article').delay(500).animate({
+		'margin':'0 0 0 20px',
+		'width':'970px'
+    },1000);
+    $('#researchPreview').delay(1100).fadeIn();
+}
+// Fermeture de l'encart de résultats pertinents'
+function closePreview(){
+    var width = (($(window).width()-555)/2);
+    
+    $('#researchPreview').fadeOut();
+    $('#selecteur').delay(1000).animate({
+		'left':'0'
+    },1000);
+    $('#article').delay(500).animate({
+		'margin':'0 0 0 '+width+'px',
+		'width':'555px'
+    },500);    
+}
+// MAJ du contenu de l'encart 
+function researchPreview(){ 
+    var where = $("#type_search").val();
+    var what = $("#search_value_id").val();
+	
+    $("#researchPreview").html('<img src="public/media/image/loader.gif" />');
+    
+	$.ajax({
+		type:'POST',
+		url:'script/search.php',
+		data:{
+			'what':what,
+			'where':where
+		},
+		success:function(response){
+			$("#researchPreview").empty();
+			$("#researchPreview").delay(800).append(response);
+		}
+    });
+}
+function scrollTo(direction){
+	if(direction == 'top'){
+		var height = $('#members_container').offset().top-250;
+		$('#members_switch').css({'background':'#cecdce url(public/media/image/fleche_right.png) center center no-repeat'});
+		$('#general_switch').css({'background':'#2B5A74 url(public/media/image/fleche_bottom.png) center center no-repeat'});
+	} else {
+		var height = $('#bio_gen').offset().top;
+		$('#members_switch').css({'background':'#cecdce url(public/media/image/fleche_top_black.png) center center no-repeat'});
+		$('#general_switch').css({'background':'#2B5A74 url(public/media/image/fleche_right_white.png) center center no-repeat'});
+	}
+	
+	$('html,body').stop().animate({scrollTop:height},1000);
 }

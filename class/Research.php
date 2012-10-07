@@ -15,13 +15,13 @@ class Research{
     }
     
     public function execute($request){
-	try{
-	    $result = $this->pdo->query($request);
-	    $return = $result->fetchAll(PDO::FETCH_ASSOC);
-	    return $return;
-          
-	}catch(PDOException $e){
-	    return $e->getMessage();
-	}
+		try{
+			$result = $this->pdo->query($request);
+			$return = $result->fetchAll(PDO::FETCH_ASSOC);
+			return $return;
+			  
+		} catch(PDOException $e){
+			return $e->getMessage();
+		}
     }
 }
