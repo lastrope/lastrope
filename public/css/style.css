@@ -377,11 +377,8 @@ textarea:-moz-placeholder {
 	-webkit-box-shadow: 0 -3px 5px rgba(10,10,10,0.9);
 	-moz-box-shadow: 0 -3px 5px rgba(10,10,10,0.9);
 }
-#content_bis{
-	
-}
 #content_bis h3{
-	background:#7F554E;
+	background:#3a3a3a;
 	padding:5px;
 	color:#fff;
 	border-bottom: 2px dashed #fff;
@@ -396,7 +393,14 @@ textarea:-moz-placeholder {
 	background-color:#D6D6D6;
 	z-index:500;
 	max-width:250px;
-
+	
+	box-shadow: 5px 5px 10px rgba(0,0,0,0.6);
+	-webkit-box-shadow: 5px 5px 10px rgba(0,0,0,0.6);
+	-moz-box-shadow: 5px 5px 10px rgba(0,0,0,0.6);
+	-o-box-shadow: 5px 5px 10px rgba(0,0,0,0.6);
+	-ms-box-shadow: 5px 5px 10px rgba(0,0,0,0.6);
+	
+	border-bottom-right-radius: 500px;
 }
 #selecteur ul{
 	padding:2px 0px;

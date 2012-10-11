@@ -47,7 +47,9 @@ $(document).ready(function(){
 	});
 	
 	// jquery for showing news navigation left on the page loading
-	$('#selecteur').animate({'left':'0'},1200);
+	$('#selecteur').animate({
+		'left':'0'
+	},1200);
 	
 	// jquery for showing news navigation right
 	$('#image_back').click(function(){
