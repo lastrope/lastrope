@@ -48,6 +48,7 @@
 <script type="text/javascript" src="public/js/jquery.js"></script>
 <script type="text/javascript" src="public/js/jquery.easing.1.3.js"></script>
 <script type="text/javascript" src="public/js/jfunction.js"></script>
+<script type="text/javascript" src="public/js/animation-background.js"></script>
 <script type="text/javascript" src="public/js/function.js"></script>
 <!-- For scroll -->       
 <script type="text/javascript" src="public/js/jquery-ui.js"></script>        
@@ -86,12 +87,6 @@
 					margin:'auto'
 				});
 			}
-			if($('body').height() < 700){
-				$('footer').empty();
-				$('footer').html('<div id="footer_block"><div id="footer"><p class="foot_left"><?php echo COPYRIGHT;?></p><p class="foot_right"><?php echo SACEM; ?></p></div></div>');
-			}else if($('body').height() > 700){
-				$('footer').html('<div id="footer_block"><div id="complement_back"><div id="footer"><p class="foot_left"><?php echo COPYRIGHT;?></p><p class="foot_right"><?php echo SACEM; ?></p></div><div id="copyright"></div></div></div>');
-			}
 		});
 		// Responsive design function on resize
 		$(window).resize(function(){
@@ -113,12 +108,6 @@
 				$('#article').css({
 					margin:'auto'
 				});
-			}
-			if($('body').height() < 700){
-				$('footer').empty();
-				$('footer').html('<div id="footer_block"><div id="footer"><p class="foot_left"><?php echo COPYRIGHT;?></p><p class="foot_right"><?php echo SACEM; ?></p></div></div>');
-			}else if($('body').height() > 700){
-				$('footer').html('<div id="footer_block"><div id="complement_back"><div id="footer"><p class="foot_left"><?php echo COPYRIGHT;?></p><p class="foot_right"><?php echo SACEM; ?></p></div><div id="copyright"></div></div></div>');
 			}
 		});
 	});

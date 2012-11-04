@@ -7,47 +7,45 @@
 ?>
 <header>
 <div id="header_block">
-	<div id="complement">
-		<div id="language">
-			<a href="set_language.php?lang=en" title="English Version">
-				<img src="public/media/image/flag_en.png" />
+	<div id="language">
+		<a href="set_language.php?lang=en" title="English Version">
+			<img src="public/media/image/flag_en.png" />
+		</a>
+		<a href="set_language.php?lang=fr" title="Version Française">
+			<img src="public/media/image/flag_fr.png" />
+		</a>
+	</div>
+	<div id="header">
+		<ul>
+		<?php
+			foreach($linksInformation as $this_link_information){
+				$id_css_array = explode('.',$this_link_information['href']);
+				$id_css = reset($id_css_array);
+				$url_tab = '/'.$tag_langue.'-'.$this_link_information['href'];
+				
+				if($this_link_information['href'] != 'home'){
+					echo '
+		<li '.(($actual_url == $url_tab)?'class="selected menu"':'class="menu"').'id="'.$id_css.'">
+			<a href="'.$tag_langue.'-'.$this_link_information['href'].'">'.
+				$this_link_information['text'].'
 			</a>
-			<a href="set_language.php?lang=fr" title="Version Française">
-				<img src="public/media/image/flag_fr.png" />
-			</a>
-		</div>
-		<div id="header">
-			<ul>
-			<?php
-				foreach($linksInformation as $this_link_information){
-					$id_css_array = explode('.',$this_link_information['href']);
-					$id_css = reset($id_css_array);
-					$url_tab = '/'.$tag_langue.'-'.$this_link_information['href'];
-					
-					if($this_link_information['href'] != 'home'){
-						echo '
-			<li '.(($actual_url == $url_tab)?'class="selected menu"':'class="menu"').'id="'.$id_css.'">
-				<a href="'.$tag_langue.'-'.$this_link_information['href'].'">'.
-					$this_link_information['text'].'
-				</a>
-			</li>';
-					
-					}
+		</li>';
+				
 				}
-			?>
-			</ul>
-			
-			<div id="box">
-				<div id="rectangle">
-				</div>
+			}
+		?>
+		</ul>
+		
+		<div id="box">
+			<div id="rectangle">
 			</div>
 		</div>
-			
-		<div id="logo">
-			<a href="<?php echo $tag_langue; ?>-home">
-				<img src="public/media/image/logo2.png" alt="logo" style="position: absolute;top:4px;left:25px"/>
-			</a>
-		</div>
+	</div>
+		
+	<div id="logo">
+		<a href="<?php echo $tag_langue; ?>-home">
+			<img src="public/media/image/logo2.png" alt="logo" style="position: absolute;top:4px;left:25px"/>
+		</a>
 	</div>
 </div>
 </header>
