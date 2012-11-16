@@ -191,7 +191,18 @@ $(document).ready(function(){
 			
 			load_news_text(0, lang_tag[0]);
 		}
-    }); 
+    });
+	$('.bubble_period').hover(function(){
+		$(this).children('.bubble_period_hover').css({
+			'top':$('.bubble_container').height(),
+			'display':'block'
+		});
+		
+		$(this).children('.bubble_period_hover').fadeIn(500);
+		
+	}, function(){
+		$(this).children('.bubble_period_hover').fadeOut(500);
+	});
 });
 // Animation for the website opening
 function loader(){
