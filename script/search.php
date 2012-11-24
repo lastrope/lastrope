@@ -61,7 +61,8 @@
 							$request .= "AND lang='$langue'";
 							$attribute_value = 'event';
 							break;
-						default:;
+						default: $request = null;
+							break;
 					}
 					// Exécution de la requête
 					$return = $research->execute($request);

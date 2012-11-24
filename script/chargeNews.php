@@ -22,6 +22,7 @@
 					case 'actu':
 						$actus = new Actus($pdo, $session->read('langue'));
 						$actus_inf = $actus->isActuExist($news_id);
+						$output .= '<div class="titre">'.$actus_inf['title'].'</div>';
 						$output .= nl2br($actus_inf['body']);
 						break;
 					case 'video':
@@ -34,13 +35,13 @@
 						$output .= '<span>' . $video_inf['description'] . '</span>';
 						break;
 					case 'music':
-						//$music = new Music($pdo, $session->read('langue'));
-						//$music_inf = $music->getMusicById($news_id);
+						$music = new Music($pdo, $session->read('langue'));
+						$music_inf = $music->getMusicById($news_id);
 						break;
 					case 'event':
 						$event = new Event($pdo, $session->read('langue'));
 						$event_inf = $event->isEventExist($news_id);
-						$output .= '<span>'.$event_inf['title'].'</span>';
+						$output .= '<div class="titre">'.$event_inf['title'].'</div>';
 						$output .= nl2br($event_inf['body']);
 						break;
 					case 'member':

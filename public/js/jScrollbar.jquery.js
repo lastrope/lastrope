@@ -53,7 +53,7 @@
 				var pxUpWhenMaskMove = pxUpWhenScrollMove * (diff/pxDraggable);
 				
 				js_drag
-				.click(function(e){e.preventDefault();})
+				.live('click',function(e){e.preventDefault();})
 				.draggable({
 					axis:'y',
 					containment: js_Parentdrag,
