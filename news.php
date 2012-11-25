@@ -65,8 +65,8 @@ require_once 'sort_actu_header.php';
 	<h3><?php echo SEARCH_FORM_ADVICE; ?></h3>
 
 	<form id="my_news_search" action="#" method="post">
-	    <label style="display:block;"><?php echo SEARCH_TYPE; ?></label><br/><br/>
-	    <div id="content_answer" style="display:none;width: 100%;height:170px;">
+	    <label style="display:block;"><?php echo SEARCH_TYPE; ?></label><br/>
+	    <div id="content_answer" style="display:none;width: 100%;height:150px;">
 		<div id="a_sound" class="div_answer"><?php echo A_SOUND; ?></div>
 		<div id="a_member" class="div_answer"><?php echo A_MEMBER; ?></div>
 		<div id="a_video" class="div_answer"><?php echo A_VIDEO; ?></div>

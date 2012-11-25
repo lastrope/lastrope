@@ -108,8 +108,8 @@ $(document).ready(function(){
 	    });
 			
 	    right_search.animate({
-		width: '300px',
-		padding: '10px'
+		width: '300px'
+
 	    },500);
 			
 	    setTimeout(function(){
