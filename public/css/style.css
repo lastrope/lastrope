@@ -69,6 +69,7 @@ body
     width: 100%;
     margin:0;
     padding: 0;
+    background: url('../media/image/grunge_wall.png');
 }
 a{
     text-decoration: none;
@@ -131,7 +132,7 @@ textarea:-moz-placeholder {
 #global{
     position : relative;
     min-height: 100%;
-    background:#cecdce;
+    background:none;
     z-index:1;
 }
 #corps{
@@ -143,7 +144,7 @@ textarea:-moz-placeholder {
     margin: 0 auto;
     padding-bottom: 150px;
 
-    background:#cecdce;
+    background:none;
     z-index:2;
 }
 #conteneur{
@@ -152,7 +153,7 @@ textarea:-moz-placeholder {
     position: relative;
     width:100%;
     min-width:975px;
-    background:#cecdce;
+    background:none;
     margin-top: 130px;
 }
 #image_front{
