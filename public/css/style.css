@@ -54,6 +54,11 @@ address { font-style:normal }
     font-family: "Ubuntu-C";
     src: url("Ubuntu-C.ttf");
 }
+@font-face
+{
+    font-family: "Segoe UI";
+    src: url("Segoe UI.ttf");
+}
 
 /* REST OF THE CSS */
 
@@ -447,21 +452,32 @@ textarea:-moz-placeholder {
     -o-border-radius:300px;
     -ms-border-radius:300px;
 
-    font-family: helvetica;
-    font-size:18px;
-    color: #7F554E;
     text-align:center;
     padding-top: 134px;
-
-    opacity: 0.7;
 }
-#welcome:hover{
-    opacity:1;
+#welcome h1{
+    font-family: "Segoe UI", helvetica;
+    font-size:18px;
+    font-weight: normal;
+    color: #7F554E;
 }
 #article{
-    width:555px;
-    height:290px;	
+    width:600px;	
     margin:auto;
+}
+#welcome + #article{
+    background: transparent url(../media/image/clefa.png) left 5px no-repeat;
+}
+#welcome + #article h1{
+    font-family: "Segoe UI", helvetica;
+    font-weight: normal;
+    font-size:34px;
+    color: #242424;
+    margin-bottom:30px;
+    
+    text-align: center;
+    
+    background: transparent url(../media/image/clefa.png) right bottom no-repeat;
 }
 #researchPreview{
     float:right;
@@ -539,25 +555,51 @@ textarea:-moz-placeholder {
     text-align:center;
     padding-top: 30px;
 
-    opacity: 0.7;
 }
-#event:hover{
-    opacity: 1;
+#event #projo-right-to-left{
+    position: absolute;
+    bottom:-300px;
+    left: -520px;
+    z-index: -1;
+    
+    -webkit-animation-name: rotateProjo;
+    -webkit-animation-duration: 6s;
+    -webkit-animation-iteration-count: infinite;
+	
+    -moz-animation-name: rotateProjo;
+    -moz-animation-duration: 6s;
+    -moz-animation-iteration-count: infinite;
+	
+    -o-animation-name: rotateProjo;
+    -o-animation-duration: 6s;
+    -o-animation-iteration-count: infinite;
+	
+    animation-name: rotateProjo;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+article{
+    margin-bottom: 30px;
 }
 article .titre{
-    font-family: helvetica;
-    font-size:25px;
+    font-family: "Segoe UI", helvetica;
+    font-size:20px;
+    font-weight: normal;
     color: #7F554E;
     margin-bottom:20px;
+    padding-bottom:5px;
+    border-bottom: 1px solid #7F554E;
 }
 article .event_margin{
     margin-bottom: 0;
 }
 article .content_article{
-    font-family: ubuntu-c,corbel,georgia;
+    font-family: "Segoe UI",corbel,georgia;
+    color: #242424;
     text-align:justify;
     font-size: 14px;
-    line-height:22px;
+    text-indent: 10px;
+    line-height:20px;
     padding-bottom: 10px;
 
     border-bottom: 1px dashed #BDBCBD;
@@ -565,15 +607,39 @@ article .content_article{
 section {
     margin-left: 12px;
     margin-top: 40px;
-    width: 275px;
+    width: 270px;
     height:150px;
     display:none;
+    position: relative;
+}
+#welcome #projo-left-to-right{
+    position: absolute;
+    bottom:-300px;
+    right: -520px;
+    z-index: -1;
+    
+    -webkit-animation-name: rotateProjoLeft;
+    -webkit-animation-duration: 12s;
+    -webkit-animation-iteration-count: infinite;
+	
+    -moz-animation-name: rotateProjoLeft;
+    -moz-animation-duration: 12s;
+    -moz-animation-iteration-count: infinite;
+	
+    -o-animation-name: rotateProjoLeft;
+    -o-animation-duration: 12s;
+    -o-animation-iteration-count: infinite;
+	
+    animation-name: rotateProjoLeft;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
 }
 #event section:first-child{
     display:block
 }
 section .titre{
-    font-family: helvetica;
+    font-family: "Segoe UI", helvetica;
+    font-weight: normal;
     font-size:25px;
     color: #7F554E;
 }
@@ -585,6 +651,8 @@ section .content_event{
 .published{
     font-size:0.8em;
     font-style:italic;
+    float:right;
+    text-align:center;
 }
 #mail_confirm,
 #mail_error{
@@ -601,10 +669,9 @@ section .content_event{
     background:#3C4E70;
 }
 #contact_page{
-    margin: auto;
-    width: 555px;
+    margin: 120px auto;
+    width: 600px;
     height:320px;
-    background: #D6D6D6;
 }
 #contact_page input[type=text]{
     float:left;
@@ -618,7 +685,8 @@ section .content_event{
     -ms-border-radius:3px;
 
     border:none;
-    height: 25px;
+    height: 30px;
+    width: 200px;
     text-align:center;
 
     font-family: georgia;
@@ -636,6 +704,13 @@ section .content_event{
 }
 #contact_page input[type=text]:focus{
     background:#efefef;
+}
+#contact_page h1{
+    font-family: "Segoe UI", Verdana;
+    font-weight: normal;
+    font-size: 34px;
+    margin-bottom: 40px;
+    color: #242424;
 }
 #contact_page textarea{
     background:#dedfde;
@@ -675,65 +750,55 @@ section .content_event{
     height: 30px;
     width: 100px;
 
-    font-family: Ubuntu-c, arial;
+    font-family: "Segoe UI", arial;
     color: #242424;
 }
 #contact_page .button{
     display: block;
-    margin: 5px auto;
-    font-family: 'Ubuntu-C',arial;
+    margin: 10px auto;
+    font-family: 'Segoe UI', arial;
+    font-size: 16px;
     color: #fff;
     cursor: pointer;
-    padding: 7px 10px;
+    padding: 10px 15px;
 
-    border: 2px solid #303030;
-    background-color: #303030;
+    border: 2px solid #6E443D;
+    background-color: #7F554E;
+    
+    box-shadow: inset 0 0 0 rgba(0,0,0,0);
+    -webkit-box-shadow: inset 0 0 0 rgba(0,0,0,0);
+    -moz-box-shadow: inset 0 0 0 rgba(0,0,0,0);
+    -o-box-shadow: inset 0 0 0 rgba(0,0,0,0);
+    -ms-box-shadow: inset 0 0 0 rgba(0,0,0,0);
+   
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -o-border-radius: 5px;
+    -ms-border-radius: 5px;
+    
+    transition-property: all;
+    transition-duration: 0.5s;
+    -moz-transition-property: all;
+    -moz-transition-duration: 0.5s;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 0.5s;
+    -o-transition-property: all;
+    -o-transition-duration: 0.5s;
+    -ms-transition-property: all;
+    -ms-transition-duration: 0.5s;
 
-    box-shadow:	inset 1px 0 4px rgba(30,30,30,0.6),
-	inset -1px 0 4px rgba(30,30,30,0.6),
-	0 -2px 4px rgba(0,0,0,0.6),
-	2px 0 4px rgba(0,0,0,0.6);
-    -o-box-shadow:	inset 1px 0 4px rgba(30,30,30,0.6),
-	inset -1px 0 4px rgba(30,30,30,0.6),
-	0 -2px 4px rgba(0,0,0,0.6),
-	2px 0 4px rgba(0,0,0,0.6);
-    -ms-box-shadow: inset 1px 0 4px rgba(30,30,30,0.6),
-	inset -1px 0 4px rgba(30,30,30,0.6),
-	0 -2px 4px rgba(0,0,0,0.6),
-	2px 0 4px rgba(0,0,0,0.6);
-    -moz-box-shadow:inset 1px 0 4px rgba(30,30,30,0.6),
-	inset -1px 0 4px rgba(30,30,30,0.6),
-	0 -2px 4px rgba(0,0,0,0.6),
-	2px 0 4px rgba(0,0,0,0.6);
-    -webkit-box-shadow:	inset 1px 0 4px rgba(30,30,30,0.6),
-	inset -1px 0 4px rgba(30,30,30,0.6),
-	0 -2px 4px rgba(0,0,0,0.6),
-	2px 0 4px rgba(0,0,0,0.6);
+    text-shadow: 0 0 0 rgba(255,255,255,0);
 }
 #contact_page .button:hover{
-    opacity: 0.9;
+    text-shadow: 2px 2px 6px rgba(255,255,255,0.6);
 }
 #contact_page .button:active{
-    box-shadow:	inset 4px 0 4px rgba(30,30,30,0.6),
-	inset -4px 0 4px rgba(30,30,30,0.6),
-	0 2px 4px rgba(0,0,0,0.6),
-	2px 0 4px rgba(0,0,0,0.6);
-    -o-box-shadow:	inset 4px 0 4px rgba(30,30,30,0.6),
-	inset -4px 0 4px rgba(30,30,30,0.6),
-	0 2px 4px rgba(0,0,0,0.6),
-	2px 0 4px rgba(0,0,0,0.6);
-    -ms-box-shadow: inset 4px 0 4px rgba(30,30,30,0.6),
-	inset -4px 0 4px rgba(30,30,30,0.6),
-	0 2px 4px rgba(0,0,0,0.6),
-	2px 0 4px rgba(0,0,0,0.6);
-    -moz-box-shadow:inset 4px 0 4px rgba(30,30,30,0.6),
-	inset -4px 0 4px rgba(30,30,30,0.6),
-	0 2px 4px rgba(0,0,0,0.6),
-	2px 0 4px rgba(0,0,0,0.6);
-    -webkit-box-shadow:	inset 4px 0 4px rgba(30,30,30,0.6),
-	inset -4px 0 4px rgba(30,30,30,0.6),
-	0 2px 4px rgba(0,0,0,0.6),
-	2px 0 4px rgba(0,0,0,0.6);
+    box-shadow: inset 2px 2px 6px rgba(0,0,0,0.6);
+    -webkit-box-shadow: inset 2px 2px 6px rgba(0,0,0,0.6);
+    -moz-box-shadow: inset 2px 2px 6px rgba(0,0,0,0.6);
+    -o-box-shadow: inset 2px 2px 6px rgba(0,0,0,0.6);
+    -ms-box-shadow: inset 2px 2px 6px rgba(0,0,0,0.6);
 }
 /* Header */
 #language{
@@ -858,7 +923,7 @@ footer p {
 /*SOCIAL*/
 #social,#useful_links{
     width: 200px;
-    height: 350px;
+    height: 450px;
     position: absolute;
     top:-13px;
 
@@ -1035,14 +1100,14 @@ footer p {
     left:0;
     height:220px;
     width: 195px;
-    background:#CECDCE;
+    background: url('../media/image/grunge_wall.png');
     z-index:3;
 }
 #members_container .bas_member{
     position:absolute;
     bottom:0;
     left:0;
-    background:#CECDCE;
+    background: url('../media/image/grunge_wall.png');
     height: 180px;
     width: 195px;
 
@@ -1107,6 +1172,7 @@ footer p {
     margin: 20px auto;
 
     font-size:40px;
+    font-weight: normal;
     line-height:45px;
     color: #fff;
     font-family: Baphomet;
@@ -1126,13 +1192,13 @@ footer p {
     background-color: #fff;
 
     width: 100px;
-    height: 60px;
+    height: 67px;
     margin: 0 10px;
 
-    font-family: Baphomet;
-    font-size: 20px;
+    font-family: "Segoe UI", helvetica;
+    font-size: 22px;
     color: #2B5A74;
-    padding-top: 40px;
+    padding-top: 33px;
 
     cursor: pointer;
 

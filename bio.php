@@ -27,11 +27,11 @@
 		?>	
 				<div id="<?php echo $this_member['name'] . '_' . $this_member['idMembers'];?>" class="member_container">
 					<div class="haut_member">
-						<div class="name_member">
+						<h2 class="name_member">
 							<?php
 								echo $this_member['firstname'] . ' ' . $this_member['name'];
 							?>
-						</div>
+						</h2>
 					</div>
 					<div class="bas_member">
 						<div class="anim-guitare-<?php echo $cpt;?>">
@@ -83,7 +83,7 @@
 						<div class="more" style="color: #fff;"><?php echo $this_member['influences']; ?></div>
 						
 						<div class="more" style="font-weight:bold;"><?php echo SHORT_DESC . BEFORE_TWO_POINT;?>: </div>
-						<div class="more" style="color: #fff;"><?php echo $this_member['short_desc']; ?></div>
+						<div class="more" style="color: #fff;"><p><?php echo $this_member['short_desc']; ?></p></div>
 						
 						<div style="color: #7F554E;font-family:'Ubuntu-c';font-size: 13px;">
 							Cliquez pour cacher la description
@@ -103,9 +103,9 @@
 
 <!-- Second page -->
 <div id="bio_gen">
-	<div class="big_title">
+	<h1 class="big_title">
 		Biographie
-	</div>
+	</h1>
 	<div class="bubble_container">
 		<?php
 			foreach($bioInformation as $thisBio){
@@ -115,9 +115,11 @@
 						echo $thisBio["year"];
 					?>
 					<div class="bubble_period_hover">
-					<?php
-						echo nl2br($thisBio["description"]);
-					?>
+					    <p>
+						<?php
+							echo nl2br($thisBio["description"]);
+						?>
+					    </p>
 					</div>
 				</div>
 		<?php

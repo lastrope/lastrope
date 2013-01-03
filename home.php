@@ -12,38 +12,34 @@
 
 <div id="conteneur">
 	<div id="welcome">
-		<p>
+		<h1>
 			<?php echo WELCOME_ON_WEBSITE;?>
-		</p>
+		</h1>
+		<img id="projo-left-to-right" src="public/media/image/lumiere2.png" alt="lumiere gauche" />
 	</div>
 	
-	<div id="article" class="jScrollbar3">
-		<div class="jScrollbar_mask">
-			<?php
-				// On affiche les 5 dernières actus sur la page d'accueil
-				foreach($actusInformation as $this_actu){
-			?>
-			<article>
-			<div class="article_block">
-				<div class="titre"><?php echo $this_actu['title']; ?></div>
-				<div class="content_article">
-					<p>
-						<?php echo nl2br($this_actu['body']); ?>
-						<?php echo "<p class='published' style='float:right;background:#D6D6D6;text-align:center;'>".DATE_PUBLISHED." " , date("d/m/Y ".AT." H:i:s",$this_actu['date']) , "</p>"; ?>
-					</p>
-				</div>
-			</div>
-			</article>
-			<?php
-				}
-			?>
-		</div>
-		
-		<div class="jScrollbar_draggable">
-			<a href="#" class="draggable"></a>
-		</div>
+	<div id="article">
+	    <h1><?php echo LAST_FIVE_ARTICLE; ?></h1>
+	    <?php
+		    // On affiche les 5 dernières actus sur la page d'accueil
+		    foreach($actusInformation as $this_actu){
+	    ?>
+	    <article>
+	    <div class="article_block">
+		    <h2 class="titre"><?php echo $this_actu['title']; ?></h2>
+		    <div class="content_article">
+			    <p>
+				    <?php echo nl2br($this_actu['body']); ?>
+				    <?php echo "<p class='published'>".DATE_PUBLISHED." " , date("d/m/Y ".AT." H:i:s",$this_actu['date']) , "</p>"; ?>
+			    </p>
+		    </div>
+	    </div>
+	    </article>
+	    <?php
+		    }
+	    ?>
 			
-		<div class="clr"></div>
+	    <div class="clr"></div>
 	</div>
 	
 	<div id="event">
@@ -54,9 +50,9 @@
 		?>
 		<section id="event-<?php echo $compteur; ?>" <?php if($compteur == 1)echo "class='active_carousel'"; ?>>
 		<div class="section_block">
-			<div class="titre">
+			<h2 class="titre">
 				<?php echo $this_event['title']; ?>
-			</div>
+			</h2>
 			<div class="content_event">
 				<?php echo $this_event['body']; ?>
 			</div>
@@ -70,6 +66,7 @@
 			    $compteur++;
 			}
 		?>
+	    <img id="projo-right-to-left" src="public/media/image/lumiere.png" alt="lumiere droite" />
 	</div>
 </div>
 <script type="text/javascript">

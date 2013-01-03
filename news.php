@@ -89,7 +89,7 @@ require_once 'sort_actu_header.php';
 
 <div id="conteneur">
 
-    <div id="article" class="jScrollbar3">
+    <div id="article" class="jScrollbar3 news-content">
 	<div id="article_content" class="jScrollbar_mask">
 	    <?php include 'sort_actu.php'; ?>
 	</div>

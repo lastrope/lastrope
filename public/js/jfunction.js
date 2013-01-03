@@ -12,7 +12,7 @@ $(document).ready(function(){
 	
     var effet = 'easeOutElastic';
 	
-    var widthWindowOnLoad = (($(window).width()-555)/2);
+    var widthWindowOnLoad = (($(window).width()-600)/2);
 	
     // Initialization of the rollhover menu
     // If One Item is already selected put the boolean at "True"
@@ -212,7 +212,7 @@ $(document).ready(function(){
 	$('#search_value_id').addClass('input_text_passive');
     });
 	
-    $('#article').animate({
+    $('.news-content').animate({
 	'margin':'0 0 0 '+widthWindowOnLoad+'px'
     });
 	

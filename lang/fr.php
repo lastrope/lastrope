@@ -44,4 +44,5 @@
 	define("RELEVANT", "Résultat(s) pertinent(s)");
 	define("BREF", "En bref");
 	define("NO_RESULTS", "Pas de résultat(s)");
+	define("LAST_FIVE_ARTICLE", "Les cinqs derniers articles.");
 ?>

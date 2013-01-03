@@ -1,6 +1,6 @@
 .ch-item {
-	width: 100px;
-	height: 100px;
+	width: 140px;
+	height: 140px;
 	border-radius: 50%;
 	position: relative;
 	cursor: default;
@@ -18,23 +18,31 @@
 
 .ch-img-1 { 
 	background-image: url(../media/image/fb.png);
-	background-position: -70px -25px;
+	background-position: -48px -10px;
 }
 
 .ch-img-2 { 
 	background-image: url(../media/image/twitter.png);
-	background-position: -55px -5px;
+	background-position: -30px 5px;
 }
 
 .ch-img-3 { 
 	background-image: url(../media/image/noomiz.png);
-	background-position: -8px -10px;
+	background-position: 10px 5px;
 }
 
 .ch-info {
+    
+    	color: #fff;
+	padding: 10px 0;
+	font-style: italic;
+	margin: 10px auto;
+	font-size: 12px;
+	border-top: 1px solid rgba(255,255,255,0.5);
+	
 	position: absolute;
-	width: 100px;
-	height: 100px;
+	width: 140px;
+	height: 140px;
 	border-radius: 50%;
 	opacity: 0;
 	
@@ -62,21 +70,12 @@
 	letter-spacing: 2px;
 	font-size: 14px;
 	margin: 0 auto;
-	padding: 20px 0 0 0;
+	padding: 40px 0 0 0;
 	height: 60px;
 	font-family: helvetica;
 	text-shadow: 
 		0 0 1px #fff, 
 		0 1px 2px rgba(0,0,0,0.3);
-}
-
-.ch-info {
-	color: #fff;
-	padding: 10px 0;
-	font-style: italic;
-	margin: 10px auto;
-	font-size: 12px;
-	border-top: 1px solid rgba(255,255,255,0.5);
 }
 
 .ch-item:hover {

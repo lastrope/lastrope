@@ -4,19 +4,19 @@
  ********************************
  */
 .anim-guitare-1, .anim-guitare-0{
-	-webkit-animation-name: rotateInstru;
+    -webkit-animation-name: rotateInstru;
     -webkit-animation-duration: 4s;
     -webkit-animation-iteration-count: infinite;
 	
-	-moz-animation-name: rotateInstru;
+    -moz-animation-name: rotateInstru;
     -moz-animation-duration: 4s;
     -moz-animation-iteration-count: infinite;
 	
-	-o-animation-name: rotateInstru;
+    -o-animation-name: rotateInstru;
     -o-animation-duration: 4s;
     -o-animation-iteration-count: infinite;
 	
-	animation-name: rotateInstru;
+    animation-name: rotateInstru;
     animation-duration: 4s;
     animation-iteration-count: infinite;
 }
@@ -440,5 +440,193 @@
 	100%{
 		transform: rotate(0deg);
 		animation-timing-function: ease-out;
+	}
+}
+
+/*
+ *******************************
+ *** ANIMATION FOR THE PROJO ***
+ *******************************
+ */
+ @-webkit-keyframes rotateProjo{
+	0%{
+		-webkit-transform: rotate(0);
+		-webkit-animation-timing-function: ease-out;
+	}
+	25%{
+		-webkit-transform: rotate(5deg) translate(10px,7px);
+		-webkit-animation-timing-function: ease-in;
+	}
+	50%{
+		-webkit-transform: rotate(0);
+		-webkit-animation-timing-function: ease-out;
+	}
+	75%{
+		-webkit-transform: rotate(-5deg) translate(10px,-7px);
+		-webkit-animation-timing-function: ease-in;
+	}
+	100%{
+		-webkit-transform: rotate(0);
+		-webkit-animation-timing-function: ease-out;
+	}
+}
+ @-moz-keyframes rotateProjo{
+	0%{
+		-webkit-transform: rotate(0);
+		-webkit-animation-timing-function: ease-out;
+	}
+	25%{
+		-webkit-transform: rotate(5deg) translate(10px,7px);
+		-webkit-animation-timing-function: ease-in;
+	}
+	50%{
+		-webkit-transform: rotate(0);
+		-webkit-animation-timing-function: ease-out;
+	}
+	75%{
+		-webkit-transform: rotate(-5deg) translate(10px,-7px);
+		-webkit-animation-timing-function: ease-in;
+	}
+	100%{
+		-webkit-transform: rotate(0);
+		-webkit-animation-timing-function: ease-out;
+	}
+}
+ @-o-keyframes rotateProjo{
+	0%{
+		-webkit-transform: rotate(0);
+		-webkit-animation-timing-function: ease-out;
+	}
+	25%{
+		-webkit-transform: rotate(5deg) translate(10px,7px);
+		-webkit-animation-timing-function: ease-in;
+	}
+	50%{
+		-webkit-transform: rotate(0);
+		-webkit-animation-timing-function: ease-out;
+	}
+	75%{
+		-webkit-transform: rotate(-5deg) translate(10px,-7px);
+		-webkit-animation-timing-function: ease-in;
+	}
+	100%{
+		-webkit-transform: rotate(0);
+		-webkit-animation-timing-function: ease-out;
+	}
+}
+ @keyframes rotateProjo{
+	0%{
+		-webkit-transform: rotate(0);
+		-webkit-animation-timing-function: ease-out;
+	}
+	25%{
+		-webkit-transform: rotate(5deg) translate(10px,7px);
+		-webkit-animation-timing-function: ease-in;
+	}
+	50%{
+		-webkit-transform: rotate(0);
+		-webkit-animation-timing-function: ease-out;
+	}
+	75%{
+		-webkit-transform: rotate(-5deg) translate(10px,-7px);
+		-webkit-animation-timing-function: ease-in;
+	}
+	100%{
+		-webkit-transform: rotate(0);
+		-webkit-animation-timing-function: ease-out;
+	}
+}
+
+/*
+ ************************************
+ *** ANIMATION FOR THE LEFT PROJO ***
+ ************************************
+ */
+ @-webkit-keyframes rotateProjoLeft{
+	0%{
+		-webkit-transform: rotate(0);
+		-webkit-animation-timing-function: ease-out;
+	}
+	25%{
+		-webkit-transform: rotate(5deg) translate(-10px,-7px);
+		-webkit-animation-timing-function: ease-in;
+	}
+	50%{
+		-webkit-transform: rotate(0);
+		-webkit-animation-timing-function: ease-out;
+	}
+	75%{
+		-webkit-transform: rotate(-5deg) translate(-10px,7px);
+		-webkit-animation-timing-function: ease-in;
+	}
+	100%{
+		-webkit-transform: rotate(0);
+		-webkit-animation-timing-function: ease-out;
+	}
+}
+ @-moz-keyframes rotateProjoLeft{
+	0%{
+		-webkit-transform: rotate(0);
+		-webkit-animation-timing-function: ease-out;
+	}
+	25%{
+		-webkit-transform: rotate(5deg) translate(10px,7px);
+		-webkit-animation-timing-function: ease-in;
+	}
+	50%{
+		-webkit-transform: rotate(0);
+		-webkit-animation-timing-function: ease-out;
+	}
+	75%{
+		-webkit-transform: rotate(-5deg) translate(10px,-7px);
+		-webkit-animation-timing-function: ease-in;
+	}
+	100%{
+		-webkit-transform: rotate(0);
+		-webkit-animation-timing-function: ease-out;
+	}
+}
+ @-o-keyframes rotateProjoLeft{
+	0%{
+		-webkit-transform: rotate(0);
+		-webkit-animation-timing-function: ease-out;
+	}
+	25%{
+		-webkit-transform: rotate(5deg) translate(10px,7px);
+		-webkit-animation-timing-function: ease-in;
+	}
+	50%{
+		-webkit-transform: rotate(0);
+		-webkit-animation-timing-function: ease-out;
+	}
+	75%{
+		-webkit-transform: rotate(-5deg) translate(10px,-7px);
+		-webkit-animation-timing-function: ease-in;
+	}
+	100%{
+		-webkit-transform: rotate(0);
+		-webkit-animation-timing-function: ease-out;
+	}
+}
+ @keyframes rotateProjoLeft{
+	0%{
+		-webkit-transform: rotate(0);
+		-webkit-animation-timing-function: ease-out;
+	}
+	25%{
+		-webkit-transform: rotate(5deg) translate(10px,7px);
+		-webkit-animation-timing-function: ease-in;
+	}
+	50%{
+		-webkit-transform: rotate(0);
+		-webkit-animation-timing-function: ease-out;
+	}
+	75%{
+		-webkit-transform: rotate(-5deg) translate(10px,-7px);
+		-webkit-animation-timing-function: ease-in;
+	}
+	100%{
+		-webkit-transform: rotate(0);
+		-webkit-animation-timing-function: ease-out;
 	}
 }
