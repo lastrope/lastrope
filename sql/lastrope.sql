@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Dim 18 Novembre 2012 à 20:06
+-- Généré le: Lun 07 Janvier 2013 à 10:10
 -- Version du serveur: 5.5.24-log
 -- Version de PHP: 5.3.13
 
@@ -182,7 +182,7 @@ CREATE TABLE IF NOT EXISTS `members` (
 INSERT INTO `members` (`idMembers`, `nom_table`, `name`, `firstname`, `surname`, `picture`, `birthday`, `instrument`, `influences`, `short_desc`, `lang`) VALUES
 (1, '', 'Dulon', 'Thibault', 'Titi', 'titou.png', '28/02/1992', 'Guitariste Soliste', 'Ayreon, Iron Maiden, Dream Theater, Circus Maximus, Periphery, Tesseract, Nightwish', 'Après plusieurs expériences de groupe non sérieuse, j''ai décidé, avec un ami, de fonder Dust of shadows, un groupe de heavy progressif où l''on pourrait enfin exprimer notre âme heavy et prog.\r\nEn parallèle, je continue mes projets solo qui me permettent d''exprimer mon autre moi musical et d''apprendre toutes les ficelles du mixage. http://soundcloud.com/fitz_lucassen', 'fr'),
 (2, '', 'Gautier', 'Franck', 'Kyky', 'kyky.png', '27/07/1990', 'Guitariste Rythmique', '', '', 'fr'),
-(3, '', 'De Lima', 'Paco', 'Squid', 'pakpak.png', '26/07/1991', 'Bassiste', 'Rage Against The Machine, Periphery, Marcus Miller, Le peuple de l''herbe, Dream Theater, Massive Attack, Victor Wooten', 'Paco De lima, né le 26 Juillet 1991. Commence la Basse électrique à son 16eme anniversaire dans le but de monter un groupe avec des amis. C’est alors qu’il prend conscience qu’il veut faire de la musique sa vie mais doit s’en donner les moyen. Il abandonne rapidement son premier groupe pour intègre le groupe Tape 105 et donne un premier concert au bout de deux mois d’instrument. Par la suite ce groupe est dissout et il se retrouve donc orphelin. Un jour, une connaissance de son enfance, Franck Gautier, lui propose de rentrer dans le groupe Dust Of Shadows et c’est avec joie qu’il l’intègre. Par le biais de ce groupe il peaufine son jeu et apprend de nouvelles techniques. De fil en aiguille le groupe prend en maturité, en expérience, évolue et devient PassAngers. A côté Paco a d’autres projets musicaux secondaires tel qu’un groupe de reprise Cap’tain Cover.', 'fr'),
+(3, '', 'De Lima', 'Paco', 'Squid', 'pakpak.png', '26/07/1991', 'Bassiste', 'Rage Against The Machine, Periphery, Marcus Miller, Le peuple de l''herbe, Dream Theater, Massive Attack, Victor Wooten', '', 'fr'),
 (4, '', 'Ramos', 'Camille', 'Boulette', 'cams.png', '31/07/1992', 'Batteur', 'Devin Townsend, Rage Against The Machine, Tool, Tesseract, Iron Maiden, Steve Gad, Billy Cohbam', '', 'fr'),
 (5, '', 'Spenato', 'Romain', 'Rominou', 'rominou.png', '06/08/1990', 'Chanteur', '', '', 'fr'),
 (6, '', 'Dulon', 'Thibault', 'Titi', 'titou.png', '28/02/1992', 'Lead Guitarist', 'Ayreon, Iron Maiden, Dream Theater, Circus Maximus, Periphery, Tesseract, Nightwish', 'After several not serious band experiences, I''ve decided, with a friend, to found Dust of Shadows, a heavy progressive band where we could finally express our heavy soul.\r\n Meanwhile, I continue my solo projects that allow me to express my other musical self and learn all mix tricks. http://soundcloud.com/fitz_lucassen', 'en'),
