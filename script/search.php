@@ -72,7 +72,7 @@
 							// Evite les doublons et on effectue seulement 10 affichages
 							if (array_search($result['title'], $memoire) === FALSE && $compteur < 10) {
 								$attributes = "onclick=\"load_news_text('" . intval($result['id']) . "','" . $attribute_value . "');\"";
-								$output .= "<p><a href='#' " . $attributes . " >" . $result['title'] . "</a></p>";
+								$output .= "<p class='result_search'><a href='#' " . $attributes . " >" . $result['title'] . "</a></p>";
 
 								$compteur++;
 							}
@@ -83,6 +83,7 @@
 				}
 			}
 		}
+		$output .= "<div id='article_found'></div>".PHP_EOL;
 		echo (isset($output) && !empty($output)) ? $h3 . PHP_EOL . $output : $h3 . PHP_EOL . NO_RESULTS;
 	} else {
 		echo $h3 . PHP_EOL . NO_RESULTS;

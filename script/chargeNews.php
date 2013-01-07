@@ -12,6 +12,7 @@
 	require '../class/Video.php';
 	$output = "";
 ?>
+<h3 >Plus en détails :</h3>
 <article>
     <div class="article_block">
 		<div class="content_article">

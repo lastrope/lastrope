@@ -129,6 +129,19 @@ $(document).ready(function(){
 	    isSearchOpen = true;
 	}
     });
+    // ## For te search action 
+    $("#form_search_action").click(function(){
+	var where = $("#type_search").val();
+	var what = $("#search_value_id").val();
+	$.ajax({
+	    type : "post",
+	    url : "script/search.php",
+	    data : {'what':what,'where':where},
+	    success:function(response){
+		$("#article_content").empty().append(response);
+	    }
+	});
+    });
     // For the research formulaire
     $('.div_answer').click(function(){
 	if($(this).hasClass('selected_answer')){
@@ -216,27 +229,8 @@ $(document).ready(function(){
 	'margin':'0 0 0 '+widthWindowOnLoad+'px'
     });
 	
-    // A la saisie d'une lettre 
     
-    $('#search_value_id').live('keyup',function(e){
-	
-	var key = $(this).val().length;
-	var keyCode = e.keyCode;
-		
-	if(key > 2){
-	    openPreview();
-	    researchPreview();
-	}else if(key == 0){
-	    sort_actu();
-	    closePreview();
-
-	}
-		
-    });
-    // MAJ du contenu de l'encart si les domaines changes 
-    $('.div_answer').live('click',function(){
-	researchPreview();
-    });
+    
     // Si l'on ferme le panel droite de recherche alors qu'il reste des caract�res de saisi
     $('#image_back').live('click',function(){
 	// on r�initialise tout
@@ -296,8 +290,8 @@ function load_news_text(id,type){
 	    type: type
 	},  
 	function success(data){
-	    $('#article_content').empty();
-	    $('#article_content').append(data);
+	    $('#article_found').empty();
+	    $('#article_found').append(data);
 	});
     },200);
    
@@ -324,26 +318,7 @@ function closePreview(){
 	'left':'0'
     },1000);
 }
-// MAJ du contenu de l'encart 
-function researchPreview(){ 
-    var where = $("#type_search").val();
-    var what = $("#search_value_id").val();
-	
-    $("#researchPreview").html('<img src="public/media/image/loader.gif" />');
-    
-    $.ajax({
-	type:'POST',
-	url:'script/search.php',
-	data:{
-	    'what':what,
-	    'where':where
-	},
-	success:function(response){
-	    $("#researchPreview").empty();
-	    $("#researchPreview").delay(800).append(response);
-	}
-    });
-}
+
 // SCROLL BIO BLEU
 function scrollTo(direction){
     var height = "";
@@ -383,3 +358,4 @@ function sort_actu(){
 	}
     });
 }
+
