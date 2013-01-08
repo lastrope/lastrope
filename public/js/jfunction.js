@@ -74,9 +74,24 @@ $(document).ready(function(){
     $('#selecteur').animate({
 	'left':'0'
     },1200);
-	
+
+    $('#search_form').animate({
+	width: '300px',
+	padding: '0'
+    },1200);
+    
+    setTimeout(function(){
+	$('#content_answer').css({
+	    display:'block'
+	});
+	$('.div_answer').css({
+	    display:'block'
+	});
+
+	$('#content_form').fadeIn('slow');
+    },1000);
     // jquery for showing news navigation right
-    $('#image_back').click(function(){
+    /*$('#image_back').click(function(){
 	right_search = $('#search_form');
 	content_search = $('#content_form');
 		
@@ -98,7 +113,7 @@ $(document).ready(function(){
 			
 	    setTimeout(function(){
 		$('#image_back').css({
-		    'background-image':'url(public/media/image/search.png)'
+		    'background-image':'url(public/media/image/plus.png)'
 		});
 	    },900);
 	    isSearchOpen = false;
@@ -124,11 +139,12 @@ $(document).ready(function(){
 	    },800);
 			
 	    $('#image_back').css({
-		'background-image':'url(public/media/image/search_moins.png)'
+		'background-image':'url(public/media/image/minus.png)',
+		'background-color':'#7F554E'
 	    });
 	    isSearchOpen = true;
 	}
-    });
+    }); */
     // ## For te search action 
     $("#form_search_action").click(function(){
 	var where = $("#type_search").val();
@@ -138,7 +154,7 @@ $(document).ready(function(){
 	    url : "script/search.php",
 	    data : {'what':what,'where':where},
 	    success:function(response){
-		$("#article_content").empty().append(response);
+		$("#article_content").html(response);
 	    }
 	});
     });
@@ -228,9 +244,7 @@ $(document).ready(function(){
     $('.news-content').animate({
 	'margin':'0 0 0 '+widthWindowOnLoad+'px'
     });
-	
-    
-    
+
     // Si l'on ferme le panel droite de recherche alors qu'il reste des caract�res de saisi
     $('#image_back').live('click',function(){
 	// on r�initialise tout
@@ -290,33 +304,28 @@ function load_news_text(id,type){
 	    type: type
 	},  
 	function success(data){
-	    $('#article_found').empty();
-	    $('#article_found').append(data);
+	    $('#article_content').empty();
+	    $('#article_content').append(data);
 	});
     },200);
    
 }
-// Ouverture de l'encart de r�sultats pertinents'
-function openPreview(){
-    $('#selecteur').animate({
-	'left':'-300px'
-    },500);
-    $('#article').delay(500).animate({
-	'margin':'0 0 0 20px',
-	'width':'970px'
-    },1000);
-    $('#researchPreview').delay(1100).fadeIn();
-}
-// Fermeture de l'encart de r�sultats pertinents'
-function closePreview(){
-    var width = (($(window).width()-555)/2);
-    $('#article').css({
-	'margin':'0 0 0 '+width+'px',
-	'width':'555px'
-    }); 
-    $('#selecteur').stop().animate({
-	'left':'0'
-    },1000);
+// Ajax for load news
+function load_news_text_search(id,type){
+    
+    setTimeout(function(){
+	$.post("script/chargeNews.php", {
+	    id: id,
+	    type: type
+	},  
+	function success(data){
+	    $('#article_found').hide();
+	    $('#article_found').empty();
+	    $('#article_found').append(data);
+	    $('#article_found').fadeIn();
+	});
+    },200);
+   
 }
 
 // SCROLL BIO BLEU
@@ -354,7 +363,7 @@ function sort_actu(){
 	    'lang':lang
 	},
 	success:function(actus){
-	    $("#article_content").prepend(actus);
+	    $("#article_content").html(actus);
 	}
     });
 }

@@ -58,10 +58,10 @@ require_once 'sort_actu_header.php';
 <!-- ----------------- -->
 
 <div id="search_form" class="div_to_show">
-    <div id="image_back">
-    </div>
+   <!--  <div id="image_back">
+    </div> -->
 
-    <div id="content_form" style="overflow:hidden;">
+    <div id="content_form" style="overflow:hidden;display:none">
 	<h3><?php echo SEARCH_FORM_ADVICE; ?></h3>
 
 	<div id="my_news_search" >
@@ -93,10 +93,6 @@ require_once 'sort_actu_header.php';
 	<div id="article_content" class="jScrollbar_mask">
 	    <?php include 'sort_actu.php'; ?>
 	</div>
-	<div class="jScrollbar_draggable">
-	    <a href="#" class="draggable"></a>
-	</div>
-	<div id="researchPreview"><img src="public/media/image/loader.gif" /></div>
 	<div class="clr"></div>
 
     </div>

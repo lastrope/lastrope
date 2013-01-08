@@ -13,7 +13,7 @@
 	$output = "";
 	$compteur = 0;
 
-	$h3 = '<h3>' . RELEVANT . '</h3>';
+	$h3 = '<h3 class="titre">' . RELEVANT . '</h3>';
 
 	if ($what != null) {
 		// séparation des tris de sélections
@@ -71,8 +71,8 @@
 						foreach ($return as $result) {
 							// Evite les doublons et on effectue seulement 10 affichages
 							if (array_search($result['title'], $memoire) === FALSE && $compteur < 10) {
-								$attributes = "onclick=\"load_news_text('" . intval($result['id']) . "','" . $attribute_value . "');\"";
-								$output .= "<p class='result_search'><a href='#' " . $attributes . " >" . $result['title'] . "</a></p>";
+								$attributes = "onclick=\"load_news_text_search('" . intval($result['id']) . "','" . $attribute_value . "');\"";
+								$output .= "<p class='result_search'><a " . $attributes . " >" . $result['title'] . "</a></p>";
 
 								$compteur++;
 							}
@@ -83,7 +83,7 @@
 				}
 			}
 		}
-		$output .= "<div id='article_found'></div>".PHP_EOL;
+		$output .= "<div id='article_found' style='display:none'></div>".PHP_EOL;
 		echo (isset($output) && !empty($output)) ? $h3 . PHP_EOL . $output : $h3 . PHP_EOL . NO_RESULTS;
 	} else {
 		echo $h3 . PHP_EOL . NO_RESULTS;

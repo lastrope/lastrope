@@ -12,7 +12,7 @@
 	require '../class/Video.php';
 	$output = "";
 ?>
-<h3 >Plus en détails :</h3>
+
 <article>
     <div class="article_block">
 		<div class="content_article">
@@ -31,7 +31,7 @@
 						$video_inf = $video->getVideoById($news_id);
 						$output .= '<span class="label_member_block">' . $video_inf['title'] . '<span>' . PHP_EOL;
 						$output .= '<span class="label_member_block">';
-						$output .= '<iframe width="512" height="300" src="' . urldecode($video_inf['url']) . '" frameborder="0" allowfullscreen></iframe>';
+						$output .= '<iframe width="600" height="370" src="' . urldecode($video_inf['url']) . '" frameborder="0" allowfullscreen></iframe>';
 						$output .= '</span>' . PHP_EOL;
 						$output .= '<span>' . $video_inf['description'] . '</span>';
 						break;
