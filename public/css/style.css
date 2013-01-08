@@ -407,7 +407,7 @@ textarea:-moz-placeholder {
 #welcome{
     width: 300px;
     height: 166px;
-    background:#fff;
+    background:#fff url('../media/image/creampaper.png') top left;
     position: absolute;
     top:0;
     left:10px;
@@ -501,7 +501,7 @@ textarea:-moz-placeholder {
 #event{
     width: 300px;
     height: 270px;
-    background:#fff;
+    background:#fff url('../media/image/creampaper.png') top left;
     position: absolute;
     top:0;
     right:10px;
@@ -614,10 +614,11 @@ section .content_event{
     line-height:22px;
 }
 .published{
-    font-size:0.8em;
+    font-size:0.7em;
     font-style:italic;
     float:right;
     text-align:center;
+    margin-right:5px;
 }
 #mail_confirm,
 #mail_error{
@@ -1286,4 +1287,108 @@ nav{
     bottom: -20px;
     right: 40px;
     z-index:1;
+}
+/** PLAYER MUSIC **/
+#player-container{
+    width:800px;
+    margin:0 auto;
+}
+.duration 
+{
+    font-size:10px;
+    color:#777;
+}
+
+.btn.play 
+{
+    width:16px;
+    height:17px;
+    background-image: url('/public/media/image/play.gif');
+    display: inline-block;
+}
+
+.btn.pause
+{
+    width:16px;
+    height:17px;
+    background-image: url('/public/media/image/pause.gif?2');
+}
+
+.btn.paused
+{
+    width:16px;
+    height:17px;
+    background-image: url('/public/media/image/play.gif?3');
+    display: inline-block;
+}
+.player 
+{
+    width:380px;
+    height:14px;
+    margin-top:5px;
+    padding-left:20px;
+}
+
+.player.inactive
+{
+    margin-top:5px;
+    margin-bottom:0px;
+    border-top: dashed 1px #555555;
+}
+
+.item .title 
+{
+    -vertical-align:middle;
+}
+
+.item .btn 
+{
+    display:inline;
+    float:left; 
+    margin-right:5px;
+    cursor:pointer;
+}
+#music-command a{
+    background-image:url('/public/media/image/sprite-player.png');
+    width:80px;
+    height:79px;
+    display:block;
+    float:left;
+    color:transparent;
+}
+#play-btn{
+    background-position: 0px 0px;
+  
+}
+#stop-btn{
+    background-position: -80px 0px;
+  
+}
+#prev-btn{
+    background-position: -160px 0px ;
+
+}
+#next-btn{
+    background-position: -320px 0px;
+   
+}
+#play-btn:hover{
+    background-position: 0px -90px;
+  
+}
+#stop-btn:hover{
+    background-position: -80px -90px;
+  
+}
+#prev-btn:hover{
+    background-position: -160px -90px ;
+
+}
+#next-btn:hover{
+    background-position: -320px -90px;
+   
+}
+
+.clear{
+    clear:both;
 }
