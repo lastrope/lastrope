@@ -52,21 +52,12 @@ require_once 'sort_actu_header.php';
 	    </li>
 	</ul>
     </div>
-</div>
-
-<!-- COLONNE DE DROITE -->
-<!-- ----------------- -->
-
-<div id="search_form" class="div_to_show">
-   <!--  <div id="image_back">
-    </div> -->
-
-    <div id="content_form" style="overflow:hidden;display:none">
+     <div id="content_form" style="overflow:hidden;display:none">
 	<h3><?php echo SEARCH_FORM_ADVICE; ?></h3>
 
 	<div id="my_news_search" >
 	    <label style="display:block;"><?php echo SEARCH_TYPE; ?></label><br/>
-	    <div id="content_answer" style="display:none;width: 100%;height:150px;">
+	    <div id="content_answer" >
 		<div id="a_sound" class="div_answer"><?php echo A_SOUND; ?></div>
 		<div id="a_member" class="div_answer"><?php echo A_MEMBER; ?></div>
 		<div id="a_video" class="div_answer"><?php echo A_VIDEO; ?></div>
@@ -74,7 +65,7 @@ require_once 'sort_actu_header.php';
 		<div id="a_event" class="div_answer"><?php echo AN_EVENT; ?></div>
 	    </div>
 
-	    <label style="display:block;"><?php echo ENTER_YOUR_SEARCH; ?></label><br/><br/>
+	    <label style="display:block;margin-bottom:10px;"><?php echo ENTER_YOUR_SEARCH; ?></label>
 	    <input id="search_value_id" type="text" name="search_value" class="input_text_passive" required/>
 
 	    <input type="hidden" value="" name="type_search" id="type_search" />

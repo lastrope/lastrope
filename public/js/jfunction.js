@@ -75,10 +75,6 @@ $(document).ready(function(){
 	'left':'0'
     },1200);
 
-    $('#search_form').animate({
-	width: '300px',
-	padding: '0'
-    },1200);
     
     setTimeout(function(){
 	$('#content_answer').css({
@@ -90,61 +86,7 @@ $(document).ready(function(){
 
 	$('#content_form').fadeIn('slow');
     },1000);
-    // jquery for showing news navigation right
-    /*$('#image_back').click(function(){
-	right_search = $('#search_form');
-	content_search = $('#content_form');
-		
-	if(isSearchOpen){
-	    content_search.fadeOut('slow');
-	    $('#content_answer').css({
-		display:'none'
-	    });
-	    $('.div_answer').css({
-		display:'none'
-	    });
-				
-	    setTimeout(function(){
-		right_search.animate({
-		    width: '0',
-		    padding: '0'
-		},500);
-	    },800);
-			
-	    setTimeout(function(){
-		$('#image_back').css({
-		    'background-image':'url(public/media/image/plus.png)'
-		});
-	    },900);
-	    isSearchOpen = false;
-	} else {
-	    content_search.css({
-		display:'none'
-	    });
-			
-	    right_search.animate({
-		width: '300px'
-
-	    },500);
-			
-	    setTimeout(function(){
-		$('#content_answer').css({
-		    display:'block'
-		});
-		$('.div_answer').css({
-		    display:'block'
-		});
-				
-		content_search.fadeIn('slow');
-	    },800);
-			
-	    $('#image_back').css({
-		'background-image':'url(public/media/image/minus.png)',
-		'background-color':'#7F554E'
-	    });
-	    isSearchOpen = true;
-	}
-    }); */
+   
     // ## For te search action 
     $("#form_search_action").click(function(){
 	var where = $("#type_search").val();
