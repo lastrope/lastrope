@@ -187,7 +187,7 @@ textarea:-moz-placeholder {
     padding:0;
     padding:0;
 
-    background: transparent url('../media/image/stripe_background.png') top left;
+    background: transparent url('../media/image/creampaper.png') top left;
 
     z-index: 100;
 
@@ -368,7 +368,7 @@ textarea:-moz-placeholder {
     left: -3000px;
     height:78%;
     min-height: 450px;
-    background:url('/public/media/image/stripe_background.png');
+    background:url('/public/media/image/creampaper.png');
     background-color:#D6D6D6;
     z-index:500;
     max-width:250px;
