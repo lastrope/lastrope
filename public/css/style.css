@@ -520,8 +520,8 @@ textarea:-moz-placeholder {
 }
 #event #projo-right-to-left{
     position: absolute;
-    bottom:-300px;
-    left: -520px;
+    bottom:-250px;
+    left: -480px;
     z-index: -1;
     
     -webkit-animation-name: rotateProjo;
@@ -579,8 +579,8 @@ section {
 }
 #welcome #projo-left-to-right{
     position: absolute;
-    bottom:-300px;
-    right: -520px;
+    bottom:-250px;
+    right: -480px;
     z-index: -1;
     
     -webkit-animation-name: rotateProjoLeft;
