@@ -1,4 +1,112 @@
+<div id="albums-slider-container">
+    <div id="albums-left-slider">
+	<div class="album-slider first-slider active-slide" id="slider-1">
+	    
+	</div>
+	<div class="album-slider" id="slider-2">
+	    
+	</div>
+	<div class="album-slider" id="slider-3">
+	    
+	</div>
+	
+    </div>
+    <div id="albums-right-panel">
+	
+    </div>
+    <div class="clear"></div>
+</div>
+<style>
+    #albums-slider-container{
+	margin:100px;
+	width:500px;
+	height:200px;
+    }
+    #albums-left-slider{
+	position:relative;
+	overflow:hidden;
+	float:left;
+	height:200px;
+	width:300px;
+    }
+    #albums-right-panel{
+	float:left;
+	width:200px;
+	height:200px;
+	background:#0000FF;
+    }
+    .album-slider{
+	width:300px;
+	height:200px;
+	position:absolute;
+    }
+    #slider-1{
+	background:#FF0000;
+	
+	
+    }
+    #slider-2{
+	background:#FFFF00;
+	
+    }
+    #slider-3{
+	background:#AADD00;
+	
+    }
+    
+</style>
+<script type="text/javascript">
+$(document).ready(function(){
+    var nb_slide =  $('#albums-left-slider > div').length;
+    init();
+    setTimeout('slide('+nb_slide+')',4000);
+});
+function init(){
+    var init_position = 0;
+    
+    $('.album-slider').each(function(){
+	$(this).css({'left':init_position+'px'});
+	init_position =  init_position + 300;
+    });
+
+}
+function slide(nb_slide){
+    var init_position = 0;
+    $('.album-slider').each(function(){
+	var position = $(this).css('left');
+	var nextPosition = parseInt(position) - 300;
+	
+	if(nextPosition == 0 ){
+	    $(this).prev().removeClass('active-slide');
+	    $(this).next().addClass('active-slide');
+	}
+	$(this).stop().animate({'left': nextPosition+'px'},2000);
+    });
+    if($('.active-slide').attr('id') == "slider-"+nb_slide){
+	$('.album-slider').each(function(){
+	    $(this).delay(4000).animate({'left':init_position+'px'},2000);
+	    init_position =  init_position + 300;
+	});
+	
+    }else{
+	setTimeout('slide('+nb_slide+')',4000);
+    }
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
 <div id="conteneur">
+    
     <div id="player-container">
 	<div class="item" style="width: 400px;" href="http://devreactor.com/audio/1.mp3">
 	    <div>

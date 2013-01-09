@@ -29,4 +29,19 @@ class Music{
         }
         return array();
     }
+    public function getMusicsByAlbums($idAlbums){
+	$request = "SELECT s.idSong, s.name, s.filename, s.title, s.description ".
+		   "FROM song s INNER JOIN albums_song as ON s.idSong = as.idSong ".
+		   "INNER JOIN albums a ON a.idAlbums = as.idAlbums ".
+		   "WHERE s.lang='".$this->lang."' AND s.idSong=".$idAlbums;
+
+        try{
+            $result = $this->pdo->query($request);
+            $ligne = $result->fetch(PDO::FETCH_ASSOC);
+            return $ligne;
+        }catch(PDOException $e){
+            print $e->getMessage();
+        }
+        return array();
+    }
 }
