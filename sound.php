@@ -78,7 +78,7 @@ function slide(nb_slide){
 	
 	if(nextPosition == 0 ){
 	    $(this).prev().removeClass('active-slide');
-	    $(this).next().addClass('active-slide');
+	    $(this).addClass('active-slide');
 	}
 	$(this).stop().animate({'left': nextPosition+'px'},2000);
     });

@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Lun 07 Janvier 2013 à 10:10
+-- Généré le: Mer 09 Janvier 2013 à 14:26
 -- Version du serveur: 5.5.24-log
--- Version de PHP: 5.3.13
+-- Version de PHP: 5.3.1
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -43,6 +43,35 @@ CREATE TABLE IF NOT EXISTS `actus` (
 INSERT INTO `actus` (`idActus`, `nom_table`, `title`, `body`, `date`, `lang`) VALUES
 (1, '', 'Il y a du changement dans l''air.', 'Comme le dit le titre, il y a du changement dans l''air. L''été nous a tous inspiré cette année pour une vague de changement. Ainsi, voici un site tout beau tout propre refait de A à Z pour vous présenter le groupe.\r\nNous avons beaucoup évolué depuis la création de Dust Of Shadows. Et notre musique aussi. De ce fait, le besoin de changer de nom, d''apparence et d''identité est venu assez naturellement.\r\nRépondant à présent au nom de Passanger, nous prévoyons la sortie de notre nouvel EP "Eighteen" de quatre titres fin décembre.\r\n\r\nEn plus de cela, et toujours pour répondre à ce besoin de changement d''identité, nous avons réalisé - avec l''aide d''une photographe accomplie ;) - des photos reflétant le plus possible l''image souhaité du groupe et surtout de sa musique. Pour suivre ce mouvement général une vidéo de présentation est en cours de réalisation/montage.\r\nS''inscrivant dans l''air de la musique moderne et complexe, Passanger est bien décidé à franchir une nouvelle étape. La sortie de ce futur EP sera l''élément attendu pour pouvoir - enfin - élargir notre horizon.\r\nNe perdez pas de temps et allez explorer ce site qui sera quotidiennement maintenu à jour pour être constamment exhaustif de toutes nos informations.\r\n\r\nMusicalement,\r\nPassanger.', 1344757674, 'fr'),
 (2, '', 'There is change in the air.', 'As the title says, there is a change in the air. Summer inspired us all this year for the wave of change. So here is a new clean and nice website to introduce the band.\r\nWe have evolved considerably since the creation of Dust Of Shadows. And our music too. Therefore, the need to change our name, our appearance and our identity came pretty naturally.\r\nResponding to the name of Passanger, we expect the release of our new four titles EP "Eighteen" in late December.\r\n\r\nIn addition to this and always to meet this need of changing, we have made - with the help of an accomplished photographer ;) - photos reflecting the desired image of the band and especially its music. To follow this general trend, we are also making a video presentation (in progress / editing).\r\nAs part of the air of modern and complex music, Passanger is determined to pass the next step. The release of this future EP will be the element expected to be able - finally - to expand our horizon.\r\nDo not waste time and go explore this website which will be daily maintained to be constantly updated exhaustive of all our information.\r\n\r\nMusically,\r\nPassanger.', 1344757674, 'en');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `albums`
+--
+
+CREATE TABLE IF NOT EXISTS `albums` (
+  `idAlbums` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
+  `description` text COLLATE utf8_unicode_ci NOT NULL,
+  `date` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
+  `cover` varchar(150) COLLATE utf8_unicode_ci NOT NULL,
+  `lang` varchar(2) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`idAlbums`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `albums_song`
+--
+
+CREATE TABLE IF NOT EXISTS `albums_song` (
+  `idAlbums` smallint(5) unsigned NOT NULL,
+  `idSong` smallint(5) unsigned NOT NULL,
+  PRIMARY KEY (`idAlbums`,`idSong`),
+  KEY `idSong` (`idSong`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -199,11 +228,10 @@ INSERT INTO `members` (`idMembers`, `nom_table`, `name`, `firstname`, `surname`,
 
 CREATE TABLE IF NOT EXISTS `song` (
   `idSong` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `nom_table` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `filename` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
+  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `filename` varchar(250) COLLATE utf8_unicode_ci DEFAULT NULL,
   `title` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
   `description` mediumtext COLLATE utf8_unicode_ci NOT NULL,
-  `thumb` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
   `lang` varchar(2) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`idSong`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
@@ -212,8 +240,8 @@ CREATE TABLE IF NOT EXISTS `song` (
 -- Contenu de la table `song`
 --
 
-INSERT INTO `song` (`idSong`, `nom_table`, `filename`, `title`, `description`, `thumb`, `lang`) VALUES
-(1, '', 'lastrope', 'lastrope', 'lastrope', '', 'fr');
+INSERT INTO `song` (`idSong`, `name`, `filename`, `title`, `description`, `lang`) VALUES
+(1, '', 'lastrope', 'lastrope', 'lastrope', 'fr');
 
 -- --------------------------------------------------------
 
@@ -238,6 +266,17 @@ CREATE TABLE IF NOT EXISTS `video` (
 
 INSERT INTO `video` (`idVideo`, `nom_table`, `url`, `title`, `description`, `thumb`, `lang`) VALUES
 (1, '', 'http%3A%2F%2Fwww.youtube.com%2Fembed%2FFDXU3pREfbE', 'Passanger - Revolution ', 'Video prise lors d''un concert spécial métal à Etréchy dans l''essonne (91)', 'none', 'fr');
+
+--
+-- Contraintes pour les tables exportées
+--
+
+--
+-- Contraintes pour la table `albums_song`
+--
+ALTER TABLE `albums_song`
+  ADD CONSTRAINT `albums_song_ibfk_2` FOREIGN KEY (`idSong`) REFERENCES `song` (`idSong`),
+  ADD CONSTRAINT `albums_song_ibfk_1` FOREIGN KEY (`idAlbums`) REFERENCES `albums` (`idAlbums`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
