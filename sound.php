@@ -1,6 +1,7 @@
-<div id="albums-slider-container">
-    <div id="albums-left-slider">
-	<div class="album-slider first-slider active-slide" id="slider-1">
+
+<div id="albums-slider-container" >
+    <div id="albums-left-slider" class="stop-slider">
+	<div class="album-slider active-slide" id="slider-1">
 	    
 	</div>
 	<div class="album-slider" id="slider-2">
@@ -14,30 +15,32 @@
     <div id="albums-right-panel">
 	
     </div>
+    <button>TEST</button>
     <div class="clear"></div>
 </div>
 <style>
     #albums-slider-container{
-	margin:100px;
-	width:500px;
-	height:200px;
+	margin:140px auto 20px;
+	width:700px;
+	height:300px;
+	
     }
     #albums-left-slider{
 	position:relative;
 	overflow:hidden;
 	float:left;
-	height:200px;
-	width:300px;
+	height:300px;
+	width:400px;
     }
     #albums-right-panel{
 	float:left;
-	width:200px;
-	height:200px;
+	width:300px;
+	height:300px;
 	background:#0000FF;
     }
     .album-slider{
-	width:300px;
-	height:200px;
+	width:400px;
+	height:300px;
 	position:absolute;
     }
     #slider-1{
@@ -56,41 +59,45 @@
     
 </style>
 <script type="text/javascript">
+    
 $(document).ready(function(){
-    var nb_slide =  $('#albums-left-slider > div').length;
-    init();
-    setTimeout('slide('+nb_slide+')',4000);
+    nb_slide =  $('#albums-left-slider > div').length;
+    pause = false;
+    position = 1;
+    $('button').click(function(){
+	
+    });
 });
 function init(){
     var init_position = 0;
-    
     $('.album-slider').each(function(){
 	$(this).css({'left':init_position+'px'});
-	init_position =  init_position + 300;
+	init_position =  init_position + 400;
     });
 
 }
-function slide(nb_slide){
+function reset(){
     var init_position = 0;
     $('.album-slider').each(function(){
-	var position = $(this).css('left');
-	var nextPosition = parseInt(position) - 300;
-	
-	if(nextPosition == 0 ){
-	    $(this).prev().removeClass('active-slide');
-	    $(this).addClass('active-slide');
-	}
-	$(this).stop().animate({'left': nextPosition+'px'},2000);
+	$(this).animate({'left':init_position+'px'});
+	init_position =  init_position + 400;
     });
-    if($('.active-slide').attr('id') == "slider-"+nb_slide){
-	$('.album-slider').each(function(){
-	    $(this).delay(4000).animate({'left':init_position+'px'},2000);
-	    init_position =  init_position + 300;
-	});
-	
-    }else{
-	setTimeout('slide('+nb_slide+')',4000);
-    }
+}
+function start(){
+    $('.album-slider').each(function(i){
+	if(i == nb_slide){
+	    
+	}
+    });
+}
+function pause(){
+    
+}
+function next(){
+    
+}
+function prev(){
+    
 }
 </script>
 
