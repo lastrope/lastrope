@@ -13,11 +13,13 @@
 	
     </div>
     <div id="albums-right-panel">
-	
+	<div id="control-panel">
+	    <button class="playStop control-btn">play</button>
+	    
+	    <button class="next control-btn">next</button>
+	</div>
     </div>
-    <button class="play">play</button>
-    <button class="stop">pause</button>
-    <button class="next">next</button>
+    
     <div class="clear"></div>
 </div>
 <style>
@@ -26,6 +28,20 @@
 	width:700px;
 	height:300px;
 	
+    }
+    .control-btn{
+	border:0 none;
+	background:url(/public/media/image/sprite-slider.png);
+	color:transparent;
+	height:39px;
+	width:40px;
+    }
+    #control-panel{
+	height:50px;
+	width:100%;
+	background:#fff;
+	position:absolute;
+	bottom:0;
     }
     #albums-left-slider{
 	position:relative;
@@ -39,6 +55,7 @@
 	width:300px;
 	height:300px;
 	background:#0000FF;
+	position:relative;
     }
     .album-slider{
 	width:400px;
@@ -71,12 +88,21 @@ $(document).ready(function(){
     init();
     interval = "";
     
-    $('.play').click(function(){
-	start();
+    $('.playStop').click(function(){
+	
+	$(this).toggle(function(){
+	    start();
+	    $(this).css({
+		'backgroundPosition':'50px 0px'
+	    });
+	},function(){
+	    stop();
+	    $(this).css({
+		'backgroundPosition':'0px 0px'
+	    });
+	});
     });
-    $('.stop').click(function(){
-	stop();
-    });
+    
     $('.next').click(function(){
 	play();
     });
