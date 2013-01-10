@@ -15,7 +15,9 @@
     <div id="albums-right-panel">
 	
     </div>
-    <button>TEST</button>
+    <button class="play">play</button>
+    <button class="stop">pause</button>
+    <button class="next">next</button>
     <div class="clear"></div>
 </div>
 <style>
@@ -64,37 +66,75 @@ $(document).ready(function(){
     nb_slide =  $('#albums-left-slider > div').length;
     pause = false;
     position = 1;
-    $('button').click(function(){
-	
+    duration = 4000;
+    widthSlider = 400;
+    init();
+    interval = "";
+    
+    $('.play').click(function(){
+	start();
+    });
+    $('.stop').click(function(){
+	stop();
+    });
+    $('.next').click(function(){
+	play();
     });
 });
 function init(){
     var init_position = 0;
     $('.album-slider').each(function(){
 	$(this).css({'left':init_position+'px'});
-	init_position =  init_position + 400;
+	init_position =  init_position + widthSlider;
     });
-
+    
 }
-function reset(){
+function isTheEnd(){
+    if($('.active-slide').attr('id') != 'slider-'+nb_slide){
+	return true;
+    }
+    return false;
+}
+function backToBegin(){
     var init_position = 0;
     $('.album-slider').each(function(){
 	$(this).animate({'left':init_position+'px'});
-	init_position =  init_position + 400;
+	init_position =  init_position + widthSlider;
     });
+    $('.album-slider').removeClass('active-slide');
+    $('#slider-1').addClass('active-slide');
 }
 function start(){
-    $('.album-slider').each(function(i){
-	if(i == nb_slide){
-	    reset();
-	}
-    });
+    interval = setInterval('play()',duration);
 }
-function pause(){
-    
+function play(){
+    if(isTheEnd()){
+        next();
+    }else{
+	backToBegin();
+    }
+}
+function stop(){
+    clearInterval(interval);
+}
+function reset(){
+    stop();
+    start();
 }
 function next(){
+    var nextPosition =0;
+    var position = 0;
     
+    $('.album-slider').each(function(){
+	position = $(this).css('left');
+	nextPosition = parseInt(position) - widthSlider;
+	if(nextPosition == 0){
+	    $(this).prev().removeClass('active-slide');
+	    $(this).addClass('active-slide');
+	}
+	$(this).animate({'left':nextPosition+'px'});
+    });
+    reset();
 }
 function prev(){
     
