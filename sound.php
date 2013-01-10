@@ -86,7 +86,7 @@ function reset(){
 function start(){
     $('.album-slider').each(function(i){
 	if(i == nb_slide){
-	    
+	    reset();
 	}
     });
 }
