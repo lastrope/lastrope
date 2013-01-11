@@ -14,8 +14,9 @@
     </div>
     <div id="albums-right-panel">
 	<div id="control-panel">
-	    <button class="playStop control-btn">play</button>
-	    
+	    <button class="prev control-btn">prev</button>
+	    <button class="play control-btn">play</button>
+	    <button class="stop control-btn">stop</button>
 	    <button class="next control-btn">next</button>
 	</div>
     </div>
@@ -31,17 +32,20 @@
     }
     .control-btn{
 	border:0 none;
-	background:url(/public/media/image/sprite-slider.png);
+	background:url(/public/media/image/sprite-control.png);
 	color:transparent;
-	height:39px;
+	height:40px;
 	width:40px;
+	margin: 0px 5px;
     }
     #control-panel{
 	height:50px;
 	width:100%;
 	background:#fff;
 	position:absolute;
-	bottom:0;
+	bottom:-150px;
+	text-align: center;
+	background:url(/public/media/image/bg-panel-control.png);
     }
     #albums-left-slider{
 	position:relative;
@@ -75,6 +79,22 @@
 	background:#AADD00;
 	
     }
+    .control-btn:hover{
+	cursor: pointer;
+	
+    }
+    
+    .next{
+	background-position:43px 0px;
+    }
+    .play{
+	background-position:-100px 0px;
+    }
+
+    .stop{
+	background-position:-55px 0px;
+    }
+    
     
 </style>
 <script type="text/javascript">
@@ -87,20 +107,12 @@ $(document).ready(function(){
     widthSlider = 400;
     init();
     interval = "";
-    
-    $('.playStop').click(function(){
-	
-	$(this).toggle(function(){
-	    start();
-	    $(this).css({
-		'backgroundPosition':'50px 0px'
-	    });
-	},function(){
-	    stop();
-	    $(this).css({
-		'backgroundPosition':'0px 0px'
-	    });
-	});
+    setTimeout('start()',duration)
+    $('.play').click(function(){
+	start();
+    });
+    $('.stop').click(function(){
+	stop();
     });
     
     $('.next').click(function(){
@@ -109,11 +121,14 @@ $(document).ready(function(){
 });
 function init(){
     var init_position = 0;
+    
     $('.album-slider').each(function(){
 	$(this).css({'left':init_position+'px'});
 	init_position =  init_position + widthSlider;
     });
-    
+    $('#control-panel').animate({
+	'bottom':'0px'
+    },1500);
 }
 function isTheEnd(){
     if($('.active-slide').attr('id') != 'slider-'+nb_slide){
@@ -131,6 +146,7 @@ function backToBegin(){
     $('#slider-1').addClass('active-slide');
 }
 function start(){
+    stop();
     interval = setInterval('play()',duration);
 }
 function play(){
