@@ -2,15 +2,15 @@
 <div id="albums-slider-container" >
     <div id="albums-left-slider" class="stop-slider">
 	<div class="album-slider active-slide" id="slider-1">
-	    
+
 	</div>
 	<div class="album-slider" id="slider-2">
-	    
+
 	</div>
 	<div class="album-slider" id="slider-3">
-	    
+
 	</div>
-	
+
     </div>
     <div id="albums-right-panel">
 	<div id="control-panel">
@@ -20,7 +20,7 @@
 	    <button class="next control-btn">next</button>
 	</div>
     </div>
-    
+
     <div class="clear"></div>
 </div>
 <style>
@@ -28,7 +28,7 @@
 	margin:140px auto 20px;
 	width:700px;
 	height:300px;
-	
+
     }
     .control-btn{
 	border:0 none;
@@ -46,6 +46,7 @@
 	bottom:-150px;
 	text-align: center;
 	background:url(/public/media/image/bg-panel-control.png);
+
     }
     #albums-left-slider{
 	position:relative;
@@ -58,8 +59,9 @@
 	float:left;
 	width:300px;
 	height:300px;
-	background:#0000FF;
+	background:#323232;
 	position:relative;
+	overflow:hidden;
     }
     .album-slider{
 	width:400px;
@@ -68,60 +70,79 @@
     }
     #slider-1{
 	background:#FF0000;
-	
-	
+
+
     }
     #slider-2{
 	background:#FFFF00;
-	
+
     }
     #slider-3{
 	background:#AADD00;
-	
+
     }
     .control-btn:hover{
 	cursor: pointer;
-	
+
     }
-    
+
     .next{
 	background-position:43px 0px;
     }
     .play{
-	background-position:-100px 0px;
+	background-position:-100px -0px;
     }
 
     .stop{
 	background-position:-55px 0px;
     }
-    
-    
+    .prev:hover{
+	background-position:0px -45px;
+    }
+    .next:hover{
+	background-position:43px -45px;
+    }
+    .play:hover{
+	background-position:-100px -45px;
+    }
+
+    .stop:hover{
+	background-position:-55px -45px;
+    }
+
+
 </style>
 <script type="text/javascript">
-    
+
 $(document).ready(function(){
     nb_slide =  $('#albums-left-slider > div').length;
-    pause = false;
-    position = 1;
-    duration = 4000;
-    widthSlider = 400;
+    pause = false; // variable témoin autoroll
+    duration = 4000; // temps entre chaque slide
+    widthSlider = 400; // largeur du slider gauche
     init();
     interval = "";
-    setTimeout('start()',duration)
+    setTimeout('start()',duration);
     $('.play').click(function(){
 	start();
+	pause = false;
     });
     $('.stop').click(function(){
+	
 	stop();
+	pause = true;
     });
-    
+
     $('.next').click(function(){
-	play();
+	next();
+    });
+    $('.prev').click(function(){
+	prev();
     });
 });
+// positionnement des slides
 function init(){
     var init_position = 0;
-    
+
     $('.album-slider').each(function(){
 	$(this).css({'left':init_position+'px'});
 	init_position =  init_position + widthSlider;
@@ -130,12 +151,21 @@ function init(){
 	'bottom':'0px'
     },1500);
 }
+// Test si l'on est sur le dernier slide
 function isTheEnd(){
     if($('.active-slide').attr('id') != 'slider-'+nb_slide){
 	return true;
     }
     return false;
 }
+// Test si l'on est sur le premier slide
+function isTheBegin(){
+    if($('.active-slide').attr('id') == 'slider-1'){
+	return true;
+    }
+    return false;
+}
+// Retour au premier slide
 function backToBegin(){
     var init_position = 0;
     $('.album-slider').each(function(){
@@ -145,40 +175,69 @@ function backToBegin(){
     $('.album-slider').removeClass('active-slide');
     $('#slider-1').addClass('active-slide');
 }
+// Retour au dernier slide
+function backToEnd(){
+    var init_position = parseInt($('#slider-'+nb_slide).css('left'));
+    $('.album-slider').each(function(){
+	$(this).animate({'left':'-'+init_position+'px'});
+	init_position =   init_position - widthSlider ;
+    });
+    $('.album-slider').removeClass('active-slide');
+    $('#slider-'+nb_slide).addClass('active-slide');
+}
+// Démarrage de l'autoroll
 function start(){
     stop();
-    interval = setInterval('play()',duration);
+    interval = setInterval('next()',duration);
 }
-function play(){
-    if(isTheEnd()){
-        next();
-    }else{
-	backToBegin();
-    }
-}
+// Stop l'autoroll
 function stop(){
     clearInterval(interval);
 }
-function reset(){
-    stop();
-    start();
-}
+// Passe au slide suivant
 function next(){
     var nextPosition =0;
     var position = 0;
-    
-    $('.album-slider').each(function(){
-	position = $(this).css('left');
-	nextPosition = parseInt(position) - widthSlider;
-	if(nextPosition == 0){
-	    $(this).prev().removeClass('active-slide');
-	    $(this).addClass('active-slide');
-	}
-	$(this).animate({'left':nextPosition+'px'});
-    });
-    reset();
+    stop();
+    if(isTheEnd()){
+	$('.album-slider').each(function(){
+	    position = $(this).css('left');
+	    nextPosition = parseInt(position) - widthSlider;
+	    if(nextPosition == 0){
+		$(this).prev().removeClass('active-slide');
+		$(this).addClass('active-slide');
+	    }
+	    $(this).animate({'left':nextPosition+'px'});
+	});
+    }else{
+	backToBegin();
+    }
+    if(!pause){
+	start();
+    }
 }
+// Passe au slide précédent 
 function prev(){
+    var nextPosition =0;
+    var position = 0;
+    stop();
+    if(!isTheBegin()){
+	$('.album-slider').each(function(){
+	    position = $(this).css('left');
+	    nextPosition = parseInt(position) + widthSlider;
+	    if(nextPosition == 0){
+		$(this).next().removeClass('active-slide');
+		$(this).addClass('active-slide');
+	    }
+	    $(this).animate({'left':nextPosition+'px'});
+	});
+	
+    }else{
+	backToEnd();
+    }
+    if(!pause){
+	start();
+    }
     
 }
 </script>
@@ -195,7 +254,7 @@ function prev(){
 
 
 <div id="conteneur">
-    
+
     <div id="player-container">
 	<div class="item" style="width: 400px;" href="http://devreactor.com/audio/1.mp3">
 	    <div>
@@ -235,10 +294,10 @@ function prev(){
     $(document).ready(function() {
 	
 	$("#player-container").playlist(
-	    {
-		playerurl: "/public/js/swf/drplayer.swf"
-	    }
-	);
+	{
+	    playerurl: "/public/js/swf/drplayer.swf"
+	}
+    );
     });
     
 </script>
