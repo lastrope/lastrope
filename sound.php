@@ -90,11 +90,11 @@
 	background-position:43px 0px;
     }
     .play{
-	background-position:-100px -0px;
+	background-position:-100px 2px;
     }
 
     .stop{
-	background-position:-55px 0px;
+	background-position:-55px 2px;
     }
     .prev:hover{
 	background-position:0px -45px;
@@ -103,11 +103,11 @@
 	background-position:43px -45px;
     }
     .play:hover{
-	background-position:-100px -45px;
+	background-position:-100px -43px;
     }
 
     .stop:hover{
-	background-position:-55px -45px;
+	background-position:-55px -43px;
     }
 
 
