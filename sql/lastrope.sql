@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.1
+-- version 3.4.5
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Mer 09 Janvier 2013 à 14:26
--- Version du serveur: 5.5.24-log
--- Version de PHP: 5.3.1
+-- Généré le : Dim 13 Janvier 2013 à 15:53
+-- Version du serveur: 5.5.16
+-- Version de PHP: 5.3.8
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -58,7 +58,17 @@ CREATE TABLE IF NOT EXISTS `albums` (
   `cover` varchar(150) COLLATE utf8_unicode_ci NOT NULL,
   `lang` varchar(2) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`idAlbums`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=5 ;
+
+--
+-- Contenu de la table `albums`
+--
+
+INSERT INTO `albums` (`idAlbums`, `name`, `description`, `date`, `cover`, `lang`) VALUES
+(1, 'Ultimate Attempt', 'Premier album', '2010', 'ultimate_attempt.jpg', 'fr'),
+(2, 'Ultimate Attempt', 'First album', '2010', 'ultimate_attempt.jpg', 'en'),
+(3, 'Eighteen', 'Deuxième album', '2012', 'eighteen.jpg', 'fr'),
+(4, 'Eighteen', 'Second album', '2012', 'eighteen.jpg', 'en');
 
 -- --------------------------------------------------------
 
@@ -67,11 +77,63 @@ CREATE TABLE IF NOT EXISTS `albums` (
 --
 
 CREATE TABLE IF NOT EXISTS `albums_song` (
-  `idAlbums` smallint(5) unsigned NOT NULL,
-  `idSong` smallint(5) unsigned NOT NULL,
-  PRIMARY KEY (`idAlbums`,`idSong`),
-  KEY `idSong` (`idSong`)
+  `idSong` smallint(6) NOT NULL,
+  `idAlbums` smallint(6) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Contenu de la table `albums_song`
+--
+
+INSERT INTO `albums_song` (`idSong`, `idAlbums`) VALUES
+(1, 1),
+(2, 1),
+(3, 1),
+(4, 1),
+(5, 1),
+(6, 1),
+(7, 1),
+(8, 1),
+(9, 1),
+(10, 1),
+(11, 1),
+(12, 1),
+(13, 2),
+(14, 2),
+(15, 2),
+(16, 2),
+(17, 2),
+(18, 2),
+(19, 2),
+(20, 2),
+(21, 2),
+(22, 2),
+(23, 2),
+(24, 2),
+(25, 3),
+(26, 3),
+(27, 3),
+(28, 3),
+(29, 3),
+(30, 3),
+(31, 3),
+(32, 3),
+(33, 3),
+(34, 3),
+(35, 3),
+(36, 3),
+(37, 4),
+(38, 4),
+(39, 4),
+(40, 4),
+(41, 4),
+(42, 4),
+(43, 4),
+(44, 4),
+(45, 4),
+(46, 4),
+(47, 4),
+(48, 4);
 
 -- --------------------------------------------------------
 
@@ -228,20 +290,67 @@ INSERT INTO `members` (`idMembers`, `nom_table`, `name`, `firstname`, `surname`,
 
 CREATE TABLE IF NOT EXISTS `song` (
   `idSong` smallint(5) unsigned NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
   `filename` varchar(250) COLLATE utf8_unicode_ci DEFAULT NULL,
   `title` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
-  `description` mediumtext COLLATE utf8_unicode_ci NOT NULL,
+  `description` mediumtext COLLATE utf8_unicode_ci,
+  `duration` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
   `lang` varchar(2) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`idSong`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=49 ;
 
 --
 -- Contenu de la table `song`
 --
 
-INSERT INTO `song` (`idSong`, `name`, `filename`, `title`, `description`, `lang`) VALUES
-(1, '', 'lastrope', 'lastrope', 'lastrope', 'fr');
+INSERT INTO `song` (`idSong`, `filename`, `title`, `description`, `duration`, `lang`) VALUES
+(1, '', 'Intro', '', '01:45', 'fr'),
+(2, '', 'War is the key', '', '03:43', 'fr'),
+(3, '', 'Revenge', '', '04:10', 'fr'),
+(4, '', 'The King', '', '04:57', 'fr'),
+(5, '', 'Burn in hell', '', '04:12', 'fr'),
+(6, '', 'Death blows in my ears', '', '04:11', 'fr'),
+(7, '', 'Into the shadows', '', '04:47', 'fr'),
+(8, '', 'Never yourself', '', '04:33', 'fr'),
+(9, '', 'Hopess', '', '04:22', 'fr'),
+(10, '', 'Power of death', '', '04:14', 'fr'),
+(11, '', 'Ultimate Attempt', '', '04:36', 'fr'),
+(12, '', 'Conclusion', '', '02:08', 'fr'),
+(13, '', 'Intro', '', '01:45', 'en'),
+(14, '', 'War is the key', '', '03:43', 'en'),
+(15, '', 'Revenge', '', '04:10', 'en'),
+(16, '', 'The King', '', '04:57', 'en'),
+(17, '', 'Burn in hell', '', '04:12', 'en'),
+(18, '', 'Death blows in my ears', '', '04:11', 'en'),
+(19, '', 'Into the shadows', '', '04:47', 'en'),
+(20, '', 'Never yourself', '', '04:33', 'en'),
+(21, '', 'Hopess', '', '04:22', 'en'),
+(22, '', 'Power of death', '', '04:14', 'en'),
+(23, '', 'Ultimate Attempt', '', '04:36', 'en'),
+(24, '', 'Conclusion', '', '02:08', 'en'),
+(25, '', 'Ch.1 - A weird travel', '', '04:00', 'fr'),
+(26, '', 'Ch.2 - Survive after mourning', '', '05:50', 'fr'),
+(27, '', 'Ch.3 - Loneliness', '', '05:10', 'fr'),
+(28, '', 'Ch.4 - Kidnapping', '', '04:20', 'fr'),
+(29, '', 'Ch.5 - Dilemma', '', '05:20', 'fr'),
+(30, '', 'Ch.6 - The Leak', '', '03:45', 'fr'),
+(31, '', 'Ch.7 - Change your mind', '', '05:00', 'fr'),
+(32, '', 'Ch.8 - Nostalgia', '', '04:00', 'fr'),
+(33, '', 'Ch.9 - Revolution', '', '02:45', 'fr'),
+(34, '', 'Ch.10 - Revelation', '', '04:10', 'fr'),
+(35, '', 'Ch.11 - Partener till the end', '', '04:22', 'fr'),
+(36, '', 'Ch.12 - Somewhere else', '', '03:30', 'fr'),
+(37, '', 'Ch.1 - A weird travel', '', '04:00', 'en'),
+(38, '', 'Ch.2 - Survive after mourning', '', '05:50', 'en'),
+(39, '', 'Ch.3 - Loneliness', '', '05:10', 'en'),
+(40, '', 'Ch.4 - Kidnapping', '', '04:20', 'en'),
+(41, '', 'Ch.5 - Dilemma', '', '05:20', 'en'),
+(42, '', 'Ch.6 - The Leak', '', '03:45', 'en'),
+(43, '', 'Ch.7 - Change your mind', '', '05:00', 'en'),
+(44, '', 'Ch.8 - Nostalgia', '', '04:00', 'en'),
+(45, '', 'Ch.9 - Revolution', '', '02:45', 'en'),
+(46, '', 'Ch.10 - Revelation', '', '04:10', 'en'),
+(47, '', 'Ch.11 - Partener till the end', '', '04:22', 'en'),
+(48, '', 'Ch.12 - Somewhere else', '', '03:30', 'en');
 
 -- --------------------------------------------------------
 
@@ -266,17 +375,6 @@ CREATE TABLE IF NOT EXISTS `video` (
 
 INSERT INTO `video` (`idVideo`, `nom_table`, `url`, `title`, `description`, `thumb`, `lang`) VALUES
 (1, '', 'http%3A%2F%2Fwww.youtube.com%2Fembed%2FFDXU3pREfbE', 'Passanger - Revolution ', 'Video prise lors d''un concert spécial métal à Etréchy dans l''essonne (91)', 'none', 'fr');
-
---
--- Contraintes pour les tables exportées
---
-
---
--- Contraintes pour la table `albums_song`
---
-ALTER TABLE `albums_song`
-  ADD CONSTRAINT `albums_song_ibfk_2` FOREIGN KEY (`idSong`) REFERENCES `song` (`idSong`),
-  ADD CONSTRAINT `albums_song_ibfk_1` FOREIGN KEY (`idAlbums`) REFERENCES `albums` (`idAlbums`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

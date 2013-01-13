@@ -29,15 +29,32 @@ class Music{
         }
         return array();
     }
-    public function getMusicsByAlbums($idAlbums){
-	$request = "SELECT s.idSong, s.name, s.filename, s.title, s.description ".
-		   "FROM song s INNER JOIN albums_song as ON s.idSong = as.idSong ".
-		   "INNER JOIN albums a ON a.idAlbums = as.idAlbums ".
-		   "WHERE s.lang='".$this->lang."' AND s.idSong=".$idAlbums;
+    public function getAllAlbums(){
+        $request = "SELECT idAlbums
+			FROM albums
+			WHERE lang='".$this->lang."'";
+
 
         try{
+	    $stmt = $this->pdo->query($request);
+            $stmt->setFetchMode(PDO::FETCH_ASSOC);
+	    $ligne = $stmt->fetchAll();
+            return $ligne;
+        }catch(PDOException $e){
+            print $e->getMessage();
+        }
+        return array();
+    }
+    public function getMusicsByAlbums($idAlbums){
+	$request = "SELECT s.idSong, s.filename, s.title as stitle, s.description, s.duration, a.name as atitle  ".
+		   "FROM song s INNER JOIN albums_song als ON s.idSong = als.idSong ".
+		   "INNER JOIN albums a ON a.idAlbums = als.idAlbums ".
+		   "WHERE s.lang='".$this->lang."' AND a.idAlbums=".$idAlbums;
+       
+        try{
             $result = $this->pdo->query($request);
-            $ligne = $result->fetch(PDO::FETCH_ASSOC);
+	    $result->setFetchMode(PDO::FETCH_ASSOC);
+            $ligne = $result->fetchAll();
             return $ligne;
         }catch(PDOException $e){
             print $e->getMessage();

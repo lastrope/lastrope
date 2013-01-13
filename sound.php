@@ -1,18 +1,30 @@
+<?php require_once 'class/Music.php'?>
+<?php $music = new Music($pdo,$session->read('langue')); ?>
+<?php $albumsId = $music->getAllAlbums(); ?>
+<?php $compteurSlide = 1; ?>
 
 <div id="albums-slider-container" >
-    <div id="albums-left-slider" class="stop-slider">
-	<div class="album-slider active-slide" id="slider-1">
-
-	</div>
-	<div class="album-slider" id="slider-2">
-
-	</div>
-	<div class="album-slider" id="slider-3">
-
-	</div>
-
+    <div id="albums-left-slider">
+	<?php foreach($albumsId as $id): ?>
+	    <?php $compteurSong = 1; ?>
+	    <div class="album-slider" id="slider-<?php echo $compteurSlide ?>">
+	    <?php foreach($music->getMusicsByAlbums($id['idAlbums']) as $val): ?>
+		    <p class="song-title"><span class="song-number"><?php echo $compteurSong++ ?></span>-  <?php echo $val['stitle']; ?>  <span class="song-duration"><?php echo $val['duration']; ?></span></p>
+	    <?php endforeach; ?>
+	    </div>
+	<?php $compteurSlide++; ?>
+	<?php endforeach; ?>
     </div>
     <div id="albums-right-panel">
+	<div class="album-cover" id="cover-1">
+	    
+	</div>
+	<div class="album-cover" id="cover-2">
+	    
+	</div>
+	<div class="album-cover" id="cover-3">
+	    
+	</div>
 	<div id="control-panel">
 	    <button class="prev control-btn">prev</button>
 	    <button class="play control-btn">play</button>
@@ -28,7 +40,19 @@
 	margin:140px auto 20px;
 	width:700px;
 	height:300px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-o-border-radius:10px;
+	-ms-border-radius:10px;
+	border-radius:10px;
+	overflow:hidden;
 
+    }
+    .song-title{
+	font-size:18px;
+	font-family:Helvetica;
+	margin-bottom: 4px;
+	
     }
     .control-btn{
 	border:0 none;
@@ -51,9 +75,11 @@
     #albums-left-slider{
 	position:relative;
 	overflow:hidden;
+	
 	float:left;
 	height:300px;
 	width:400px;
+	background:url('/public/media/image/creampaper.png');
     }
     #albums-right-panel{
 	float:left;
@@ -68,18 +94,20 @@
 	height:300px;
 	position:absolute;
     }
-    #slider-1{
-	background:#FF0000;
-
-
+    .song-duration{
+	font-size:14px;
+	color:#323232;
+	font-style:italic;
     }
-    #slider-2{
-	background:#FFFF00;
-
-    }
-    #slider-3{
-	background:#AADD00;
-
+    .song-number{
+	width:35px;
+	text-align: center;
+	display:block;
+	float:left;
+	color:#6E443D;
+	font-weight:bold;
+	font-style:oblique;
+	
     }
     .control-btn:hover{
 	cursor: pointer;
@@ -117,7 +145,7 @@
 $(document).ready(function(){
     nb_slide =  $('#albums-left-slider > div').length;
     pause = false; // variable témoin autoroll
-    duration = 4000; // temps entre chaque slide
+    duration = 6000; // temps entre chaque slide
     widthSlider = 400; // largeur du slider gauche
     init();
     interval = "";
