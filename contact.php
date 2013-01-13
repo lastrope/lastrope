@@ -37,17 +37,17 @@
 		<form id="form_contact" action="script/mailme.php" method="post">
 			<h1><?php echo CONTACT_US; ?></h1>
 			<label class="label_form" for="nom"><?php echo NAME . BEFORE_TWO_POINT;?>:</label>
-			<input type="text" name="nom" id="nom" value="<?php echo isset($_SESSION['contact_nom'])?$_SESSION['contact_nom']:"" ?>" placeholder="Votre nom" required/>
+			<input type="text" name="nom" id="nom" value="<?php echo isset($_SESSION['contact_nom'])?$_SESSION['contact_nom']:"" ?>" placeholder="<?php echo PL_NAME; ?>" required/>
 			<span class="tooltip"><?php echo NAME_TOOLTIP;?></span><br /><br /><br />
 
 			<label class="label_form" for="mail"><?php echo MAIL . BEFORE_TWO_POINT;?>:</label>
-			<input type="text" name="mail" id="mail" value="<?php echo isset($_SESSION['contact_mail'])?$_SESSION['contact_mail']:"" ?>" pattern="[a-zA-Z0-9\-\_\.]+@[a-zA-Z0-9\-\_\.]+\.[a-zA-Z]+" placeholder="Votre email" required />
+			<input type="text" name="mail" id="mail" value="<?php echo isset($_SESSION['contact_mail'])?$_SESSION['contact_mail']:"" ?>" pattern="[a-zA-Z0-9\-\_\.]+@[a-zA-Z0-9\-\_\.]+\.[a-zA-Z]+" placeholder="<?php echo PL_EMAIL; ?>" required />
 			<span class="tooltip"><?php echo MAIL_TOOLTIP;?></span><br /><br /><br />
 
 			<label class="label_form" for="message"><?php echo MESSAGE . BEFORE_TWO_POINT;?>:</label>
 			<textarea name="message" id="message" rows="10" cols="30"><?php echo isset($_SESSION['contact_message'])?$_SESSION['contact_message']:"" ?></textarea><br />
 
-			<input class="button" type="submit" value="Envoyer" />
+			<input class="button" type="submit" value="<?php echo SEND;?>" />
 		</form>
 	</div>
 	

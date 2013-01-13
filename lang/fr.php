@@ -21,6 +21,10 @@
 	define("BIRTHDAY","Née le");
 	define("ADRESS","Adresse");
 	define("MAIL","Email");
+	define("SEND", "Envoyer");
+	define("PL_NAME", "Votre nom");
+	define("PL_EMAIL", "Votre e-mail");
+
 	// Members page
 	define("INSTRUMENT","Instrument");
 	define("INFLUENCES","Influences");

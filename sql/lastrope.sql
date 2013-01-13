@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.4.5
+-- version 3.5.1
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le : Dim 13 Janvier 2013 à 15:53
--- Version du serveur: 5.5.16
--- Version de PHP: 5.3.8
+-- Généré le: Dim 13 Janvier 2013 à 23:04
+-- Version du serveur: 5.5.24-log
+-- Version de PHP: 5.3.13
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -275,12 +275,12 @@ INSERT INTO `members` (`idMembers`, `nom_table`, `name`, `firstname`, `surname`,
 (2, '', 'Gautier', 'Franck', 'Kyky', 'kyky.png', '27/07/1990', 'Guitariste Rythmique', '', '', 'fr'),
 (3, '', 'De Lima', 'Paco', 'Squid', 'pakpak.png', '26/07/1991', 'Bassiste', 'Rage Against The Machine, Periphery, Marcus Miller, Le peuple de l''herbe, Dream Theater, Massive Attack, Victor Wooten', '', 'fr'),
 (4, '', 'Ramos', 'Camille', 'Boulette', 'cams.png', '31/07/1992', 'Batteur', 'Devin Townsend, Rage Against The Machine, Tool, Tesseract, Iron Maiden, Steve Gad, Billy Cohbam', '', 'fr'),
-(5, '', 'Spenato', 'Romain', 'Rominou', 'rominou.png', '06/08/1990', 'Chanteur', '', '', 'fr'),
+(5, '', '?', '?', '?', '', '?', 'Chanteur', '?', 'Chanteur extrêmement motivé pour une aventure musicale mais surtout humaine ?! Contacte nous !', 'fr'),
 (6, '', 'Dulon', 'Thibault', 'Titi', 'titou.png', '28/02/1992', 'Lead Guitarist', 'Ayreon, Iron Maiden, Dream Theater, Circus Maximus, Periphery, Tesseract, Nightwish', 'After several not serious band experiences, I''ve decided, with a friend, to found Dust of Shadows, a heavy progressive band where we could finally express our heavy soul.\r\n Meanwhile, I continue my solo projects that allow me to express my other musical self and learn all mix tricks. http://soundcloud.com/fitz_lucassen', 'en'),
 (7, '', 'Gautier', 'Franck', 'Kyky', 'kyky.png', '27/07/1990', 'Rythm Guitarist', '', '', 'en'),
 (8, '', 'De Lima', 'Paco', 'Pakpak', 'pakpak.png', '26/07/1991', 'Bassist', 'Rage Against The Machine, Periphery, Marcus Miller, Le peuple de l''herbe, Dream Theater, Massive Attack, Victor Wooten', '', 'en'),
 (9, '', 'Ramos', 'Camille', 'Boulette', 'cams.png', '31/07/1992', 'Drummer', 'Devin Townsend, Rage Against The Machine, Tool, Tesseract, Iron Maiden, Steve Gad, Billy Cohbam', '', 'en'),
-(10, '', 'Spenato', 'Romain', 'Rominou', 'rominou.png', '06/08/1990', 'Singer', '', '', 'en');
+(10, '', '?', '?', '?', '', '?', 'Singer', '', 'Singer who want a new musical adventure ? Contact us !', 'en');
 
 -- --------------------------------------------------------
 
