@@ -20,7 +20,7 @@
 			<?php
 				// Construction de la réponse en fonction du type de news demandé
 				switch ($news_type) {
-					case 'actu':
+					case 'news':
 						$actus = new Actus($pdo, $session->read('langue'));
 						$actus_inf = $actus->isActuExist($news_id);
 						$output .= '<div class="titre">'.$actus_inf['title'].'</div>';
