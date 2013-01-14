@@ -20,6 +20,25 @@ $(document).ready(function(){
     $('.prev').click(function(){
 	prev();
     });
+//    $( ".album-cover" ).bind(
+//	"mouseover mouseout",
+//	function(){
+//	    var albumId = $(this).attr('id');
+//	    if($("#"+albumId+"-detail").css('display') == "block"){
+//		$("#"+albumId+"-detail").hide();
+//	    }else{
+//		$("#"+albumId+"-detail").show();
+//	    }
+//	}
+//    );
+//   $('.album-cover').hover(function(){
+//	var albumId = $(this).attr('id');
+//	$("#"+albumId+"-detail").show();
+//    },function(){
+//	var albumId = $(this).attr('id');
+//	$("#"+albumId+"-detail").hide();
+//    });
+   
 });
 // positionnement des slides
 function init(){
@@ -123,10 +142,8 @@ function prev(){
 		$(this).animate({'left':nextPosition+'px'});
 
 	    });
-
 	}else{
 	    backToEnd();
-
 	}
 	changeCover();
 	if(!pause){
@@ -137,7 +154,9 @@ function prev(){
 // Change la pochette d'album 
 function changeCover(){
     $('.album-cover').fadeOut();
+    $('.album-cover').css('zIndex','0');
     var id = $('.active-slide').attr('id');
     id = id.split('-');
+    $('#cover-'+id[1]).css('zIndex','900');
     $('#cover-'+id[1]).fadeIn();
 }

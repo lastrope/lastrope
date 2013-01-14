@@ -20,6 +20,12 @@
 	    <div class="album-cover" id="cover-<?php echo $compteurCover ?>">
 		<img class="cover" alt="<?php echo $album['name']; ?>" src="/public/media/image/<?php echo $album['cover']; ?>" />
 	    </div>
+	<div class="album-cover-detail" id="cover-<?php echo $compteurCover ?>-detail">
+	    <p>Album : </p>
+	    <p><?php echo $album['name']; ?></p>
+	    <p>Date : </p>
+	    <p><?php echo $album['date']; ?></p>
+	</div>
 	    <?php $compteurCover++; ?>
 	<?php endforeach; ?>
 	<div id="control-panel">
@@ -32,122 +38,8 @@
 
     <div class="clear"></div>
 </div>
-<style>
-    #albums-slider-container{
-	margin:140px auto 20px;
-	width:700px;
-	height:300px;
-	-moz-border-radius: 10px;
-	-webkit-border-radius: 10px;
-	-o-border-radius:10px;
-	-ms-border-radius:10px;
-	border-radius:10px;
-	overflow:hidden;
-
-    }
-    
-    .song-title{
-	font-size:16px;
-	font-family:Helvetica;
-	margin-bottom: 4px;
-	
-    }
-    .control-btn{
-	border:0 none;
-	background:url('/public/media/image/sprite-control.png');
-	color:transparent;
-	height:40px;
-	width:40px;
-	margin: 0px 5px;
-    }
-    #control-panel{
-	height:50px;
-	width:100%;
-	background:#fff;
-	position:absolute;
-	bottom:-150px;
-	text-align: center;
-	background:url('/public/media/image/bg-panel-control.png');
-
-    }
-    #albums-left-slider{
-	position:relative;
-	overflow:hidden;
-	
-	float:left;
-	height:300px;
-	width:400px;
-	background:url('/public/media/image/creampaper.png');
-    }
-    #albums-right-panel{
-	float:left;
-	width:300px;
-	height:300px;
-	background:#323232;
-	position:relative;
-	overflow:hidden;
-    }
-    .album-slider{
-	width:400px;
-	height:300px;
-	position:absolute;
-	padding:7px 0 0;
-    }
-    .album-cover{
-	position:absolute;
-	top:0;
-	left:0;
-	display:none;
-    }
-    .cover{
-	height:300px;
-	
-    }
-    .song-duration{
-	font-size:14px;
-	color:#323232;
-	font-style:italic;
-    }
-    .song-number{
-	width:35px;
-	text-align: center;
-	display:block;
-	float:left;
-	color:#6E443D;
-	font-weight:bold;
-	font-style:oblique;
-	
-    }
-    .control-btn:hover{
-	cursor: pointer;
-    }
-
-    .next{
-	background-position:43px 0px;
-    }
-    .play{
-	background-position:-100px 2px;
-    }
-
-    .stop{
-	background-position:-55px 2px;
-    }
-    .prev:hover{
-	background-position:0px -45px;
-    }
-    .next:hover{
-	background-position:43px -45px;
-    }
-    .play:hover{
-	background-position:-100px -43px;
-    }
-
-    .stop:hover{
-	background-position:-55px -43px;
-    }
-</style>
 <script type="text/javascript" src="/public/js/soundSlider.js"></script>
-<div id="conteneur">
+
 
     <div id="player-container">
 	<div class="item" style="width: 400px;" href="http://devreactor.com/audio/1.mp3">
@@ -182,7 +74,7 @@
 	</div>
     </div>
 
-</div>
+
 <script src="/public/js/drplayer.js" type="text/javascript"></script>
 <script type="text/javascript">
     $(document).ready(function() {
@@ -195,3 +87,8 @@
     });
     
 </script>
+<!--[if IE]>
+<script type="text/javascript">
+    
+</script>
+<![endif]-->
