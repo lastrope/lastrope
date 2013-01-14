@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Dim 13 Janvier 2013 à 23:04
+-- Généré le: Lun 14 Janvier 2013 à 23:41
 -- Version du serveur: 5.5.24-log
 -- Version de PHP: 5.3.13
 
@@ -367,14 +367,16 @@ CREATE TABLE IF NOT EXISTS `video` (
   `thumb` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
   `lang` varchar(2) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`idVideo`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=4 ;
 
 --
 -- Contenu de la table `video`
 --
 
 INSERT INTO `video` (`idVideo`, `nom_table`, `url`, `title`, `description`, `thumb`, `lang`) VALUES
-(1, '', 'http%3A%2F%2Fwww.youtube.com%2Fembed%2FFDXU3pREfbE', 'Passanger - Revolution ', 'Video prise lors d''un concert spécial métal à Etréchy dans l''essonne (91)', 'none', 'fr');
+(1, '', 'http://www.youtube.com/watch?v=FDXU3pREfbE', 'Revolution', 'Video prise lors d''un concert spécial métal à Etréchy dans l''essonne (91)', 'none', 'fr'),
+(2, '', 'http://www.youtube.com/watch?v=Y0S3D4iGADI', 'Power of death', 'Une composition du premier album joué au live d''Etréchy lors de la deuxième édition du festival métal.', 'none', 'fr'),
+(3, '', 'http://www.youtube.com/watch?v=3cFp55qBRGI', 'Dilemma', 'Une composition du deuxième album interprété lors d''un live au PitchTime de Dourdan.', 'none', 'fr');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
