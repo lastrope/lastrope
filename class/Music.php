@@ -30,7 +30,7 @@ class Music{
         return array();
     }
     public function getAllAlbums(){
-        $request = "SELECT idAlbums
+        $request = "SELECT *
 			FROM albums
 			WHERE lang='".$this->lang."'";
 

@@ -25,7 +25,7 @@ require_once 'sort_actu_header.php';
 		    $cpt_actu++;
 		}
 		?>
-    	    <li id="news_<?php echo $cpt; ?>" onclick="load_news_text('<?php echo (isset($this_actu['idActus']) ? $this_actu['idActus'] . "','actu" : $this_actu['idEvent'] . "','event"); ?>');">
+    	    <li id="news_<?php echo $cpt; ?>" onclick="load_news_text('<?php echo (isset($this_actu['idActus']) ? $this_actu['idActus'] . "','news" : $this_actu['idEvent'] . "','event"); ?>');">
 		    <?php echo $this_actu['title']; ?>
     	    </li>
 		<?php
@@ -39,7 +39,7 @@ require_once 'sort_actu_header.php';
 	    // Et on les affiche à la suite
 	    while ($rest_cpt < count($rest_array)) {
 		?>
-    	    <li id="news_<?php echo $cpt; ?>" onclick="load_news_text('<?php echo (isset($rest_array[$rest_key[$rest_cpt]]['idActus']) ? $rest_array[$rest_key[$rest_cpt]]['idActus'] . "','actu" : $rest_array[$rest_key[$rest_cpt]]['idEvent'] . "','event"); ?>');">
+    	    <li id="news_<?php echo $cpt; ?>" onclick="load_news_text('<?php echo (isset($rest_array[$rest_key[$rest_cpt]]['idActus']) ? $rest_array[$rest_key[$rest_cpt]]['idActus'] . "','news" : $rest_array[$rest_key[$rest_cpt]]['idEvent'] . "','event"); ?>');">
 		    <?php echo $rest_array[$rest_key[$rest_cpt]]['title']; ?>
     	    </li>
 		<?php

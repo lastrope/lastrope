@@ -2,12 +2,12 @@
 <?php $music = new Music($pdo,$session->read('langue')); ?>
 <?php $albumsId = $music->getAllAlbums(); ?>
 <?php $compteurSlide = 1; ?>
-
+<?php $compteurCover = 1; ?>
 <div id="albums-slider-container" >
     <div id="albums-left-slider">
 	<?php foreach($albumsId as $id): ?>
 	    <?php $compteurSong = 1; ?>
-	    <div class="album-slider" id="slider-<?php echo $compteurSlide ?>">
+	    <div class="album-slider" id="slider-<?php echo $compteurSlide ?>" >
 	    <?php foreach($music->getMusicsByAlbums($id['idAlbums']) as $val): ?>
 		    <p class="song-title"><span class="song-number"><?php echo $compteurSong++ ?></span>-  <?php echo $val['stitle']; ?>  <span class="song-duration"><?php echo $val['duration']; ?></span></p>
 	    <?php endforeach; ?>
@@ -16,15 +16,12 @@
 	<?php endforeach; ?>
     </div>
     <div id="albums-right-panel">
-	<div class="album-cover" id="cover-1">
-	    
-	</div>
-	<div class="album-cover" id="cover-2">
-	    
-	</div>
-	<div class="album-cover" id="cover-3">
-	    
-	</div>
+	<?php foreach($albumsId as $album): ?>
+	    <div class="album-cover" id="cover-<?php echo $compteurCover ?>">
+		<img class="cover" alt="<?php echo $album['name']; ?>" src="/public/media/image/<?php echo $album['cover']; ?>" />
+	    </div>
+	    <?php $compteurCover++; ?>
+	<?php endforeach; ?>
 	<div id="control-panel">
 	    <button class="prev control-btn">prev</button>
 	    <button class="play control-btn">play</button>
@@ -48,15 +45,16 @@
 	overflow:hidden;
 
     }
+    
     .song-title{
-	font-size:18px;
+	font-size:16px;
 	font-family:Helvetica;
 	margin-bottom: 4px;
 	
     }
     .control-btn{
 	border:0 none;
-	background:url(/public/media/image/sprite-control.png);
+	background:url('/public/media/image/sprite-control.png');
 	color:transparent;
 	height:40px;
 	width:40px;
@@ -69,7 +67,7 @@
 	position:absolute;
 	bottom:-150px;
 	text-align: center;
-	background:url(/public/media/image/bg-panel-control.png);
+	background:url('/public/media/image/bg-panel-control.png');
 
     }
     #albums-left-slider{
@@ -93,6 +91,17 @@
 	width:400px;
 	height:300px;
 	position:absolute;
+	padding:7px 0 0;
+    }
+    .album-cover{
+	position:absolute;
+	top:0;
+	left:0;
+	display:none;
+    }
+    .cover{
+	height:300px;
+	
     }
     .song-duration{
 	font-size:14px;
@@ -111,7 +120,6 @@
     }
     .control-btn:hover{
 	cursor: pointer;
-
     }
 
     .next{
@@ -137,150 +145,8 @@
     .stop:hover{
 	background-position:-55px -43px;
     }
-
-
 </style>
-<script type="text/javascript">
-
-$(document).ready(function(){
-    nb_slide =  $('#albums-left-slider > div').length;
-    pause = false; // variable témoin autoroll
-    duration = 6000; // temps entre chaque slide
-    widthSlider = 400; // largeur du slider gauche
-    init();
-    interval = "";
-    setTimeout('start()',duration);
-    $('.play').click(function(){
-	start();
-	pause = false;
-    });
-    $('.stop').click(function(){
-	
-	stop();
-	pause = true;
-    });
-
-    $('.next').click(function(){
-	next();
-    });
-    $('.prev').click(function(){
-	prev();
-    });
-});
-// positionnement des slides
-function init(){
-    var init_position = 0;
-
-    $('.album-slider').each(function(){
-	$(this).css({'left':init_position+'px'});
-	init_position =  init_position + widthSlider;
-    });
-    $('#control-panel').animate({
-	'bottom':'0px'
-    },1500);
-}
-// Test si l'on est sur le dernier slide
-function isTheEnd(){
-    if($('.active-slide').attr('id') != 'slider-'+nb_slide){
-	return true;
-    }
-    return false;
-}
-// Test si l'on est sur le premier slide
-function isTheBegin(){
-    if($('.active-slide').attr('id') == 'slider-1'){
-	return true;
-    }
-    return false;
-}
-// Retour au premier slide
-function backToBegin(){
-    var init_position = 0;
-    $('.album-slider').each(function(){
-	$(this).animate({'left':init_position+'px'});
-	init_position =  init_position + widthSlider;
-    });
-    $('.album-slider').removeClass('active-slide');
-    $('#slider-1').addClass('active-slide');
-}
-// Retour au dernier slide
-function backToEnd(){
-    var init_position = parseInt($('#slider-'+nb_slide).css('left'));
-    $('.album-slider').each(function(){
-	$(this).animate({'left':'-'+init_position+'px'});
-	init_position =   init_position - widthSlider ;
-    });
-    $('.album-slider').removeClass('active-slide');
-    $('#slider-'+nb_slide).addClass('active-slide');
-}
-// Démarrage de l'autoroll
-function start(){
-    stop();
-    interval = setInterval('next()',duration);
-}
-// Stop l'autoroll
-function stop(){
-    clearInterval(interval);
-}
-// Passe au slide suivant
-function next(){
-    var nextPosition =0;
-    var position = 0;
-    stop();
-    if(isTheEnd()){
-	$('.album-slider').each(function(){
-	    position = $(this).css('left');
-	    nextPosition = parseInt(position) - widthSlider;
-	    if(nextPosition == 0){
-		$(this).prev().removeClass('active-slide');
-		$(this).addClass('active-slide');
-	    }
-	    $(this).animate({'left':nextPosition+'px'});
-	});
-    }else{
-	backToBegin();
-    }
-    if(!pause){
-	start();
-    }
-}
-// Passe au slide précédent 
-function prev(){
-    var nextPosition =0;
-    var position = 0;
-    stop();
-    if(!isTheBegin()){
-	$('.album-slider').each(function(){
-	    position = $(this).css('left');
-	    nextPosition = parseInt(position) + widthSlider;
-	    if(nextPosition == 0){
-		$(this).next().removeClass('active-slide');
-		$(this).addClass('active-slide');
-	    }
-	    $(this).animate({'left':nextPosition+'px'});
-	});
-	
-    }else{
-	backToEnd();
-    }
-    if(!pause){
-	start();
-    }
-    
-}
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
+<script type="text/javascript" src="/public/js/soundSlider.js"></script>
 <div id="conteneur">
 
     <div id="player-container">
