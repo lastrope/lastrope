@@ -75,6 +75,19 @@ $(document).ready(function(){
 	'left':'0'
     },1200);
 
+    $('.active-vignette').click(function(){
+	var idVideo = $(this).attr('data-id');
+	var $this = $(this);
+	
+	$.ajax({
+	    type : "post",
+	    url : "script/showVideo.php",
+	    data : {'idVideo':idVideo},
+	    success:function(response){
+		$(".left-column").append(response);
+	    }
+	});
+    });
     
     setTimeout(function(){
 	$('#content_answer').css({

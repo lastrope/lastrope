@@ -29,4 +29,22 @@ class Video{
         }
         return array();
     }
+    public function getAllVideo(){
+        $request = "SELECT *
+			FROM video
+			WHERE lang='".$this->lang."'";
+		
+        $videos_array = array();
+		
+        try{
+            $result = $this->pdo->query($request);
+            while($ligne = $result->fetch(PDO::FETCH_ASSOC)){
+                    $videos_array[$ligne['idVideo']] = $ligne;
+            }
+            return $videos_array;
+        }catch(PDOException $e){
+            print $e->getMessage();
+        }
+        return array();
+    }
 }

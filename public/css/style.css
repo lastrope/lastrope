@@ -664,7 +664,7 @@ section .content_event{
 #contact_page input[type=text]:focus{
     background:#efefef;
 }
-#contact_page h1{
+#contact_page h1, .left-column h1, .right-column h1{
     font-family: "Segoe UI", Verdana;
     font-weight: normal;
     font-size: 34px;
@@ -1509,4 +1509,61 @@ nav{
 
 .clear{
     clear:both;
+}
+
+/* Media page */
+.left-column, .right-column{
+    width: 450px;
+    height: 600px;
+    
+    background: transparent url(../media/image/studio.png) center 50px no-repeat;
+}
+.left-column h1, .right-column h1{
+    background: transparent url(../media/image/clefa.png) right bottom no-repeat;
+    margin-bottom: 0;
+}
+.left-column{
+    float: left;
+    margin-left: 20px;
+}
+.right-column{
+    float: right;
+    margin-right: 20px;
+}
+.left-column .cube-preview{
+    width: 148px;
+    height: 136px;
+    
+    background: rgba(40,40,40,0.5);
+    float: left;
+    display: block;
+    
+    border: 1px solid #fff;
+}
+.left-column .active-vignette{
+    background: transparent url(../media/image/bg-vignette.png) left top no-repeat;
+    text-align: center;
+    color: #fff;
+    
+    font-family: 'Segoe UI';
+    font-size: 22px;
+    
+    padding: 50px 5px 0 5px;
+    height: 86px;
+    width: 138px;
+    cursor: pointer;
+    
+    transition-property: all;
+    transition-duration: 0.5s;
+    -moz-transition-property: all;
+    -moz-transition-duration: 0.5s;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 0.5s;
+    -o-transition-property: all;
+    -o-transition-duration: 0.5s;
+    -ms-transition-property: all;
+    -ms-transition-duration: 0.5s;
+}
+.left-column .active-vignette:hover{
+    background: transparent url(../media/image/bg-vignette-hover.png) left top no-repeat;
 }
