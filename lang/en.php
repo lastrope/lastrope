@@ -49,4 +49,9 @@
 	define("BREF", "In short");
 	define("NO_RESULTS", "No Result(s)");
 	define("LAST_FIVE_ARTICLE", "The five last articles.");
+	
+	// Media Page
+	define("VIDEO_TITLE", "Videos");
+	define("IMAGE_TITLE", "Photos");
+	define("CLOSE_WINDOW", "Close");
 ?>

@@ -298,7 +298,7 @@ textarea:-moz-placeholder {
     color:#FFFFFF;
 
     letter-spacing: 4px;
-    font-family: 'baphomet',helvetica;
+    font-family: 'baphomet', georgia;
     font-size: 18px;
 
     border-radius:100px;
@@ -407,7 +407,7 @@ textarea:-moz-placeholder {
 
 }
 #welcome h1{
-    font-family: "Baphomet", helvetica;
+    font-family: "Baphomet", georgia;
     font-size:40px;
     font-weight: normal;
     color: #7F554E;
@@ -665,7 +665,7 @@ section .content_event{
     background:#efefef;
 }
 #contact_page h1, .left-column h1, .right-column h1{
-    font-family: "Segoe UI", Verdana;
+    font-family: "Segoe UI", Helvetica;
     font-weight: normal;
     font-size: 34px;
     margin-bottom: 40px;
@@ -709,13 +709,13 @@ section .content_event{
     height: 30px;
     width: 100px;
 
-    font-family: "Segoe UI", arial;
+    font-family: "Segoe UI", corbel, arial;
     color: #242424;
 }
 #contact_page .button{
     display: block;
     margin: 10px auto;
-    font-family: 'Segoe UI', arial;
+    font-family: 'Segoe UI', corbel, arial;
     font-size: 16px;
     color: #fff;
     cursor: pointer;
@@ -788,7 +788,7 @@ header{
 #header{
     position: relative;
 
-    font-family: baphomet, helvetica;
+    font-family: baphomet, georgia;
     color: #fff;
     font-size: 22px;
     width:875px;
@@ -940,7 +940,7 @@ footer p {
     padding: 2px 4px;
     background-color: transparent;
     color: #7F554E;
-    font-family: 'Ubuntu-C', arial;
+    font-family: 'Ubuntu-C', corbel, arial;
 }
 /** BIO STYLE **/
 #switch_bio{
@@ -1017,7 +1017,7 @@ footer p {
     z-index:2;
 }
 #members_container .name_member{
-    font-family: baphomet,Helvetica;
+    font-family: baphomet, georgia;
     font-weight: bold;
     font-size:18px;
     position: absolute;
@@ -1081,7 +1081,7 @@ footer p {
     width: 90px;
 
     color: #21B8FF;
-    font-family: Ubuntu-C, arial;
+    font-family: Ubuntu-C, corbel, arial;
     font-size: 11px;
 }
 #members_container .more{
@@ -1089,7 +1089,7 @@ footer p {
     padding: 5px 5px 0 5px;
 
     color: #21B8FF;
-    font-family: Ubuntu-C,arial;
+    font-family: Ubuntu-C, corbel, arial;
     font-size: 11px;
 }
 #members_container .more_about_him{
@@ -1135,7 +1135,7 @@ footer p {
     font-weight: normal;
     line-height:45px;
     color: #fff;
-    font-family: Baphomet;
+    font-family: Baphomet, georgia;
     font-weight: bold;
 }
 .bubble_container{
@@ -1515,6 +1515,7 @@ nav{
 .left-column, .right-column{
     width: 450px;
     height: 600px;
+    position: relative;
     
     background: transparent url(../media/image/studio.png) center 50px no-repeat;
 }
@@ -1545,7 +1546,7 @@ nav{
     text-align: center;
     color: #fff;
     
-    font-family: 'Segoe UI';
+    font-family: 'Segoe UI', helvetica;
     font-size: 22px;
     
     padding: 50px 5px 0 5px;
@@ -1566,4 +1567,26 @@ nav{
 }
 .left-column .active-vignette:hover{
     background: transparent url(../media/image/bg-vignette-hover.png) left top no-repeat;
+}
+.video-preview{
+    width: 450px;
+    height: 452px;
+    
+    background: rgba(0,0,0,0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-top: 100px;
+    margin-top: 48px;
+}
+.close{
+    margin-top: 20px;
+    text-align: center;
+    color: #fff;
+    font-family: "Segoe UI", helvetica;
+    font-size: 24px;
+}
+.close:hover{
+    text-decoration: underline;
+    cursor: pointer;
 }

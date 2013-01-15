@@ -74,6 +74,10 @@ $(document).ready(function(){
     $('#selecteur').animate({
 	'left':'0'
     },1200);
+    
+    $('.close p').live('click', function(){
+	$('.video-preview').remove();
+    });
 
     $('.active-vignette').click(function(){
 	var idVideo = $(this).attr('data-id');

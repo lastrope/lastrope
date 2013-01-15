@@ -53,4 +53,5 @@
 	// Media Page
 	define("VIDEO_TITLE", "Les videos");
 	define("IMAGE_TITLE", "Les photos");
+	define("CLOSE_WINDOW", "Fermer");
 ?>
