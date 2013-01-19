@@ -45,6 +45,22 @@ class Music{
         }
         return array();
     }
+    public function getAlbumsName(){
+	$request = "SELECT name
+			FROM albums
+			WHERE lang='".$this->lang."'";
+
+        try{
+            $stmt = $this->pdo->query($request);
+            $stmt->setFetchMode(PDO::FETCH_ASSOC);
+	    $ligne = $stmt->fetchAll();
+            return $ligne;
+        }catch(PDOException $e){
+            print $e->getMessage();
+        }
+        return array();
+	
+    }
     public function getMusicsByAlbums($idAlbums){
 	$request = "SELECT s.idSong, s.filename, s.title as stitle, s.description, s.duration, a.name as atitle  ".
 		   "FROM song s INNER JOIN albums_song als ON s.idSong = als.idSong ".

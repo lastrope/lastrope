@@ -154,9 +154,28 @@ function prev(){
 // Change la pochette d'album 
 function changeCover(){
     $('.album-cover').fadeOut();
-    $('.album-cover').css('zIndex','0');
+    $('.album-names-slide').fadeOut();
     var id = $('.active-slide').attr('id');
     id = id.split('-');
-    $('#cover-'+id[1]).css('zIndex','900');
+    
     $('#cover-'+id[1]).fadeIn();
+    $('#album-name-'+id[1]).fadeIn();
+}
+/** Responsive **/
+$(window).load(function(){
+    responsiveSound();
+});
+$(window).resize(function(){
+    responsiveSound();
+});
+function responsiveSound(){
+    
+    if(parseInt($(this).width()) < 1560){
+	$('#sound-left-column').css({'margin':'140px auto 0px','float':'none'});
+	$('#sound-right-column').css({'margin':'30px auto 60px','float':'none'});
+	
+    }else{
+	$('#sound-left-column').css({'margin':'140px 40px 20px','float':'left'});
+	$('#sound-right-column').css({'margin':'140px 40px 20px','float':'right'});
+    }
 }
