@@ -6,14 +6,21 @@ $(document).ready(function(){
     init();
     interval = "";
     setTimeout('start()',duration);
-    $('.play').click(function(){
-	start();
-	pause = false;
+    $('#autoplay').click(function(){
+	var classes = $(this).attr('class');
+	if(classes == "stop"){
+	    start();
+	    pause = false;
+	    $(this).removeClass(classes);
+	    $(this).addClass("play");
+	}else if(classes == "play"){
+	    stop();
+	    pause = true;
+	    $(this).removeClass(classes);
+	    $(this).addClass("stop");
+	}
     });
-    $('.stop').click(function(){
-	stop();
-	pause = true;
-    });
+    
     $('.next').click(function(){
 	next();
     });

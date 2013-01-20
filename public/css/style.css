@@ -128,7 +128,7 @@ textarea:-moz-placeholder {
 #logo_loader{
     position:absolute;
     z-index:999;
-    background: url('../media/image/logo2.png')center center  no-repeat ;
+    background: url('../media/image/logo1p.png')center center  no-repeat ;
     height:155px;
     width:155px;
 
@@ -827,6 +827,16 @@ header{
     margin: -30px auto 0 auto;
     position: relative;
     z-index:3;
+    background: url("../media/image/logo1p.png") no-repeat scroll center center transparent;
+}
+#logo:hover{
+    background: url("../media/image/logo1phover.png") no-repeat scroll center center transparent;
+}
+#logo a{
+    display:block;
+    width: 200px;
+    height: 160px;
+    
 }
 #box{
     position: absolute;
@@ -875,7 +885,7 @@ footer p {
     margin-right: 30px;
 }
 #copyright{
-    background: transparent url('../media/image/logo1p.png') center center no-repeat;
+    background: transparent url('../media/image/logo1.png') center center no-repeat;
     width: 200px;
     height: 155px;
     margin: -100px auto 0 auto;
@@ -1398,7 +1408,7 @@ nav{
     -o-border-radius:10px;
     -ms-border-radius:10px;
     border-radius:10px;
-    min-height:350px;
+    min-height:300px;
 }
 #sound-right-column audio{
     width:300px;
@@ -1467,6 +1477,28 @@ nav{
     font-family:Helvetica;
     margin-bottom: 4px;
 
+}
+#autoplay{
+    border:0 none;
+    color:transparent;
+    height:40px;
+    width:80px;
+}
+#autoplay:hover{
+    cursor: pointer;
+}
+
+.play{
+    background:transparent url('/public/media/image/sprite-control.png');
+    background-position: -60px -45px;
+}
+.stop{
+    background:transparent url('/public/media/image/sprite-control.png');
+    background-position: -60px -0px;
+}
+.stop:hover{
+   background:transparent url('/public/media/image/sprite-control.png');
+    background-position: -60px -45px; 
 }
 .control-btn{
     border:0 none;
@@ -1542,26 +1574,15 @@ nav{
 .next{
     background-position:43px 0px;
 }
-.play{
-    background-position:-100px 2px;
-}
 
-.stop{
-    background-position:-55px 2px;
-}
+
 .prev:hover{
     background-position:0px -45px;
 }
 .next:hover{
     background-position:43px -45px;
 }
-.play:hover{
-    background-position:-100px -43px;
-}
 
-.stop:hover{
-    background-position:-55px -43px;
-}
 
 .clear{
     clear:both;
