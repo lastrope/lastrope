@@ -147,7 +147,7 @@ textarea:-moz-placeholder {
 
     position: relative;
     margin: 0 auto;
-    padding-bottom: 150px;
+    padding-bottom: 168px;
 
     background:none;
     z-index:2;
@@ -1577,7 +1577,7 @@ nav{
 }
 .left-column h1, .right-column h1{
     background: transparent url(../media/image/clefa.png) right bottom no-repeat;
-    margin-bottom: 0;
+    margin-bottom: 2px;
 }
 .left-column{
     float: left;
@@ -1633,12 +1633,12 @@ nav{
     top: 0;
     left: 0;
     padding-top: 100px;
-    margin-top: 48px;
+    margin-top: 49px;
 }
 .close{
     margin-top: 20px;
     text-align: center;
-    color: #fff;
+    color: #7F554E;
     font-family: "Segoe UI", helvetica;
     font-size: 24px;
 }
