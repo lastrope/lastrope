@@ -50,4 +50,5 @@
     <div class="right-column">
 	<h1><?php echo IMAGE_TITLE;?></h1>
     </div>
+    <div class="clear" ></div>
 </div>

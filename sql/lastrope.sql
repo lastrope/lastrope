@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Mar 15 Janvier 2013 à 23:30
+-- Généré le: Dim 20 Janvier 2013 à 15:16
 -- Version du serveur: 5.5.24-log
 -- Version de PHP: 5.3.13
 
@@ -134,6 +134,31 @@ INSERT INTO `albums_song` (`idSong`, `idAlbums`) VALUES
 (46, 4),
 (47, 4),
 (48, 4);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `album_photo`
+--
+
+CREATE TABLE IF NOT EXISTS `album_photo` (
+  `idAlbum` smallint(5) NOT NULL AUTO_INCREMENT,
+  `nomAlbum` varchar(255) CHARACTER SET utf8 NOT NULL DEFAULT '',
+  `nbPhotos` int(5) NOT NULL DEFAULT '0',
+  `dateAlbum` varchar(10) CHARACTER SET utf8 NOT NULL DEFAULT '',
+  `lang` varchar(2) CHARACTER SET utf8 NOT NULL DEFAULT 'fr',
+  PRIMARY KEY (`idAlbum`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=5 ;
+
+--
+-- Contenu de la table `album_photo`
+--
+
+INSERT INTO `album_photo` (`idAlbum`, `nomAlbum`, `nbPhotos`, `dateAlbum`, `lang`) VALUES
+(1, 'Concert à Dourdan', 0, '02-12-2011', 'fr'),
+(2, 'Concert à Roinville', 0, '06-02-2010', 'fr'),
+(3, 'Concert à Janville', 0, '12-12-2009', 'fr'),
+(4, 'Concert à Etrechy', 0, '22-10-2011', 'fr');
 
 -- --------------------------------------------------------
 
@@ -281,6 +306,39 @@ INSERT INTO `members` (`idMembers`, `nom_table`, `name`, `firstname`, `surname`,
 (8, '', 'De Lima', 'Paco', 'Pakpak', 'pakpak.png', '26/07/1991', 'Bassist', 'Rage Against The Machine, Periphery, Marcus Miller, Le peuple de l''herbe, Dream Theater, Massive Attack, Victor Wooten', '', 'en'),
 (9, '', 'Ramos', 'Camille', 'Boulette', 'cams.png', '31/07/1992', 'Drummer', 'Devin Townsend, Rage Against The Machine, Tool, Tesseract, Iron Maiden, Steve Gad, Billy Cohbam', '', 'en'),
 (10, '', '?', '?', '?', '', '?', 'Singer', '', 'Singer who want a new musical adventure ? Contact us !', 'en');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `photo`
+--
+
+CREATE TABLE IF NOT EXISTS `photo` (
+  `idPhoto` smallint(5) NOT NULL AUTO_INCREMENT,
+  `idAlbum` smallint(5) NOT NULL,
+  `captionPhoto` varchar(255) CHARACTER SET utf8 NOT NULL DEFAULT '',
+  `urlPhoto` varchar(255) CHARACTER SET utf8 NOT NULL DEFAULT '',
+  `lang` varchar(2) CHARACTER SET utf8 NOT NULL DEFAULT 'fr',
+  PRIMARY KEY (`idPhoto`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=17 ;
+
+--
+-- Contenu de la table `photo`
+--
+
+INSERT INTO `photo` (`idPhoto`, `idAlbum`, `captionPhoto`, `urlPhoto`, `lang`) VALUES
+(1, 1, 'Solo de Thibault', '2011-12-03 00.10.33.jpg', 'fr'),
+(2, 1, 'Le groupe en plein morceau', '2011-12-03 00.10.41.jpg', 'fr'),
+(3, 1, 'Dans la bonne humeur évidemment !', '2011-12-03 00.10.44.jpg', 'fr'),
+(4, 1, 'Thibault concentré...', '2011-12-03 00.14.06.jpg', 'fr'),
+(5, 1, '', '2011-12-03 00.14.21.jpg', 'fr'),
+(6, 1, '', '2011-12-03 00.21.40.jpg', 'fr'),
+(7, 1, '', '2011-12-03 00.21.43.jpg', 'fr'),
+(8, 1, '', '2011-12-03 00.22.50.jpg', 'fr'),
+(9, 1, '', '2011-12-03 00.23.51.jpg', 'fr'),
+(10, 1, '', '2011-12-03 00.23.55.jpg', 'fr'),
+(11, 1, '', '2011-12-03 00.25.31.jpg', 'fr'),
+(12, 1, '', 'top.JPG', 'fr');
 
 -- --------------------------------------------------------
 
