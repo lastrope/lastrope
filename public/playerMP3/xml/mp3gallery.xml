@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mp3gallery>
+	
+	<albums startAlbumNo = "">
+		
+		<!-- if this album tag will not be here, the player will work as usual -->
+        <album id="1">
+			
+			<author><![CDATA[50 Cent]]></author>
+			
+			<image>content/images/albums/50 Cent.jpg</image>
+
+			<name alsoInList = "true"><![CDATA[<font color="#8E0020">Album title 1</font>]]></name>
+			<caption><![CDATA[Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer...  <font color="#8E0020"><a href="http://www.flabell.com">read more</a></font>]]></caption>
+			
+			<link>http://www.themesbell.com</link><target>_blank</target> <!-- to go to a specific page on clicking the image inside the mp3 player -->
+			
+			<buy price = "9.99" target = "">http://www.themesbell.com</buy><!-- if empty, the download button on the album image won't appear 
+																			price: if leave it empty or 0 the price won't appear, in this case you could use the button as a download button
+																			-->
+			
+			<tracks>
+				<item id="11">
+					<title><![CDATA[Mix Track 2]]></title>
+					<artist><![CDATA[feat. Eo]]></artist> <!-- if you want this item to have a different artist(for example featuring artist write the text in this tag -->
+					<duration>00:31</duration> <!-- define this only if is the correct duration, otherwise it will make the song to jump incorrectly -->
+					
+					<buy price = "0.99" url = "http://www.flabell.com" target = "_blank">Buy</buy> <!-- if you want this item to have a different text then the general text, write the text in this tag 
+																									 if the url is empty then the button won't appear-->
+
+					<song>content/songs/song1.mp3</song>
+                    
+                    <!-- if you want to use RTMP streaming use this "song" tag like below -->
+                    <!-- 
+                        <song streamer = "rtmp://domain.com/app/">mp3:streamPath</song> 
+                    -->
+				</item>
+				<item id="12">
+					<title><![CDATA[Track title 2]]></title>
+					<artist><![CDATA[]]></artist>
+					<duration></duration>
+					
+					<buy price = "" url = "" target = ""></buy>
+					
+					<song>content/songs/song1.mp3</song>
+                    <!-- if you want to use RTMP streaming use this "song" tag like below -->
+                    <!-- 
+                        <song streamer = "rtmp://domain.com/app/">mp3:streamPath</song> 
+                    -->
+				</item>
+				<item id="13">
+					<title><![CDATA[Track title 3]]></title>
+					<artist><![CDATA[]]></artist>
+                    <duration>00:31</duration>
+					<buy price = "" url = ""></buy>
+					<song>content/songs/song1.mp3</song>
+				</item>
+				<item id="14">
+					<title><![CDATA[Mix Track 4]]></title>
+					<artist><![CDATA[Artist name 4]]></artist>
+					<price>12</price>
+					<duration>00:31</duration>
+					<buy url = "http://www.flabell.com"></buy>
+					<song>content/songs/song1.mp3</song>
+				</item>
+				<item id="15">
+					<title><![CDATA[Track title 5]]></title>
+					<artist><![CDATA[Artist name 5]]></artist>
+					<duration>00:31</duration>
+					<buy url = "http://www.paypal.com"></buy>
+					<song>content/songs/song1.mp3</song>
+				</item>
+				<item id="16">
+					<title><![CDATA[Track title 6]]></title>
+					<artist><![CDATA[Artist name 6]]></artist>
+					<duration>00:31</duration>
+					<buy url = "http://www.paypal.com"></buy>
+					<song>content/songs/song1.mp3</song>
+				</item>	
+				<item id="17">
+					<title><![CDATA[Track title 3]]></title>
+					<artist><![CDATA[Artist name 3]]></artist>
+                    <duration>00:31</duration>
+					<buy url = "http://www.paypal.com"></buy>
+					<song>content/songs/song1.mp3</song>
+				</item>
+				<item id="18">
+					<title><![CDATA[Track title 4]]></title>
+					<artist><![CDATA[Artist name 4]]></artist>
+					<duration>00:31</duration>
+					<buy url = "http://www.paypal.com"></buy>
+					<song>content/songs/song1.mp3</song>
+				</item>
+				<item id="19">
+					<title><![CDATA[Track title 5]]></title>
+					<artist><![CDATA[Artist name 5]]></artist>
+					<duration>00:31</duration>
+					<buy url = "http://www.paypal.com"></buy>
+					<song>content/songs/song1.mp3</song>
+				</item>
+				<item id="110">
+					<title><![CDATA[Track title 6]]></title>
+					<artist><![CDATA[Artist name 6]]></artist>
+					<duration>00:31</duration>
+					<buy url = "http://www.paypal.com"></buy>
+					<song>content/songs/song1.mp3</song>
+				</item>								
+			</tracks>
+		</album>
+		
+		<album id="2">
+			<image>content/images/albums/Bow Wow.jpg</image>
+			
+			<author><![CDATA[Bow Wow]]></author>
+			<name alsoInList = "false"><![CDATA[<font color="#ff0000">Album Title 2</font>]]></name>
+			<caption><![CDATA[Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer...  <font color="#9AC836"><a href="http://www.flabell.com">read more</a></font>]]></caption>
+			
+			<link></link><target>_blank</target>
+			<buy></buy>
+			
+			<tracks>
+				<item id="21">
+					<title><![CDATA[Track title 1]]></title>
+					<artist><![CDATA[Artist name 1]]></artist>
+					<buy url = "http://www.paypal.com">Download</buy> <!-- if you want this item to have a different text write the text in the tag -->
+					<duration>00:31</duration>
+					<song>content/songs/song1.mp3</song>
+				</item>
+				<item id="22">
+					<title><![CDATA[Track title 2]]></title>
+					<artist><![CDATA[Artist name 2]]></artist>
+					<buy url = "http://www.paypal.com"></buy>
+					<duration>00:31</duration>
+					<song>content/songs/song1.mp3</song>
+				</item>
+				<item id="23">
+					<title><![CDATA[Mix Track 3]]></title>
+					<artist><![CDATA[Artist name 3]]></artist>
+                    <duration>00:31</duration>
+					<buy url = "http://www.paypal.com"></buy>
+					<song>content/songs/song1.mp3</song>
+				</item>
+				<item id="24">
+					<title><![CDATA[Track title 4]]></title>
+					<artist><![CDATA[Artist name 4]]></artist>
+					<duration>00:31</duration>
+					<buy url = "http://www.paypal.com"></buy>
+					<song>content/songs/song1.mp3</song>
+				</item>
+				<item id="25">
+					<title><![CDATA[Track title 5]]></title>
+					<artist><![CDATA[Artist name 5]]></artist>
+					<duration>00:31</duration>
+					<buy url = "http://www.paypal.com"></buy>
+					<song>content/songs/song1.mp3</song>
+				</item>
+				<item id="26">
+					<title><![CDATA[Track title 6]]></title>
+					<artist><![CDATA[Artist name 6]]></artist>
+					<duration>00:31</duration>
+					<buy url = "http://www.paypal.com"></buy>
+					<song>content/songs/song1.mp3</song>
+				</item>	
+				<item id="27">
+					<title><![CDATA[Track title 3]]></title>
+					<artist><![CDATA[Artist name 3]]></artist>
+					<buy url = "http://www.paypal.com"></buy>
+					<song>content/songs/song1.mp3</song>
+				</item>
+				<item id="28">
+					<title><![CDATA[Track title 4]]></title>
+					<artist><![CDATA[Artist name 4]]></artist>
+					<duration>00:31</duration>
+					<buy url = "http://www.paypal.com"></buy>
+					<song>content/songs/song1.mp3</song>
+				</item>
+				<item id="29">
+					<title><![CDATA[Track title 5]]></title>
+					<artist><![CDATA[Artist name 5]]></artist>
+					<duration>00:31</duration>
+					<buy url = "http://www.paypal.com"></buy>
+					<song>content/songs/song1.mp3</song>
+				</item>
+				<item id="210">
+					<title><![CDATA[Track title 6]]></title>
+					<artist><![CDATA[Artist name 6]]></artist>
+					<duration>00:31</duration>
+					<buy url = "http://www.paypal.com"></buy>
+					<song>content/songs/song1.mp3</song>
+				</item>								
+			</tracks>
+		</album>
+		
+		<album id="3">
+			<image>content/images/albums/Busta Rhymes.jpg</image>
+			
+			<author><![CDATA[Busta Rhymes]]></author>
+			<name alsoInList = "false"><![CDATA[<font color="#ff0000">Album Title 3</font>]]></name>
+			<caption><![CDATA[]]></caption>
+			
+			<link></link><target>_blank</target>
+			<buy></buy>
+			
+			<tracks>
+				<item id="31">
+					<title><![CDATA[Track title 1]]></title>
+					<artist><![CDATA[Artist name 1]]></artist>
+					<buy url = "http://www.paypal.com">Download</buy> <!-- if you want this item to have a different text write the text in the tag -->
+					<duration>00:31</duration>
+					<song>content/songs/song1.mp3</song>
+				</item>
+				<item id="32">
+					<title><![CDATA[Track title 2]]></title>
+					<artist><![CDATA[Artist name 2]]></artist>
+					<buy url = "http://www.paypal.com"></buy>
+					<duration>00:31</duration>
+					<song>content/songs/song1.mp3</song>
+				</item>
+				<item id="33">
+					<title><![CDATA[Track title 3]]></title>
+					<artist><![CDATA[Artist name 3]]></artist>
+                    <duration>00:31</duration>
+					<buy url = "http://www.paypal.com"></buy>
+					<song>content/songs/song1.mp3</song>
+				</item>
+				<item id="34">
+					<title><![CDATA[Mix Track 1]]></title>
+					<artist><![CDATA[Artist name 4]]></artist>
+					<duration>00:31</duration>
+					<buy url = "http://www.paypal.com"></buy>
+					<song>content/songs/song1.mp3</song>
+				</item>
+				<item id="35">
+					<title><![CDATA[Track title 5]]></title>
+					<artist><![CDATA[Artist name 5]]></artist>
+					<duration>00:31</duration>
+					<buy url = "http://www.paypal.com"></buy>
+					<song>content/songs/song1.mp3</song>
+				</item>
+				<item id="36">
+					<title><![CDATA[Track title 6]]></title>
+					<artist><![CDATA[Artist name 6]]></artist>
+					<duration>00:31</duration>
+					<buy url = "http://www.paypal.com"></buy>
+					<song>content/songs/song1.mp3</song>
+				</item>	
+				<item id="37">
+					<title><![CDATA[Track title 3]]></title>
+					<artist><![CDATA[Artist name 3]]></artist>
+                    <duration>00:31</duration>
+					<buy url = "http://www.paypal.com"></buy>
+					<song>content/songs/song1.mp3</song>
+				</item>
+				<item id="38">
+					<title><![CDATA[Track title 4]]></title>
+					<artist><![CDATA[Artist name 4]]></artist>
+					<duration>00:31</duration>
+					<buy url = "http://www.paypal.com"></buy>
+					<song>content/songs/song1.mp3</song>
+				</item>
+				<item id="39">
+					<title><![CDATA[Track title 5]]></title>
+					<artist><![CDATA[Artist name 5]]></artist>
+					<duration>00:31</duration>
+					<buy url = "http://www.paypal.com"></buy>
+					<song>content/songs/song1.mp3</song>
+				</item>
+				<item id="310">
+					<title><![CDATA[Track title 6]]></title>
+					<artist><![CDATA[Artist name 6]]></artist>
+					<duration>00:31</duration>
+					<buy url = "http://www.paypal.com"></buy>
+					<song>content/songs/song1.mp3</song>
+				</item>								
+			</tracks>
+		</album>
+		
+		<album id="4">
+			<image>content/images/albums/Fat Joe.jpg</image>
+			
+			<author><![CDATA[Fat Joe]]></author>
+			<name alsoInList = "false"><![CDATA[<font color="#ff0000">Album Title 4</font>]]></name>
+			<caption><![CDATA[Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer...  <font color="#9AC836"><a href="http://www.flabell.com">read more</a></font>]]></caption>
+			
+			<link></link><target>_blank</target>
+			<buy></buy>
+			
+			<tracks>
+				<item id="41">
+					<title><![CDATA[Track title 1]]></title>
+					<artist><![CDATA[Artist name 1]]></artist>
+					<buy url = "http://www.paypal.com">Download</buy> <!-- if you want this item to have a different text write the text in the tag -->
+					<duration>00:31</duration>
+					<song>content/songs/song1.mp3</song>
+				</item>
+				<item id="42">
+					<title><![CDATA[Track title 2]]></title>
+					<artist><![CDATA[Artist name 2]]></artist>
+					<buy url = "http://www.paypal.com"></buy>
+					<duration>00:31</duration>
+					<song>content/songs/song1.mp3</song>
+				</item>
+				<item id="43">
+					<title><![CDATA[Track title 3]]></title>
+					<artist><![CDATA[Artist name 3]]></artist>
+                    <duration>00:31</duration>
+					<buy url = "http://www.paypal.com"></buy>
+					<song>content/songs/song1.mp3</song>
+				</item>
+				<item id="44">
+					<title><![CDATA[Track title 4]]></title>
+					<artist><![CDATA[Artist name 4]]></artist>
+					<duration>00:31</duration>
+					<buy url = "http://www.paypal.com"></buy>
+					<song>content/songs/song1.mp3</song>
+				</item>
+				<item id="45">
+					<title><![CDATA[Track title 5]]></title>
+					<artist><![CDATA[Artist name 5]]></artist>
+					<duration>00:31</duration>
+					<buy url = "http://www.paypal.com"></buy>
+					<song>content/songs/song1.mp3</song>
+				</item>
+				<item id="46">
+					<title><![CDATA[Track title 6]]></title>
+					<artist><![CDATA[Artist name 6]]></artist>
+					<duration>00:31</duration>
+					<buy url = "http://www.paypal.com"></buy>
+					<song>content/songs/song1.mp3</song>
+				</item>	
+				<item id="47">
+					<title><![CDATA[Track title 3]]></title>
+					<artist><![CDATA[Artist name 3]]></artist>
+                    <duration>00:31</duration>
+					<buy url = "http://www.paypal.com"></buy>
+					<song>content/songs/song1.mp3</song>
+				</item>
+				<item id="48">
+					<title><![CDATA[Track title 4]]></title>
+					<artist><![CDATA[Artist name 4]]></artist>
+					<duration>00:31</duration>
+					<buy url = "http://www.paypal.com"></buy>
+					<song>content/songs/song1.mp3</song>
+				</item>
+				<item id="49">
+					<title><![CDATA[Track title 5]]></title>
+					<artist><![CDATA[Artist name 5]]></artist>
+					<duration>00:31</duration>
+					<buy url = "http://www.paypal.com"></buy>
+					<song>content/songs/song1.mp3</song>
+				</item>
+				<item id="410">
+					<title><![CDATA[Track title 6]]></title>
+					<artist><![CDATA[Artist name 6]]></artist>
+					<duration>00:31</duration>
+					<buy url = "http://www.paypal.com"></buy>
+					<song>content/songs/song1.mp3</song>
+				</item>								
+			</tracks>
+		</album>
+		
+		<album id="5">
+			<image>content/images/albums/Fergie.jpg</image>
+			
+			<author><![CDATA[Fergie]]></author>
+			<name alsoInList = "false"><![CDATA[<font color="#ff0000">Album Title 5</font>]]></name>
+			<caption><![CDATA[Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s, when an unknown printer...  <font color="#9AC836"><a href="http://www.flabell.com">read more</a></font>]]></caption>
+			
+			<link></link><target>_blank</target>
+			<buy></buy>
+			
+			<tracks>
+				<item id="51">
+					<title><![CDATA[Track title 1]]></title>
+					<artist><![CDATA[Artist name 1]]></artist>
+					<buy url = "http://www.paypal.com">Download</buy> <!-- if you want this item to have a different text write the text in the tag -->
+					<duration>00:31</duration>
+					<song>content/songs/song1.mp3</song>
+				</item>
+				<item id="52">
+					<title><![CDATA[Track title 2]]></title>
+					<artist><![CDATA[Artist name 2]]></artist>
+					<buy url = "http://www.paypal.com"></buy>
+					<duration>00:31</duration>
+					<song>content/songs/song1.mp3</song>
+				</item>
+				<item id="53">
+					<title><![CDATA[Track title 3]]></title>
+					<artist><![CDATA[Artist name 3]]></artist>
+                    <duration>00:31</duration>
+					<buy url = "http://www.paypal.com"></buy>
+					<song>content/songs/song1.mp3</song>
+				</item>
+				<item id="54">
+					<title><![CDATA[Track title 4]]></title>
+					<artist><![CDATA[Artist name 4]]></artist>
+					<duration>00:31</duration>
+					<buy url = "http://www.paypal.com"></buy>
+					<song>content/songs/song1.mp3</song>
+				</item>
+				<item id="55">
+					<title><![CDATA[Track title 5]]></title>
+					<artist><![CDATA[Artist name 5]]></artist>
+					<duration>00:31</duration>
+					<buy url = "http://www.paypal.com"></buy>
+					<song>content/songs/song1.mp3</song>
+				</item>
+				<item id="56">
+					<title><![CDATA[Track title 6]]></title>
+					<artist><![CDATA[Artist name 6]]></artist>
+					<duration>00:31</duration>
+					<buy url = "http://www.paypal.com"></buy>
+					<song>content/songs/song1.mp3</song>
+				</item>	
+				<item id="57">
+					<title><![CDATA[Track title 3]]></title>
+					<artist><![CDATA[Artist name 3]]></artist>
+                    <duration>00:31</duration>
+					<buy url = "http://www.paypal.com"></buy>
+					<song>content/songs/song1.mp3</song>
+				</item>
+				<item id="58">
+					<title><![CDATA[Track title 4]]></title>
+					<artist><![CDATA[Artist name 4]]></artist>
+					<duration>00:31</duration>
+					<buy url = "http://www.paypal.com"></buy>
+					<song>content/songs/song1.mp3</song>
+				</item>
+				<item id="59">
+					<title><![CDATA[Track title 5]]></title>
+					<artist><![CDATA[Artist name 5]]></artist>
+					<duration>00:31</duration>
+					<buy url = "http://www.paypal.com"></buy>
+					<song>content/songs/song1.mp3</song>
+				</item>
+				<item id="510">
+					<title><![CDATA[Track title 6]]></title>
+					<artist><![CDATA[Artist name 6]]></artist>
+					<duration>00:31</duration>
+					<buy url = "http://www.paypal.com"></buy>
+					<song>content/songs/song1.mp3</song>
+				</item>								
+			</tracks>
+		</album>
+		
+		
+	</albums>	
+</mp3gallery>
