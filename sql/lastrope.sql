@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.1
+-- version 3.4.5
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Dim 20 Janvier 2013 à 15:16
--- Version du serveur: 5.5.24-log
--- Version de PHP: 5.3.13
+-- Généré le : Lun 21 Janvier 2013 à 16:20
+-- Version du serveur: 5.5.16
+-- Version de PHP: 5.3.8
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -364,13 +364,13 @@ INSERT INTO `song` (`idSong`, `filename`, `title`, `description`, `duration`, `l
 (1, '', 'Intro', '', '01:45', 'fr'),
 (2, '', 'War is the key', '', '03:43', 'fr'),
 (3, '', 'Revenge', '', '04:10', 'fr'),
-(4, '', 'The King', '', '04:57', 'fr'),
+(4, 'Scarlet.mp3', 'The King', '', '04:57', 'fr'),
 (5, '', 'Burn in hell', '', '04:12', 'fr'),
 (6, '', 'Death blows in my ears', '', '04:11', 'fr'),
 (7, '', 'Into the shadows', '', '04:47', 'fr'),
 (8, '', 'Never yourself', '', '04:33', 'fr'),
 (9, '', 'Hopess', '', '04:22', 'fr'),
-(10, '', 'Power of death', '', '04:14', 'fr'),
+(10, 'Passenger.mp3', 'Power of death', '', '04:14', 'fr'),
 (11, '', 'Ultimate Attempt', '', '04:36', 'fr'),
 (12, '', 'Conclusion', '', '02:08', 'fr'),
 (13, '', 'Intro', '', '01:45', 'en'),
@@ -385,10 +385,10 @@ INSERT INTO `song` (`idSong`, `filename`, `title`, `description`, `duration`, `l
 (22, '', 'Power of death', '', '04:14', 'en'),
 (23, '', 'Ultimate Attempt', '', '04:36', 'en'),
 (24, '', 'Conclusion', '', '02:08', 'en'),
-(25, '', 'Ch.1 - A weird travel', '', '04:00', 'fr'),
+(25, 'Scarlet.mp3', 'Ch.1 - A weird travel', '', '04:00', 'fr'),
 (26, '', 'Ch.2 - Survive after mourning', '', '05:50', 'fr'),
 (27, '', 'Ch.3 - Loneliness', '', '05:10', 'fr'),
-(28, '', 'Ch.4 - Kidnapping', '', '04:20', 'fr'),
+(28, 'Passenger.mp3', 'Ch.4 - Kidnapping', '', '04:20', 'fr'),
 (29, '', 'Ch.5 - Dilemma', '', '05:20', 'fr'),
 (30, '', 'Ch.6 - The Leak', '', '03:45', 'fr'),
 (31, '', 'Ch.7 - Change your mind', '', '05:00', 'fr'),
