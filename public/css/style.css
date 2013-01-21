@@ -1608,7 +1608,7 @@ nav{
     float: right;
     margin-right: 20px;
 }
-.left-column .cube-preview{
+.left-column .cube-preview, .right-column .cube-preview{
     width: 148px;
     height: 136px;
     
@@ -1618,7 +1618,7 @@ nav{
     
     border: 1px solid #fff;
 }
-.left-column .active-vignette{
+.left-column .active-vignette, .right-column .active-vignette{
     background: transparent url(../media/image/bg-vignette.png) left top no-repeat;
     text-align: center;
     color: #fff;
@@ -1642,7 +1642,7 @@ nav{
     -ms-transition-property: all;
     -ms-transition-duration: 0.5s;
 }
-.left-column .active-vignette:hover{
+.left-column .active-vignette:hover, .right-column .active-vignette:hover{
     background: transparent url(../media/image/bg-vignette-hover.png) left top no-repeat;
 }
 .video-preview{
