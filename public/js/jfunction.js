@@ -181,28 +181,29 @@ $(document).ready(function(){
     });
 	
     // For scrolling content on bio page
-    $('#members_switch').click(function(){
-	scrollTo('top');
+    $('#switch').click(function(){
+	var direction = $(this).attr('class');
+	$(this).removeClass(direction);
+	if(direction == "top"){
+	    scrollTo('top');
+	    $(this).addClass('bottom');
+	}else if(direction == "bottom"){
+	    scrollTo('bottom');
+	    $(this).addClass('top');
+	}
     });
-    $('#general_switch').click(function(){
-	scrollTo('bottom');
-    });
+    
 	
     // Check if the scroll in the page is on a keypoint for changing image
     $(window).scroll(function(){
 	if($(window).scrollTop() <= ($('#members_container').offset().top+370)){
-	    $('#members_switch').css({
-		'background':'#cecdce url(public/media/image/fleche_right.png) center center no-repeat'
-	    });
-	    $('#general_switch').css({
+	    $('#switch').css({
 		'background':'#2B5A74 url(public/media/image/fleche_bottom.png) center center no-repeat'
 	    });
+	    
 	} else {
-	    $('#members_switch').css({
+	    $('#switch').css({
 		'background':'#cecdce url(public/media/image/fleche_top_black.png) center center no-repeat'
-	    });
-	    $('#general_switch').css({
-		'background':'#2B5A74 url(public/media/image/fleche_right_white.png) center center no-repeat'
 	    });
 	}
     });
