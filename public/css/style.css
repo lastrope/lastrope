@@ -16,11 +16,6 @@ address { font-style:normal }
 }
 @font-face
 {
-    font-family: "baphomet";
-    src: url("baphomet.ttf");
-}
-@font-face
-{
     font-family: "Ubuntu-R";
     src: url("Ubuntu-R.ttf");
 }
@@ -59,6 +54,12 @@ address { font-style:normal }
     font-family: "Segoe UI";
     src: url("Segoe UI.ttf");
 }
+@font-face
+{
+    font-family: "Hasteristico";
+    src: url("Hasteristico.ttf");
+}
+
 
 /* REST OF THE CSS */
 
@@ -114,7 +115,7 @@ textarea:-moz-placeholder {
 /* Loader */
 #top_loader,
 #bottom_loader{
-    background:#111 url('../media/image/metal_header2.png') ;
+    background:#111 url('../media/image/stressed_linen.png') ;
     position:absolute;
     width:100%;
     z-index:888;    
@@ -298,7 +299,7 @@ textarea:-moz-placeholder {
     color:#FFFFFF;
 
     letter-spacing: 4px;
-    font-family: 'baphomet', georgia;
+    font-family: 'Hasteristico', georgia;
     font-size: 18px;
 
     border-radius:100px;
@@ -407,7 +408,7 @@ textarea:-moz-placeholder {
 
 }
 #welcome h1{
-    font-family: "Baphomet", georgia;
+    font-family: "Hasteristico", georgia;
     font-size:40px;
     font-weight: normal;
     color: #7F554E;
@@ -763,7 +764,7 @@ section .content_event{
 #language{
     float:right;
     margin-right:10px;
-    margin-top:13px;
+    margin-top:25px;
 }
 #language img{
     height:20px;
@@ -776,7 +777,7 @@ header{
     width:100%;
     min-width:975px;
     height:70px;
-    background:#111 url('../media/image/metal_header2.png') left top repeat-x;
+    background:#111 url('../media/image/stressed_linen.png') left top repeat-x;
     z-index: 800;
 
     box-shadow: 0 5px 5px rgba(0,0,0,0.6);
@@ -787,8 +788,9 @@ header{
 }
 #header{
     position: relative;
-
-    font-family: baphomet, georgia;
+    letter-spacing: 1px;
+    font-weight:bold;
+    font-family: Hasteristico, georgia, sans-serif;
     color: #fff;
     font-size: 22px;
     width:875px;
@@ -800,6 +802,19 @@ header{
 #header a {
     color: #fff;
     font-weight: bold;
+    transition-property: all;
+    transition-duration: .4s;
+    -moz-transition-property: all;
+    -moz-transition-duration: .4s;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: .4s;
+    -o-transition-property: all;
+    -o-transition-duration: .4s;
+    -ms-transition-property: all;
+    -ms-transition-duration: .4s;
+}
+#header a:hover{
+    text-shadow: 0px 0px 9px #eee;
 }
 #header ul{
     position:absolute;
@@ -828,6 +843,15 @@ header{
     position: relative;
     z-index:3;
     background: url("../media/image/logo1p.png") no-repeat scroll center center transparent;
+    
+    -moz-transition-property: background;
+    -moz-transition-duration: .6s;
+    -o-transition-property: background;
+    -o-transition-duration: .6s;
+    -webkit-transition-property: background;
+    -webkit-transition-duration: .6s;
+    transition-property: background;
+    transition-duration: .6s;
 }
 #logo:hover{
     background: url("../media/image/logo1phover.png") no-repeat scroll center center transparent;
@@ -855,7 +879,7 @@ footer{
     width:100%;
     min-width:975px;
     height:70px;
-    background:#111 url('../media/image/metal_header2.png') left top repeat-x;
+    background:#111 url('../media/image/stressed_linen.png') left top repeat-x;
     z-index:800;
     box-shadow: 0 -5px 5px rgba(0,0,0,0.6);
     -webkit-box-shadow: 0 -5px 5px rgba(0,0,0,0.6);
@@ -1027,7 +1051,7 @@ footer p {
     z-index:2;
 }
 #members_container .name_member{
-    font-family: baphomet, georgia;
+    font-family: Hasteristico, georgia;
     font-weight: bold;
     font-size:18px;
     position: absolute;
@@ -1145,7 +1169,7 @@ footer p {
     font-weight: normal;
     line-height:45px;
     color: #fff;
-    font-family: Baphomet, georgia;
+    font-family: Hasteristico, georgia;
     font-weight: bold;
 }
 .bubble_container{
