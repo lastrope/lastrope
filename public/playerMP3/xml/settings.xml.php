@@ -131,7 +131,7 @@
 			
 			<backToAlbumsBt disable = "false">
 				
-				<text normalColor = "0xFFFFFF" overColor = "0x000000"></text>
+				<text normalColor = "0xFFFFFF" overColor = "0x000000"><?php echo PLAYER_RETURN ?></text>
 				
 				<backFillColor>0x6E443D</backFillColor>
 				<backFillOverColor>0xDDDDDD</backFillOverColor>

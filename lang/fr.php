@@ -60,5 +60,6 @@
 	define("PLAYLIST","Découvrir en musique");
 	define("PLAYER_TITLE","En écoute");
 	define("PLAYER_ARTIST", "Artiste");
+	define("PLAYER_RETURN", "Retour aux albums");
 	
 ?>
