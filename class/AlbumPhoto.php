@@ -76,7 +76,8 @@ class AlbumPhoto{
     public function getAlbumById($id){
         $request = "SELECT idAlbum, nomAlbum, nbPhotos , dateAlbum
 			FROM album_photo
-			WHERE idActus=".$id;
+			WHERE idAlbum=".$id. "
+			AND lang='".$this->lang."'";
 		
         $album_array = array();
 		
