@@ -102,7 +102,7 @@
 	/// if you want to use absolute paths(like "http://domain.com/images/....") then leave it empty("")
 // Also, if you want the embed code to work correctly you'll need to set the an absolute path for pathToFiles, like this: http://www.yourwebsite.dom/.../mp3gallery/
 	flashvars.pathToFiles = "/public/playerMP3/";
-	flashvars.xmlPath = "xml/settings.xml";
+	flashvars.xmlPath = "xml/settings.xml.php";
 	flashvars.contentXMLPath = "xml/mp3gallery.xml.php";
 
 	/** EMBED THE SWF**/

@@ -58,5 +58,7 @@
 	//SOUND PAGE 
 	define("DISCOGRAPHY","Discographie");
 	define("PLAYLIST","Découvrir en musique");
-	define("SOUND_PLAYER_TITLE","En écoute");
+	define("PLAYER_TITLE","En écoute");
+	define("PLAYER_ARTIST", "Artiste");
+	
 ?>
