@@ -40,7 +40,6 @@
 					// Ici c'est le corp de la page. Il serait préférable de découper chaque partie pour avoir un code souple et modulable
 					// Décommenter cette ligne et mettre entre guillemet le chemin relatif de la page à inclure
 					include($page.".php");
-					include("page/nav.phtml");
 				?>
 			</div>
 			<?php

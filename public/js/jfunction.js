@@ -92,6 +92,23 @@ $(document).ready(function(){
 	    }
 	});
     });
+    $('.right-column .close p').live('click', function(){
+	$('.video-preview').remove();
+    });
+
+    $('.right-column .active-vignette').click(function(){
+	var idAlbum = $(this).attr('data-id');
+	var $this = $(this);
+	
+	$.ajax({
+	    type : "post",
+	    url : "script/showNav.php",
+	    data : {'idAlbum':idAlbum},
+	    success:function(response){
+		$("#global").append(response);
+	    }
+	});
+    });
     
     setTimeout(function(){
 	$('#content_answer').css({
