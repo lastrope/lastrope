@@ -12,8 +12,8 @@ $(document).ready(function(){
 	
     var effet = 'easeOutElastic';
 	
-    var widthWindowOnLoad = (($(window).width()-600)/2);
-	
+    var widthWindowOnLoad = ((parseInt($(window).width())-600)/2);
+    fixContent(widthWindowOnLoad);
     // Initialization of the rollhover menu
     // If One Item is already selected put the boolean at "True"
     $('li').each(function(){
@@ -69,11 +69,9 @@ $(document).ready(function(){
 	    easing:effet
 	});
     });
-	
+    
     // jquery for showing news navigation left on the page loading
-    $('#selecteur').animate({
-	'left':'0'
-    },1200);
+    selecteurAppears();
     
     $('.left-column .close p').live('click', function(){
 	$('.video-preview').remove();
@@ -193,7 +191,6 @@ $(document).ready(function(){
 	}
     });
     
-	
     // Check if the scroll in the page is on a keypoint for changing image
     $(window).scroll(function(){
 	if($(window).scrollTop() <= ($('#members_container').offset().top+370)){
@@ -217,23 +214,6 @@ $(document).ready(function(){
 	$('#search_value_id').removeClass('input_text_active');
 	$('#search_value_id').addClass('input_text_passive');
     });
-	
-    $('.news-content').animate({
-	'margin':'0 0 0 '+widthWindowOnLoad+'px'
-    });
-
-    // Si l'on ferme le panel droite de recherche alors qu'il reste des caract�res de saisi
-    $('#image_back').live('click',function(){
-	// on r�initialise tout
-	$('.selected_answer').removeClass('selected_answer');
-	$('#type_search').val('');
-		
-	if($('#content_form').css('display') != 'none'){
-	    closePreview();
-	    $('#search_value_id').val('');
-	    sort_actu();
-	}
-    });
     $('.bubble_period').hover(function(){
 	$(this).children('.bubble_period_hover').css({
 	    'top':$('.bubble_container').height(),
@@ -245,6 +225,7 @@ $(document).ready(function(){
     }, function(){
 	$(this).children('.bubble_period_hover').fadeOut(500);
     });
+    
 });
 // Animation for the website opening
 function loader(){
@@ -344,6 +325,7 @@ function sort_actu(){
 	}
     });
 }
+
 function verif_search(){
     var search = document.getElementById('search_value_id');
 	
@@ -355,4 +337,18 @@ function verif_search(){
 	search.className = 'input_text_passive';
 	return true;
     }
+}
+function selecteurAppears(){
+    $('#selecteur').fadeIn(1500);
+}
+// RESPONSIVE NEWS
+$(window).resize(function(){
+    var widthWindowOnResize = ((parseInt($(window).width())-600)/2);
+    fixContent(widthWindowOnResize);
+
+});
+function fixContent(width){
+    $('.content-responsive').css({
+	'margin':'0 0 0 '+width+'px'
+    });
 }
