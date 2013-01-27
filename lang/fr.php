@@ -54,6 +54,7 @@
 	define("VIDEO_TITLE", "Les videos");
 	define("IMAGE_TITLE", "Les photos");
 	define("CLOSE_WINDOW", "Fermer");
+	define("PHOTOS_OF", "Photo du");
 	
 	//SOUND PAGE 
 	define("DISCOGRAPHY","Discographie");

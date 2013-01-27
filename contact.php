@@ -50,7 +50,4 @@
 			<input class="button" type="submit" value="<?php echo SEND;?>" />
 		</form>
 	</div>
-	
-	<div id="useful_links">
-	</div>
 </div>

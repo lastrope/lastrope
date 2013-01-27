@@ -728,7 +728,7 @@ section .content_event{
 #language{
     float:right;
     margin-right:10px;
-    margin-top:25px;
+    margin-top:23px;
 }
 #language img{
     height:20px;
@@ -1000,6 +1000,7 @@ footer p {
 
     position:relative;
     z-index:2;
+    overflow: hidden;
 }
 #members_container .name_member{
     font-family: Hasteristico, georgia;
@@ -1109,7 +1110,7 @@ footer p {
     -o-box-shadow: inset 0 4px 8px rgba(0,0,0,0.7),
 	inset 0 -4px 8px rgba(0,0,0,0.7);
 
-    margin: 20px 0 -98px;
+    margin: 20px 0 -103px;
 }
 .big_title{
     width: 200px;
@@ -1573,14 +1574,14 @@ nav{
 /* Media page */
 .left-column, .right-column{
     width: 450px;
-    height: 600px;
+    height: 615px;
     position: relative;
     
-    background: transparent url(../media/image/studio.png) center 50px no-repeat;
+    background: transparent url(../media/image/studio.png) center 63px no-repeat;
 }
 .left-column h1, .right-column h1{
     background: transparent url(../media/image/clefa.png) right bottom no-repeat;
-    margin-bottom: 2px;
+    margin-bottom: 16px;
 }
 .left-column{
     float: left;

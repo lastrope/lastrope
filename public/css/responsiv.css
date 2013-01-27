@@ -1,0 +1,173 @@
+@media screen and (max-width: 1210px) {
+    #welcome{
+	display: none;
+    }
+    #event {
+	float: left;
+    }
+    #article{
+	float: left;
+	margin-left: 20px;
+    }
+}
+@media screen and (max-width: 950px) { 
+    .right-column{
+	float: left;
+    }
+    #members_container{
+	min-width: 0;
+	min-height: 0;
+	width: auto;
+	max-width: 975px;
+	height: auto;
+	background: transparent;
+    }
+}
+@media screen and (max-width: 900px) { 
+    /** header **/
+    #language{
+	float: none;
+	margin: auto;
+	width: 80px;
+	text-align: center;
+    }
+    header {
+	width: auto;
+	min-width: 0;
+	min-height: 70px;
+	height: auto;
+	background-repeat: repeat;
+	padding: 10px;
+    }
+    #header{
+	width: auto;
+	min-height: 70px;
+	height: auto;
+	overflow: visible;
+    }
+    #box{
+	display: none;
+    }
+    #header ul {
+	position: static;
+    }
+    #header ul li{
+	float: none;
+	text-align: center;
+	width: auto;
+    }
+    #news {
+	margin-left: 0;
+    }
+    
+    /** corps **/
+    #corps{
+	min-width: 0;
+	width: auto;
+    }
+    #conteneur{
+	min-width: 0;
+	width: auto;
+	margin-top: 40px;
+    }
+    #article{
+	float: none;
+	margin: auto;
+    }
+    #event {
+	position: relative;
+	float: none;
+	margin: auto;
+    }
+    #projo-right-to-left{
+	display: none;
+    }
+    #social{
+	position: static;
+	float: none;
+	width: 480px;
+	height: 200px;
+	margin: auto;
+    }
+    #social ul li {
+	float: left;
+	display: block;
+	margin: 10px 10px;
+    }
+    #contact_page{
+	height: auto;
+	margin: 0 auto;
+	text-align: center;
+    }
+    #contact_page .label_form{
+	width: 176px;
+    }
+    .right-column{
+	margin-left: 20px;
+    }
+    
+    /** footer **/
+    footer{
+	width: 100%;
+	min-width: 0;
+    }
+    #copyright{
+	display: none;
+    }
+}
+@media screen and (max-width: 700px) {
+    footer{
+	height: auto;
+	padding-bottom: 10px;
+    }
+    #footer{
+	height: auto;
+	position: static;
+    }
+    #footer p{
+	float: none;
+	text-decoration: none;
+	margin-left: 30px;
+	margin-top: 15px;
+	border: none;
+    }
+    #article{
+	width: auto;
+	padding: 10px;
+    }
+    #welcome + #article h1{
+	background: none;
+    }
+    
+    #contact_page{
+	width: auto;
+    }
+    #contact_page .label_form{
+	float: none;
+	margin: auto;
+	text-align: center;
+    }
+    #contact_page input[type="text"]{
+	float: none;
+	margin: auto;
+	text-align: center;
+    }
+    #contact_page textarea{
+	width: auto;
+	min-width: 100px;
+    }
+}
+@media screen and (max-width: 450px) {
+    #social{
+	position: static;
+	float: none;
+	width: 200px;
+	height: 450px;
+	margin: auto;
+    }
+    #social ul li {
+	float: none;
+	display: block;
+	margin: 10px auto;
+    }
+}

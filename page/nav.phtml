@@ -45,7 +45,7 @@
 			?>
 			<li>
 			    <a href="#">
-				<img src="<?php echo __path_photo__ . "/" . $target_album["dateAlbum"] . "/" . $photo ?>" data-large="<?php echo __path_photo__ . "/" . $target_album["dateAlbum"] . "/" . $photo ?>" alt="<?php echo "Photo de " . $target_album["nomAlbum"]; ?>" data-description="<?php echo "Photo de " . $target_album["nomAlbum"]; ?>" />
+				<img src="<?php echo __path_photo__ . "/" . $target_album["dateAlbum"] . "/" . $photo ?>" data-large="<?php echo __path_photo__ . "/" . $target_album["dateAlbum"] . "/" . $photo ?>" alt="<?php echo PHOTOS_OF . " " . $target_album["nomAlbum"]; ?>" data-description="<?php echo PHOTOS_OF . " " . $target_album["nomAlbum"]; ?>" />
 			    </a>
 			</li>
 			<?php 
@@ -57,4 +57,8 @@
 	    <!-- End Elastislide Carousel Thumbnail Viewer -->
 	</div><!-- rg-thumbs -->
     </div><!-- rg-gallery -->
+    
+        <div style="color:#fff;" class="close">
+	<p><?php echo CLOSE_WINDOW;?></p>
+    </div>
 </div>

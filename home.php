@@ -68,6 +68,7 @@
 		?>
 	    <img id="projo-right-to-left" src="public/media/image/lumiere.png" alt="lumiere droite" />
 	</div>
+	<div class="clear"></div>
 </div>
 <script type="text/javascript">
 	function eventCarousel(section){

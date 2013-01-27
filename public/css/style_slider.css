@@ -5,9 +5,11 @@
     width: 100%;
     height: 100%;
     z-index:999999999;
-    padding-top: 40px;
     
     background:transparent url(../media/image/bordure-transparente.png) repeat top left;
+}
+#rg-gallery{
+    margin-top: 43px;
 }
 .rg-image-wrapper{
 	position:relative;
@@ -36,7 +38,7 @@
 	height:100%;
 	text-indent:-9000px;
 	cursor:pointer;
-	opacity:0.3;
+	opacity:0.5;
 	outline:none;
 	-moz-border-radius: 10px 0px 0px 10px;
 	-webkit-border-radius: 10px 0px 0px 10px;
@@ -51,7 +53,7 @@
 	border-radius: 0px 10px 10px 0px;
 }
 .rg-image-nav a:hover{
-	opacity:0.8;
+	opacity:0.9;
 }
 .rg-caption {
 	text-align:center;

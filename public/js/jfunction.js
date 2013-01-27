@@ -92,8 +92,8 @@ $(document).ready(function(){
 	    }
 	});
     });
-    $('.right-column .close p').live('click', function(){
-	$('.video-preview').remove();
+    $('#carousel-container .close p').live('click', function(){
+	$('#carousel-container').remove();
     });
 
     $('.right-column .active-vignette').click(function(){
