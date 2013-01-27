@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.4.5
+-- version 3.5.1
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le : Lun 21 Janvier 2013 à 16:20
--- Version du serveur: 5.5.16
--- Version de PHP: 5.3.8
+-- Généré le: Dim 27 Janvier 2013 à 00:28
+-- Version du serveur: 5.5.24-log
+-- Version de PHP: 5.3.13
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -306,39 +306,6 @@ INSERT INTO `members` (`idMembers`, `nom_table`, `name`, `firstname`, `surname`,
 (8, '', 'De Lima', 'Paco', 'Pakpak', 'pakpak.png', '26/07/1991', 'Bassist', 'Rage Against The Machine, Periphery, Marcus Miller, Le peuple de l''herbe, Dream Theater, Massive Attack, Victor Wooten', '', 'en'),
 (9, '', 'Ramos', 'Camille', 'Boulette', 'cams.png', '31/07/1992', 'Drummer', 'Devin Townsend, Rage Against The Machine, Tool, Tesseract, Iron Maiden, Steve Gad, Billy Cohbam', '', 'en'),
 (10, '', '?', '?', '?', '', '?', 'Singer', '', 'Singer who want a new musical adventure ? Contact us !', 'en');
-
--- --------------------------------------------------------
-
---
--- Structure de la table `photo`
---
-
-CREATE TABLE IF NOT EXISTS `photo` (
-  `idPhoto` smallint(5) NOT NULL AUTO_INCREMENT,
-  `idAlbum` smallint(5) NOT NULL,
-  `captionPhoto` varchar(255) CHARACTER SET utf8 NOT NULL DEFAULT '',
-  `urlPhoto` varchar(255) CHARACTER SET utf8 NOT NULL DEFAULT '',
-  `lang` varchar(2) CHARACTER SET utf8 NOT NULL DEFAULT 'fr',
-  PRIMARY KEY (`idPhoto`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=17 ;
-
---
--- Contenu de la table `photo`
---
-
-INSERT INTO `photo` (`idPhoto`, `idAlbum`, `captionPhoto`, `urlPhoto`, `lang`) VALUES
-(1, 1, 'Solo de Thibault', '2011-12-03 00.10.33.jpg', 'fr'),
-(2, 1, 'Le groupe en plein morceau', '2011-12-03 00.10.41.jpg', 'fr'),
-(3, 1, 'Dans la bonne humeur évidemment !', '2011-12-03 00.10.44.jpg', 'fr'),
-(4, 1, 'Thibault concentré...', '2011-12-03 00.14.06.jpg', 'fr'),
-(5, 1, '', '2011-12-03 00.14.21.jpg', 'fr'),
-(6, 1, '', '2011-12-03 00.21.40.jpg', 'fr'),
-(7, 1, '', '2011-12-03 00.21.43.jpg', 'fr'),
-(8, 1, '', '2011-12-03 00.22.50.jpg', 'fr'),
-(9, 1, '', '2011-12-03 00.23.51.jpg', 'fr'),
-(10, 1, '', '2011-12-03 00.23.55.jpg', 'fr'),
-(11, 1, '', '2011-12-03 00.25.31.jpg', 'fr'),
-(12, 1, '', 'top.JPG', 'fr');
 
 -- --------------------------------------------------------
 

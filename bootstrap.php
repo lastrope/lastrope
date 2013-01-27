@@ -4,7 +4,6 @@ define("DATABASE","lastrope");
 define("USER","root");
 define("PASSWORD","");
 require_once 'class/Session.php';
-require_once 'script/function.php';
 
 // création de l'objet de session
 $session = new Session();

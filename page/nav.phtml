@@ -41,11 +41,11 @@
 		    <ul>
 			<?php
 
-			    foreach($the_album as $photo) {
+			    foreach($photos as $photo) {
 			?>
 			<li>
 			    <a href="#">
-				<img src="public/media/photo/<?php echo $target_album["dateAlbum"] . "/" . $photo["urlPhoto"]; ?>" data-large="" alt="<?php echo $photo["captionPhoto"]; ?>" data-description="<?php echo $photo["captionPhoto"]; ?>" />
+				<img src="<?php echo __path_photo__ . "/" . $target_album["dateAlbum"] . "/" . $photo ?>" data-large="<?php echo __path_photo__ . "/" . $target_album["dateAlbum"] . "/" . $photo ?>" alt="<?php echo "Photo de " . $target_album["nomAlbum"]; ?>" data-description="<?php echo "Photo de " . $target_album["nomAlbum"]; ?>" />
 			    </a>
 			</li>
 			<?php 

@@ -11,41 +11,6 @@ address { font-style:normal }
 /* FONT FAMILY LINKAGE */
 @font-face
 {
-    font-family: "Action of the Time New";
-    src: url("Action of the Time New.ttf");
-}
-@font-face
-{
-    font-family: "Ubuntu-R";
-    src: url("Ubuntu-R.ttf");
-}
-@font-face
-{
-    font-family: "Ubuntu-L";
-    src: url("Ubuntu-L.ttf");
-}
-@font-face
-{
-    font-family: "Ubuntu-LI";
-    src: url("Ubuntu-LI.ttf");
-}
-@font-face
-{
-    font-family: "Ubuntu-M";
-    src: url("Ubuntu-M.ttf");
-}
-@font-face
-{
-    font-family: "Ubuntu-B";
-    src: url("Ubuntu-B.ttf");
-}
-@font-face
-{
-    font-family: "Ubuntu-BI";
-    src: url("Ubuntu-BI.ttf");
-}
-@font-face
-{
     font-family: "Ubuntu-C";
     src: url("Ubuntu-C.ttf");
 }
@@ -54,7 +19,7 @@ address { font-style:normal }
     font-family: "Segoe UI";
     src: url("Segoe UI.ttf");
 }
-@font-face
+@font-face  
 {
     font-family: "Hasteristico";
     src: url("Hasteristico.ttf");
@@ -137,7 +102,6 @@ textarea:-moz-placeholder {
 /* Corps */
 #global{
     position : relative;
-    min-height: 100%;
     background:none;
     z-index:1;
 }
