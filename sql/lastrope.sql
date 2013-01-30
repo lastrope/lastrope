@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Dim 27 Janvier 2013 à 15:48
+-- Généré le: Mer 30 Janvier 2013 à 23:01
 -- Version du serveur: 5.5.24-log
 -- Version de PHP: 5.3.13
 
@@ -41,8 +41,8 @@ CREATE TABLE IF NOT EXISTS `actus` (
 --
 
 INSERT INTO `actus` (`idActus`, `nom_table`, `title`, `body`, `date`, `lang`) VALUES
-(1, '', 'Il y a du changement dans l''air.', 'Comme le dit le titre, il y a du changement dans l''air. L''été nous a tous inspiré l''année passée pour une vague de changement. Ainsi, voici un site tout beau tout propre refait de A à Z pour vous présenter le groupe.\r\nNous avons beaucoup évolué depuis la création de Dust Of Shadows. Et notre musique aussi. De ce fait, le besoin de changer de nom, d''apparence et d''identité est venu assez naturellement.\r\nRépondant à présent au nom de Passanger, nous prévoyons la sortie de notre nouvel EP "Eighteen part 1" de quatre titres fin février.\r\n\r\nPour suivre ce mouvement général une vidéo de présentation, voir même un clip, est un projet en cours de réflexion.\r\nS''inscrivant dans l''air de la musique moderne et complexe, Passanger est bien décidé à franchir une nouvelle étape. La sortie de ce futur EP sera l''élément attendu pour pouvoir - enfin - élargir notre horizon.\r\nNe perdez pas de temps et allez explorer ce site qui sera quotidiennement maintenu à jour pour être constamment exhaustif de toutes nos informations.\r\n\r\nMusicalement,\r\nPassanger.', 1344757674, 'fr'),
-(2, '', 'There is change in the air.', 'As the title says, there is change in the air. Last summer inspired us for a wave of change. So here is a new clean and nice website to introduce the band.\r\nWe have evolved considerably since the creation of Dust Of Shadows. And our music too. Therefore, the need to change our name, our appearance and our identity came pretty naturally.\r\nResponding to the name of Passanger, we expect the release of our new four titles EP "Eighteen part 1" in late february.\r\n\r\nTo follow this general trend, we are also thinking of a video presentation (in progress).\r\nAs part of the air of modern and complex music, Passanger is determined to pass the next step. The release of this future EP will be the element expected to be able - finally - to expand our horizon.\r\nDo not waste time and go explore this website which will be daily maintained to be constantly updated exhaustive of all our information.\r\n\r\nMusically,\r\nPassanger.', 1344757674, 'en');
+(1, '', 'Il y a du changement dans l''air.', 'Comme le dit le titre, il y a du changement dans l''air. L''été nous a tous inspiré cette année pour une vague de changement. Ainsi, voici un site tout beau tout propre refait de A à Z pour vous présenter le groupe.\r\nNous avons beaucoup évolué depuis la création de Dust Of Shadows. Et notre musique aussi. De ce fait, le besoin de changer de nom, d''apparence et d''identité est venu assez naturellement.\r\nRépondant à présent au nom de Passanger, nous prévoyons la sortie de notre nouvel EP "Eighteen" de quatre titres fin décembre.\r\n\r\nEn plus de cela, et toujours pour répondre à ce besoin de changement d''identité, nous avons réalisé - avec l''aide d''une photographe accomplie ;) - des photos reflétant le plus possible l''image souhaité du groupe et surtout de sa musique. Pour suivre ce mouvement général une vidéo de présentation est en cours de réalisation/montage.\r\nS''inscrivant dans l''air de la musique moderne et complexe, Passanger est bien décidé à franchir une nouvelle étape. La sortie de ce futur EP sera l''élément attendu pour pouvoir - enfin - élargir notre horizon.\r\nNe perdez pas de temps et allez explorer ce site qui sera quotidiennement maintenu à jour pour être constamment exhaustif de toutes nos informations.\r\n\r\nMusicalement,\r\nPassanger.', 1344757674, 'fr'),
+(2, '', 'There is change in the air.', 'As the title says, there is a change in the air. Summer inspired us all this year for the wave of change. So here is a new clean and nice website to introduce the band.\r\nWe have evolved considerably since the creation of Dust Of Shadows. And our music too. Therefore, the need to change our name, our appearance and our identity came pretty naturally.\r\nResponding to the name of Passanger, we expect the release of our new four titles EP "Eighteen" in late December.\r\n\r\nIn addition to this and always to meet this need of changing, we have made - with the help of an accomplished photographer ;) - photos reflecting the desired image of the band and especially its music. To follow this general trend, we are also making a video presentation (in progress / editing).\r\nAs part of the air of modern and complex music, Passanger is determined to pass the next step. The release of this future EP will be the element expected to be able - finally - to expand our horizon.\r\nDo not waste time and go explore this website which will be daily maintained to be constantly updated exhaustive of all our information.\r\n\r\nMusically,\r\nPassanger.', 1344757674, 'en');
 
 -- --------------------------------------------------------
 
@@ -67,8 +67,8 @@ CREATE TABLE IF NOT EXISTS `albums` (
 INSERT INTO `albums` (`idAlbums`, `name`, `description`, `date`, `cover`, `lang`) VALUES
 (1, 'Ultimate Attempt', 'Premier album', '2010', 'ultimate_attempt.jpg', 'fr'),
 (2, 'Ultimate Attempt', 'First album', '2010', 'ultimate_attempt.jpg', 'en'),
-(3, 'Eighteen', 'Deuxième album', '2013', 'eighteen.jpg', 'fr'),
-(4, 'Eighteen', 'Second album', '2013', 'eighteen.jpg', 'en');
+(3, 'Eighteen', 'Deuxième album', '2012', 'eighteen.jpg', 'fr'),
+(4, 'Eighteen', 'Second album', '2012', 'eighteen.jpg', 'en');
 
 -- --------------------------------------------------------
 
@@ -148,21 +148,17 @@ CREATE TABLE IF NOT EXISTS `album_photo` (
   `dateAlbum` varchar(10) CHARACTER SET utf8 NOT NULL DEFAULT '',
   `lang` varchar(2) CHARACTER SET utf8 NOT NULL DEFAULT 'fr',
   PRIMARY KEY (`idAlbum`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=9 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=5 ;
 
 --
 -- Contenu de la table `album_photo`
 --
 
 INSERT INTO `album_photo` (`idAlbum`, `nomAlbum`, `nbPhotos`, `dateAlbum`, `lang`) VALUES
-(1, 'Concert à Dourdan', 12, '02-12-2011', 'fr'),
-(2, 'Concert à Roinville', 10, '06-02-2010', 'fr'),
-(3, 'Concert à Janville', 28, '12-12-2009', 'fr'),
-(4, 'Concert à Etrechy', 3, '22-10-2011', 'fr'),
-(5, 'Gig in Dourdan', 12, '02-12-2011', 'en'),
-(6, 'Gig in Roinville', 10, '06-02-2010', 'en'),
-(7, 'Gig in Janville', 28, '12-12-2009', 'en'),
-(8, 'Gig in Etrechy', 3, '22-10-2011', 'en');
+(1, 'Concert à Dourdan', 0, '02-12-2011', 'fr'),
+(2, 'Concert à Roinville', 0, '06-02-2010', 'fr'),
+(3, 'Concert à Janville', 0, '12-12-2009', 'fr'),
+(4, 'Concert à Etrechy', 0, '22-10-2011', 'fr');
 
 -- --------------------------------------------------------
 
@@ -183,14 +179,14 @@ CREATE TABLE IF NOT EXISTS `bio` (
 --
 
 INSERT INTO `bio` (`idPeriod`, `year`, `description`, `lang`) VALUES
-(1, 2012, 'Après un premier semestre remplis de répétitions pour les musiques du dernier album et de quelques concerts dans la région, le groupe se met en quette d''une nouvelle identité musicale et graphique.\r\n\r\nL''enregistrement du nouvel EP "Eighteen part 1" commença en août.\r\n\r\nLa sortie prévu début 2013 donnera naissance à la nouvel vie du groupe.', 'fr'),
+(1, 2012, 'Après un premier semestre remplis de répétitions pour les musiques du dernier album et de quelques concerts dans la région, le groupe se met en quette d''une nouvelle identité musicale et graphique.\n\nL''enregistrement du nouvel EP "Eighteen part 1" commença en aout.\n\nLa sortie prévu début 2013 donne naissance à la nouvel vie du groupe.', 'fr'),
 (2, 2011, 'Fort de cet album enfin sur CD, le groupe décide de s''inscrire à la SACEM pour officialiser ses droits d''auteurs.\n\nCette étape franchie, la groupe jongle entre répète, concert (Etrechy, Roinville, Sermaise, Dourdan), et composition du nouvel E.P "Eighteen part 1".', 'fr'),
-(3, 2010, 'Tout en enchaînant les concerts à Roinville, Dourdan, Sermaise...etc,\r\nle groupe termine la composition de l''album et commence aussitôt son enregistrement chez Thibault afin de le sortir vers la fin d''année.\r\n\r\nCet album de 12 titres fait main sera donc la première trace du groupe.', 'fr'),
-(4, 2009, 'Naissant d''une envie commune, Dust of Shadows voit le jour grâce à Thibault et Kenny, désireux de fonder un groupe de Heavy-métal sérieux.\n\nAprès une recherche intensive, chaque nouveaux membre trouva la pièce manquante. Ainsi Franck rejoignit le groupe comme second guitariste puis amena Paco le bassiste, qui lui même nous présenta Camille la batteuse, remplaçante de Kenny qui nous quitta pour une vie meilleure.\n\nAprès quelques ébauche, le groupe s''attela à la composition du premier Album "Ultimate Attempt".\n\nEt c''est le 12 décembre 2009 qu''ils scellèrent leurs line-up en se produisant pour la première fois ensemble sur scène à Janville.', 'fr'),
-(5, 2012, 'After a first semester filled with rehearsals for the new album and some gigs in our region, the group goes in search of a new musical and graphic identity.\r\n\r\nThe recording of the new EP "Eighteen Part 1" began in August and the release in the beginning of 2013 means a new life for the band.', 'en'),
-(6, 2011, 'Proud of this album finally recorded, the band decided to enroll SACEM formalized its copyright.\r\n\r\nThis step, the group juggles with rehearsals, concerts (Etrechy, Roinville, Sermaise, Dourdan), and composition of the new EP "Eighteen Part 1"', 'en'),
-(7, 2010, 'While chaining concerts in Roinville, Dourdan, Sermaise...etc. the band ended composition of their first album and immediatly began recording in Thibault''s house, in order to finish it in the end of the year.\r\n\r\nThis 12-tracks album will be the first band-trace.', 'en'),
-(8, 2009, 'Born of a common desire, Dust of Shadows was created by Thibault and Kenny, wanting to start a serious band of heavy-metal.\r\n\r\nAfter an intensive search, each new member found the missing piece. And Franck joined the band as second guitarist.\r\nPaco, the bass-guitarist, was brought by Franck. And Himself presented to Dust of shadow Camille, successor of Kenny who left the band for a better life.\r\n\r\nAfter a few draft, the group set about the composition of the first album "Ultimate Attempt".\r\n\r\nAnd it is in December 12, 2009 they seal their line-up performing for the first time together on stage in Janville.', 'en');
+(3, 2010, 'Tout en enchaînant les concerts à Roinville, Dourdan, Sermaise...etc,\nle groupe termine la composition de l''album et commence aussitôt son enregistrement chez Thibault afin de sortir dans la fin de l''année cet Album de 12 titres fait main.', 'fr'),
+(4, 2009, 'Naissant d''une envie commune, Dust of Shadows voit le jour grâce à Thibault et Kenny, désireux de fonder un groupe de Heavy-métal sérieux.\n\nAprès une recherche intensive, chaque nouveaux membre trouva la pièce manquante. Ainsi Franck rejoignit le groupe comme second guitariste puis amena Paco le bassiste, qui lui même nous présenta Camille la batteuse, remplaçante de Kenny qui nous quitta pour une vie meilleure.\n\nAprès quelques ébauche, le groupe s''attela à la composition du premier Album "Ultimate Attempt".\n\nEt c''est le 12 décembre 2009 qu''ils celèrent leurs line-up en se produisant pour la première fois ensemble sur scène à Janville.', 'fr'),
+(5, 2012, 'After a first semester filled with rehearsals for the new album and some gigs in our region, the group goes in search of a new musical and graphic identity. The recording of the new EP "Eighteen Part 1" began in August and the release in the beginning of 2013 means a new life for the band.', 'en'),
+(6, 2011, '', 'en'),
+(7, 2010, '', 'en'),
+(8, 2009, '', 'en');
 
 -- --------------------------------------------------------
 
@@ -300,16 +296,49 @@ CREATE TABLE IF NOT EXISTS `members` (
 --
 
 INSERT INTO `members` (`idMembers`, `nom_table`, `name`, `firstname`, `surname`, `picture`, `birthday`, `instrument`, `influences`, `short_desc`, `lang`) VALUES
-(1, '', 'Dulon', 'Thibault', 'Titi', 'titou.png', '28/02/1992', 'Guitariste Soliste', 'Ayreon, Iron Maiden, Dream Theater, Circus Maximus, Periphery, Tesseract, Nightwish', 'Après plusieurs expériences de groupe non sérieuse, j''ai décidé, avec un ami, de fonder Dust of shadows, un groupe de heavy progressif où l''on pourrait enfin exprimer notre âme heavy et prog.\r\nEn parallèle, je continue mes projets solo qui me permettent d''exprimer mon autre moi musical et d''apprendre toutes les ficelles du mixage. http://soundcloud.com/fitz_lucassen', 'fr'),
+(1, '', 'Dulon', 'Thibault', 'Titi', 'titou.png', '28/02/1992', 'Guitariste Soliste', 'Ayreon, Iron Maiden, Dream Theater, Circus Maximus, Periphery, Tesseract, Nightwish', 'Après plusieurs expériences de groupe non sérieuse, Thibault, née le 28 février 1992, et son ami Kenny décident de fonder Dust of shadows, un groupe de heavy progressif dans lequel ils pourrait enfin exprimer leur âme heavy et prog.\r\nAutodidacte depuis l''age de 15ans, il commence par apprendre la batterie avant de sombrer complètement dans la passion du manche à 6 cordes et du plectre chaleureux.\r\nEn parallèle, il continue ses projets solo qui lui permettent d''exprimer ses autres influences musicales (BO, classique, jazz) et d''apprendre toutes les ficelles du mixage. http://soundcloud.com/fitz_lucassen', 'fr'),
 (2, '', 'Gautier', 'Franck', 'Kyky', 'kyky.png', '27/07/1990', 'Guitariste Rythmique', '', '', 'fr'),
-(3, '', 'De Lima', 'Paco', 'Squid', 'pakpak.png', '26/07/1991', 'Bassiste', 'Rage Against The Machine, Periphery, Marcus Miller, Le peuple de l''herbe, Dream Theater, Massive Attack, Victor Wooten', '', 'fr'),
-(4, '', 'Ramos', 'Camille', 'Boulette', 'cams.png', '31/07/1992', 'Batteur', 'Devin Townsend, Rage Against The Machine, Tool, Tesseract, Iron Maiden, Steve Gad, Billy Cohbam', '', 'fr'),
+(3, '', 'De Lima', 'Paco', 'Squid', 'pakpak.png', '26/07/1991', 'Bassiste', 'Rage Against The Machine, Periphery, Marcus Miller, Le peuple de l''herbe, Dream Theater, Massive Attack, Victor Wooten', 'Paco, née le 26 juillet 1991, commence son initiation à la musique par le piano. Après avoir fait 8 ans de conservatoire (piano, solfège, chorale), il commence l''apprentissage de la basse à 16 ans en jouant avec des amis dans des petits groupes éphémères, puis quelques années plus tard par le biais de Franck, entre dans le groupe Dust Of Shadows.\r\nLe groupe depuis rebaptisé Passanger lui permet de développer différentes techniques en rapport avec le métal.\r\nEn parallèle, il entretient d''autres projets musicaux comme Capt''ain Cover, groupe de reprises Rock/Hard des années 70 à nos jours.', 'fr'),
+(4, '', 'Ramos', 'Camille', 'Boulette', 'cams.png', '31/07/1992', 'Batteur', 'Devin Townsend, Rage Against The Machine, Tool, Tesseract, Iron Maiden, Steve Gad, Billy Cohbam', 'Camille, née le 31 juillet 1992 commence son initiation à la musique par le piano et le violon, avant de découvrir les percussions à 12 ans.\r\nElle commence l''apprentissage de la batterie à 15 ans en jouant avec des amis dans des petits groupes éphémères. Puis, par le biais de son ami Paco, elle intègre le groupe Dust Of Shadows en tant que batteuse déjà composé.\r\n\r\nLe groupe, depuis, rebaptisé Passanger, lui permet de développer technique et précision nécessaire à tout batteur de métal.\r\nElle poursuit ses études au Conservatoire de Versailles en Percussion tout en participant à de nombreux projets, comme l''Orchestre de la SNCF.', 'fr'),
 (5, '', '?', '?', '?', '', '?', 'Chanteur', '?', 'Chanteur extrêmement motivé pour une aventure musicale mais surtout humaine ?! Contacte nous !', 'fr'),
 (6, '', 'Dulon', 'Thibault', 'Titi', 'titou.png', '28/02/1992', 'Lead Guitarist', 'Ayreon, Iron Maiden, Dream Theater, Circus Maximus, Periphery, Tesseract, Nightwish', 'After several not serious band experiences, I''ve decided, with a friend, to found Dust of Shadows, a heavy progressive band where we could finally express our heavy soul.\r\n Meanwhile, I continue my solo projects that allow me to express my other musical self and learn all mix tricks. http://soundcloud.com/fitz_lucassen', 'en'),
 (7, '', 'Gautier', 'Franck', 'Kyky', 'kyky.png', '27/07/1990', 'Rythm Guitarist', '', '', 'en'),
 (8, '', 'De Lima', 'Paco', 'Pakpak', 'pakpak.png', '26/07/1991', 'Bassist', 'Rage Against The Machine, Periphery, Marcus Miller, Le peuple de l''herbe, Dream Theater, Massive Attack, Victor Wooten', '', 'en'),
 (9, '', 'Ramos', 'Camille', 'Boulette', 'cams.png', '31/07/1992', 'Drummer', 'Devin Townsend, Rage Against The Machine, Tool, Tesseract, Iron Maiden, Steve Gad, Billy Cohbam', '', 'en'),
 (10, '', '?', '?', '?', '', '?', 'Singer', '', 'Singer who want a new musical adventure ? Contact us !', 'en');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `photo`
+--
+
+CREATE TABLE IF NOT EXISTS `photo` (
+  `idPhoto` smallint(5) NOT NULL AUTO_INCREMENT,
+  `idAlbum` smallint(5) NOT NULL,
+  `captionPhoto` varchar(255) CHARACTER SET utf8 NOT NULL DEFAULT '',
+  `urlPhoto` varchar(255) CHARACTER SET utf8 NOT NULL DEFAULT '',
+  `lang` varchar(2) CHARACTER SET utf8 NOT NULL DEFAULT 'fr',
+  PRIMARY KEY (`idPhoto`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=13 ;
+
+--
+-- Contenu de la table `photo`
+--
+
+INSERT INTO `photo` (`idPhoto`, `idAlbum`, `captionPhoto`, `urlPhoto`, `lang`) VALUES
+(1, 1, 'Solo de Thibault', '2011-12-03 00.10.33.jpg', 'fr'),
+(2, 1, 'Le groupe en plein morceau', '2011-12-03 00.10.41.jpg', 'fr'),
+(3, 1, 'Dans la bonne humeur évidemment !', '2011-12-03 00.10.44.jpg', 'fr'),
+(4, 1, 'Thibault concentré...', '2011-12-03 00.14.06.jpg', 'fr'),
+(5, 1, '', '2011-12-03 00.14.21.jpg', 'fr'),
+(6, 1, '', '2011-12-03 00.21.40.jpg', 'fr'),
+(7, 1, '', '2011-12-03 00.21.43.jpg', 'fr'),
+(8, 1, '', '2011-12-03 00.22.50.jpg', 'fr'),
+(9, 1, '', '2011-12-03 00.23.51.jpg', 'fr'),
+(10, 1, '', '2011-12-03 00.23.55.jpg', 'fr'),
+(11, 1, '', '2011-12-03 00.25.31.jpg', 'fr'),
+(12, 1, '', 'top.JPG', 'fr');
 
 -- --------------------------------------------------------
 
@@ -396,7 +425,7 @@ CREATE TABLE IF NOT EXISTS `video` (
   `thumb` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
   `lang` varchar(2) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`idVideo`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=4 ;
 
 --
 -- Contenu de la table `video`
@@ -405,10 +434,7 @@ CREATE TABLE IF NOT EXISTS `video` (
 INSERT INTO `video` (`idVideo`, `nom_table`, `url`, `title`, `description`, `thumb`, `lang`) VALUES
 (1, '', '<iframe width="450" height="338" src="https://www.youtube.com/embed/FDXU3pREfbE" frameborder="0" allowfullscreen></iframe>', 'Revolution', 'Video prise lors d''un concert spécial métal à Etréchy dans l''essonne (91)', 'none', 'fr'),
 (2, '', '<iframe width="450" height="338" src="https://www.youtube.com/embed/Y0S3D4iGADI" frameborder="0" allowfullscreen></iframe>', 'Power of death', 'Une composition du premier album joué au live d''Etréchy lors de la deuxième édition du festival métal.', 'none', 'fr'),
-(3, '', '<iframe width="450" height="253" src="https://www.youtube.com/embed/3cFp55qBRGI" frameborder="0" allowfullscreen></iframe>', 'Dilemma', 'Une composition du deuxième album interprété lors d''un live au PitchTime de Dourdan.', 'none', 'fr'),
-(4, '', '<iframe width="450" height="338" src="https://www.youtube.com/embed/FDXU3pREfbE" frameborder="0" allowfullscreen></iframe>', 'Revolution', 'Video taken during a special metal gig in Etrechy (91)', 'none', 'en'),
-(5, '', '<iframe width="450" height="338" src="https://www.youtube.com/embed/Y0S3D4iGADI" frameborder="0" allowfullscreen></iframe>', 'Power of death', 'Composition of the first album played live in Etréchy in the second edition of the festival metal.', 'none', 'en'),
-(6, '', '<iframe width="450" height="253" src="https://www.youtube.com/embed/3cFp55qBRGI" frameborder="0" allowfullscreen></iframe>', 'Dilemma', 'Composition of the second album performed during a PitchTime live in Dourdan.', 'none', 'en');
+(3, '', '<iframe width="450" height="253" src="https://www.youtube.com/embed/3cFp55qBRGI" frameborder="0" allowfullscreen></iframe>', 'Dilemma', 'Une composition du deuxième album interprété lors d''un live au PitchTime de Dourdan.', 'none', 'fr');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
