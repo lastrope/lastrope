@@ -87,9 +87,6 @@ $tag_langue = isset($_SESSION['langue']) ? $_SESSION['langue'] : 'fr';
     		<div style="color: #7F554E;font-family:'Ubuntu-c';font-size: 13px;">
     		    Cliquez pour cacher la description
     		</div>
-    		<div class="img_member">
-    		    <img src="public/media/image/<?php echo $this_member['picture']; ?>" alt="<?php echo NAME . BEFORE_TWO_POINT; ?>_picture" width="203px" />
-    		</div>
     	    </div>
     	</div>
 

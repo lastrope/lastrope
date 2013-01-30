@@ -1034,16 +1034,6 @@ footer p {
 
     box-shadow: 0 -4px 10px rgba(250,250,250,0.4);
 }
-#members_container .img_member{
-    width:195px;
-    height: 120px;
-
-    position: absolute;
-    bottom:0;
-    left:0;
-    cursor: pointer;
-    z-index:99;
-}
 #members_container .haut_member{
     position: relative;
     top:0;
