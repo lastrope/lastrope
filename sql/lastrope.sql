@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Mer 30 Janvier 2013 à 23:01
+-- Généré le: Jeu 14 Février 2013 à 18:06
 -- Version du serveur: 5.5.24-log
 -- Version de PHP: 5.3.13
 
@@ -41,8 +41,8 @@ CREATE TABLE IF NOT EXISTS `actus` (
 --
 
 INSERT INTO `actus` (`idActus`, `nom_table`, `title`, `body`, `date`, `lang`) VALUES
-(1, '', 'Il y a du changement dans l''air.', 'Comme le dit le titre, il y a du changement dans l''air. L''été nous a tous inspiré cette année pour une vague de changement. Ainsi, voici un site tout beau tout propre refait de A à Z pour vous présenter le groupe.\r\nNous avons beaucoup évolué depuis la création de Dust Of Shadows. Et notre musique aussi. De ce fait, le besoin de changer de nom, d''apparence et d''identité est venu assez naturellement.\r\nRépondant à présent au nom de Passanger, nous prévoyons la sortie de notre nouvel EP "Eighteen" de quatre titres fin décembre.\r\n\r\nEn plus de cela, et toujours pour répondre à ce besoin de changement d''identité, nous avons réalisé - avec l''aide d''une photographe accomplie ;) - des photos reflétant le plus possible l''image souhaité du groupe et surtout de sa musique. Pour suivre ce mouvement général une vidéo de présentation est en cours de réalisation/montage.\r\nS''inscrivant dans l''air de la musique moderne et complexe, Passanger est bien décidé à franchir une nouvelle étape. La sortie de ce futur EP sera l''élément attendu pour pouvoir - enfin - élargir notre horizon.\r\nNe perdez pas de temps et allez explorer ce site qui sera quotidiennement maintenu à jour pour être constamment exhaustif de toutes nos informations.\r\n\r\nMusicalement,\r\nPassanger.', 1344757674, 'fr'),
-(2, '', 'There is change in the air.', 'As the title says, there is a change in the air. Summer inspired us all this year for the wave of change. So here is a new clean and nice website to introduce the band.\r\nWe have evolved considerably since the creation of Dust Of Shadows. And our music too. Therefore, the need to change our name, our appearance and our identity came pretty naturally.\r\nResponding to the name of Passanger, we expect the release of our new four titles EP "Eighteen" in late December.\r\n\r\nIn addition to this and always to meet this need of changing, we have made - with the help of an accomplished photographer ;) - photos reflecting the desired image of the band and especially its music. To follow this general trend, we are also making a video presentation (in progress / editing).\r\nAs part of the air of modern and complex music, Passanger is determined to pass the next step. The release of this future EP will be the element expected to be able - finally - to expand our horizon.\r\nDo not waste time and go explore this website which will be daily maintained to be constantly updated exhaustive of all our information.\r\n\r\nMusically,\r\nPassanger.', 1344757674, 'en');
+(1, '', 'Il y a du changement dans l''air.', 'Comme le dit le titre, il y a du changement dans l''air. L''été nous a tous inspiré l''année passée pour une vague de changement. Ainsi, voici un site tout beau tout propre refait de A à Z pour vous présenter le groupe.\nNous avons beaucoup évolué depuis la création de Dust Of Shadows. Et notre musique aussi. De ce fait, le besoin de changer de nom, d''apparence et d''identité est venu assez naturellement.\nRépondant à présent au nom de Passanger, nous prévoyons la sortie de notre nouvel EP "Eighteen part 1" de quatre titres fin février.\n\nPour suivre ce mouvement général une vidéo de présentation, voir même un clip, est un projet en cours de réflexion.\nS''inscrivant dans l''air de la musique moderne et complexe, Passanger est bien décidé à franchir une nouvelle étape. La sortie de ce futur EP sera l''élément attendu pour pouvoir - enfin - élargir notre horizon.\nNe perdez pas de temps et allez explorer ce site qui sera quotidiennement maintenu à jour pour être constamment exhaustif de toutes nos informations.\n\nMusicalement,\nPassanger.', 1360864511, 'fr'),
+(2, '', 'There is change in the air.', 'As the title says, there is change in the air. Last summer inspired us for a wave of change. So here is a new clean and nice website to introduce the band.\r\nWe have evolved considerably since the creation of Dust Of Shadows. And our music too. Therefore, the need to change our name, our appearance and our identity came pretty naturally.\r\nResponding to the name of Passanger, we expect the release of our new four titles EP "Eighteen part 1" in late february.\r\n\r\nTo follow this general trend, we are also thinking of a video presentation (in progress).\r\nAs part of the air of modern and complex music, Passanger is determined to pass the next step. The release of this future EP will be the element expected to be able - finally - to expand our horizon.\r\nDo not waste time and go explore this website which will be daily maintained to be constantly updated exhaustive of all our information.\r\n\r\nMusically,\r\nPassanger.', 1360864511, 'en');
 
 -- --------------------------------------------------------
 
@@ -67,8 +67,8 @@ CREATE TABLE IF NOT EXISTS `albums` (
 INSERT INTO `albums` (`idAlbums`, `name`, `description`, `date`, `cover`, `lang`) VALUES
 (1, 'Ultimate Attempt', 'Premier album', '2010', 'ultimate_attempt.jpg', 'fr'),
 (2, 'Ultimate Attempt', 'First album', '2010', 'ultimate_attempt.jpg', 'en'),
-(3, 'Eighteen', 'Deuxième album', '2012', 'eighteen.jpg', 'fr'),
-(4, 'Eighteen', 'Second album', '2012', 'eighteen.jpg', 'en');
+(3, 'Eighteen', 'Deuxième album', '2013', 'eighteen.jpg', 'fr'),
+(4, 'Eighteen', 'Second album', '2013', 'eighteen.jpg', 'en');
 
 -- --------------------------------------------------------
 
@@ -148,17 +148,21 @@ CREATE TABLE IF NOT EXISTS `album_photo` (
   `dateAlbum` varchar(10) CHARACTER SET utf8 NOT NULL DEFAULT '',
   `lang` varchar(2) CHARACTER SET utf8 NOT NULL DEFAULT 'fr',
   PRIMARY KEY (`idAlbum`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=9 ;
 
 --
 -- Contenu de la table `album_photo`
 --
 
 INSERT INTO `album_photo` (`idAlbum`, `nomAlbum`, `nbPhotos`, `dateAlbum`, `lang`) VALUES
-(1, 'Concert à Dourdan', 0, '02-12-2011', 'fr'),
-(2, 'Concert à Roinville', 0, '06-02-2010', 'fr'),
-(3, 'Concert à Janville', 0, '12-12-2009', 'fr'),
-(4, 'Concert à Etrechy', 0, '22-10-2011', 'fr');
+(1, 'Concert à Dourdan', 12, '02-12-2011', 'fr'),
+(2, 'Concert à Roinville', 10, '06-02-2010', 'fr'),
+(3, 'Concert à Janville', 28, '12-12-2009', 'fr'),
+(4, 'Concert à Etrechy', 3, '22-10-2011', 'fr'),
+(5, 'Gig in Dourdan', 12, '02-12-2011', 'en'),
+(6, 'Gig in Roinville', 10, '06-02-2010', 'en'),
+(7, 'Gig in Janville', 28, '12-12-2009', 'en'),
+(8, 'Gig in Etrechy', 3, '22-10-2011', 'en');
 
 -- --------------------------------------------------------
 
@@ -179,14 +183,14 @@ CREATE TABLE IF NOT EXISTS `bio` (
 --
 
 INSERT INTO `bio` (`idPeriod`, `year`, `description`, `lang`) VALUES
-(1, 2012, 'Après un premier semestre remplis de répétitions pour les musiques du dernier album et de quelques concerts dans la région, le groupe se met en quette d''une nouvelle identité musicale et graphique.\n\nL''enregistrement du nouvel EP "Eighteen part 1" commença en aout.\n\nLa sortie prévu début 2013 donne naissance à la nouvel vie du groupe.', 'fr'),
+(1, 2012, 'Après un premier semestre remplis de répétitions pour les musiques du dernier album et de quelques concerts dans la région, le groupe se met en quette d''une nouvelle identité musicale et graphique.\r\n\r\nL''enregistrement du nouvel EP "Eighteen part 1" commença en août.\r\n\r\nLa sortie prévu début 2013 donnera naissance à la nouvel vie du groupe.', 'fr'),
 (2, 2011, 'Fort de cet album enfin sur CD, le groupe décide de s''inscrire à la SACEM pour officialiser ses droits d''auteurs.\n\nCette étape franchie, la groupe jongle entre répète, concert (Etrechy, Roinville, Sermaise, Dourdan), et composition du nouvel E.P "Eighteen part 1".', 'fr'),
-(3, 2010, 'Tout en enchaînant les concerts à Roinville, Dourdan, Sermaise...etc,\nle groupe termine la composition de l''album et commence aussitôt son enregistrement chez Thibault afin de sortir dans la fin de l''année cet Album de 12 titres fait main.', 'fr'),
-(4, 2009, 'Naissant d''une envie commune, Dust of Shadows voit le jour grâce à Thibault et Kenny, désireux de fonder un groupe de Heavy-métal sérieux.\n\nAprès une recherche intensive, chaque nouveaux membre trouva la pièce manquante. Ainsi Franck rejoignit le groupe comme second guitariste puis amena Paco le bassiste, qui lui même nous présenta Camille la batteuse, remplaçante de Kenny qui nous quitta pour une vie meilleure.\n\nAprès quelques ébauche, le groupe s''attela à la composition du premier Album "Ultimate Attempt".\n\nEt c''est le 12 décembre 2009 qu''ils celèrent leurs line-up en se produisant pour la première fois ensemble sur scène à Janville.', 'fr'),
-(5, 2012, 'After a first semester filled with rehearsals for the new album and some gigs in our region, the group goes in search of a new musical and graphic identity. The recording of the new EP "Eighteen Part 1" began in August and the release in the beginning of 2013 means a new life for the band.', 'en'),
-(6, 2011, '', 'en'),
-(7, 2010, '', 'en'),
-(8, 2009, '', 'en');
+(3, 2010, 'Tout en enchaînant les concerts à Roinville, Dourdan, Sermaise...etc,\r\nle groupe termine la composition de l''album et commence aussitôt son enregistrement chez Thibault afin de le sortir vers la fin d''année.\r\n\r\nCet album de 12 titres fait main sera donc la première trace du groupe.', 'fr'),
+(4, 2009, 'Naissant d''une envie commune, Dust of Shadows voit le jour grâce à Thibault et Kenny, désireux de fonder un groupe de Heavy-métal sérieux.\n\nAprès une recherche intensive, chaque nouveaux membre trouva la pièce manquante. Ainsi Franck rejoignit le groupe comme second guitariste puis amena Paco le bassiste, qui lui même nous présenta Camille la batteuse, remplaçante de Kenny qui nous quitta pour une vie meilleure.\n\nAprès quelques ébauche, le groupe s''attela à la composition du premier Album "Ultimate Attempt".\n\nEt c''est le 12 décembre 2009 qu''ils scellèrent leurs line-up en se produisant pour la première fois ensemble sur scène à Janville.', 'fr'),
+(5, 2012, 'After a first semester filled with rehearsals for the new album and some gigs in our region, the group goes in search of a new musical and graphic identity.\r\n\r\nThe recording of the new EP "Eighteen Part 1" began in August and the release in the beginning of 2013 means a new life for the band.', 'en'),
+(6, 2011, 'Proud of this album finally recorded, the band decided to enroll SACEM formalized its copyright.\r\n\r\nThis step, the group juggles with rehearsals, concerts (Etrechy, Roinville, Sermaise, Dourdan), and composition of the new EP "Eighteen Part 1"', 'en'),
+(7, 2010, 'While chaining concerts in Roinville, Dourdan, Sermaise...etc. the band ended composition of their first album and immediatly began recording in Thibault''s house, in order to finish it in the end of the year.\r\n\r\nThis 12-tracks album will be the first band-trace.', 'en'),
+(8, 2009, 'Born of a common desire, Dust of Shadows was created by Thibault and Kenny, wanting to start a serious band of heavy-metal.\r\n\r\nAfter an intensive search, each new member found the missing piece. And Franck joined the band as second guitarist.\r\nPaco, the bass-guitarist, was brought by Franck. And Himself presented to Dust of shadow Camille, successor of Kenny who left the band for a better life.\r\n\r\nAfter a few draft, the group set about the composition of the first album "Ultimate Attempt".\r\n\r\nAnd it is in December 12, 2009 they seal their line-up performing for the first time together on stage in Janville.', 'en');
 
 -- --------------------------------------------------------
 
@@ -210,10 +214,10 @@ CREATE TABLE IF NOT EXISTS `event` (
 --
 
 INSERT INTO `event` (`idEvent`, `nom_table`, `title`, `body`, `date`, `type`, `lang`) VALUES
-(1, '', 'Concert Epinay-sur-Orge !', 'On vous donne rdv le 30 Juin 2012 à Epinay sur orge pour un concert des Passanger.', 1344757700, 'co', 'fr'),
-(2, '', 'Gig in Epinay-sur-Orge', 'We look forward to seeing you on June the 30th 2012 in Epinay-sur-Orge for a Passanger gig.', 1344757700, 'co', 'en'),
-(3, '', 'Concert Roinville !', 'On vous donne rdv le 23 Juin 2012 à Roinville pour un concert des Passanger.', 1344757743, 'co', 'fr'),
-(4, '', 'Gig in Roinville', 'We look forward to seeing you on June the 23rd 2012 in Roinville for a Passanger gig.', 1344757743, 'co', 'en');
+(1, '', 'Concert Epinay-sur-Orge !', 'On vous donne rdv le 30 Juin 2012 à Epinay sur orge pour un concert des Passanger.', 1360864511, 'co', 'fr'),
+(2, '', 'Gig in Epinay-sur-Orge', 'We look forward to seeing you on June the 30th 2012 in Epinay-sur-Orge for a Passanger gig.', 1360864511, 'co', 'en'),
+(3, '', 'Concert Roinville !', 'On vous donne rdv le 23 Juin 2012 à Roinville pour un concert des Passanger.', 1360864511, 'co', 'fr'),
+(4, '', 'Gig in Roinville', 'We look forward to seeing you on June the 23rd 2012 in Roinville for a Passanger gig.', 1360864511, 'co', 'en');
 
 -- --------------------------------------------------------
 
@@ -235,8 +239,8 @@ CREATE TABLE IF NOT EXISTS `header` (
 --
 
 INSERT INTO `header` (`idHeader`, `title`, `meta_description`, `meta_keywords`, `lang`) VALUES
-(1, 'Passanger', 'Le site du groupe de heavy métal progressif Passanger', 'Passanger,heavy metal, progressif, iron maiden, dream theater,guitare, solo,batterie,php,html,css,mysql,css3,html5,jquery,javascript', 'fr'),
-(2, 'Passanger', 'The website of the heavy metal progressif band Lastrope', 'lastrope,heavy metal, progressif, iron maiden, dream theater,guitar, solo,drum,php,html,css,mysql,css3,html5,jquery,javascript', 'en');
+(1, 'Passanger', 'Le site du groupe de heavy métal progressif Passanger née en 2009, anciennement Dust Of Shadows', 'Passanger,dust of shadows,heavy metal, progressif,iron maiden,dream theater,guitare,ibanez,peavey,lag,pearl,solo,batterie,php,html,css,mysql,css3,html5,jquery,javascript', 'fr'),
+(2, 'Passanger', 'The website of the heavy metal progressif band Passanger, born in 2009 and previously called Dust Of Shadows', 'Passanger,dust of shadows,heavy metal, progressif,iron maiden,dream theater,guitar,ibanez,peavey,lag,pearl,solo,drum,php,html,css,mysql,css3,html5,jquery,javascript', 'en');
 
 -- --------------------------------------------------------
 
@@ -310,39 +314,6 @@ INSERT INTO `members` (`idMembers`, `nom_table`, `name`, `firstname`, `surname`,
 -- --------------------------------------------------------
 
 --
--- Structure de la table `photo`
---
-
-CREATE TABLE IF NOT EXISTS `photo` (
-  `idPhoto` smallint(5) NOT NULL AUTO_INCREMENT,
-  `idAlbum` smallint(5) NOT NULL,
-  `captionPhoto` varchar(255) CHARACTER SET utf8 NOT NULL DEFAULT '',
-  `urlPhoto` varchar(255) CHARACTER SET utf8 NOT NULL DEFAULT '',
-  `lang` varchar(2) CHARACTER SET utf8 NOT NULL DEFAULT 'fr',
-  PRIMARY KEY (`idPhoto`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=13 ;
-
---
--- Contenu de la table `photo`
---
-
-INSERT INTO `photo` (`idPhoto`, `idAlbum`, `captionPhoto`, `urlPhoto`, `lang`) VALUES
-(1, 1, 'Solo de Thibault', '2011-12-03 00.10.33.jpg', 'fr'),
-(2, 1, 'Le groupe en plein morceau', '2011-12-03 00.10.41.jpg', 'fr'),
-(3, 1, 'Dans la bonne humeur évidemment !', '2011-12-03 00.10.44.jpg', 'fr'),
-(4, 1, 'Thibault concentré...', '2011-12-03 00.14.06.jpg', 'fr'),
-(5, 1, '', '2011-12-03 00.14.21.jpg', 'fr'),
-(6, 1, '', '2011-12-03 00.21.40.jpg', 'fr'),
-(7, 1, '', '2011-12-03 00.21.43.jpg', 'fr'),
-(8, 1, '', '2011-12-03 00.22.50.jpg', 'fr'),
-(9, 1, '', '2011-12-03 00.23.51.jpg', 'fr'),
-(10, 1, '', '2011-12-03 00.23.55.jpg', 'fr'),
-(11, 1, '', '2011-12-03 00.25.31.jpg', 'fr'),
-(12, 1, '', 'top.JPG', 'fr');
-
--- --------------------------------------------------------
-
---
 -- Structure de la table `song`
 --
 
@@ -364,13 +335,13 @@ INSERT INTO `song` (`idSong`, `filename`, `title`, `description`, `duration`, `l
 (1, '', 'Intro', '', '01:45', 'fr'),
 (2, '', 'War is the key', '', '03:43', 'fr'),
 (3, '', 'Revenge', '', '04:10', 'fr'),
-(4, 'Scarlet.mp3', 'The King', '', '04:57', 'fr'),
+(4, 'king.mp3', 'The King', '', '04:57', 'fr'),
 (5, '', 'Burn in hell', '', '04:12', 'fr'),
-(6, '', 'Death blows in my ears', '', '04:11', 'fr'),
+(6, 'death.mp3', 'Death blows in my ears', '', '04:11', 'fr'),
 (7, '', 'Into the shadows', '', '04:47', 'fr'),
 (8, '', 'Never yourself', '', '04:33', 'fr'),
 (9, '', 'Hopess', '', '04:22', 'fr'),
-(10, 'Passenger.mp3', 'Power of death', '', '04:14', 'fr'),
+(10, 'power.mp3', 'Power of death', '', '04:14', 'fr'),
 (11, '', 'Ultimate Attempt', '', '04:36', 'fr'),
 (12, '', 'Conclusion', '', '02:08', 'fr'),
 (13, '', 'Intro', '', '01:45', 'en'),
@@ -385,10 +356,10 @@ INSERT INTO `song` (`idSong`, `filename`, `title`, `description`, `duration`, `l
 (22, '', 'Power of death', '', '04:14', 'en'),
 (23, '', 'Ultimate Attempt', '', '04:36', 'en'),
 (24, '', 'Conclusion', '', '02:08', 'en'),
-(25, 'Scarlet.mp3', 'Ch.1 - A weird travel', '', '04:00', 'fr'),
+(25, '', 'Ch.1 - A weird travel', '', '04:00', 'fr'),
 (26, '', 'Ch.2 - Survive after mourning', '', '05:50', 'fr'),
 (27, '', 'Ch.3 - Loneliness', '', '05:10', 'fr'),
-(28, 'Passenger.mp3', 'Ch.4 - Kidnapping', '', '04:20', 'fr'),
+(28, '', 'Ch.4 - Kidnapping', '', '04:20', 'fr'),
 (29, '', 'Ch.5 - Dilemma', '', '05:20', 'fr'),
 (30, '', 'Ch.6 - The Leak', '', '03:45', 'fr'),
 (31, '', 'Ch.7 - Change your mind', '', '05:00', 'fr'),
@@ -425,7 +396,7 @@ CREATE TABLE IF NOT EXISTS `video` (
   `thumb` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
   `lang` varchar(2) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`idVideo`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=7 ;
 
 --
 -- Contenu de la table `video`
@@ -434,7 +405,10 @@ CREATE TABLE IF NOT EXISTS `video` (
 INSERT INTO `video` (`idVideo`, `nom_table`, `url`, `title`, `description`, `thumb`, `lang`) VALUES
 (1, '', '<iframe width="450" height="338" src="https://www.youtube.com/embed/FDXU3pREfbE" frameborder="0" allowfullscreen></iframe>', 'Revolution', 'Video prise lors d''un concert spécial métal à Etréchy dans l''essonne (91)', 'none', 'fr'),
 (2, '', '<iframe width="450" height="338" src="https://www.youtube.com/embed/Y0S3D4iGADI" frameborder="0" allowfullscreen></iframe>', 'Power of death', 'Une composition du premier album joué au live d''Etréchy lors de la deuxième édition du festival métal.', 'none', 'fr'),
-(3, '', '<iframe width="450" height="253" src="https://www.youtube.com/embed/3cFp55qBRGI" frameborder="0" allowfullscreen></iframe>', 'Dilemma', 'Une composition du deuxième album interprété lors d''un live au PitchTime de Dourdan.', 'none', 'fr');
+(3, '', '<iframe width="450" height="253" src="https://www.youtube.com/embed/3cFp55qBRGI" frameborder="0" allowfullscreen></iframe>', 'Dilemma', 'Une composition du deuxième album interprété lors d''un live au PitchTime de Dourdan.', 'none', 'fr'),
+(4, '', '<iframe width="450" height="338" src="https://www.youtube.com/embed/FDXU3pREfbE" frameborder="0" allowfullscreen></iframe>', 'Revolution', 'Video taken during a special metal gig in Etrechy (91)', 'none', 'en'),
+(5, '', '<iframe width="450" height="338" src="https://www.youtube.com/embed/Y0S3D4iGADI" frameborder="0" allowfullscreen></iframe>', 'Power of death', 'Composition of the first album played live in Etréchy in the second edition of the festival metal.', 'none', 'en'),
+(6, '', '<iframe width="450" height="253" src="https://www.youtube.com/embed/3cFp55qBRGI" frameborder="0" allowfullscreen></iframe>', 'Dilemma', 'Composition of the second album performed during a PitchTime live in Dourdan.', 'none', 'en');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
