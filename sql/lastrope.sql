@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.1
+-- version 3.5.5
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Jeu 14 Février 2013 à 18:48
--- Version du serveur: 5.5.24-log
--- Version de PHP: 5.3.13
+-- Généré le: Jeu 14 Février 2013 à 22:13
+-- Version du serveur: 5.5.28-1-log
+-- Version de PHP: 5.4.4-10
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -214,10 +214,10 @@ CREATE TABLE IF NOT EXISTS `event` (
 --
 
 INSERT INTO `event` (`idEvent`, `nom_table`, `title`, `body`, `date`, `type`, `lang`) VALUES
-(1, '', 'Concert Epinay-sur-Orge !', 'On vous donne rdv le 30 Juin 2012 à Epinay sur orge pour un concert des Passanger.', 1360864511, 'co', 'fr'),
-(2, '', 'Gig in Epinay-sur-Orge', 'We look forward to seeing you on June the 30th 2012 in Epinay-sur-Orge for a Passanger gig.', 1360864511, 'co', 'en'),
-(3, '', 'Concert Roinville !', 'On vous donne rdv le 23 Juin 2012 à Roinville pour un concert des Passanger.', 1360864511, 'co', 'fr'),
-(4, '', 'Gig in Roinville', 'We look forward to seeing you on June the 23rd 2012 in Roinville for a Passanger gig.', 1360864511, 'co', 'en');
+(1, '', 'Sortie de l''EP Eighteen part 1', 'Fin mars sortira le nouvel EP de Passanger "Eightee part 1".', 1360864511, 'co', 'fr'),
+(2, '', 'Release of Eighteen part 1', 'The new Passanger EP "Eightee part 1" will be released in end of March.', 1360864511, 'co', 'en'),
+(3, '', 'Recherche un(e) photographe', 'Passanger recherche son(sa) photographe attitré(e) ! Contactez-nous', 1360864511, 'co', 'fr'),
+(4, '', 'Search a photograph', 'We are looking for our official photograph ! Contact us !', 1360864511, 'co', 'en');
 
 -- --------------------------------------------------------
 
