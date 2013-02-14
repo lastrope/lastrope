@@ -191,20 +191,22 @@ $(document).ready(function(){
 	}
     });
     
-    // Check if the scroll in the page is on a keypoint for changing image
-    $(window).scroll(function(){
-	if($(window).scrollTop() <= ($('#members_container').offset().top+370)){
-	    $('#switch').css({
-		'background':'#2B5A74 url(public/media/image/fleche_bottom.png) center center no-repeat'
-	    });
-	    
-	} else {
-	    $('#switch').css({
-		'background':'#cecdce url(public/media/image/fleche_top_black.png) center center no-repeat'
-	    });
-	}
-    });
-	
+    if($('#members_container').length > 0) {
+	// Check if the scroll in the page is on a keypoint for changing image
+	$(window).scroll(function(){
+	    if($(window).scrollTop() <= ($('#members_container').offset().top+300)){
+		$('#switch').css({
+		    'background':'#2B5A74 url(public/media/image/fleche_bottom.png) center center no-repeat'
+		});
+
+	    } else {
+		$('#switch').css({
+		    'background':'#cecdce url(public/media/image/fleche_top_black.png) center center no-repeat'
+		});
+	    }
+	});
+    }
+    
     // Change the appearance of the input on the search form
     $('#search_value_id').focus(function(){
 	$('#search_value_id').removeClass('input_text_passive');
@@ -344,7 +346,11 @@ function selecteurAppears(){
 // RESPONSIVE NEWS
 $(window).resize(function(){
     var widthWindowOnResize = ((parseInt($(window).width())-600)/2);
-    fixContent(widthWindowOnResize);
+    
+    if($(window).width() > 600)
+        fixContent(widthWindowOnResize);
+    else
+	fixContent(5);
 
 });
 function fixContent(width){

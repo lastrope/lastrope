@@ -26,8 +26,8 @@
 	text-align:center;
     }
     #content_form .button{
-	float:right;
-	margin:-5px 15px 0 0;
+	float:left;
+	margin:-5px 0 0 15px;
 	width:280px;
     }
     #conteneur-news{
@@ -35,6 +35,7 @@
     }
     .input_text_passive, .input_text_active{
 	width:265px;
+	float: left;
     }
     
 }
@@ -186,6 +187,23 @@
     #contact_page textarea{
 	width: auto;
 	min-width: 100px;
+    }
+}
+@media screen and (max-width: 600px) {
+    #content_bis ul li{
+	text-align: center;
+    }
+    #my_news_search{
+	padding-left: 0;
+	text-align: center;
+    }
+    #selecteur{
+	height: 430px;
+    }
+    #search_value_id, #content_form #form_search_action{
+	display: block;
+	margin: 20px auto;
+	float: none;
     }
 }
 @media screen and (max-width: 450px) {
