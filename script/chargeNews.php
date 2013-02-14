@@ -38,6 +38,7 @@
 					case 'music':
 						$music = new Music($pdo, $session->read('langue'));
 						$music_inf = $music->getMusicById($news_id);
+						
 						break;
 					case 'event':
 						$event = new Event($pdo, $session->read('langue'));
