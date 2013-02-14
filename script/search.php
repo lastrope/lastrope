@@ -71,7 +71,12 @@
 						foreach ($return as $result) {
 							// Evite les doublons et on effectue seulement 10 affichages
 							if (array_search($result['title'], $memoire) === FALSE && $compteur < 10) {
-								$attributes = "onclick=\"load_news_text_search('" . intval($result['id']) . "','" . $attribute_value . "');\"";
+								if(!$attribute_value == 'music'){
+								    $attributes = "onclick=\"load_news_text_search('" . intval($result['id']) . "','" . $attribute_value . "');\"";
+								    
+								}else{
+								    $attributes = "href='/".$langue."-sound' ";
+								}   
 								$output .= "<p class='result_search'><a " . $attributes . " >" . $result['title'] . "</a></p>";
 
 								$compteur++;
