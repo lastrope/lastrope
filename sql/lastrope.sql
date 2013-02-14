@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client: localhost
--- Généré le: Jeu 14 Février 2013 à 18:06
+-- Généré le: Jeu 14 Février 2013 à 18:48
 -- Version du serveur: 5.5.24-log
 -- Version de PHP: 5.3.13
 
@@ -300,16 +300,16 @@ CREATE TABLE IF NOT EXISTS `members` (
 --
 
 INSERT INTO `members` (`idMembers`, `nom_table`, `name`, `firstname`, `surname`, `picture`, `birthday`, `instrument`, `influences`, `short_desc`, `lang`) VALUES
-(1, '', 'Dulon', 'Thibault', 'Titi', 'titou.png', '28/02/1992', 'Guitariste Soliste', 'Ayreon, Iron Maiden, Dream Theater, Circus Maximus, Periphery, Tesseract, Nightwish', 'Après plusieurs expériences de groupe non sérieuse, Thibault, née le 28 février 1992, et son ami Kenny décident de fonder Dust of shadows, un groupe de heavy progressif dans lequel ils pourrait enfin exprimer leur âme heavy et prog.\r\nAutodidacte depuis l''age de 15ans, il commence par apprendre la batterie avant de sombrer complètement dans la passion du manche à 6 cordes et du plectre chaleureux.\r\nEn parallèle, il continue ses projets solo qui lui permettent d''exprimer ses autres influences musicales (BO, classique, jazz) et d''apprendre toutes les ficelles du mixage. http://soundcloud.com/fitz_lucassen', 'fr'),
-(2, '', 'Gautier', 'Franck', 'Kyky', 'kyky.png', '27/07/1990', 'Guitariste Rythmique', '', '', 'fr'),
+(1, '', 'Dulon', 'Thibault', 'Titi', 'titou.png', '28/02/1992', 'Guitariste Soliste', 'Ayreon, Iron Maiden, Dream Theater, Circus Maximus, Periphery, Tesseract, Intervals, Nightwish, Delain', 'Après plusieurs expériences de groupe non sérieuse, Thibault, née le 28 février 1992, et son ami Kenny décident de fonder Dust of shadows, un groupe de heavy progressif dans lequel ils pourrait enfin exprimer leur âme heavy et prog.\nAutodidacte depuis l''age de 15ans, il commence par apprendre la batterie avant de sombrer complètement dans la passion du manche à 6 cordes et du plectre chaleureux.\nEn parallèle, il continue ses projets solo qui lui permettent d''exprimer ses autres influences musicales (BO, classique, jazz) et d''apprendre toutes les ficelles du mixage. http://soundcloud.com/fitz_lucassen', 'fr'),
+(2, '', 'Gautier', 'Franck', 'Kyky', 'kyky.png', '27/07/1990', 'Guitariste Rythmique', 'Iron maiden, Saxon, Helloween, Racer X, Accept, Killswitch Engage, Issues, Of Mice & men, Everyone dies in utah, While she sleeps, Symphony X, Bury Tomorrow, Periphery .', 'Franck , né le 27 juillet 1990. Commence son initiation à la musique à l''âge de 16 ans principalement à la guitare classique puis électrique, en grande partie autodidacte à ses débuts, c''est aux cotés de Pierre Culeux qu''il s''initie aux premières techniques de métal et enfin, au près  d''Emmanuel Malépart qu''il continue aujourd''hui d''apprendre et évoluer. Traversant multiples styles musicaux et divers groupes éphémères, il finit par rencontrer Thibault Dulon via un site communautaire pour musiciens et intégra ainsi le groupe Dust Of Shadows.', 'fr'),
 (3, '', 'De Lima', 'Paco', 'Squid', 'pakpak.png', '26/07/1991', 'Bassiste', 'Rage Against The Machine, Periphery, Marcus Miller, Le peuple de l''herbe, Dream Theater, Massive Attack, Victor Wooten', 'Paco, née le 26 juillet 1991, commence son initiation à la musique par le piano. Après avoir fait 8 ans de conservatoire (piano, solfège, chorale), il commence l''apprentissage de la basse à 16 ans en jouant avec des amis dans des petits groupes éphémères, puis quelques années plus tard par le biais de Franck, entre dans le groupe Dust Of Shadows.\r\nLe groupe depuis rebaptisé Passanger lui permet de développer différentes techniques en rapport avec le métal.\r\nEn parallèle, il entretient d''autres projets musicaux comme Capt''ain Cover, groupe de reprises Rock/Hard des années 70 à nos jours.', 'fr'),
 (4, '', 'Ramos', 'Camille', 'Boulette', 'cams.png', '31/07/1992', 'Batteur', 'Devin Townsend, Rage Against The Machine, Tool, Tesseract, Iron Maiden, Steve Gad, Billy Cohbam', 'Camille, née le 31 juillet 1992 commence son initiation à la musique par le piano et le violon, avant de découvrir les percussions à 12 ans.\r\nElle commence l''apprentissage de la batterie à 15 ans en jouant avec des amis dans des petits groupes éphémères. Puis, par le biais de son ami Paco, elle intègre le groupe Dust Of Shadows en tant que batteuse déjà composé.\r\n\r\nLe groupe, depuis, rebaptisé Passanger, lui permet de développer technique et précision nécessaire à tout batteur de métal.\r\nElle poursuit ses études au Conservatoire de Versailles en Percussion tout en participant à de nombreux projets, comme l''Orchestre de la SNCF.', 'fr'),
 (5, '', '?', '?', '?', '', '?', 'Chanteur', '?', 'Chanteur extrêmement motivé pour une aventure musicale mais surtout humaine ?! Contacte nous !', 'fr'),
-(6, '', 'Dulon', 'Thibault', 'Titi', 'titou.png', '28/02/1992', 'Lead Guitarist', 'Ayreon, Iron Maiden, Dream Theater, Circus Maximus, Periphery, Tesseract, Nightwish', 'After several not serious band experiences, I''ve decided, with a friend, to found Dust of Shadows, a heavy progressive band where we could finally express our heavy soul.\r\n Meanwhile, I continue my solo projects that allow me to express my other musical self and learn all mix tricks. http://soundcloud.com/fitz_lucassen', 'en'),
-(7, '', 'Gautier', 'Franck', 'Kyky', 'kyky.png', '27/07/1990', 'Rythm Guitarist', '', '', 'en'),
-(8, '', 'De Lima', 'Paco', 'Pakpak', 'pakpak.png', '26/07/1991', 'Bassist', 'Rage Against The Machine, Periphery, Marcus Miller, Le peuple de l''herbe, Dream Theater, Massive Attack, Victor Wooten', '', 'en'),
-(9, '', 'Ramos', 'Camille', 'Boulette', 'cams.png', '31/07/1992', 'Drummer', 'Devin Townsend, Rage Against The Machine, Tool, Tesseract, Iron Maiden, Steve Gad, Billy Cohbam', '', 'en'),
-(10, '', '?', '?', '?', '', '?', 'Singer', '', 'Singer who want a new musical adventure ? Contact us !', 'en');
+(6, '', 'Dulon', 'Thibault', 'Titi', 'titou.png', '28/02/1992', 'Lead Guitarist', 'Ayreon, Iron Maiden, Dream Theater, Circus Maximus, Periphery, Tesseract, Intervals, Nightwish, Delain', 'After several non-serious band experiences Thibault, who was born on 28 February 1992, and his friend, Kenny, decided to form Dust of shadows, a heavy progressive band in which they could finally express their heavy and prog soul.\nAutodidact from the age of 15, he began by learning the drum before sinking completely into the passion of the 6 strings handle and plectrum warm.\nIn parallel, he carries on his solo projects which allow him to express his other musical influences (BO, classical, jazz) and learn all the mixing tricks. http://soundcloud.com/fitz_lucassen\n', 'en'),
+(7, '', 'Gautier', 'Franck', 'Kyky', 'kyky.png', '27/07/1990', 'Rythm Guitarist', 'Iron maiden, Saxon, Helloween, Racer X, Accept, Killswitch Engage, Issues, Of Mice & men, Everyone dies in utah, While she sleeps, Symphony X, Bury Tomorrow, Periphery .', 'Frank, born in July 27 of 1990. begins his introduction to music at the age of 16 mainly on classical guitar and then electric guitar, largely self-taught in its infancy, it is alongside Pierre Culeux he learns the metal techniques and now, it’s with Emmanuel Malépart he continues to learn and evolve. Through multiple musical styles and various ephemera bands, he ends meet Thibault Dulon via a community musician’s website and join Dust Of Shadows.', 'en'),
+(8, '', 'De Lima', 'Paco', 'Pakpak', 'pakpak.png', '26/07/1991', 'Bassist', 'Rage Against The Machine, Periphery, Marcus Miller, Le peuple de l''herbe, Dream Theater, Massive Attack, Victor Wooten', 'Paco, born in July 26 of 1991, begins his introduction to music on the piano. After 8 years of conservatory (piano, music theory, choir), he began learning the bass at age of 16 playing with friends in small ephemeral groups, then a few years later through Franck, enters Dust Of Shadows band.\nThe group since renamed Passanger allows him to develop different techniques in relation to the metal.\nIn parallel, he has other musical projects like Capt''ain Cover, cover band Rock / Hard 70s to today.\n', 'en'),
+(9, '', 'Ramos', 'Camille', 'Boulette', 'cams.png', '31/07/1992', 'Drummer', 'Devin Townsend, Rage Against The Machine, Tool, Tesseract, Iron Maiden, Steve Gad, Billy Cohbam', 'Camille, born in July 31 of 1992 begins his introduction to music with the piano and the violin, before discovering percussion at 12 years old.\nShe began learning the drums at age of 15 playing with friends in small ephemeral band. Then, through his friend Paco, she joined Dust Of Shadows as the official drummer.\n\nThe band, since renamed Passanger, allows her  to develop technique and precision necessary for any metal drummer.\nShe carries on her studies at the Conservatory of Versailles Percussion while participating in many projects, such as the Orchestra of the SNCF.\n', 'en'),
+(10, '', '?', '?', '?', '', '?', 'Singer', '?', 'Singer who want a new musical adventure ? Contact us !', 'en');
 
 -- --------------------------------------------------------
 
@@ -347,13 +347,13 @@ INSERT INTO `song` (`idSong`, `filename`, `title`, `description`, `duration`, `l
 (13, '', 'Intro', '', '01:45', 'en'),
 (14, '', 'War is the key', '', '03:43', 'en'),
 (15, '', 'Revenge', '', '04:10', 'en'),
-(16, '', 'The King', '', '04:57', 'en'),
+(16, 'king.mp3', 'The King', '', '04:57', 'en'),
 (17, '', 'Burn in hell', '', '04:12', 'en'),
-(18, '', 'Death blows in my ears', '', '04:11', 'en'),
+(18, 'death.mp3', 'Death blows in my ears', '', '04:11', 'en'),
 (19, '', 'Into the shadows', '', '04:47', 'en'),
 (20, '', 'Never yourself', '', '04:33', 'en'),
 (21, '', 'Hopess', '', '04:22', 'en'),
-(22, '', 'Power of death', '', '04:14', 'en'),
+(22, 'power.mp3', 'Power of death', '', '04:14', 'en'),
 (23, '', 'Ultimate Attempt', '', '04:36', 'en'),
 (24, '', 'Conclusion', '', '02:08', 'en'),
 (25, '', 'Ch.1 - A weird travel', '', '04:00', 'fr'),
