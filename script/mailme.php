@@ -18,7 +18,7 @@ $session->write('contact_mail', $mailProvenance);
 $session->write('contact_message', $messageProvenance);
 
 //destinataire(s)
-$to = "";
+$to = "thibault.dulon@gmail.com;franck.gautier.developpeur@gmail.com";
 // sujet facultatif
 $subject = "";
 
