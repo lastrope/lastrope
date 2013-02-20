@@ -75,9 +75,7 @@ class Mail{
      */
     public function sendMail(){
         try{
-            // La fonction mail ne marche pas en local il faut configurer le SMTP etc..
-            // Commentée pour l'instant
-            //mail($this->to, $this->subject, $this->message, $this->headers);
+            mail($this->to, $this->subject, $this->message, $this->headers);
             return true;
         }catch(Exception $e){
             return false;
