@@ -11,7 +11,7 @@
 			<li>
 				<div class="ch-item ch-img-2">
 					<div class="ch-info">
-						<h3><a href="#">Twitter</a></h3>
+						<h3><a href="http://twitter.com/PassangerBand">Twitter</a></h3>
 					</div>
 				</div>
 			</li>
