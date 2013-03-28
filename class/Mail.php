@@ -36,7 +36,7 @@ class Mail{
         $this->headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
 
         $this->headers .= 'To: ' . $this->to . "\r\n";
-        $this->headers .= 'From: PASSANGER' . $this->nom . ' <' . $this->from . '>' . "\r\n";
+        $this->headers .= 'From: PASSANGER, Personne : ' . $this->nom . ' <contact@passanger.fr>' . "\r\n";
 		
         return $this;
     }
@@ -53,6 +53,8 @@ class Mail{
 			</head>
 			<body>
 				<p>' . nl2br($this->message) . '
+				    <br/><br/>
+				    <i>Vous pouvez recontacter cette personne grâce à son e-mail : ' . $this->from .'.</i>
 				</p>
 			</body>
 		</html>';

@@ -9,10 +9,10 @@
 <div id="header_block">
 	<div id="language">
 		<a href="set_language.php?lang=en" title="English Version">
-			<img src="public/media/image/flag_en.png" />
+			<img src="public/media/image/flag_en.png" alt="Traduire en anglais"/>
 		</a>
 		<a href="set_language.php?lang=fr" title="Version Française">
-			<img src="public/media/image/flag_fr.png" />
+			<img src="public/media/image/flag_fr.png" alt="Traduire en français"/>
 		</a>
 	</div>
 	<div id="header">
@@ -25,8 +25,8 @@
 				
 				if($this_link_information['href'] != 'home'){
 					echo '
-		<li '.(($actual_url == $url_tab)?'class="selected menu"':'class="menu"').'id="'.$id_css.'">
-			<a href="'.$tag_langue.'-'.$this_link_information['href'].'">'.
+		<li '.(($actual_url == $url_tab)?'class="selected menu"':'class="menu"').' id="'.$id_css.'">
+			<a href="'.$tag_langue.'-'.$this_link_information['href'].'#content-starting">'.
 				$this_link_information['text'].'
 			</a>
 		</li>';

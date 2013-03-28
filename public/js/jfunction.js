@@ -1,19 +1,20 @@
 $(document).ready(function(){
-    var divNews = $('#news');
-    var divBio = $('#bio');
-    var divMedia = $('#media');
-    var divSon = $('#son');
-    var divContact = $('#contact');
-    var default_active = divNews;
-	
-    var isNavOpen = false;
-    var isSearchOpen = false;
     var temoin = false;
 	
     var effet = 'easeOutElastic';
 	
     var widthWindowOnLoad = ((parseInt($(window).width())-600)/2);
-    fixContent(widthWindowOnLoad);
+    if($(window).width() > 600)
+	fixContent(widthWindowOnLoad);
+    else
+	fixContent(5);
+    
+    
+    /*************************
+     * ROLLHOVER MENU HEADER *
+     *************************/
+    
+    
     // Initialization of the rollhover menu
     // If One Item is already selected put the boolean at "True"
     $('li').each(function(){
@@ -70,8 +71,83 @@ $(document).ready(function(){
 	});
     });
     
+    
+    /***************************
+     * NEWS PAGE SEARCH COLUMN *
+     ***************************/
+    
+     
     // jquery for showing news navigation left on the page loading
     selecteurAppears();
+    // display content of news navigation left after it appears
+    setTimeout(function(){
+	$('#content_answer').css({
+	    display:'block'
+	});
+	$('.div_answer').css({
+	    display:'block'
+	});
+
+	$('#content_form').fadeIn('slow');
+    },1000);
+    
+   // For the search action 
+    $("#form_search_action").click(function(){
+	var where = $("#type_search").val();
+	var what = $("#search_value_id").val();
+	$.ajax({
+	    type : "post",
+	    url : "script/search.php",
+	    data : {'what':what,'where':where},
+	    success:function(response){
+		$("#article_content").html(response);
+	    }
+	});
+    });
+    // For the research formulaire
+    $('.div_answer').click(function(){
+	if($(this).hasClass('selected_answer')){
+	    $(this).removeClass('selected_answer');
+			
+	    var current_value = $('#type_search').val();
+	    current_value = current_value.replace($(this).attr("id"),'');
+			
+	    $('#type_search').val(current_value);
+	} else {
+	    $(this).addClass('selected_answer');
+			
+	    if($('#type_search').val() == ""){
+		$('#type_search').val($(this).attr("id"));
+	    } else {
+		$('#type_search').val($('#type_search').val() + ' ' + $(this).attr("id"));
+	    }
+	}
+    });
+    // Change the appearance of the input on the search form
+    $('#search_value_id').focus(function(){
+	$('#search_value_id').removeClass('input_text_passive');
+	$('#search_value_id').addClass('input_text_active');
+    });
+    $('#search_value_id').blur(function(){
+	$('#search_value_id').removeClass('input_text_active');
+	$('#search_value_id').addClass('input_text_passive');
+    });
+    
+    // RESPONSIVE NEWS
+    $(window).resize(function(){
+	var widthWindowOnResize = ((parseInt($(window).width())-600)/2);
+
+	if($(window).width() > 600)
+	    fixContent(widthWindowOnResize);
+	else
+	    fixContent(5);
+
+    });
+    
+    /********************************
+     * MEDIA PAGE COLUMN MANAGEMENT *
+     ********************************/
+    
     
     $('.left-column .close p').live('click', function(){
 	$('.video-preview').remove();
@@ -108,49 +184,12 @@ $(document).ready(function(){
 	});
     });
     
-    setTimeout(function(){
-	$('#content_answer').css({
-	    display:'block'
-	});
-	$('.div_answer').css({
-	    display:'block'
-	});
-
-	$('#content_form').fadeIn('slow');
-    },1000);
-   
-    // ## For te search action 
-    $("#form_search_action").click(function(){
-	var where = $("#type_search").val();
-	var what = $("#search_value_id").val();
-	$.ajax({
-	    type : "post",
-	    url : "script/search.php",
-	    data : {'what':what,'where':where},
-	    success:function(response){
-		$("#article_content").html(response);
-	    }
-	});
-    });
-    // For the research formulaire
-    $('.div_answer').click(function(){
-	if($(this).hasClass('selected_answer')){
-	    $(this).removeClass('selected_answer');
-			
-	    var current_value = $('#type_search').val();
-	    current_value = current_value.replace($(this).attr("id"),'');
-			
-	    $('#type_search').val(current_value);
-	} else {
-	    $(this).addClass('selected_answer');
-			
-	    if($('#type_search').val() == ""){
-		$('#type_search').val($(this).attr("id"));
-	    } else {
-		$('#type_search').val($('#type_search').val() + ' ' + $(this).attr("id"));
-	    }
-	}
-    });
+    
+    /*******************************
+     * BIO PAGE MEMBERS MANAGEMENT *
+     *******************************/
+    
+    
     // For the members transition
     $('.member_container').hover(function(){
 	// Change dimensions
@@ -191,8 +230,8 @@ $(document).ready(function(){
 	}
     });
     
-    if($('#members_container').length > 0) {
-	// Check if the scroll in the page is on a keypoint for changing image
+    // Check if the scroll in the page is on a keypoint for changing image
+    if($('#members_container').length > 0){
 	$(window).scroll(function(){
 	    if($(window).scrollTop() <= ($('#members_container').offset().top+300)){
 		$('#switch').css({
@@ -207,15 +246,7 @@ $(document).ready(function(){
 	});
     }
     
-    // Change the appearance of the input on the search form
-    $('#search_value_id').focus(function(){
-	$('#search_value_id').removeClass('input_text_passive');
-	$('#search_value_id').addClass('input_text_active');
-    });
-    $('#search_value_id').blur(function(){
-	$('#search_value_id').removeClass('input_text_active');
-	$('#search_value_id').addClass('input_text_passive');
-    });
+    // Manage the hover of the period's bubble
     $('.bubble_period').hover(function(){
 	$(this).children('.bubble_period_hover').css({
 	    'top':$('.bubble_container').height(),
@@ -227,7 +258,6 @@ $(document).ready(function(){
     }, function(){
 	$(this).children('.bubble_period_hover').fadeOut(500);
     });
-    
 });
 // Animation for the website opening
 function loader(){
@@ -277,12 +307,15 @@ function load_news_text_search(id,type){
 	$.post("script/chargeNews.php", {
 	    id: id,
 	    type: type
-	},  
+	},
 	function success(data){
 	    $('#article_found').hide();
 	    $('#article_found').empty();
 	    $('#article_found').append(data);
 	    $('#article_found').fadeIn();
+	    $('html,body').stop().animate({
+		scrollTop: $('#article_found').offset().top
+	    },1000);
 	});
     },200);
    
@@ -343,16 +376,6 @@ function verif_search(){
 function selecteurAppears(){
     $('#selecteur').fadeIn(1500);
 }
-// RESPONSIVE NEWS
-$(window).resize(function(){
-    var widthWindowOnResize = ((parseInt($(window).width())-600)/2);
-    
-    if($(window).width() > 600)
-        fixContent(widthWindowOnResize);
-    else
-	fixContent(5);
-
-});
 function fixContent(width){
     $('.content-responsive').css({
 	'margin':'0 0 0 '+width+'px'

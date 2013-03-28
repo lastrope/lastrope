@@ -37,23 +37,23 @@ $tag_langue = isset($_SESSION['langue']) ? $_SESSION['langue'] : 'fr';
 			<?php
 			if ($cpt == 0) {
 			    ?>
-			    <img style="margin-top: 10px;" src="public/media/image/rg1570.png" alt="" />
+			    <img style="margin-top: 10px;" src="public/media/image/rg1570.png" alt="guitare ibanez rg 1570 de thibault" />
 			    <?php
 			} else if ($cpt == 1) {
 			    ?>
-			    <img style="margin-top: 10px;" src="public/media/image/lag.png" alt="" />
+			    <img style="margin-top: 10px;" src="public/media/image/lag.png" alt="guitare lag de franck" />
 			    <?php
 			} else if ($cpt == 2) {
 			    ?>
-			    <img style="margin-top: 10px;" src="public/media/image/sr.png" alt="" />
+			    <img style="margin-top: 10px;" src="public/media/image/sr.png" alt="bass ibanez de paco" />
 			    <?php
 			} else if ($cpt == 3) {
 			    ?>
-			    <img style="margin-top: 10px;" src="public/media/image/baguette.png" alt="" />
+			    <img style="margin-top: 10px;" src="public/media/image/baguette.png" alt="baguettes de batterie de camille" />
 			    <?php
 			} else if ($cpt == 4) {
 			    ?>
-			    <img style="margin-top: 10px;" src="public/media/image/micro.png" alt="" />
+			    <img style="margin-top: 10px;" src="public/media/image/micro.png" alt="micro shure de Tatiana" />
 			    <?php
 			}
 			?>

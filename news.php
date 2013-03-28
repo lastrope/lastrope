@@ -63,6 +63,8 @@ require_once 'sort_actu_header.php';
 		<div id="a_video" class="div_answer"><?php echo A_VIDEO; ?></div>
 		<div id="a_news" class="div_answer"><?php echo A_NEWS; ?></div>
 		<div id="a_event" class="div_answer"><?php echo AN_EVENT; ?></div>
+		
+		<div class="clear"></div>
 	    </div>
 
 	    <label style="display:block;margin-bottom:10px;"><?php echo ENTER_YOUR_SEARCH; ?></label>

@@ -30,7 +30,7 @@
 		    <div class="content_article">
 			    <p>
 				    <?php echo nl2br($this_actu['body']); ?>
-				    <?php echo "<p class='published'>".DATE_PUBLISHED." " , date("d/m/Y ".AT." H:i:s",$this_actu['date']) , "</p>"; ?>
+				    <?php echo "<span class='published'>".DATE_PUBLISHED." " , date("d/m/Y ".AT." H:i:s",$this_actu['date']) , "</span>"; ?>
 			    </p>
 		    </div>
 	    </div>

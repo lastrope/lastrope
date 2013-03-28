@@ -22,7 +22,7 @@
 	-ms-border-radius: 6px;
     }
     #content_answer{
-	height:50px;
+	height:auto;
 	text-align:center;
     }
     #content_form .button{
@@ -198,7 +198,7 @@
 	text-align: center;
     }
     #selecteur{
-	height: 430px;
+	height: auto;
     }
     #search_value_id, #content_form #form_search_action{
 	display: block;

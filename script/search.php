@@ -71,7 +71,7 @@
 						foreach ($return as $result) {
 							// Evite les doublons et on effectue seulement 10 affichages
 							if (array_search($result['title'], $memoire) === FALSE && $compteur < 10) {
-								if(!$attribute_value == 'music'){
+								if($attribute_value != 'music'){
 								    $attributes = "onclick=\"load_news_text_search('" . intval($result['id']) . "','" . $attribute_value . "');\"";
 								    
 								}else{

@@ -18,9 +18,10 @@ $session->write('contact_mail', $mailProvenance);
 $session->write('contact_message', $messageProvenance);
 
 //destinataire(s)
-$to = "thibault.dulon@gmail.com;franck.gautier.developpeur@gmail.com";
+$to = "thibault.dulon@gmail.com,franck.gautier.developpeur@gmail.com";
+
 // sujet facultatif
-$subject = "";
+$subject = "Demande de contact";
 
 // Si on a toutes les données , envoie du mail 
 if ($nomProvenance && $mailProvenance && $messageProvenance) {
