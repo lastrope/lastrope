@@ -300,26 +300,6 @@ function load_news_text(id,type){
     },200);
    
 }
-// Ajax for load news
-function load_news_text_search(id,type){
-    
-    setTimeout(function(){
-	$.post("script/chargeNews.php", {
-	    id: id,
-	    type: type
-	},
-	function success(data){
-	    $('#article_found').hide();
-	    $('#article_found').empty();
-	    $('#article_found').append(data);
-	    $('#article_found').fadeIn();
-	    $('html,body').stop().animate({
-		scrollTop: $('#article_found').offset().top
-	    },1000);
-	});
-    },200);
-   
-}
 
 // SCROLL BIO BLEU
 function scrollTo(direction){
