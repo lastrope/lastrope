@@ -60,7 +60,7 @@
 		    <g:plusone size="medium"></g:plusone>
 		</div>
 		<div id="rss-button" class="like-button">
-		    <a href="http://www.passanger.fr/rss.xml.php" target="_blank">RSS</a>
+		    <a href="http://www.passanger.fr/rss.xml" target="_blank">RSS</a>
 		</div>
 
 		<div class="clear"></div>

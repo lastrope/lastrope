@@ -9,3 +9,4 @@ RewriteEngine On
 RewriteRule ^fr-(.*)$ /index.php?page=$1 [L]
 RewriteRule ^en-(.*)$ /index.php?page=$1 [L]
 RewriteRule ^details-([a-zA-Z]+)-([0-9]+)$ /newsdetails.php?type=$1&id=$2 [L]
+RewriteRule ^rss.xml$ /rss.xml.php [L]
