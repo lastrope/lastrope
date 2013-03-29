@@ -113,14 +113,13 @@ textarea:-moz-placeholder {
 
     position: relative;
     margin: 0 auto;
-    padding-bottom: 168px;
+    padding-bottom: 220px;
 
     background:none;
     z-index:2;
 }
 #conteneur{
     z-index:3;
-    position: relative;
     position: relative;
     width:100%;
     min-width:975px;
@@ -350,6 +349,22 @@ textarea:-moz-placeholder {
     -ms-transition-duration: 1s;
 }
 #selecteur ul li:hover{
+    color: #21B8FF;
+}
+#selecteur ul li a{
+    transition-property: color;
+    transition-duration: 1s;
+    -moz-transition-property: color;
+    -moz-transition-duration: 1s;
+    -webkit-transition-property: color;
+    -webkit-transition-duration: 1s;
+    -o-transition-property: color;
+    -o-transition-duration: 1s;
+    -ms-transition-property: color;
+    -ms-transition-duration: 1s;
+    color: #666666;
+}
+#selecteur ul li :hover{
     color: #21B8FF;
 }
 #welcome{
@@ -878,7 +893,7 @@ footer p {
     margin-right: 30px;
 }
 #copyright{
-    background: transparent url('../media/image/logo1.png') center center no-repeat;
+    background: transparent url('../media/image/logo11.png') center center no-repeat;
     width: 200px;
     height: 155px;
     margin: -100px auto 0 auto;
@@ -1644,4 +1659,69 @@ nav{
 .close:hover{
     text-decoration: underline;
     cursor: pointer;
+}
+/* sharing buttons */
+#like-buttons{
+    width:600px;
+    margin:20px auto;
+    text-align:right;
+    position:relative;
+}
+.like-button{
+    float:left;
+    margin-right:30px;
+}
+#fb-like-button{
+    width:70px;
+}
+#twt-button{
+    width:75px;
+}
+#glg-button{
+    width:50px;
+    margin-right:18px;
+}
+#sharing-action{
+    margin-top: -228px;
+    margin-bottom:0px;
+    position: relative;
+    height:173px;
+    width:300px;
+ }
+#sharing-action a{
+    display:none;
+    width:70px;
+    height:70px;
+    position:absolute;
+    
+}
+#fb-sharing-action{
+    left:0px;
+    top:70px;
+    background:url(../media/image/fbl.png) no-repeat center center;
+}
+#twt-sharing-action{
+    top:0px;
+    left:115px;
+    background:url(../media/image/twtl.png) no-repeat center center;
+}
+#glg-sharing-action{
+    right:0px;
+    top:70px;
+    background:url(../media/image/gplus.png) no-repeat center center;
+}
+.details #corps{
+    padding-bottom:250px;
+}
+#rss-button a{
+    color:#595959;
+    font-size:16px;
+    padding-right:25px;
+    font-weight:bold;
+    font-family: Helvetica,Verdana,Arial,sans-serif;
+    background:url(../media/image/rss.png) no-repeat center right;
+   
+}
+#rss-button a:hover{
+    color:#FFB05E;
 }

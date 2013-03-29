@@ -258,6 +258,17 @@ $(document).ready(function(){
     }, function(){
 	$(this).children('.bubble_period_hover').fadeOut(500);
     });
+    /* SHARING */
+    var logo_left_margin = (($(window).width()/2)-(300/2))+"px";
+    $('#sharing-action').css('left',logo_left_margin);
+    $('#sharing-action').hover(function(){
+	$("#copyright").css('backgroundImage','url(/public/media/image/logo12.png)');
+	$('#sharing-action a').show();
+    },function(){
+	$("#copyright").css('backgroundImage','url(/public/media/image/logo11.png)');
+	$('#sharing-action a').hide();
+    });
+    
 });
 // Animation for the website opening
 function loader(){
@@ -361,3 +372,4 @@ function fixContent(width){
 	'margin':'0 0 0 '+width+'px'
     });
 }
+

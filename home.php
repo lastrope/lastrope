@@ -11,6 +11,15 @@
 ?>
 
 <div id="conteneur">
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	var js, fjs = d.getElementsByTagName(s)[0];
+	if (d.getElementById(id)) return;
+	js = d.createElement(s); js.id = id;
+	js.src = "//connect.facebook.net/fr_FR/all.js#xfbml=1";
+	fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 	<div id="welcome">
 		<h1>
 			<?php echo WELCOME_ON_WEBSITE;?>
@@ -38,7 +47,24 @@
 	    <?php
 		    }
 	    ?>
-			
+	    <div id="like-buttons">
+
+		<div id="fb-like-button" class="like-button">
+		    <div class="fb-like" data-href="<?php 'http://www.passanger.fr'.$_SERVER['REQUEST_URI'] ?>" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div>
+		</div>
+		<div id="twt-button" class="like-button">
+			<a href="https://twitter.com/share" class="twitter-share-button" count="horizontal" data-lang="<?php echo $session->read('langue') ?>">Tweet</a>
+		</div>
+		<div id="glg-button"  class="like-button">
+		    <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+		    <g:plusone size="medium"></g:plusone>
+		</div>
+		<div id="rss-button" class="like-button">
+		    <a href="http://www.passanger.fr/rss.xml.php" target="_blank">RSS</a>
+		</div>
+
+		<div class="clear"></div>
+	    </div>	
 	    <div class="clr"></div>
 	</div>
 	

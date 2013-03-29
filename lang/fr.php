@@ -63,4 +63,8 @@
 	define("PLAYER_ARTIST", "Artiste");
 	define("PLAYER_RETURN", "Retour aux albums");
 	
+	// SHARE
+	define("TITLE_SHARING_TWT",'Partagez sur Twitter !!');
+	define("TITLE_SHARING_FB",'Partagez sur Facebook !!');
+	define("TITLE_SHARING_GGL",'Partagez sur Google+ !!');
 ?>
