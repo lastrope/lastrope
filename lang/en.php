@@ -64,7 +64,7 @@
 	define("PLAYER_RETURN", "Back to albums");
 
 	// SHARE
-	define("TITLE_SHARING_TWT",'Share it on Twitter !!');
-	define("TITLE_SHARING_FB",'Share it on Facebook !!');
-	define("TITLE_SHARING_GGL",'Share it on Google+ !!');
+	define("TITLE_SHARING_TWT",'Share it on Twitter !');
+	define("TITLE_SHARING_FB",'Share it on Facebook !');
+	define("TITLE_SHARING_GGL",'Share it on Google+ !');
 ?>
