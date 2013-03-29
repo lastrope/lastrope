@@ -897,6 +897,7 @@ footer p {
     width: 200px;
     height: 155px;
     margin: -100px auto 0 auto;
+    position:relative;
 }
 /*SOCIAL*/
 #social,#useful_links{
@@ -1681,33 +1682,35 @@ nav{
     width:50px;
     margin-right:18px;
 }
-#sharing-action{
-    margin-top: -228px;
-    margin-bottom:0px;
-    position: relative;
-    height:173px;
-    width:300px;
- }
-#sharing-action a{
-    display:none;
+
+#copyright a{
+    
     width:70px;
     height:70px;
     position:absolute;
-    
+}
+#sharing-action{
+    width:300px;
+    height:190px;
+    position:absolute;
+    top:-90px;
+    left:-54px;
+    display:none;
+  
 }
 #fb-sharing-action{
-    left:0px;
-    top:70px;
+    left:5px;
+    bottom:20px;
     background:url(../media/image/fbl.png) no-repeat center center;
 }
 #twt-sharing-action{
-    top:0px;
-    left:115px;
+    top:14px;
+    left:117px;
     background:url(../media/image/twtl.png) no-repeat center center;
 }
 #glg-sharing-action{
-    right:0px;
-    top:70px;
+    right:5px;
+    bottom:20px;
     background:url(../media/image/gplus.png) no-repeat center center;
 }
 .details #corps{
